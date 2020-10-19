@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+        {{- if not .Site.Params.disableSearch}}
+            <form class="form-inline my-2 my-lg-0 searchbox">
+                <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
+            </form>
+        {{- end}}
+         <ul class="navbar-nav flex-column pt-3">
+             {{- $currentNode := . }}
+             {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
+             {{- if eq .Site.Params.ordersectionsby "title"}}
+               {{- range .Site.Home.Sections.ByTitle}}
+               {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
+               {{- end}}
+             {{- else}}
+               {{- range .Site.Home.Sections.ByWeight}}
+               {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
+               {{- end}}
+             {{- end}}
+        </ul>
+    </div>
+</nav>
+
+<!-- Template -->
+{{- define "section-tree-nav" }}
+{{- $currentNode := .currentnode }}
+{{- with .sect}}
+{{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    {{- safeHTML .Params.head}}
+    <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1
+        {{- if .IsAncestor $currentNode}} parent{{end}}
+        {{- if eq .RelPermalink $currentNode.RelPermalink}} active{{end}}
+        {{- if .Params.alwaysopen}} alwaysopen{{end -}}
+        {{- if ne $numberOfPages 0 }} haschildren{{end}}
+        ">
+        <!-- I'm the params head -->
+        <a class="nav-link p-0" href="{{.RelPermalink}}"><h6>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</h6></a>
+      {{- if ne $numberOfPages 0 }}
+        <ul class="list-unstyled ml-2">
+          {{- .Scratch.Set "pages" .Pages }}
+          {{- if .Sections}}
+          {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+          {{- end}}
+          {{- $pages := (.Scratch.Get "pages") }}
+
+        {{- if eq .Site.Params.ordersectionsby "title"}}
+          {{- range $pages.ByTitle }}
+            {{- if and .Params.hidden (not $.showhidden) }}
+            {{- else}}
+            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+            {{- end}}
+          {{- end}}
+        {{- else}}
+          {{- range $pages.ByWeight }}
+            {{- if and .Params.hidden (not $.showhidden) }}
+            {{- else}}
+            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+            {{- end}}
+          {{- end}}
+        {{- end}}
+        </ul>
+      {{- end}}
+    </li>
+{{- else}}
+    {{- if not .Params.Hidden }}
+        <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} active{{end -}}">
+                <!-- I'm the params hidden -->
+                 <a href="{{.RelPermalink}}" class="nav-link p-0">
+                    {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+                </a>
+        </li>
+    {{- end}}
+{{- end}}
+{{- end}}
+{{- end}}

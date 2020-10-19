@@ -1,0 +1,34 @@
+{{- $sortTerm :=  .Get "sort" | default "Weight" }}
+
+{{- .Scratch.Set "current" .Page }}
+
+{{- if (.Get "page")}}
+	{{- with .Site.GetPage "section" (.Get "page") }}
+		{{- $.Scratch.Set "current" . }}
+	{{- end }}
+{{- end }}
+
+{{- $cpage := (.Scratch.Get "current") }}
+
+
+<ul class="docs-children list-unstyled">
+	{{- .Scratch.Set "pages" $cpage.Pages }}
+    {{- if $cpage.Sections}}
+	    {{- .Scratch.Set "pages" ($cpage.Pages | union $cpage.Sections) }}
+    {{- end}}
+    {{- $pages := (.Scratch.Get "pages") }}
+
+	{{- if eq $sortTerm "Weight"}}
+		{{- template "childs" dict "menu" $pages.ByWeight "pages" .Site.Pages "sortTerm" $sortTerm}}
+	{{end}}
+</ul>
+
+
+
+{{ define "childs" }}
+		{{- range .menu }}
+			<li class="h2 py-1">
+				<a href="{{.RelPermalink}}"> {{ .Title }} </a>
+			</li>
+		{{ end }}
+{{ end }}

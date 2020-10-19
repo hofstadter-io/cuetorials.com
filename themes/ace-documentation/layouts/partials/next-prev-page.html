@@ -1,0 +1,45 @@
+<div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <!-- Next prev page -->
+    {{- $currentNode := . -}}
+
+    {{- template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode -}}
+
+    {{- define "menu-nextprev" -}}
+        {{- $currentNode := .currentnode -}}
+        {{- if ne .menu.Params.hidden true -}}
+            {{- if hasPrefix $currentNode.RelPermalink .menu.RelPermalink -}}
+                {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
+                {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+            {{- else -}}
+                {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
+                    {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
+                    {{- $currentNode.Scratch.Set "nextPage" .menu -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
+
+                {{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
+                {{- if .menu.IsHome -}}
+                    {{- $currentNode.Scratch.Set "pages" .menu.Sections -}}
+                {{- else if .menu.Sections -}}
+                    {{- $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) -}}
+                {{- end -}}
+                {{- $pages := ($currentNode.Scratch.Get "pages") -}}
+
+                {{- range $pages.ByWeight -}}
+                    {{- template "menu-nextprev" dict "menu" . "currentnode" $currentNode -}}
+                {{- end -}}
+        {{- end -}}
+    {{- end -}}
+
+    <div class="d-flex justify-content-center">
+        {{- with ($.Scratch.Get "prevPage") -}}
+            <a class="p-1 mr-3 d-inline-block text-white" href="{{.RelPermalink}}" title="{{.Title}}"><i class="fas fa-chevron-left p-1"></i>{{.Title}}</a>
+        {{ end -}}
+        {{- with ($.Scratch.Get "nextPage") -}}
+            <a class="p-1 ml-3 d-inline-block text-white text-right" href="{{.RelPermalink}}" title="{{.Title}}">{{.Title}}<i class="fas fa-chevron-right p-1"></i></a>
+        {{- end }}
+    </div>
+</div>
+

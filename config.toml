@@ -1,0 +1,61 @@
+baseURL = "https://cuetorials.com"
+
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+title = "Cuetorials"
+theme = "ace-documentation"
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = "GTM-NF57PJ7"
+
+[params]
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableSearch = false # default is false
+disableReadmoreNav = false # set true to hide prev/next navigation, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-copyright'></i> Cuelang"
+url = "https://cuelang.org"
+weight = 0
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub"
+url = "https://github.com/cuelang/cue"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-play-circle'></i> Playground"
+url = "https://cuelang.org/play/"
+weight = 2
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-user'></i> Community"
+url = "https://cuelang.org/community/"
+weight = 3
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Cuetorials"
+url = "https://github.com/hofstadter-io/cuetorials.com"
+weight = 4
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-info-circle'></i> More from _Hofstadter"
+url = "https://hofstadter.io"
+weight = 5
+

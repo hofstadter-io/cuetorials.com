@@ -1,0 +1,24 @@
+<!-- Load required Javascript -->
+<script src="{{ .Site.BaseURL }}lib/jquery.min.js"></script> <!-- jQuery.js -->
+<script src="{{ .Site.BaseURL }}lib/popper.min.js"></script> <!-- Popper.js - dependency of Bootstrap -->
+
+<script src="{{ .Site.BaseURL }}js/bootstrap.min.js"></script> <!-- Other javascript -->
+
+<!-- Plugin: search -->
+<script type="text/javascript" src="{{"plugins/lunr.min.js" | relURL}}"></script>
+<script type="text/javascript" src="{{"plugins/auto-complete.js" | relURL}}"></script>
+<link href="{{"plugins/auto-complete.css" | relURL}}" rel="stylesheet">
+<script type="text/javascript">
+  {{ if .Site.IsMultiLingual }}
+      var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+  {{ else }}
+      var baseurl = "{{.Site.BaseURL}}";
+  {{ end }}
+</script>
+<script type="text/javascript" src="{{"plugins/search.js" | relURL}}"></script>
+
+<!-- Plugin: clipboard -->
+<script type="text/javascript" src="{{"plugins/clipboard.js" | relURL}}"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>

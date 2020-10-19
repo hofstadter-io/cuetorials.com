@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cuetorials
+  namespace: websites
+  labels:
+    app: cuetorials
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+
+    kubernetes.io/configuration-snippet: |
+      location ~* \.(?:css|js|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
+        expires 1h;
+        access_log off;
+        add_header Cache-Control "public";
+      }
+      location / {
+        expires -1;
+      }
+
+spec:
+  tls:
+  - hosts:
+    - cuetorials.com
+    secretName: cuetorials-tls
+
+  rules:
+  - host: cuetorials.com
+    http:
+      paths:
+        - backend:
+            serviceName: cuetorials
+            servicePort: 80
+
