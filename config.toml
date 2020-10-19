@@ -1,4 +1,4 @@
-baseURL = "https://cuetorials.com"
+baseURL = "https://cuetorials.com/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
@@ -11,15 +11,13 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-# Enable Google Analytics by entering your tracking id
-googleAnalytics = "GTM-NF57PJ7"
-
 [params]
 ordersectionsby = "weight" # ordersectionsby = "title"
 disableSearch = false # default is false
 disableReadmoreNav = false # set true to hide prev/next navigation, default is false
 highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
 menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
+googleAnalytics = "GTM-NF57PJ7"
 
 [markup]
   [markup.goldmark]
