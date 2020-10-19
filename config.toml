@@ -3,7 +3,7 @@ baseURL = "https://cuetorials.com"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Cuetorials"
-theme = "ace-documentation"
+# theme = ""
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
 
