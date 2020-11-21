@@ -3,4 +3,6 @@ title: Cuetorials
 description: "Cuelang Tutorials"
 ---
 
-Welcome
+Cuelang is purpose built for configuration and more.
+CUE stands for Configure, Unify, Execute.
+
