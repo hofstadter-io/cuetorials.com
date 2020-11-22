@@ -20,16 +20,11 @@ $dark:          #343a40;
 /* Typography styling */
 .main > h1{
     padding-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.main > h2{
-    padding-top: 4rem;
-    margin-top:-1rem;   
-}
-
-.main > h3, .main > h4, .main > h5, .main > h6{
-    padding-top: 4rem;
-    margin-top:-3rem;
+.main > h2, .main > h3, .main > h4, .main > h5, .main > h6{
+    margin-top: 1rem;
 }
 
 .haschildren ul{
@@ -45,8 +40,11 @@ $dark:          #343a40;
     padding:15px;
 }
 
-.navbar-brand img {
-    height: 3rem;
+.navbar-brand {
+  font-size: 2rem;
+  img {
+      height: 3rem;
+  }
 }
 
 /* Side navigation menus */
@@ -56,7 +54,7 @@ $dark:          #343a40;
 
 @media (min-width: 768px) {
     .docs-sidenav, .docs-toc{
-        height: calc(100vh - 4rem);
+        height: calc(100vh - 8rem);
         top:4rem;
         position: sticky;
     }

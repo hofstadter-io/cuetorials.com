@@ -1,8 +1,6 @@
 ---
-title: Cuetorials
-description: "Cuelang Tutorials"
+title: Learn you some CUE for a great good!
+description: "Cue Tutorials"
 ---
 
-Cuelang is purpose built for configuration and more.
-CUE stands for Configure, Unify, Execute.
-
+## Introduction

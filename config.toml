@@ -28,7 +28,7 @@ googleAnalytics = "GTM-NF57PJ7"
 home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-copyright'></i> Cuelang"
+name = "<i class='fas fa-copyright'></i> Cuelang.org"
 url = "https://cuelang.org"
 weight = 0
 
@@ -48,12 +48,6 @@ url = "https://cuelang.org/community/"
 weight = 3
 
 [[menu.shortcuts]]
-name = "<i class='fab fa-github'></i> Cuetorials"
+name = "<i class='fab fa-github'></i> Cuetorials GH"
 url = "https://github.com/hofstadter-io/cuetorials.com"
 weight = 4
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-info-circle'></i> More from _Hofstadter"
-url = "https://hofstadter.io"
-weight = 5
-

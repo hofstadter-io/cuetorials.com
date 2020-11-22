@@ -3,6 +3,8 @@ title: "Learning the internals"
 description: "Helpful suggestions for learning Cue's internals"
 weight: 50
 ---
+
+
 ## Notes on learning how Cue works internally
 
 The main logical piece is the evaluator.
