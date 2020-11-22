@@ -9,7 +9,7 @@ weight: 1
 Welcome to __Cuetorials__ where you can
 _learn you some Cue for great good!_
 We hope this site will help you get started with Cue
-and become an invaluable resource as you become more versed.
+and that it becomes an invaluable resource as you become more versed.
 
 I am writing this to help you learn Cue while also learning more myself.
 Cue fascinated me the first time I saw it. #Futurology!
@@ -40,7 +40,6 @@ The underlying philosophy is that it is
 harder for both humans and tooling to understand
 configuration and data that has been programmed together.
 The saying is "Wrap code in data, not data in code."
-( _Pulumi, you got it backwards_ :)
 
 In Cue, _types, values, and constraints_ are all the same.
 There is no difference (to Cue) between the schema, the data, or the rules.
