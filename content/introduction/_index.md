@@ -113,5 +113,5 @@ I'm glad you asked!
 1. `cue help`, the builtin help command
 2. [GitHub Discussions](https://github.com/cuelang/cue/discussions) (trying to move here for longevity)
 3. [Cuelang Slack](./https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C) (and the [invite if needed](https://join.slack.com/t/cuelang/shared_invite/enQtNzQwODc3NzYzNTA0LTAxNWQwZGU2YWFiOWFiOWQ4MjVjNGQ2ZTNlMmIxODc4MDVjMDg5YmIyOTMyMjQ2MTkzMTU5ZjA1OGE0OGE1NmE))
-4. [Hofstadter](https://hofstadter.io) offers commercial support and consulting for Cue
+4. [Hofstadter](/getting-help/#hofstadter-commercial-support-for-cue) offers commercial support and services for Cue
 
