@@ -54,7 +54,7 @@ $dark:          #343a40;
 
 @media (min-width: 768px) {
     .docs-sidenav, .docs-toc{
-        height: calc(100vh - 8rem);
+        min-height: calc(100vh - 8rem);
         top:4rem;
         position: sticky;
     }

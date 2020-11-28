@@ -1,5 +1,5 @@
 ---
-title: "Validating Configuration"
+title: "Validate Configuration"
 description: "Validating existing configuration with Cue"
 weight: 5
 ---

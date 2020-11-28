@@ -1,5 +1,5 @@
 ---
-title: "Validating Data"
+title: "Validate Data"
 description: "Validating data with Cue"
 weight: 10
 ---

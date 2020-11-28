@@ -1,5 +1,5 @@
 ---
-title: "Generating All The Things"
+title: "Generate All The Things"
 description: "Generating non-configuration with Cue"
 weight: 25
 ---

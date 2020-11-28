@@ -1,0 +1,15 @@
+<div class="text-muted mt-5 pt-3 border-top">
+Last modified {{ .Lastmod.Format .Site.Params.time_format_default }}{{ with .GitInfo }}: <a  href="{{ $.Site.Params.github_repo }}/commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}
+</div>
+
+<div class="d-flex flex-row justify-content-between my-3">
+  <div class="ml-3">
+      {{ partial "feedback.html" .Site.Params.ui.feedback }}
+      <br />
+  </div>
+
+  <div class="mr-5">
+    {{ partial "page-meta-links.html" . }}
+  </div>
+</div>
+
