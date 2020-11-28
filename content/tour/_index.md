@@ -4,4 +4,10 @@ descrtipion: "A tour of Cue"
 weight: 10
 ---
 
-### [Types and Values](./types-and-values)
+This section will cover the basics of Cue code.
+
+<br>
+
+---
+
+{{< childpages >}}

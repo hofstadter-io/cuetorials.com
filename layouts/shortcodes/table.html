@@ -1,4 +1,4 @@
 {{ $style := .Get "style" }}
-<div class="table {{ $style }}" role="alert">
+<div class="table bd-content {{ $style }}">
     {{ print .Inner | markdownify }}
 </div>

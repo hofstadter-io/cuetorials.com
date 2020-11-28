@@ -4,16 +4,23 @@ description: "Starting Out with Cue"
 weight: 3
 ---
 
-Many people, understandably, find Cue a complex beast when getting started.
-Cue is a logical language which you can't program in, and that's OK!
-That's the point, turing incompleteness, based on years of writing
-configuration systems at Google.
-
 When you start out with Cue, the systax may feel overwhelming
-or the processing complex and disorienting.
-That's why Cuetorials is here to help you.
-To help you get started and find the joy of Cue.
+and the processing complex or disorienting.
+That's why Cuetorials is here to help you get started and discover the joy of Cue.
 
-From our experience in the community and working with companies,
-several common paths to learning Cue have emerged.
-The following sections will 
+Our experience in the Cue community and working with companies
+has lead to some easy paths to learning Cue, largely around configuration.
+The following sections will show you how to:
+
+1. Validate config files and data
+2. Generate configuration and more
+3. Work with modules and packages
+4. Write scripts with Cue
+
+Before we get to that, let's start with some very simple Cue code and commands.
+
+<br>
+
+---
+
+{{< childpages >}}

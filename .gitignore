@@ -1,1 +1,4 @@
 /dist/
+/code/*.html
+/code/**/*.html
+/resources/

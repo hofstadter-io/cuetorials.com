@@ -4,11 +4,13 @@
     <div class="wrap border border-left-0 rounded">
         {{ with .Get "title" }}
         <div class="card-header border-0 bg-white pl-3 text-{{ $style }}">
-            <h3>{{.}}</h3>
+            <h3 class="mb-0">{{.}}</h3>
         </div>
         {{ end }}
+        {{ if .Inner }}
         <div class="card-body pt-1">
             {{ print .Inner | markdownify }}
         </div>
+        {{ end }}
     </div>
 </div>

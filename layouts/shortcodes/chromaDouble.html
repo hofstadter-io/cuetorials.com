@@ -1,0 +1,48 @@
+{{ .Scratch.Set "lhsContent" "" }}
+{{ .Scratch.Set "lhsIdentifier" "" }}
+{{ $lhsTitle := .Get "lhsTitle" }}
+{{ $lhsLang := .Get "lhsLang" }}
+{{ $lhsPath := .Get "lhsPath"}}
+{{ if ($lhsPath) }}
+    {{ .Scratch.Set "lhsContent" ($lhsPath | readFile) }}
+    {{ .Scratch.Set "lhsIdentifier" (first 10 (md5 (.Scratch.Get "lhsContent"))) }}
+{{ else }}
+    "missing lhs file input"
+{{ end}}
+
+{{ .Scratch.Set "rhsContent" "" }}
+{{ .Scratch.Set "rhsIdentifier" "" }}
+{{ $rhsTitle := .Get "rhsTitle" }}
+{{ $rhsLang := .Get "rhsLang" }}
+{{ $rhsPath := .Get "rhsPath"}}
+{{ if ($rhsPath) }}
+    {{ .Scratch.Set "rhsContent" ($rhsPath | readFile) }}
+    {{ .Scratch.Set "rhsIdentifier" (first 10 (md5 (.Scratch.Get "rhsContent"))) }}
+{{ else }}
+    "missing rhs file input"
+{{ end}}
+
+<div class="d-flex flex-column flex-sm-row align-items-stretch">
+  <div class="px-1 flex-fill align-self-stretch">
+    <p class="pl-2 py-1 m-0 border">{{ $lhsTitle }}</p>
+    {{ if $lhsLang }}
+      {{ (print "```" $lhsLang "\n" (.Scratch.Get "lhsContent") "\n```") | markdownify }}
+    {{ else }}
+      <div class="highlight">
+        {{ .Scratch.Get "lhsContent" | safeHTML }}
+      </div>
+    {{ end }}
+  </div>
+  <div class="px-1 flex-fill align-self-stretch">
+    <p class="pl-2 py-1 m-0 border">{{ $rhsTitle }}</p>
+    {{ if $rhsLang }}
+      {{ (print "```" $rhsLang "\n" (.Scratch.Get "rhsContent") "\n```") | markdownify }}
+    {{ else }}
+      <div class="highlight">
+        {{ .Scratch.Get "rhsContent" | safeHTML }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+

@@ -32,14 +32,20 @@ Cue is purpose built logical language for working with data and much more.
 Most people start with Cue by validating and generating configuration.
 They then move on to data templating, runtime input validation,
 code generation, scripting, pipelines, and oh so much more
-which we'll cover throughout.
+which we'll cover throughout these tutorials.
 
+First, you should understand that
 Cue is __not__ a general purpose language
 and instead aims for __Turing-incompleteness__.
 The underlying philosophy is that it is
 harder for both humans and tooling to understand
 configuration and data that has been programmed together.
 The saying is "Wrap code in data, not data in code."
+
+Cue is a superset of JSON. This means you can represent any JSON in Cue
+with a slightly different syntax and then some Cue super powers to boot!
+
+{{< chromaDouble lhsPath="code/introduction/json-superset/lhs.json" lhsLang="json" lhsTitle="music.json" rhsPath="code/introduction/json-superset/rhs.html" rhsTitle="music.cue" >}}
 
 In Cue, _types, values, and constraints_ are all the same.
 There is no difference (to Cue) between the schema, the data, or the rules.
@@ -52,11 +58,21 @@ The entire lattice starts from a singular root (top, `_`, any),
 ends with a single leaf (bottom, `_|_`, void),
 and all other values are between these two, partially ordered.
 
-[[ insert diagrams for simple examples here ]]
+{{< chromaHTML file="code/introduction/hierarchy/code.html" >}}
 
-<blockquote class="blockquote text-center">
-<b>CUE stands for Configure, Unify, Execute.</b>
-</blockquote>
+In the code above, we have a "type" `#Schema`, some constraints `#Constrained`, and a `Value`.
+`#Definitions:` had slightly different semantics and rules than `Values:` which we will expand on in the tutorial.
+Cue has packages, imports, all the typical basic types, lists, and structs.
+The `&` combines two or more Cue "values" (all three of {type, constraint, value}) in a conjunction ("and")
+and unsures that the result is valid and correct. There is also a disjunction ("or") operator `|`.
+In `#Constrained`, you can see a regexp and logical operators as well as a builtin from the standard library.
+We'll go into the in greater depth later.
+
+Here is a visual example of Cue's value latice:
+
+[[ insert diagrams for simple examples here, both set theory and type > constraint > values ]]
+
+{{< panel title="CUE stands for Configure, Unify, Execute" style="primary" />}}
 
 With Cue, when you write code, it is not instructions for the computer.
 Rather, you are specifying something and Cue tells you if it is valid or not.
@@ -96,6 +112,6 @@ I'm glad you asked!
 
 1. `cue help`, the builtin help command
 2. [GitHub Discussions](https://github.com/cuelang/cue/discussions) (trying to move here for longevity)
-3. [Slack](./https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C) (and the [invite if needed](https://join.slack.com/t/cuelang/shared_invite/enQtNzQwODc3NzYzNTA0LTAxNWQwZGU2YWFiOWFiOWQ4MjVjNGQ2ZTNlMmIxODc4MDVjMDg5YmIyOTMyMjQ2MTkzMTU5ZjA1OGE0OGE1NmE))
-
+3. [Cuelang Slack](./https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C) (and the [invite if needed](https://join.slack.com/t/cuelang/shared_invite/enQtNzQwODc3NzYzNTA0LTAxNWQwZGU2YWFiOWFiOWQ4MjVjNGQ2ZTNlMmIxODc4MDVjMDg5YmIyOTMyMjQ2MTkzMTU5ZjA1OGE0OGE1NmE))
+4. [Hofstadter](https://hofstadter.io) offers commercial support and consulting for Cue
 
