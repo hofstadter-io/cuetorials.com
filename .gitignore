@@ -2,3 +2,6 @@
 /code/*.html
 /code/**/*.html
 /resources/
+
+/cue.mod/gen/
+/cue.mod/pkg/

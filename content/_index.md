@@ -9,7 +9,7 @@ description: "Cue Tutorials"
 
 {{< childpages page="tour/" >}}
 
-{{< childpages page="go-api/" >}}
+{{< childpages page="api/" >}}
 
 {{< childpages page="internals/" >}}
 
