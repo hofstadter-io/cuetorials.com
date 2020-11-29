@@ -16,7 +16,7 @@ Let's start out with a simple example for an `album` object. Here we see the JSO
 
 
 We start by defining a Cue `#Album` __definition__ or __schema__ which has the same structure.
-In stead of setting the fields to data, we set them to types `string`.
+Instead of setting the fields to data, we set them to types `string`.
 Looking at the date field, we can see it repeated twice.
 This enables us to accumulate constraints across locations in a file
 or even across files and packages (how easier does applying company policies become?).
