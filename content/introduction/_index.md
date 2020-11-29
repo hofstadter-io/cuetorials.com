@@ -28,7 +28,7 @@ is the correct choice for configuration systems.
 
 ### So what is Cue?
 
-Cue is purpose built logical language for working with data and much more.
+Cue is a purpose built logical language for working with data and much more.
 Most people start with Cue by validating and generating configuration.
 They then move on to data templating, runtime input validation,
 code generation, scripting, pipelines, and oh so much more
@@ -64,7 +64,7 @@ In the code above, we have a "type" `#Schema`, some constraints `#Constrained`, 
 `#Definitions:` had slightly different semantics and rules than `Values:` which we will expand on in the tutorial.
 Cue has packages, imports, all the typical basic types, lists, and structs.
 The `&` combines two or more Cue "values" (all three of {type, constraint, value}) in a conjunction ("and")
-and unsures that the result is valid and correct. There is also a disjunction ("or") operator `|`.
+and ensures that the result is valid and correct. There is also a disjunction ("or") operator `|`.
 In `#Constrained`, you can see a regexp and logical operators as well as a builtin from the standard library.
 We'll go into the in greater depth later.
 
