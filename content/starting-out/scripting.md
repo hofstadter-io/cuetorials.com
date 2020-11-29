@@ -1,7 +1,7 @@
 ---
 title: "Scripting with Cue"
 description: "Scripting with Cue's tooling layer"
-weight: 70
+weight: 60
 ---
 
 Cue has a tooling layer where you can work with

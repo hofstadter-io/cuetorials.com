@@ -1,7 +1,7 @@
 ---
 title: "Validate Data"
 description: "Validating data with Cue"
-weight: 10
+weight: 55
 ---
 
 Validating is very similar to validating configuration

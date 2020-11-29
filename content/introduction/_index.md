@@ -12,7 +12,7 @@ We hope this site will help you get started with Cue
 and that it becomes an invaluable resource as you become more versed.
 
 I am writing this to help you learn Cue while also learning more myself.
-Cue fascinated me the first time I saw it. #Futurology!
+Cue fascinated me the first time I saw it. __#Futurology!__
 Cue's logical foundation took me back to Prolog
 and it's application to managing configuration was timely.
 I had just hacked imports into yaml, sat back and said "this is a bad idea..."
@@ -28,7 +28,7 @@ is the correct choice for configuration systems.
 
 ### So what is Cue?
 
-Cue is a purpose built logical language for working with data and much more.
+Cue is a purpose built logical language for working with config, schemas, data, and executing on these things.
 Most people start with Cue by validating and generating configuration.
 They then move on to data templating, runtime input validation,
 code generation, scripting, pipelines, and oh so much more

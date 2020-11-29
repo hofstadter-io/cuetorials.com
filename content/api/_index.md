@@ -1,5 +1,5 @@
 ---
-title: "The Go API"
+title: "Cue's API"
 description: "Using Cue's Go API"
 weight: 50
 ---

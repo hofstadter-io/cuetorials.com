@@ -1,5 +1,5 @@
 ---
-title: "Cue Internals"
+title: "Internals"
 description: "How Cue works internally"
 weight: 100
 ---
