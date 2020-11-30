@@ -1,0 +1,35 @@
+Completed:
+- complete: true
+  effort: 1
+  name: t1
+- complete: true
+  effort: 4
+  name: t2
+- complete: true
+  effort: 2
+  name: t4
+INPUT:
+  name: Tony
+  todos:
+  - complete: true
+    effort: 1
+    name: t1
+  - complete: true
+    effort: 4
+    name: t2
+  - complete: false
+    effort: 3
+    name: t3
+  - complete: true
+    effort: 2
+    name: t4
+  - complete: false
+    effort: 3
+    name: t5
+Incomplete:
+- complete: false
+  effort: 3
+  name: t3
+- complete: false
+  effort: 3
+  name: t5
