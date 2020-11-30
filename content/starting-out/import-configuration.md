@@ -85,3 +85,7 @@ you can run `cue trim` on the file to remove redundent code
 Advanced trimming is on the roadmap for Cue via _anti-unification._
 
 {{< chromaHTML file="code/starting-out/import-configuration/cuetorials-trimmed.html" >}}
+
+You may be saying, “this wackiness about int/str ports does not match my kubernetes files”
+and you are totally right. We’ll see later how to work with OpenAPI specs and more
+in the integrations sections.

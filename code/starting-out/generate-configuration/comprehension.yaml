@@ -1,0 +1,63 @@
+band:
+  name: Led Zeppelin
+  selfTitled:
+  - title: 'Led Zeppelin '
+  - title: Led Zeppelin II
+  - title: Led Zeppelin III
+  - title: Led Zeppelin IV
+  allAlbums:
+  - title: 'Led Zeppelin '
+  - title: Led Zeppelin II
+  - title: Led Zeppelin III
+  - title: Led Zeppelin IV
+  - title: Houses of the Holy
+  - title: Physical Graffiti
+  - title: Presence
+  - title: In Through the Out Door
+  - title: Coda
+  Albums:
+    Led Zeppelin:
+      pos: 0
+      artist: Led Zeppelin
+      title: Led Zeppelin
+      titleLen: 13
+    Led Zeppelin II:
+      pos: 1
+      artist: Led Zeppelin
+      title: Led Zeppelin II
+      titleLen: 15
+    Led Zeppelin III:
+      pos: 2
+      artist: Led Zeppelin
+      title: Led Zeppelin III
+      titleLen: 16
+    Led Zeppelin IV:
+      pos: 3
+      artist: Led Zeppelin
+      title: Led Zeppelin IV
+      titleLen: 15
+    Houses of the Holy:
+      pos: 4
+      artist: Led Zeppelin
+      title: Houses of the Holy
+      titleLen: 18
+    Physical Graffiti:
+      pos: 5
+      artist: Led Zeppelin
+      title: Physical Graffiti
+      titleLen: 17
+    Presence:
+      pos: 6
+      artist: Led Zeppelin
+      title: Presence
+      titleLen: 8
+    In Through the Out Door:
+      pos: 7
+      artist: Led Zeppelin
+      title: In Through the Out Door
+      titleLen: 23
+    Coda:
+      pos: 8
+      artist: Led Zeppelin
+      title: Coda
+      titleLen: 4

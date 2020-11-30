@@ -1,0 +1,3 @@
+package bar
+
+value: "BAR"
