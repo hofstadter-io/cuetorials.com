@@ -1,5 +1,7 @@
 package gol
 
+import "list"
+
 #grid: [...[...int]]
 
 init55: #grid & [
@@ -96,9 +98,21 @@ steps: {
 	// "3": (#step & { _G: steps["2"].out })
 }
 
-step000: init
-step001: (#step & { _G: step000 })
-step002: (#step & { _G: step001.out })
+#calc: {
+	steps: 3
+	RR: list.Range(0,steps, 1)
+	ss: {
+		"0": { out: init }
+		for i, I in RR {
+			let G = ss["\(I)"].out
+			"\(I+1)": (#step & { _G: G })
+		}
+	}
+}
+
+//step000: init
+//step001: (#step & { _G: step000 })
+//step002: (#step & { _G: step001.out })
 // step003: (#step & { _G: step002.out })
 //step004: (#step & { _G: step003.out })
 //step005: (#step & { _G: step004.out })
