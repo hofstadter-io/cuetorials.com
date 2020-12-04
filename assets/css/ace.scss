@@ -27,12 +27,24 @@ $dark:          #343a40;
     margin-top: 1rem;
 }
 
+.nav-link {
+  &.parent {
+    color: #0058aa !important;
+  }
+  &.current {
+    color: #007bff !important;
+  }
+}
+
+.nav-item.current {
+  color: #007bff !important;
+}
+
 .haschildren ul{
-    color: gray;
     display:none;
 }
 
-.haschildren.active ul, .haschildren.parent ul{
+.haschildren.current ul, .haschildren.parent ul{
     display:block;
 }
 

@@ -12,14 +12,9 @@
          <ul class="navbar-nav flex-column pt-3">
              {{- $currentNode := . }}
              {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
-             {{- if eq .Site.Params.ordersectionsby "title"}}
-               {{- range .Site.Home.Sections.ByTitle}}
-               {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
-               {{- end}}
-             {{- else}}
-               {{- range .Site.Home.Sections.ByWeight}}
-               {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
-               {{- end}}
+
+             {{- range .Site.Home.Sections.ByWeight}}
+             {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode}}
              {{- end}}
         </ul>
     </div>
@@ -33,14 +28,17 @@
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1
+        {{- if .InSection $currentNode}} insection{{ else }} notinsection{{end}}
         {{- if .IsAncestor $currentNode}} parent{{end}}
-        {{- if eq .RelPermalink $currentNode.RelPermalink}} active{{end}}
+        {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{ end }}
         {{- if .Params.alwaysopen}} alwaysopen{{end -}}
-        {{- if ne $numberOfPages 0 }} haschildren{{end}}
+        {{- if ne $numberOfPages 0 }} haschildren{{end -}}
         ">
         <!-- I'm the params head -->
-        <a class="nav-link p-0" href="{{.RelPermalink}}"><h6>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</h6></a>
-      {{- if ne $numberOfPages 0 }}
+        <a class="nav-link p-0 foo
+          {{- if eq .RelPermalink $currentNode.RelPermalink}} current
+          {{- else if .IsAncestor $currentNode}} parent{{end}}" href="{{.RelPermalink}}"><h6>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</h6></a>
+        {{- if ne $numberOfPages 0 }}{{ if (or (eq .RelPermalink $currentNode.RelPermalink) (.IsAncestor $currentNode)) }}
         <ul class="list-unstyled ml-2">
           {{- .Scratch.Set "pages" .Pages }}
           {{- if .Sections}}
@@ -48,29 +46,21 @@
           {{- end}}
           {{- $pages := (.Scratch.Get "pages") }}
 
-        {{- if eq .Site.Params.ordersectionsby "title"}}
-          {{- range $pages.ByTitle }}
-            {{- if and .Params.hidden (not $.showhidden) }}
-            {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-            {{- end}}
-          {{- end}}
-        {{- else}}
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
             {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
             {{- end}}
           {{- end}}
-        {{- end}}
         </ul>
+      {{- end}}
       {{- end}}
     </li>
 {{- else}}
     {{- if not .Params.Hidden }}
-        <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} active{{end -}}">
+        <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
                 <!-- I'm the params hidden -->
-                 <a href="{{.RelPermalink}}" class="nav-link p-0">
+                 <a href="{{.RelPermalink}}" class="nav-link p-0 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
                     {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
                 </a>
         </li>
