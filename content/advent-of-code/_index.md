@@ -1,11 +1,12 @@
 ---
 title: "Advent of Code"
-description: "Advent of Code 2020"
+description: "Advent of Code Solution"
 weight: 900
 ---
 
-## Using Cue to solve Advent of Code 2020
+## Using Cue to solve Advent of Code
 
+https://adventofcode.com/
 
 #### _answers are __not__ hidden_
 
