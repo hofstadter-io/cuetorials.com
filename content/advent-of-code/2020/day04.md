@@ -24,7 +24,7 @@ The automatic passport scanners are slow because they're having trouble detectin
 - ecl (Eye Color)
 - pid (Passport ID)
 - cid (Country ID)
-- 
+
 Passport data is validated in batch files (your puzzle input). Each passport is represented as a sequence of key:value pairs separated by spaces or newlines. Passports are separated by blank lines.
 
 Here is an example batch file containing four passports:
