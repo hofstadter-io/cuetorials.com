@@ -42,7 +42,7 @@ Every seat also has a unique seat ID: multiply the row by 8, then add the column
 
 Here are some other boarding passes:
 
-```
+```text
 BFFFBBFRRR: row 70, column 7, seat ID 567.
 FFFBBBFRRR: row 14, column 7, seat ID 119.
 BBFFBBFRLL: row 102, column 4, seat ID 820.
@@ -61,7 +61,7 @@ Your seat wasn't at the very front or back, though; the seats with IDs +1 and -1
 
 What is the ID of your seat?
 
-### Answers
+### Answer
 
 {{< chromaHTML file="code/advent-of-code/2020/day05.html">}}
 

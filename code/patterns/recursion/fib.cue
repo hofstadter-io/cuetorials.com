@@ -15,11 +15,11 @@ _#calc: {
 }
 
 
-_nums: list.Range(1,20,1)
+_nums: list.Range(1,num,1)
 
-_fibs: [ for i, I in _nums { (_#calc & { n: I }).f } ]
+fibs: [ for i, I in _nums { (_#calc & { n: I }).f } ]
 
 num: float | *23.0 @tag(N,type=number)
-fib: (_#calc & {n: num}).f
+// fib: (_#calc & {n: num}).f
 
 // not really recursion ;]
