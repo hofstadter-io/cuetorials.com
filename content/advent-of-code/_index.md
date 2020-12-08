@@ -8,6 +8,9 @@ weight: 900
 
 https://adventofcode.com/
 
+The code in these sections can be found in `hofstadter-io/cutorials.com` repository
+under [code/advent-of-code](https://github.com/hofstadter-io/cuetorials/tree/main/code/advent-of-code)
+
 #### _answers are __not__ hidden_
 
 

@@ -13,7 +13,7 @@ func main() {
 	var RT cue.Runtime
 
 	// The entrypoints are the same as the files you'd specify at the command line
-	entrypoints := []string{"hello.cue"}
+	entrypoints := []string{"format.cue"}
 
 	// Load Cue files into Cue build.Instances slice
 	// the second arg is a configuration object, we'll see this later
