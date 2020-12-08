@@ -535,8 +535,8 @@ drab teal bags contain 3 shiny gold bags, 2 muted blue bags, 2 posh coral bags, 
 pale olive bags contain 2 dull violet bags, 5 shiny maroon bags, 4 light red bags, 2 wavy cyan bags.
 dotted coral bags contain 1 light blue bag, 2 plaid black bags.
 light aqua bags contain 1 vibrant lime bag, 3 clear gold bags, 1 plaid plum bag, 5 shiny plum bags.
-posh magenta bags contain 4 plaid plum bags, 2 vibrant lime bags, 5 light aqua bags, 2 dull blue bags.
 posh coral bags contain 3 dotted salmon bags, 2 dim lavender bags, 4 wavy purple bags.
+posh magenta bags contain 4 plaid plum bags, 2 vibrant lime bags, 5 light aqua bags, 2 dull blue bags.
 dark plum bags contain 2 vibrant aqua bags, 2 dim fuchsia bags, 4 dull blue bags.
 posh teal bags contain 4 mirrored indigo bags, 3 striped purple bags, 5 dim cyan bags, 4 plaid silver bags.
 vibrant salmon bags contain 3 faded lime bags.
