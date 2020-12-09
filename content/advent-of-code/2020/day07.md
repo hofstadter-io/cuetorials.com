@@ -14,7 +14,7 @@ Due to recent aviation regulations, many rules (your puzzle input) are being enf
 
 For example, consider the following rules:
 
-```
+```text
 light red bags contain 1 bright white bag, 2 muted yellow bags.
 dark orange bags contain 3 bright white bags, 4 muted yellow bags.
 bright white bags contain 1 shiny gold bag.
@@ -60,7 +60,7 @@ Of course, the actual rules have a small chance of going several levels deeper t
 
 Here's another example:
 
-```
+```text
 shiny gold bags contain 2 dark red bags.
 dark red bags contain 2 dark orange bags.
 dark orange bags contain 2 dark yellow bags.

@@ -22,7 +22,7 @@ The boot code is represented as a text file with one instruction per line of tex
 
 For example, consider the following program:
 
-```
+```text
 nop +0
 acc +1
 jmp +4
@@ -36,7 +36,7 @@ acc +6
 
 These instructions are visited in this order:
 
-```
+```text
 nop +0  | 1
 acc +1  | 2, 8(!)
 jmp +4  | 3
@@ -70,7 +70,7 @@ The program is supposed to terminate by attempting to execute an instruction imm
 
 For example, consider the same program from above:
 
-```
+```text
 nop +0
 acc +1
 jmp +4
@@ -86,7 +86,7 @@ If you change the first instruction from nop +0 to jmp +0, it would create a sin
 
 However, if you change the second-to-last instruction (from jmp -4 to nop -4), the program terminates! The instructions are visited in this order:
 
-```
+```text
 nop +0  | 1
 acc +1  | 2
 jmp +4  | 3
