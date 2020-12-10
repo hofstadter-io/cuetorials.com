@@ -7,9 +7,14 @@ description: "Cue Tutorials"
 
 {{< childpages page="starting-out/" >}}
 
-{{< childpages page="tour/" >}}
+{{< childpages page="run-through/" >}}
+
+{{< childpages page="patterns/" >}}
 
 {{< childpages page="api/" >}}
 
+{{< childpages page="integrations/" >}}
 {{< childpages page="internals/" >}}
+{{< childpages page="theory/" >}}
 
+{{< childpages page="getting-help/" >}}
