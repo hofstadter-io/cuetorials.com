@@ -1,7 +1,7 @@
 ---
 title: "Integrations"
 description: "Integrations with Cuelang"
-weight: 50
+weight: 40
 ---
 
 Cue integrates with several other

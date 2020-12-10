@@ -1,7 +1,7 @@
 ---
 title: "Run Through"
 description: "A run-through of Cue syntax and capabilities"
-weight: 10
+weight: 5
 ---
 
 A run-through on Cue will show you

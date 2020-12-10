@@ -85,8 +85,10 @@ cue.mod
             └── hofmod-server
 ```
 
-Because Cue does not yet have a dependency managemnet system, you have to get them their another way.
-Fortunatedly, Hofstadter has built a generalized dependency management system as part of our `hof` tool,
+Cue does not yet have a dependency managemnet system. You have to get them in place another way.
+([Open issue](https://github.com/cuelang/cue/issues/409))
+
+Fortunately, Hofstadter has built a generalized dependency management system as part of our `hof` tool,
 based on `go mod` and Minimum Version Selection (MVS).
 While it does not have all of the automation of a `go mod` solution, but should help you out unitl Cue has its own.
 

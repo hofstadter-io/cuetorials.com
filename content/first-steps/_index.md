@@ -1,7 +1,7 @@
 ---
-title: "Starting Out"
-description: "Starting Out with Cue"
-weight: 3
+title: "First Steps"
+description: "First steps with Cue"
+weight: 10
 ---
 
 When you start out with Cue, the systax may feel overwhelming
