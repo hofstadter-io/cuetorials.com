@@ -1,1 +1,1 @@
-module: "github.com/hofstadter-io/cuetorials"
+module: "github.com/hofstadter-io/cuetorials.com"
