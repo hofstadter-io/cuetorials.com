@@ -1,4 +1,4 @@
-package revdep
+package algos
 
 import "list"
 
