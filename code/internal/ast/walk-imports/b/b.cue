@@ -1,0 +1,3 @@
+package b
+
+B: "B"

@@ -5,7 +5,7 @@ description: "Cue Tutorials"
 
 {{< childpages page="introduction/" brief="a one pager about Cue" >}}
 {{< childpages page="run-through/" brief="of Cue's concepts and syntax" >}}
-{{< childpages page="first-steps/" brief="you can take with Cue" >}}
+{{< childpages page="first-steps/" brief="to adopting Cue" >}}
 {{< childpages page="patterns/" brief="and more complex Cue" >}}
 {{< childpages page="integrations/" brief="with other formats and standards" >}}
 {{< childpages page="api/" brief="for working with Cue from Go" >}}

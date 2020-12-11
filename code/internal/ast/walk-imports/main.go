@@ -13,7 +13,7 @@ func main() {
 	var RT cue.Runtime
 
 	// The entrypoints are the same as the files you'd specify at the command line
-	entrypoints := []string{"format.cue"}
+	entrypoints := []string{"a.cue", "b/b.cue"}
 
 	// Load Cue files into Cue build.Instances slice
 	// the second arg is a configuration object, we'll see this later
@@ -28,7 +28,7 @@ func main() {
 			continue
 		}
 
-		// Use cue.Runtime to build.Instance to cue.Instance
+		// Use cue.Runtime to build.Instance to cue.INstance
 		I, err := RT.Build(bi)
 		if err != nil {
 			fmt.Println("Error during build:", bi.Err)
@@ -73,3 +73,4 @@ func main() {
 	}
 
 }
+
