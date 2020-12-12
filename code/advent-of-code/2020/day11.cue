@@ -2,11 +2,10 @@ package day11
 
 import (
 	"list"
-	// "strconv"
 	"strings"
 )
 
-iters: int | *5 @tag(iters,type=int)
+iters: int | *1 @tag(iters,type=int)
 
 // # -> 35
 // . -> 46
@@ -14,7 +13,7 @@ iters: int | *5 @tag(iters,type=int)
 
 // input processing
 // _input: _example
-_input: _real
+// _input: _real
 _lines: strings.Split(_input, "\n")
 _runes: [for _, L in _lines { 
 	strings.Runes(L)
@@ -92,9 +91,11 @@ _XR: list.Range(0,X+1,1)
 				}]
 			}]
 			_grid: [ for y, _ in _YR { [for x, _ in _XR { Grid[y][x].val }] } ]
-			// pretty: strings.Join([ for y, _ in _YR { strings.Join([for x, _ in _XR { Grid[y][x].rune }], "") } ], "\n")
 			same: _grid == last
-			// seats: strings.Count(pretty, "#")
+			if i+1 == iters {
+				pretty: strings.Join([ for y, _ in _YR { strings.Join([for x, _ in _XR { Grid[y][x].rune }], "") } ], "\n")
+				seats: strings.Count(pretty, "#")
+			}
 		}
 
 	}
