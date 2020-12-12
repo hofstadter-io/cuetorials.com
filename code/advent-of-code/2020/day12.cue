@@ -66,6 +66,7 @@ rR: {
 	}
 }
 
+// rotate waypoint left
 RL: {
 	_x: int
 	_y: int
@@ -83,6 +84,7 @@ RL: {
 	}			
 }
 
+// rotate waypoint right
 RR: {
 	_x: int
 	_y: int
@@ -189,3 +191,5 @@ RR: {
 		}
 	}
 }
+
+// answers are in the last element (M & pM)
