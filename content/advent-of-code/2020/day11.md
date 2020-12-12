@@ -254,7 +254,7 @@ Given the new visibility method and the rule change for occupied seats becoming 
 
 Only solved part1 so far. Due to Cue’s performance issues, this one needs to be run in a bash loop.
 
-`mkdir day11; for I in {1..100}; cue cmd -t iter=$I day11_tool.cue; done`
+`mkdir day11; for I in {1..100}; do cue cmd sol -t iter=$I day11_tool.cue; done`
 
 It will print an update each iteration.
 
