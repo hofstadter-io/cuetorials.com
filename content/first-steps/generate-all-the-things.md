@@ -15,11 +15,11 @@ How? By using `text/templates` to render any file we wish.
 
 `first.cue`
 
-{{< chromaHTML file="code/starting-out/generate-all-the-things/first.html">}}
+{{< chromaHTML file="code/first-steps/generate-all-the-things/first.html">}}
 
 `first_tool.cue`
 
-{{< chromaHTML file="code/starting-out/generate-all-the-things/first_tool.html">}}
+{{< chromaHTML file="code/first-steps/generate-all-the-things/first_tool.html">}}
 
 ```sh
 cue cmd -t "name=bob" gen-todos
@@ -53,7 +53,7 @@ and use a 3-way diff to merge design updates and custom code.
 
 `hof.cue`
 
-{{< chromaHTML file="code/starting-out/generate-all-the-things/hof.html">}}
+{{< chromaHTML file="code/first-steps/generate-all-the-things/hof.html">}}
 
 You can learn more about `hof` from these links:
 

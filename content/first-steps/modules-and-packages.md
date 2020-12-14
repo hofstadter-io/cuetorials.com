@@ -30,31 +30,31 @@ Before you do, you will _not_ be able to import files from other directories or 
 
 `cue.mod/module.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/cue.mod/module.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/module.html" >}}
 
 `root.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/root.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/root.html" >}}
 
 `a/a.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/a/a.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/a/a.html" >}}
 
 `cue.mod/pkg/github.com/foo/bar/bar.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/cue.mod/pkg/github.com/foo/bar/bar.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/bar.html" >}}
 
 `cue.mod/pkg/github.com/foo/bar/b/b.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/cue.mod/pkg/github.com/foo/bar/b/b.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/b/b.html" >}}
 
 `cue.mod/pkg/github.com/foo/bar/multi/hello.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" >}}
 
 `cue.mod/pkg/github.com/foo/bar/multi/world.cue`
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" >}}
 
 We can see this works by running
 
@@ -62,7 +62,7 @@ We can see this works by running
 cue eval root.cue
 ```
 
-{{< chromaHTML file="code/starting-out/modules-and-packages/eval.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/eval.html" >}}
 
 
 <br>
@@ -130,5 +130,5 @@ You can learn more about Hofstadter and our `hof` tool at https://docs.hofstadte
 
 We also have several modules available on GitHub (https://github.com/hofstadter-io)
 using the `hofmod-` prefix. These are designed for our code generation framework,
-discussed in the final section of "starting-out".
+discussed in the final section of "first-steps".
 

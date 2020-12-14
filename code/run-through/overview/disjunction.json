@@ -1,0 +1,8 @@
+{
+    "hello": "world",
+    "port": 5432,
+    "val": {
+        "foo": "bar",
+        "ans": 42
+    }
+}

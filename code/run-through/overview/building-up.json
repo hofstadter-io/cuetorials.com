@@ -1,0 +1,13 @@
+{
+    "value": {
+        "name": "app",
+        "kind": "deploy",
+        "version": "v1.0.42",
+        "labels": [
+            "server",
+            "prod"
+        ],
+        "role": "backend",
+        "public": false
+    }
+}

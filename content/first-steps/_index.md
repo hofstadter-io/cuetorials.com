@@ -11,7 +11,7 @@ From our experience in the Cue community, and from working with companies,
 we have found some easy paths to start learning Cue.
 
 The code in these sections can be found in `hofstadter-io/cutorials.com` repository
-under [code/starting-out](https://github.com/hofstadter-io/cuetorials/tree/main/code/starting-out)
+under [code/first-steps](https://github.com/hofstadter-io/cuetorials/tree/main/code/first-steps)
 
 The following sections will show you how to:
 

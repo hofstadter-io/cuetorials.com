@@ -12,7 +12,7 @@ When we validate existing configuration, we are designing a schema and using Cue
 
 Let's start out with a simple example for an `album` object. Here we see the JSON and Cue representation for an album.
 
-{{< chromaDouble lhsPath="code/starting-out/validate-configuration/album.json" lhsLang="json" lhsTitle="album.json" rhsPath="code/starting-out/validate-configuration/album.html" rhsTitle="album.cue" >}}
+{{< chromaDouble lhsPath="code/first-steps/validate-configuration/album.json" lhsLang="json" lhsTitle="album.json" rhsPath="code/first-steps/validate-configuration/album.html" rhsTitle="album.cue" >}}
 
 
 We start by defining a Cue `#Album` __definition__ or __schema__ which has the same structure.
@@ -61,7 +61,7 @@ Let's validate the Kubernetes manifests for this website.
 Below is the Yaml as a single file,
 [you can find the originals in the repo](https://github.com/hofstadter-io/cuetorials.com/tree/main/ci/k8s).
 
-{{< chromaCode lang="yaml" file="code/starting-out/validate-configuration/cuetorials.yaml" >}}
+{{< chromaCode lang="yaml" file="code/first-steps/validate-configuration/cuetorials.yaml" >}}
 
 <br>
 
@@ -71,7 +71,7 @@ As a first step, we setup some top-level __definitions__ for our Kubernetes reso
 We have a definition for each resource type and a `#Schema` which uses the disjunction operator (`|`) to
 say the schema must unify with one of these entries, like an "or" statement.
 
-{{< chromaHTML file="code/starting-out/validate-configuration/cuetorials-v1.html" >}}
+{{< chromaHTML file="code/first-steps/validate-configuration/cuetorials-v1.html" >}}
 
 Each resource type is defined as a `struct` (`{}`), defines fields for `apiVerions` and `kind`,
 and leaves the definition open with the `...` (meaning more fields are allowed).
@@ -96,7 +96,7 @@ and so we needed the disjunction and selector to make this work.
 
 Now that we have some boilerplate, let's define more schema to validate deeper into the objects.
 
-{{< chromaHTML file="code/starting-out/validate-configuration/cuetorials-v2.html" >}}
+{{< chromaHTML file="code/first-steps/validate-configuration/cuetorials-v2.html" >}}
 
 Here are the things to pay attention to:
 
@@ -114,7 +114,7 @@ You'll also notice in the last section that we had several schema sections which
 We can reduce this by introducing some reusable definitions for `label` and `metadata`.
 The repeated sections are replaced with the definition label.
 
-{{< chromaHTML file="code/starting-out/validate-configuration/cuetorials-v3.html" >}}
+{{< chromaHTML file="code/first-steps/validate-configuration/cuetorials-v3.html" >}}
 
 
 <br>
@@ -127,7 +127,7 @@ they match within different sections of a resource. We change the schema to:
 - include `labels: app: string` to ensure an `app` label is on all resources. Notice that we can specify nested resources on a single line with `path: to: nested: value`.
 - use `metadata.labels` on `#Deployment.spec.selector.matchLabels` and `#Service.spec.selector`. This ensures that the labels are the same between the respective sections of the resources.
 
-{{< chromaHTML file="code/starting-out/validate-configuration/cuetorials-v4.html" >}}
+{{< chromaHTML file="code/first-steps/validate-configuration/cuetorials-v4.html" >}}
 
 <br>
 
