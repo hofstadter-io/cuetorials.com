@@ -1,6 +1,6 @@
 ---
-title: "Overview"
-description: "A quick overview of Cue"
+title: "Foundations"
+description: "Foundations for Cue"
 weight: 5
 ---
 
@@ -21,10 +21,9 @@ When representing JSON in Cue, the differences are:
 - The outer most curly braces are optional
 
 
-
 {{< chromaDouble
-  lhsPath="code/run-through/overview/superset.html" lhsTitle="superset.cue"
-  rhsPath="code/run-through/overview/superset.json" rhsLang="json" rhsTitle="cue export superset.cue"
+  lhsPath="code/overview/foundations/superset.html" lhsTitle="superset.cue"
+  rhsPath="code/overview/foundations/superset.json" rhsLang="json" rhsTitle="cue export superset.cue"
 >}}
 
 
@@ -45,15 +44,19 @@ as a rough guide with instances becoming more concrete until there is an error.
 
 ### Types are Values
 
+If you think about JSONSchema vs JSON, they are separate concepts.
+One defines a schema, the other is data. In Cue they are the same.
+
 Cue merges types and values into a single concept, the value lattice.
 This gives us the ability to
 define schemas, refine with constraints, fill with data,
 and combine these ideas along a spectrum.
+It also means defining schemas is more natural with how we think about and write code as humans.
 
 {{< chromaTriple
-  lhsPath="code/run-through/overview/tav-schema.html" lhsTitle="Schema"
-  midPath="code/run-through/overview/tav-constrain.html" midTitle="Constraints"
-  rhsPath="code/run-through/overview/tav-data.html" rhsTitle="Data"
+  lhsPath="code/overview/foundations/tav-schema.html" lhsTitle="Schema"
+  midPath="code/overview/foundations/tav-constrain.html" midTitle="Constraints"
+  rhsPath="code/overview/foundations/tav-data.html" rhsTitle="Data"
 >}}
 
 While you're likely familiar with types and data,
@@ -90,8 +93,8 @@ as long as they are consistent with each other.
 - the rules are applied recursively
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/fields.html" lhsTitle="fields.cue"
-  rhsPath="code/run-through/overview/fields-eval.html" rhsTitle="cue eval fields.cue"
+  lhsPath="code/overview/foundations/fields.html" lhsTitle="fields.cue"
+  rhsPath="code/overview/foundations/fields-eval.html" rhsTitle="cue eval fields.cue"
 >}}
 
 Using these properties will be
@@ -111,19 +114,19 @@ They have slightly different rules from structs.
 You indicate a definitions with `#mydef:` and can leave it open with `...`
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/definition.html" lhsTitle="definition.cue"
-  rhsPath="code/run-through/overview/definition.json" rhsLang="json" rhsTitle="cue eval definition.cue"
+  lhsPath="code/overview/foundations/definition.html" lhsTitle="definition.cue"
+  rhsPath="code/overview/foundations/definition.json" rhsLang="json" rhsTitle="cue eval definition.cue"
 >}}
 
 
 ### Conjunctions
 
-Conjunctions "meet" to values together, combining their rules or data.
+Conjunctions "meet" values together, combining their fields, rules, and data.
 They are like "and" and the `&` operator is used for them.
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/conjunction.html" lhsTitle="conjunction.cue"
-  rhsPath="code/run-through/overview/conjunction.json" rhsLang="json" rhsTitle="cue export conjunction.cue"
+  lhsPath="code/overview/foundations/conjunction.html" lhsTitle="conjunction.cue"
+  rhsPath="code/overview/foundations/conjunction.json" rhsLang="json" rhsTitle="cue export conjunction.cue"
 >}}
 
 
@@ -133,9 +136,13 @@ Disjunctions "join" values to create options or alternatives.
 They are like "or" and the `|` operator is used for them.
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/disjunction.html" lhsTitle="disjunction.cue"
-  rhsPath="code/run-through/overview/disjunction.json" rhsLang="json" rhsTitle="cue export disjunction.cue"
+  lhsPath="code/overview/foundations/disjunction.html" lhsTitle="disjunction.cue"
+  rhsPath="code/overview/foundations/disjunction.json" rhsLang="json" rhsTitle="cue export disjunction.cue"
 >}}
+
+- enums (as values)
+- sum-type (any of these types)
+- null-coalescing (use this computation, or default to some valu)
 
 
 ### Defaults and Optionals
@@ -143,8 +150,8 @@ They are like "or" and the `|` operator is used for them.
 Cue supports setting defaults for values or marking a field optional.
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/default-optional.html" lhsTitle="default-optional.cue"
-  rhsPath="code/run-through/overview/default-optional.json" rhsLang="json" rhsTitle="cue export default-optional.cue"
+  lhsPath="code/overview/foundations/default-optional.html" lhsTitle="default-optional.cue"
+  rhsPath="code/overview/foundations/default-optional.json" rhsLang="json" rhsTitle="cue export default-optional.cue"
 >}}
 
 
@@ -161,7 +168,7 @@ By default structs are open and definitions are closed.
 Cue also allows us to explicitly do the opposite.
 
 {{< chromaHTML
-  file="code/run-through/overview/open-closed.html" title="open-closed.cue"
+  file="code/overview/foundations/open-closed.html" title="open-closed.cue"
 >}}
 
 
@@ -171,8 +178,8 @@ In Cue, it is recommended to start small and build values up.
 This makes schemas reusable.
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/building-up.html" lhsTitle="building-up.cue"
-  rhsPath="code/run-through/overview/building-up.json" rhsLang="json" rhsTitle="cue export building-up.cue"
+  lhsPath="code/overview/foundations/building-up.html" lhsTitle="building-up.cue"
+  rhsPath="code/overview/foundations/building-up.json" rhsLang="json" rhsTitle="cue export building-up.cue"
 >}}
 
 ### Order is Irrelevant
@@ -181,8 +188,8 @@ Cue's unification system resolves values, schemas,  and correctness
 regardless of order and which files may contain them.
 
 {{< chromaDouble
-  lhsPath="code/run-through/overview/order.html" lhsTitle="order.cue"
-  rhsPath="code/run-through/overview/order-2.html" rhsTitle="cue export order.cue order-2.cue"
+  lhsPath="code/overview/foundations/order.html" lhsTitle="order.cue"
+  rhsPath="code/overview/foundations/order-2.html" rhsTitle="cue export order.cue order-2.cue"
 >}}
 
 
@@ -200,9 +207,21 @@ The main ideas are:
 - no primitive recursion or inheritance
 - the initial learning curve is worth the long-term maintenance
 
-The main inspirations are:
+The main inspirations for these restrictions are:
 
-- Difficulties with Borgcfg and GCL as complexity grew
-- Lingo and Typed Feature Structure Grammars
-- Logical and functional languages
+- Difficulties with Borgcfg and GCL as complexity grew (i.e. object orientedness)
+- Lingo and Typed Feature Structure Grammars (managing massive configurations)
+- Logical and functional languages (various pieces like comprehensions in immutability)
+
+
+### Foundations in Golang
+
+Cue started as a fork of Go mainly to simplify the bootstrapping of a new language.
+Marcel is also a member of the Go team at Google and many philosophies carry over:
+
+- Cue is implemented in Go
+- Rich tooling in an awesome CLI
+- APIs for working with the language
+- A standard library included
+
 

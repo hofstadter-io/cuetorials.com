@@ -47,6 +47,13 @@ with a slightly different syntax and then some Cue super powers to boot!
 
 {{< chromaDouble lhsPath="code/introduction/json-superset/lhs.json" lhsLang="json" lhsTitle="music.json" rhsPath="code/introduction/json-superset/rhs.html" rhsTitle="music.cue" >}}
 
+If you think about JSONSchema vs JSON, they are separate concepts.
+One defines a schema, the other is data. In Cue they are the same.
+Cue merges types and values into a single concept, the value lattice.
+This gives us the ability to
+define schemas, refine with constraints, and create valid data in the same file.
+It also means defining schemas is more natural with how we think about and write code as humans.
+
 In Cue, _types, values, and constraints_ are all the same.
 There is no difference (to Cue) between the schema, the data, or the rules.
 Cue has a __value hierarchy__ which connects

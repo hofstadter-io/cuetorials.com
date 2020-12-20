@@ -13,7 +13,7 @@ func main() {
 	var RT cue.Runtime
 
 	// The entrypoints are the same as the files you'd specify at the command line
-	entrypoints := []string{"format.cue"}
+	entrypoints := []string{"fill.cue"}
 
 	// Load Cue files into Cue build.Instances slice
 	// the second arg is a configuration object, we'll see this later
@@ -39,37 +39,57 @@ func main() {
 		value := I.Value()
 
 		// Validate the value
-		err = value.Validate()
+		err = value.Validate(
+			cue.Final(), // close structs and lists
+			cue.Concrete(false),   // allow incomplete values
+		)
 		if err != nil {
 			fmt.Println("Error during validate:", err)
+			continue
+		}
+		printVal(value)
+
+		// A := value.Lookup("A")
+		A := value.LookupDef("#A")
+		printVal(A)
+		B := value.Lookup("B")
+		printVal(B)
+
+		R := A.Fill(B, "a", "nested")
+		if R.Err() != nil {
+			fmt.Println("Error during fill:", R.Err())
+			continue
+		}
+
+		U := R.Unify(A)
+		if U.Err() != nil {
+			fmt.Println("Error during unify:", U.Err())
 			continue
 		}
 
 		// Generate an AST
 		//   try out different options
-		syn := value.Syntax(
-			cue.Final(), // close structs and lists
-			cue.Concrete(false),   // allow incomplete values
-			cue.Definitions(false),
-			cue.Hidden(true),
-			cue.Optional(true),
-			cue.Attributes(true),
-			cue.Docs(true),
-		)
-
-		// Pretty print the AST, returns ([]byte, error)
-		bs, err := format.Node(
-			syn,
-			format.TabIndent(false),
-			format.UseSpaces(2),
-			// format.Simplify(),
-		)
-		if err != nil {
-			fmt.Println("Error during format:", err)
-			continue
-		}
-
-		fmt.Println(string(bs))
+		printVal(U)
 	}
 
+}
+
+func printVal(val cue.Value) {
+	syn := val.Syntax(
+		cue.Final(), // close structs and lists
+		cue.Concrete(false),   // allow incomplete values
+		cue.Definitions(false),
+		cue.Hidden(true),
+		cue.Optional(true),
+		cue.Attributes(true),
+		cue.Docs(true),
+	)
+
+	// Pretty print the AST, returns ([]byte, error)
+	bs, _ := format.Node(
+		syn,
+		format.TabIndent(false),
+		format.UseSpaces(2),
+	)
+	fmt.Println(string(bs))
 }

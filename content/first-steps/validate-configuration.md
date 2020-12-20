@@ -137,3 +137,9 @@ There is much more we could do to fill out this schema.
 We leave it as an exercise for the reader to add the details.
 In particular, the `port` schema and cross validation will reinforce what we showed here.
 
+
+--- 
+
+validate
+trim
+templatize

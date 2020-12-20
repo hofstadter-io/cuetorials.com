@@ -11,4 +11,6 @@ album: #Album & {
 	artist: "Led Zeppelin"
 	title: "Led Zeppelin I"
 	year: 1969
+
+	// studio: true  (uncomment to trigger error)
 }

@@ -18,6 +18,7 @@ weight: 10
 
 ### Strings
 
+- based on swift strings
 
 ### Raw Strings
 
@@ -29,6 +30,7 @@ weight: 10
 
 
 ### Structs
+
 
 
 ### Definitions

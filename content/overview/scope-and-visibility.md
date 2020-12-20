@@ -6,6 +6,9 @@ weight: 20
 
 ### Reference Lookup
 
+fields without quotes you can reference as identifiers
+
+fields with quotes require dot notation
 
 ### Aliases
 

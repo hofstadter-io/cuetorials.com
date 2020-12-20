@@ -7,6 +7,9 @@ weight: 40
 Cue integrates with several other
 configuration, schema, and languages.
 
+- enables you to translate between various schema sources
+- becomes a source of truth
+
 {{< table >}}
 | System      | Import                          | Export                          | Annotations   |
 | --          | :--:                            | :--:                            | :--           |
@@ -19,5 +22,8 @@ configuration, schema, and languages.
 {{< /table>}}
 
     * requires writing code
+
+- mappings are non-trivial
+- meanings are not the same between them
 
 {{< childpages >}}

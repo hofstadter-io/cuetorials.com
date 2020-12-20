@@ -20,6 +20,10 @@ To use this system, there are a couple of differences from regular cue:
 You will also be able to use your "pure" Cue from these files,
 but not the other way around (as this would break the rules).
 
+- Cue explicitly prevents computation
+- But we need to often combine these configuarations and tasks in ops
+- Cue scripting / workflow
+
 
 ### Example Script
 
