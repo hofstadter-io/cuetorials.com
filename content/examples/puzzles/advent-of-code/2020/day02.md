@@ -48,5 +48,5 @@ How many passwords are valid according to the new interpretation of the policies
 
 ### Answers
 
-{{< chromaHTML file="code/advent-of-code/2020/day02.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day02.html">}}
 

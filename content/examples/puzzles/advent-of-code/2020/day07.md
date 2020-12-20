@@ -78,6 +78,6 @@ How many individual bags are required inside your single shiny gold bag?
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day07.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day07.html">}}
 
 

@@ -87,6 +87,6 @@ What do you get if you multiply together the number of trees encountered on each
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day03.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day03.html">}}
 
 

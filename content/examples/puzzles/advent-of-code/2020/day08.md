@@ -106,5 +106,5 @@ Fix the program so that it terminates normally by changing exactly one jmp (to n
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day08.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day08.html">}}
 

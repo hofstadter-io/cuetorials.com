@@ -96,6 +96,6 @@ For each group, count the number of questions to which everyone answered "yes". 
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day06.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day06.html">}}
 
 

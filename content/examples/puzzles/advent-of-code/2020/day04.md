@@ -134,6 +134,6 @@ Count the number of valid passports - those that have all required fields and va
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day04.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day04.html">}}
 
 

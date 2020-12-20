@@ -9,4 +9,4 @@ weight: 1
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2019/day01.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2019/day01.html">}}

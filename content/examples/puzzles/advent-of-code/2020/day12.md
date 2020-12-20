@@ -79,5 +79,5 @@ Figure out where the navigation instructions actually lead. What is the Manhatta
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day12.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day12.html">}}
 

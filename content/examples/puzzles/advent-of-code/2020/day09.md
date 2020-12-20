@@ -100,5 +100,5 @@ What is the encryption weakness in your XMAS-encrypted list of numbers?
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day09.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day09.html">}}
 

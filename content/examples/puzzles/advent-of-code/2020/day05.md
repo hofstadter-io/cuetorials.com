@@ -63,6 +63,6 @@ What is the ID of your seat?
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day05.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day05.html">}}
 
 

@@ -148,5 +148,5 @@ What is the total number of distinct ways you can arrange the adapters to connec
 
 ### Answer
 
-{{< chromaHTML file="code/advent-of-code/2020/day10.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day10.html">}}
 

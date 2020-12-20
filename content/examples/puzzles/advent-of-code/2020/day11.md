@@ -258,7 +258,7 @@ Only solved part1 so far. Due to Cue’s performance issues, this one needs to b
 
 It will print an update each iteration.
 
-{{< chromaHTML file="code/advent-of-code/2020/day11_tool.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day11_tool.html">}}
 
 For part2, pre-calculate and hard-code the x,y position for each direction for each seat.
 We don’t want to calculate this each time. Then the defaults need to be updated for the direction values.

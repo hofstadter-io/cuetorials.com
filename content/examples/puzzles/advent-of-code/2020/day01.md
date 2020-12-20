@@ -46,4 +46,4 @@ In your expense report, what is the product of the three entries that sum to 202
 
 ### Answers
 
-{{< chromaHTML file="code/advent-of-code/2020/day01.html">}}
+{{< chromaHTML file="code/puzzles/advent-of-code/2020/day01.html">}}
