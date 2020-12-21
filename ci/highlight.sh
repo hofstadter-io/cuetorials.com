@@ -13,12 +13,15 @@ function highlight () {
     $FN.cue > $FN.html
 }
 
-FILES=$@
+DIRS=$@
 if [[ $# == 0 ]]; then
-  FILES=`find code -name "*.cue"`
+  DIRS=code
 fi
 
-for F in ${FILES[@]}; do
-  echo $F
-  highlight $F
+for D in ${DIRS[@]}; do
+  FILES=`find $D -name "*.cue"`
+  for F in ${FILES[@]}; do
+    echo $F
+    highlight $F
+  done
 done
