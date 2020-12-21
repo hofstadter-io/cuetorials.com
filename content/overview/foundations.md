@@ -189,7 +189,8 @@ regardless of order and which files may contain them.
 
 {{< chromaDouble
   lhsPath="code/overview/foundations/order.html" lhsTitle="order.cue"
-  rhsPath="code/overview/foundations/order-2.html" rhsTitle="cue export order.cue order-2.cue"
+  midPath="code/overview/foundations/order-2.html" midTitle="crder-2.cue"
+  rhsPath="code/overview/foundations/order-out.html" rhsTitle="cue export order.cue order-2.cue"
 >}}
 
 
