@@ -17,7 +17,7 @@ You will learn how to:
 - Extract and work with Cue attributes
 - Unify and validate Cue and Go values
 - Decode to, and encode from, Cue and Go values
-- Validate, constraing, and complete Go values
+- Validate, constrain, and complete Go values
 
 Working with the encodings is in the [integrations section](/integrations).
 

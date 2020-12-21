@@ -48,6 +48,18 @@ or for conflicts and invalid semantics in your code.
 >}}
 
 
+### Null Coalescing
+
+Null coalescing allows us to provide fallback values when errors occur.
+This is technically error coalescing since `null` is a vaid value.
+This works by using disjunctions and defaults.
+
+{{< chromaDouble
+  lhsPath="code/overview/types-and-values/coalesce.html" lhsTitle="coalesce.cue"
+  rhsPath="code/overview/types-and-values/coalesce-out.html" rhsTitle="cue eval coalesce.cue"
+>}}
+
+
 ### Numbers
 
 Cue defines two number kinds:

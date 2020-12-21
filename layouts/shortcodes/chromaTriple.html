@@ -36,7 +36,7 @@
 
 <div class="d-flex flex-column flex-sm-row align-items-stretch">
   <div class="px-1 flex-fill align-self-stretch">
-    <p class="pl-2 py-1 m-0 border">{{ $lhsTitle }}</p>
+    <p class="pl-2 py-1 m-0 border bg-light">{{ $lhsTitle }}</p>
     {{ if $lhsLang }}
       {{ (print "```" $lhsLang "\n" (.Scratch.Get "lhsContent") "\n```") | markdownify }}
     {{ else }}
@@ -46,7 +46,7 @@
     {{ end }}
   </div>
   <div class="px-1 flex-fill align-self-stretch">
-    <p class="pl-2 py-1 m-0 border">{{ $midTitle }}</p>
+    <p class="pl-2 py-1 m-0 borde bg-lightr">{{ $midTitle }}</p>
     {{ if $midLang }}
       {{ (print "```" $midLang "\n" (.Scratch.Get "midContent") "\n```") | markdownify }}
     {{ else }}
@@ -56,7 +56,7 @@
     {{ end }}
   </div>
   <div class="px-1 flex-fill align-self-stretch">
-    <p class="pl-2 py-1 m-0 border">{{ $rhsTitle }}</p>
+    <p class="pl-2 py-1 m-0 borde bg-lightr">{{ $rhsTitle }}</p>
     {{ if $rhsLang }}
       {{ (print "```" $rhsLang "\n" (.Scratch.Get "rhsContent") "\n```") | markdownify }}
     {{ else }}
