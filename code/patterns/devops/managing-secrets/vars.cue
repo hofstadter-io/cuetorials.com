@@ -1,3 +1,0 @@
-vars: {
-	key: "shhh"
-}

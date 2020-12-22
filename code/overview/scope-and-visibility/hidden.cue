@@ -10,5 +10,3 @@ _#NoshowDefn: {
 }
 
 B: _#NoshowDefn & { hello: "world" }
-
-_see: "me"

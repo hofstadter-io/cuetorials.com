@@ -1,0 +1,81 @@
+Custom Flow Task
+TF:  {
+	a: {
+		foo:   1
+		hello: string
+	}
+	b: {
+		foo: 2
+	}
+	c: {
+		foo: a.foo * 3
+		goo: b.foo * 3
+	}
+}
+TF:  {
+	foo:   1
+	hello: string
+}
+TF:  {
+	foo: 2
+}
+TF:  {
+	foo: a.foo * 3
+	goo: b.foo * 3
+}
+CustomTask: 2 {
+	foo: 2
+}
+CustomTask: 1 {
+	foo:   1
+	hello: string
+}
+TF:  {
+	a: {
+		foo:   1
+		hello: string
+	}
+	b: {
+		foo: 2
+		bar: 3
+	}
+	c: {
+		foo: a.foo * 3
+		goo: b.foo * 3
+	}
+}
+TF:  {
+	a: {
+		foo:   1
+		hello: "world"
+		bar:   2
+	}
+	b: {
+		foo: 2
+		bar: 3
+	}
+	c: {
+		foo: a.foo * 3
+		goo: b.foo * 3
+	}
+}
+CustomTask: 3 {
+	foo: a.foo * 3
+	goo: b.foo * 3
+}
+TF:  {
+	a: {
+		foo:   1
+		hello: "world"
+		bar:   2
+	}
+	b: {
+		foo: 2
+		bar: 3
+	}
+	c: {
+		foo: a.foo * 3
+		goo: b.foo * 3
+		bar: 4
+	}
+}
