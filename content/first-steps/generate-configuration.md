@@ -4,7 +4,7 @@ description: "Generating configuration with Cue"
 weight: 20
 ---
 
-Cue is paritally inspired by functional languages
+Cue is partially inspired by functional languages
 and has some features which help us to write
 "code" which generates large amounts of config or data.
 When you combine comprehension with conjunctions, defaults, and guards,
