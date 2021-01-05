@@ -48,17 +48,6 @@ Update: schema.#List & {
 				"kubernetes.io/ingress.class": "nginx"
 				"nginx.ingress.kubernetes.io/force-ssl-redirect": "true"
 				"cert-manager.io/cluster-issuer": "letsencrypt-prod"
-
-				"kubernetes.io/configuration-snippet": """
-				location ~* \\.(?:css|js|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
-					expires 1h;
-					access_log off;
-					add_header Cache-Control "public";
-				}
-				location / {
-					expires -1;
-				}
-				"""
 			}
 		} // END Ingress.metadata
 
