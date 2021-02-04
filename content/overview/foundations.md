@@ -115,7 +115,7 @@ You indicate a definitions with `#mydef:` and can leave it open with `...`
 
 {{< chromaDouble
   lhsPath="code/overview/foundations/definition.html" lhsTitle="definition.cue"
-  rhsPath="code/overview/foundations/definition.json" rhsLang="json" rhsTitle="cue eval definition.cue"
+  rhsPath="code/overview/foundations/definition.json" rhsLang="json" rhsTitle="cue export definition.cue"
 >}}
 
 
