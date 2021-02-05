@@ -16,7 +16,7 @@ Cue has a standard library with numerous helper packages.
 There are broadly two types of packages
 
 1. Hermetic functions which you can use from `pure.cue` files.
-2. Non-hermitc functions which interact with the outside world. These are for the scripting layer in `_tool.cue` files.
+2. Non-hermetic functions which interact with the outside world. These are for the scripting layer in `_tool.cue` files.
 
 ##### Pure Packages
 
