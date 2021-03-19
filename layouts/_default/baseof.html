@@ -2,14 +2,6 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        {{ if .Site.Params.googleAnalytics }}
-        {{ if eq hugo.Environment "production" }}
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.googleAnalytics }}"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        {{ end }}
-        {{ end }}
 
         {{- partial "header.html" . -}}
 
