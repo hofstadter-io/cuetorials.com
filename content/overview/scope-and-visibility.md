@@ -9,8 +9,8 @@ weight: 20
 Cue will reference a value from the nearest enclosing scope.
 Some quirks are:
 
-- fields without quotes you can reference as identifiers
-- fields with quotes require dot notation
+- fields without quotes you can reference as identifiers and with dot notation
+- fields with quotes require index notation
 - fields defined across scopes require sufficient paths to resolve
 
 {{< chromaHTML file="code/overview/scope-and-visibility/lookup.html" title="lookup.cue" >}}
