@@ -15,10 +15,10 @@ When representing JSON in Cue, the differences are:
 - There are `// single line comments`
 - Objects are called structs
 - Object members are called struct fields
-- Quotes can be omitted for field names without special charactors
+- Quotes can be omitted for field names without special characters
 - You don't need commas after struct fields
 - You can place a comma after the last element in a list
-- The outer most curly braces are optional
+- The outermost curly braces are optional
 
 
 {{< chromaDouble
