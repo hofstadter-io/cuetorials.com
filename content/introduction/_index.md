@@ -14,9 +14,9 @@ and that it becomes an invaluable resource as you become more versed.
 I am writing this to help you learn Cue while also learning more myself.
 Cue fascinated me the first time I saw it. __#Futurology!__
 Cue's logical foundation took me back to Prolog
-and it's application to managing configuration was timely.
+and its application to managing configuration was timely.
 I had just hacked imports into yaml, sat back and said "this is a bad idea..."
-Cue stuck out from the alternatives for it's philosophy and heritage. 
+Cue stuck out from the alternatives for its philosophy and heritage. 
 Cue has now become the central UX to the [hof tool](https://github.com/hofstadter-io/hof).
 
 Much credit must be given to Marcel van Lohuizen, the creator of Cue.
