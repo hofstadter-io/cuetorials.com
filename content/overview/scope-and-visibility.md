@@ -17,7 +17,7 @@ Some quirks are:
 
 ### Aliases
 
-An alias define local value which is not part of the struct.
+An alias defines a local value which is not part of the struct.
 They can be used for accessing shadowed fields, 
 naming intermediate calculations or expressions,
 and more. They will not be output.
@@ -34,7 +34,7 @@ As we've seen, there are a few ways to access nested values.
 ### Hidden Fields and Values
 
 Hidden fields and values are prefixed with underscores.
-You can reference them in the current package and optional
+You can reference them in the current package and optionally
 show them when evaluating. Use quotes if you want a real label that begins with an underscore.
 
 _note, hidden output appears (no pun intended) to be broken in v0.3.0-alpha6_
