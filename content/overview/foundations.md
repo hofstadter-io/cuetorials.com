@@ -142,7 +142,7 @@ They are like "or" and the `|` operator is used for them.
 
 - enums (as values)
 - sum-type (any of these types)
-- null-coalescing (use this computation, or default to some valu)
+- null-coalescing (use this computation, or default to some value)
 
 
 ### Defaults and Optionals
