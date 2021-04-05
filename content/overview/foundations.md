@@ -32,8 +32,8 @@ When representing JSON in Cue, the differences are:
 Every instance lives somewhere in Cue's __Value Lattice__.
 The most open value is "top" or `_` which matches any instance.
 The most restricted value is "bottom" or `_|_` and represents
-a invalid instances, conflicts, and errors.
-Every other instances is in between and partially ordered
+invalid instances, conflicts, and errors.
+Every other instance is in between, and partially ordered
 when compared to other instances.
 This may sound confusing right now, but will become clearer
 as you learn and use Cue more.
