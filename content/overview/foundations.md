@@ -140,6 +140,8 @@ They are like "or" and the `|` operator is used for them.
   rhsPath="code/overview/foundations/disjunction.json" rhsLang="json" rhsTitle="cue export disjunction.cue"
 >}}
 
+Disjunctions have several uses:
+
 - enums (as values)
 - sum-type (any of these types)
 - null-coalescing (use this computation, or default to some valu)
