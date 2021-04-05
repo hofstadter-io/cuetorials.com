@@ -177,7 +177,7 @@ They are closed by default and are __not__ emited by Cue when exporting.
 ### Embeddings
 
 You can embed structs and definitions within eachother as a method to build up values.
-You can acheive the same with opened structs / defnitions and conjunctions, but often we cannot modify what we can embed.
+You can acheive the same with opened structs / definitions and conjunctions, but often we cannot modify what we can embed.
 
 {{< chromaDouble
   lhsPath="code/overview/types-and-values/embed.html" lhsTitle="embed.cue"
