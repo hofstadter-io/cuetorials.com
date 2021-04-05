@@ -75,7 +75,7 @@ You'll also want to start with small schemas and build them up into more complex
 
 One of the most important aspects of Cue to understand is that __values cannot be changed__.
 There are no overloads or overrides in Cue.
-This has implications on how you write and organized code.
+This has implications on how you write and organize code.
 The reason is for maintainability and comprehension, but is also required by Cue's philosophy.
 You will find this useful if you've ever wondered where else some value in your
 configuration was set from. Cue will not only guarantee that it is the value you set it to,
