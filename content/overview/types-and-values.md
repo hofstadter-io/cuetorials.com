@@ -195,6 +195,6 @@ For now, you can apply a constraint to string labels and use a identifier to set
 
 {{< chromaDouble
   lhsPath="code/overview/types-and-values/patterns.html" lhsTitle="patterns.cue"
-  rhsPath="code/overview/types-and-values/patterns-out.html" rhsTitle="cue eval patterns.cue"
+  rhsPath="code/overview/types-and-values/patterns-out.html" rhsTitle="cue export patterns.cue"
 >}}
 
