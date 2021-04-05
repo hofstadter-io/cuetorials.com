@@ -64,7 +64,7 @@ This works by using disjunctions and defaults.
 
 Cue defines two number kinds:
 
-- `int` are whole numbers, implemented as BigInt to represent any value, and can be constrained for bytes size (like int64)
+- `int` are whole numbers, implemented as BigInt to represent any value, and can be constrained for byte size (like int64)
 - `number` are decimals numbers, (also not bounded by byte size, also constrainable?), ints are also numbers
 
 {{< chromaHTML
@@ -154,7 +154,7 @@ Mismatched elements result in errors.
 ### Structs
 
 Structs are like JSON objects. They are the primary composite type in Cue.
-The have a set of fields (label: value)
+They have a set of fields (label: value).
 By default, they are open and you can add more fields.
 
 {{< chromaHTML
@@ -165,7 +165,7 @@ By default, they are open and you can add more fields.
 ### Definitions
 
 Definitions are very similar to structs and are primarily used for schemas.
-They are closed by default and are __not__ emited by Cue when exporting.
+They are closed by default and are __not__ emitted by Cue when exporting.
 
 {{< chromaTriple
   lhsPath="code/overview/types-and-values/defns.html" lhsTitle="defns.cue"
@@ -176,8 +176,9 @@ They are closed by default and are __not__ emited by Cue when exporting.
 
 ### Embeddings
 
-You can embed structs and definitions within eachother as a method to build up values.
-You can acheive the same with opened structs / definitions and conjunctions, but often we cannot modify what we can embed.
+You can embed structs and definitions within each other as a method to build up values.
+You can achieve the same with opened structs / definitions and conjunctions, but often we cannot modify what we can embed.
+
 
 {{< chromaDouble
   lhsPath="code/overview/types-and-values/embed.html" lhsTitle="embed.cue"
@@ -188,9 +189,9 @@ You can acheive the same with opened structs / definitions and conjunctions, but
 ### Pattern Matching Constraints
 
 Pattern matching allows you to specify constraints for labels which match a pattern.
-While limited in matching today, they will be siginificantly more powerful once the
+While limited in matching today, they will be significantly more powerful once the
 [query proposal](https://github.com/cuelang/cue/issues/165) is accepted and implemented.
-For now, you can apply a constraint to string labels and use a identifier to set fields if you like.
+For now, you can apply a constraint to string labels and use an identifier to set fields if you like.
 
 
 {{< chromaDouble
