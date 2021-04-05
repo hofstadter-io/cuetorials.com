@@ -179,9 +179,10 @@ They are closed by default and are __not__ emitted by Cue when exporting.
 You can embed structs and definitions within each other as a method to build up values.
 You can achieve the same with opened structs / definitions and conjunctions, but often we cannot modify what we can embed.
 
+
 {{< chromaDouble
   lhsPath="code/overview/types-and-values/embed.html" lhsTitle="embed.cue"
-  rhsPath="code/overview/types-and-values/embed-out.html" rhsTitle="cue eval embed.cue"
+  rhsPath="code/overview/types-and-values/embed-out.html" rhsTitle="cue export embed.cue"
 >}}
 
 
@@ -195,6 +196,6 @@ For now, you can apply a constraint to string labels and use an identifier to se
 
 {{< chromaDouble
   lhsPath="code/overview/types-and-values/patterns.html" lhsTitle="patterns.cue"
-  rhsPath="code/overview/types-and-values/patterns-out.html" rhsTitle="cue eval patterns.cue"
+  rhsPath="code/overview/types-and-values/patterns-out.html" rhsTitle="cue export patterns.cue"
 >}}
 

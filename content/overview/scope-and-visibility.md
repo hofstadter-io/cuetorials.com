@@ -9,15 +9,15 @@ weight: 20
 Cue will reference a value from the nearest enclosing scope.
 Some quirks are:
 
-- fields without quotes you can reference as identifiers
-- fields with quotes require dot notation
+- fields without quotes you can reference as identifiers and with dot notation
+- fields with quotes require index notation
 - fields defined across scopes require sufficient paths to resolve
 
 {{< chromaHTML file="code/overview/scope-and-visibility/lookup.html" title="lookup.cue" >}}
 
 ### Aliases
 
-An alias define local value which is not part of the struct.
+An alias defines a local value which is not part of the struct.
 They can be used for accessing shadowed fields, 
 naming intermediate calculations or expressions,
 and more. They will not be output.
@@ -34,7 +34,7 @@ As we've seen, there are a few ways to access nested values.
 ### Hidden Fields and Values
 
 Hidden fields and values are prefixed with underscores.
-You can reference them in the current package and optional
+You can reference them in the current package and optionally
 show them when evaluating. Use quotes if you want a real label that begins with an underscore.
 
 _note, hidden output appears (no pun intended) to be broken in v0.3.0-alpha6_

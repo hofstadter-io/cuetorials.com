@@ -15,10 +15,10 @@ When representing JSON in Cue, the differences are:
 - There are `// single line comments`
 - Objects are called structs
 - Object members are called struct fields
-- Quotes can be omitted for field names without special charactors
+- Quotes can be omitted for field names without special characters
 - You don't need commas after struct fields
 - You can place a comma after the last element in a list
-- The outer most curly braces are optional
+- The outermost curly braces are optional
 
 
 {{< chromaDouble
@@ -32,8 +32,8 @@ When representing JSON in Cue, the differences are:
 Every instance lives somewhere in Cue's __Value Lattice__.
 The most open value is "top" or `_` which matches any instance.
 The most restricted value is "bottom" or `_|_` and represents
-a invalid instances, conflicts, and errors.
-Every other instances is in between and partially ordered
+invalid instances, conflicts, and errors.
+Every other instance is in between, and partially ordered
 when compared to other instances.
 This may sound confusing right now, but will become clearer
 as you learn and use Cue more.
@@ -75,7 +75,7 @@ You'll also want to start with small schemas and build them up into more complex
 
 One of the most important aspects of Cue to understand is that __values cannot be changed__.
 There are no overloads or overrides in Cue.
-This has implications on how you write and organized code.
+This has implications on how you write and organize code.
 The reason is for maintainability and comprehension, but is also required by Cue's philosophy.
 You will find this useful if you've ever wondered where else some value in your
 configuration was set from. Cue will not only guarantee that it is the value you set it to,
@@ -115,7 +115,7 @@ You indicate a definitions with `#mydef:` and can leave it open with `...`
 
 {{< chromaDouble
   lhsPath="code/overview/foundations/definition.html" lhsTitle="definition.cue"
-  rhsPath="code/overview/foundations/definition.json" rhsLang="json" rhsTitle="cue eval definition.cue"
+  rhsPath="code/overview/foundations/definition.json" rhsLang="json" rhsTitle="cue export definition.cue"
 >}}
 
 
@@ -140,9 +140,11 @@ They are like "or" and the `|` operator is used for them.
   rhsPath="code/overview/foundations/disjunction.json" rhsLang="json" rhsTitle="cue export disjunction.cue"
 >}}
 
+Disjunctions have several uses:
+
 - enums (as values)
 - sum-type (any of these types)
-- null-coalescing (use this computation, or default to some valu)
+- null-coalescing (use this computation, or default to some value)
 
 
 ### Defaults and Optionals
