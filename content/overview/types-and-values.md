@@ -181,7 +181,7 @@ You can acheive the same with opened structs / definitions and conjunctions, but
 
 {{< chromaDouble
   lhsPath="code/overview/types-and-values/embed.html" lhsTitle="embed.cue"
-  rhsPath="code/overview/types-and-values/embed-out.html" rhsTitle="cue eval embed.cue"
+  rhsPath="code/overview/types-and-values/embed-out.html" rhsTitle="cue export embed.cue"
 >}}
 
 
