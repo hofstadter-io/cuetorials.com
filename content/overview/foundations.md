@@ -144,7 +144,7 @@ Disjunctions have several uses:
 
 - enums (as values)
 - sum-type (any of these types)
-- null-coalescing (use this computation, or default to some valu)
+- null-coalescing (use this computation, or default to some value)
 
 
 ### Defaults and Optionals
