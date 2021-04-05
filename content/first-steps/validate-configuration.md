@@ -20,7 +20,7 @@ Instead of setting the fields to data, we set them to types `string`.
 Looking at the date field, we can see it repeated twice.
 This enables us to accumulate constraints across locations in a file
 or even across files and packages (how easier does applying company policies become?).
-Define constraints on multiple lines is equivalent to using the conjunction operator (`&`)
+Defining constraints on multiple lines is equivalent to using the conjunction operator (`&`)
 and would look like `date: string & time.Format(...)`.
 We add an additional __constraint__ using Cue's standard library.
 We `import "time"` and use the `time.Format("format")` function to enforce
