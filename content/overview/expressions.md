@@ -60,7 +60,7 @@ Cue supports regular expression constraints with the `=~` and `!~` operators.
 >}}
 
 They are based on [Go's regular expressions](https://golang.org/pkg/regexp/).
-Cue also has some additional {{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</cuedoc>}}.:w
+Cue also has some additional {{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</cuedoc>}}.
 
 
 
