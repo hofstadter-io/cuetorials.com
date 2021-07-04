@@ -2,7 +2,7 @@
 
 Hugo static website based on the ACE documentatino theme.
 
-- https://cutorials.com
+- https://cuetorials.com
 - https://gohugo.io
 - https://themes.gohugo.io/ace-documentation/
 - https://docs.vantage-design.com/ace/
