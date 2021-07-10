@@ -10,7 +10,7 @@ change between runs. This is done to enforce consistency.
 To work with the external world,
 Cue has a tooling layer where you
 can access the execute commands, read and write files, or make network calls.
-(the list of "tools" can be [found here](https://pkg.go.dev/cuelang.org/go@v0.3.0-alpha5/pkg/tool))
+(the list of "tools" can be [found here](https://pkg.go.dev/cuelang.org/go@v0.4.0/pkg/tool))
 
 To use this system, there are a couple of differences from regular cue:
 

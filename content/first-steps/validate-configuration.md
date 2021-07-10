@@ -30,7 +30,7 @@ You can learn more about how Go time formats work in the
 An important note to make about time formats is that the values used in the
 format template string are very specific to Go's birth date/time.
 (Mon Jan 2 15:04:05 MST 2006)
-You can find more helpers in [Cue's standard library](https://pkg.go.dev/cuelang.org/go/pkg@v0.3.0-alpha5#section-directories),
+You can find more helpers in [Cue's standard library](https://pkg.go.dev/cuelang.org/go/pkg@v0.4.0#section-directories),
 just note that you cannot use the `tool/...` in normal Cue files.
 They are reserved for the scripting layer we will cover in a few sections.
 

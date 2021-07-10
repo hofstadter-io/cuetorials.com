@@ -22,7 +22,7 @@ menushortcutsnewtab = true # set true to open shortcuts links to a new tab/windo
 github_project_repo = "https://github.com/hofstadter-io/cuetorials.com"
 github_repo = "https://github.com/hofstadter-io/cuetorials.com"
 time_format_default = "January 2, 2006"
-cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.3.0-alpha6"
+cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.0"
 
 [markup]
   [markup.goldmark]
@@ -39,7 +39,7 @@ weight = 0
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub"
-url = "https://github.com/cuelang/cue"
+url = "https://github.com/cue-lang/cue"
 weight = 1
 
 [[menu.shortcuts]]
