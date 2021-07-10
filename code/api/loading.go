@@ -27,7 +27,7 @@ func main() {
 			continue
 		}
 
-		// Use cue.Runtime to build.Instance to cue.INstance
+		// Use cue.Runtime to build.Instance to cue.Instance
 		I, err := RT.Build(bi)
 		if err != nil {
 			fmt.Println("Error during build:", bi.Err)
