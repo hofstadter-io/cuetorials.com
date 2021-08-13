@@ -23,7 +23,7 @@ When we load with Go, we can setup this `Config` object to modify the behavior.
 
 {{< cuedoc page="/cue/load#Config" >}}load.Config documentation{{</cuedoc>}}
 
-The comments there explain how to use the vaious options.
+The comments there explain how to use the various options.
 Most are for advanced use cases and will make more sense
 once you have seen more of Cue.
 Others you have seen as flags to the CLI.

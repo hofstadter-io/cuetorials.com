@@ -73,7 +73,7 @@ say the schema must unify with one of these entries, like an "or" statement.
 
 {{< chromaHTML file="code/first-steps/validate-configuration/cuetorials-v1.html" >}}
 
-Each resource type is defined as a `struct` (`{}`), defines fields for `apiVerions` and `kind`,
+Each resource type is defined as a `struct` (`{}`), defines fields for `apiVersions` and `kind`,
 and leaves the definition open with the `...` (meaning more fields are allowed).
 By default definitions are closed and any undefined fields will cause an error.
 The `apiVersion` and `kind` fields are concrete values,

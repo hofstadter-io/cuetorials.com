@@ -26,7 +26,7 @@ cue cmd -t "name=bob" gen-todos
 ```
 
 Cue's template system is Go's template system,
-so all of the capabilties and rules are the same.
+so all of the capabilities and rules are the same.
 We've used both list and field comprehension
 to define render and write our templates respectively.
 With sophisticated Cue definitions, values, and templates
