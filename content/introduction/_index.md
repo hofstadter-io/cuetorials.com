@@ -75,7 +75,7 @@ and ensures that the result is valid and correct. There is also a disjunction ("
 In `#Constrained`, you can see a regexp and logical operators as well as a builtin from the standard library.
 We'll go into the in greater depth later.
 
-Here is a visual example of Cue's value latice:
+Here is a visual example of Cue's value lattice:
 
 [[ insert diagrams for simple examples here, both set theory and type > constraint > values ]]
 

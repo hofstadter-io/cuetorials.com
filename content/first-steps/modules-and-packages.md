@@ -25,7 +25,7 @@ _While, Cue does not yet have a dependency management system, it will import and
 
 ## Defining a module
 
-To define a module, we simmply need to add a `cue.mod/module.cue` file.
+To define a module, we simply need to add a `cue.mod/module.cue` file.
 Before you do, you will _not_ be able to import files from other directories or modules.
 
 `cue.mod/module.cue`
@@ -85,7 +85,7 @@ cue.mod
             └── hofmod-server
 ```
 
-Cue does not yet have a dependency managemnet system. You have to get them in place another way.
+Cue does not yet have a dependency management system. You have to get them in place another way.
 ([Open issue](https://github.com/cuelang/cue/issues/409))
 
 Fortunately, Hofstadter has built a generalized dependency management system as part of our `hof` tool,

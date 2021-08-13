@@ -21,7 +21,7 @@ You will also be able to use your "pure" Cue from these files,
 but not the other way around (as this would break the rules).
 
 - Cue explicitly prevents computation
-- But we need to often combine these configuarations and tasks in ops
+- But we need to often combine these configurations and tasks in ops
 - Cue scripting / workflow
 
 

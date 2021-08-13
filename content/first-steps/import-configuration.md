@@ -71,7 +71,7 @@ Now add the following lines to your `cuetorials.cue` file:
 {{< chromaHTML file="code/first-steps/import-configuration/cuetorials-add.html" >}}
 
 Now try running `cue eval cuetorials.cue`. You are likely to see some errors.
-This is because Kubernetes acccepts both strings and integers in several places.
+This is because Kubernetes accepts both strings and integers in several places.
 To fix these, add the `IntVal: <#>` before the integer (or `StrVal:` if you are using a different yaml that has strings).
 
 - `deployment >>> rollingUpdate`
@@ -80,7 +80,7 @@ To fix these, add the `IntVal: <#>` before the integer (or `StrVal:` if you are 
 - `ingress >>> servicePort`
 
 Once you get `cue eval` working (printing out Cue values)
-you can run `cue trim` on the file to remove redundent code
+you can run `cue trim` on the file to remove redundant code
 (based on minimization and defaults).
 Advanced trimming is on the roadmap for Cue via _anti-unification._
 

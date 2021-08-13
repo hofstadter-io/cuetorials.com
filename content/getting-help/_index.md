@@ -18,7 +18,7 @@ Hofstadter offers services for:
 
 - Development and support
 - Training and workshops
-- Consultating and integration
+- Consulting and integration
 - Cue feature development
 
 To learn more:
