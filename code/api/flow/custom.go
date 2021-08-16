@@ -5,10 +5,11 @@ import (
 	"fmt"
 
 	"cuelang.org/go/cue"
+	"cuelang.org/go/cue/cuecontext"
 	"cuelang.org/go/tools/flow"
 )
 
-var RT cue.Runtime
+var CTX cue.Context
 
 // Our tasks specified as Cue
 var input = `
@@ -31,18 +32,21 @@ func main() {
 	var err error
 	fmt.Println("Custom Flow Task")
 
+	// create context
+	ctx := cuecontext.New()
+
 	// Setup the flow Config
 	cfg := &flow.Config{ Root: cue.ParsePath("tasks") }
 
 	// compile our input
-	inst, err := RT.Compile("input.cue", input)
-	if err != nil {
-		fmt.Println("Error:", err)
+	value := ctx.CompileString(input, cue.Filename("input.cue"))
+	if value.Err() != nil {
+		fmt.Println("Error:", value.Err())
 		return
 	}
 
 	// create the workflow whiich will build the task graph
-	workflow := flow.New(cfg, inst, TaskFactory)
+	workflow := flow.New(cfg, value, TaskFactory)
 
 	// run our custom workflow
 	err = workflow.Run(context.Background())
