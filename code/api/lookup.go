@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 
+	"cuelang.org/go/cue"
 	"cuelang.org/go/cue/cuecontext"
+	"cuelang.org/go/cue/format"
 	"cuelang.org/go/cue/load"
 )
 
@@ -12,7 +14,7 @@ func main() {
 	ctx := cuecontext.New()
 
 	// The entrypoints are the same as the files you'd specify at the command line
-	entrypoints := []string{"hello.cue"}
+	entrypoints := []string{"lookup.cue"}
 
 	// Load Cue files into Cue build.Instances slice
 	// the second arg is a configuration object, we'll see this later
@@ -34,15 +36,42 @@ func main() {
 			continue
 		}
 
-		// print the error
-		fmt.Println("root value:", value)
-
 		// Validate the value
-		err := value.Validate()
+		err := value.Validate(
+			cue.Final(), // close structs and lists
+			cue.Concrete(false),   // allow incomplete values
+		)
 		if err != nil {
 			fmt.Println("Error during validate:", err)
 			continue
 		}
+		printVal(value)
+
+		// A := value.Lookup("A")
+		foo := value.Lookup("foo")
+		printVal(foo)
+		bar := foo.LookupPath(cue.ParsePath("#bar"))
+		printVal(bar)
 	}
 
+}
+
+func printVal(val cue.Value) {
+	syn := val.Syntax(
+		cue.Final(), // close structs and lists
+		cue.Concrete(false),   // allow incomplete values
+		cue.Definitions(false),
+		cue.Hidden(true),
+		cue.Optional(true),
+		cue.Attributes(true),
+		cue.Docs(true),
+	)
+
+	// Pretty print the AST, returns ([]byte, error)
+	bs, _ := format.Node(
+		syn,
+		format.TabIndent(false),
+		format.UseSpaces(2),
+	)
+	fmt.Println(string(bs))
 }

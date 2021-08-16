@@ -4,13 +4,14 @@ import (
 	"fmt"
 
 	"cuelang.org/go/cue"
+	"cuelang.org/go/cue/cuecontext"
 	"cuelang.org/go/cue/format"
 	"cuelang.org/go/cue/load"
 )
 
 func main() {
-	// We need a Cue.Runtime, the zero value is ready to use
-	var RT cue.Runtime
+	// We need a cue.Context, the New'd return is ready to use
+	ctx := cuecontext.New()
 
 	// The entrypoints are the same as the files you'd specify at the command line
 	entrypoints := []string{"format.cue"}
@@ -28,18 +29,15 @@ func main() {
 			continue
 		}
 
-		// Use cue.Runtime to build.Instance to cue.Instance
-		I, err := RT.Build(bi)
-		if err != nil {
-			fmt.Println("Error during build:", bi.Err)
+		// Use cue.Context to turn build.Instance to cue.Instance
+		value := ctx.BuildInstance(bi)
+		if value.Err() != nil {
+			fmt.Println("Error during build:", value.Err())
 			continue
 		}
 
-		// get the root value
-		value := I.Value()
-
 		// Validate the value
-		err = value.Validate()
+		err := value.Validate()
 		if err != nil {
 			fmt.Println("Error during validate:", err)
 			continue

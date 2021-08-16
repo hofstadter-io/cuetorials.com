@@ -1,12 +1,13 @@
 package fill
 
 #A: {
-	a: close({
+	a: {
 		foo: string
-		nested: close({
+		nested: {
 			hello: string
-		})
-	})
+			... // need to open this nested struct so we can add a field during fill
+		}
+	}
 }
 
 hello: "world"
