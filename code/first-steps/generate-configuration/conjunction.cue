@@ -31,7 +31,9 @@
 
 // Additionally apply our labels buildup to the resources
 #Schema: {
-	metadata: #metadata & #myLabels
+	metadata: #metadata & {
+		labels: #myLabels
+	}
 }
 
 #Deployment: {
