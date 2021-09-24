@@ -34,8 +34,8 @@
     "missing rhs file input"
 {{ end}}
 
-<div class="d-flex flex-column flex-sm-row mb-3 flex-wrap">
-  <div class="px-1 flex-fill flex-column d-flex">
+<div class="d-flex flex-column flex-sm-row flex-wrap">
+  <div class="px-1 flex-fill flex-column d-flex mb-3">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $lhsTitle }}</p>
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "lhsIdentifier") }}">
       <div class="position-absolute pt-1 pr-1" style="right:0;">
@@ -52,7 +52,7 @@
     {{ end }}
     </div>
   </div>
-  <div class="px-1 flex-fill flex-column d-flex">
+  <div class="px-1 flex-fill flex-column d-flex mb-3">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $midTitle }}</p>
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "midIdentifier") }}">
       <div class="position-absolute pt-1 pr-1" style="right:0;">
@@ -69,7 +69,7 @@
     {{ end }}
     </div>
   </div>
-  <div class="px-1 flex-fill flex-column d-flex">
+  <div class="px-1 flex-fill flex-column d-flex mb-3">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $rhsTitle }}</p>
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "rhsIdentifier") }}">
       <div class="position-absolute pt-1 pr-1" style="right:0;">
