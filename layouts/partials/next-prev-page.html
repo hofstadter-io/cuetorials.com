@@ -34,13 +34,13 @@
 <div class="d-flex justify-content-around">
 
   {{- with ($.Scratch.Get "prevPage") -}}
-  <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+  <div class="bg-primary overflow-hidden p-3 mt-5 shadow" style="width: 40%">
       <a class="p-1 mr-3 d-inline-block text-white" href="{{.RelPermalink}}" title="{{.Title}}"><i class="fas fa-chevron-left px-2"></i>{{.Title}}</a>
   </div>
   {{ end -}}
 
   {{- with ($.Scratch.Get "nextPage") -}}
-  <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+  <div class="bg-primary overflow-hidden p-3 mt-5 shadow" style="width: 40%">
       <a class="p-1 ml-3 d-inline-block text-white text-right" href="{{.RelPermalink}}" title="{{.Title}}">{{.Title}}<i class="fas fa-chevron-right px-2"></i></a>
   </div>
   {{- end }}
