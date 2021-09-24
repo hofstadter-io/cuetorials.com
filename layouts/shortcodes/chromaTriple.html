@@ -34,7 +34,7 @@
     "missing rhs file input"
 {{ end}}
 
-<div class="d-flex flex-column flex-sm-row flex-wrap">
+<div class="d-flex flex-column flex-sm-row flex-wrap overflow-auto">
   <div class="px-1 flex-fill flex-column d-flex mb-3">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $lhsTitle }}</p>
     <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "lhsIdentifier") }}">
