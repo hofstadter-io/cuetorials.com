@@ -18,6 +18,12 @@ code: highlight
 codefiles: $(CUE_FILES)
 	@for f in $(CUE_FILES); do echo $$f; done
 
+.PHONY: htmlfiles cleanhtml
+htmlfiles: $(HTML_FILES)
+	@for f in $(HTML_FILES); do echo $$f; done
+cleanhtml: $(HTML_FILES)
+	@for f in $(HTML_FILES); do rm $$f; done
+
 code/%.html: code/%.cue
 	@echo highlight "$<" as "$@"
 	@chroma --html-only --html-inline-styles --html-tab-width=4 -f html -s solarized-dark "$<" > "$@"

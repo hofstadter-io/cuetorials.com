@@ -1,0 +1,21 @@
+{
+    "ex1": {
+        "a": "a",
+        "b": "abc",
+        "l": [
+            "prefix",
+            "none"
+        ],
+        "result": "prefix"
+    },
+    "ex2": {
+        "a": "abc",
+        "b": "abc",
+        "l": [
+            "prefix",
+            "same",
+            "none"
+        ],
+        "result": "prefix"
+    }
+}
