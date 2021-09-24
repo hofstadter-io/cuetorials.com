@@ -1,7 +1,7 @@
 ---
 title: "Field patterns"
 description: "Patterns around struct fields"
-weight: 5
+weight: 3
 ---
 
 

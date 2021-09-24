@@ -5,7 +5,7 @@ DefaultContentLanguage = "en"
 title = "Cuetorials"
 # theme = ""
 pygmentsCodeFences = true
-pygmentsStyle = "solarized-dark"
+pygmentsStyle = "github"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false

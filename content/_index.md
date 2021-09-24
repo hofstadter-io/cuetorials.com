@@ -13,12 +13,13 @@ configuration, APIs, database schemas, code, … you name it.
 The code in these sections can be found in `hofstadter-io/cutorials.com` repository
 under [code](https://github.com/hofstadter-io/cuetorials/tree/main/code) and will mirror the URL path.
 
-{{< childpages page="introduction/" brief="a one pager about Cue" >}}
-{{< childpages page="overview/" brief="of Cue's concepts and syntax" >}}
-{{< childpages page="first-steps/" brief="to adopting Cue" >}}
-{{< childpages page="patterns/" brief="and more complex Cue" >}}
+{{< childpages page="introduction/" brief="a one pager about CUE" >}}
+{{< childpages page="overview/" brief="of CUE's concepts and syntax" >}}
+{{< childpages page="first-steps/" brief="to adopting CUE" >}}
+{{< childpages page="patterns/" brief="and more complex CUE" >}}
 {{< childpages page="integrations/" brief="with other formats and standards" >}}
-{{< childpages page="api/" brief="for working with Cue from Go" >}}
-{{< childpages page="internals/" brief="of Cue's evaluator" >}}
+{{< childpages page="api/" brief="for working with CUE from Go" >}}
+{{< childpages page="internals/" brief="of CUE's evaluator" >}}
+{{< childpages page="futurology/" brief="a look into what's coming" >}}
 {{< childpages page="getting-help/" >}}
 

@@ -34,9 +34,15 @@
     "missing rhs file input"
 {{ end}}
 
-<div class="d-flex flex-column flex-sm-row align-items-stretch">
-  <div class="px-1 flex-fill align-self-stretch">
+<div class="d-flex flex-column flex-sm-row mb-3 flex-wrap">
+  <div class="px-1 flex-fill flex-column d-flex">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $lhsTitle }}</p>
+    <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "lhsIdentifier") }}">
+      <div class="position-absolute pt-1 pr-1" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "lhsIdentifier") }}">
+          <i class="far fa-copy"></i>
+        </button>
+      </div>
     {{ if $lhsLang }}
       {{ (print "```" $lhsLang "\n" (.Scratch.Get "lhsContent") "\n```") | markdownify }}
     {{ else }}
@@ -44,9 +50,16 @@
         {{ .Scratch.Get "lhsContent" | safeHTML }}
       </div>
     {{ end }}
+    </div>
   </div>
-  <div class="px-1 flex-fill align-self-stretch">
+  <div class="px-1 flex-fill flex-column d-flex">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $midTitle }}</p>
+    <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "midIdentifier") }}">
+      <div class="position-absolute pt-1 pr-1" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "midIdentifier") }}">
+          <i class="far fa-copy"></i>
+        </button>
+      </div>
     {{ if $midLang }}
       {{ (print "```" $midLang "\n" (.Scratch.Get "midContent") "\n```") | markdownify }}
     {{ else }}
@@ -54,9 +67,16 @@
         {{ .Scratch.Get "midContent" | safeHTML }}
       </div>
     {{ end }}
+    </div>
   </div>
-  <div class="px-1 flex-fill align-self-stretch">
+  <div class="px-1 flex-fill flex-column d-flex">
     <p class="pl-2 py-1 m-0 border bg-light">{{ $rhsTitle }}</p>
+    <div class="position-relative border flex-fill" id="{{printf "clipboard_%s" (.Scratch.Get "rhsIdentifier") }}">
+      <div class="position-absolute pt-1 pr-1" style="right:0;">
+        <button class="btn btn-light" data-clipboard-target="#{{printf "clipboard_%s" (.Scratch.Get "rhsIdentifier") }}">
+          <i class="far fa-copy"></i>
+        </button>
+      </div>
     {{ if $rhsLang }}
       {{ (print "```" $rhsLang "\n" (.Scratch.Get "rhsContent") "\n```") | markdownify }}
     {{ else }}
@@ -64,6 +84,7 @@
         {{ .Scratch.Get "rhsContent" | safeHTML }}
       </div>
     {{ end }}
+    </div>
   </div>
 </div>
 

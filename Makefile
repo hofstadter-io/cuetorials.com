@@ -21,12 +21,12 @@ codefiles: $(CUE_FILES)
 .PHONY: htmlfiles cleanhtml
 htmlfiles: $(HTML_FILES)
 	@for f in $(HTML_FILES); do echo $$f; done
-cleanhtml: $(HTML_FILES)
+cleanhtml:
 	@for f in $(HTML_FILES); do rm $$f; done
 
 code/%.html: code/%.cue
 	@echo highlight "$<" as "$@"
-	@chroma --html-only --html-inline-styles --html-tab-width=4 -f html -s solarized-dark "$<" > "$@"
+	@NODE_PATH=/usr/lib/node_modules node ci/highlight.js < "$<" > "$@"
 
 .PHONY: hugo
 hugo:
