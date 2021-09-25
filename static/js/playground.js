@@ -1,6 +1,6 @@
 function playground(id) {
   console.log("playground: ", id)
-  var data = document.getElementById(id).innerHTML
+  var data = document.getElementById(id).value;
   console.log(data)
   fetch("/playground", {
     method: "POST",

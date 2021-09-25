@@ -37,9 +37,9 @@
         {{ .Scratch.Get "content" | safeHTML }}
       </div>
 {{ if (.Get "play") }}
-<pre class="invisible" style="height:0" id="{{printf "playground_%s" (.Scratch.Get "identifier") }}">
-{{ .Scratch.Get "code" | safeHTML }}
-</pre>
+<textarea class="invisible" style="height:0" id="{{printf "playground_%s" (.Scratch.Get "identifier") }}">
+{{ .Scratch.Get "code" | htmlUnescape }}
+</textarea>
 {{ end}}
     </div>
 </div>
