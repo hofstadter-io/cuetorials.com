@@ -1,6 +1,0 @@
-Hello Tony.
-
-The items still on your todo list:
-
-t3  3
-t5  3

@@ -6,7 +6,8 @@ weight: 10
 
 {{<lead>}}
 When you start out with Cue, the systax may feel overwhelming but the learning curve will pay itself back.
-First Steps will take you through some examples of how to get the most out of Cue without breaking what you already have.
+First Steps will take you through some examples of how to get the most out of Cue without rewriting or breaking what you already have.
+In fact, these will help you improve and verify your existing data, config, and processes.
 {{</lead>}}
 
 {{<quote author="Roger Peppe">}}

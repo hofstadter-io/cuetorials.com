@@ -18,3 +18,17 @@ no necessarily sneaky, but work it in without changing things
 
 The code in these sections can be found in `hofstadter-io/cutorials.com` repository
 under [code/first-steps](https://github.com/hofstadter-io/cuetorials/tree/main/code/first-steps)
+
+
+
+# A collapsible section with markdown
+<details>
+  <summary class="h3">Click to expand!</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+

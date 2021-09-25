@@ -28,41 +28,18 @@ _While, Cue does not yet have a dependency management system, it will import and
 To define a module, we simply need to add a `cue.mod/module.cue` file.
 Before you do, you will _not_ be able to import files from other directories or modules.
 
-`cue.mod/module.cue`
+{{< chromaCode file="code/first-steps/modules-and-packages/listing.txt" title="file listing" lang="shell">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/module.html" title="cue.mod/module.cue">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/root.html" title="root.cue">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/a/a.html" title="a/a.cue">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/bar.html" title="cue.mod/pkg/github.com/foo/bar/bar.cue">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/b/b.html" title="cue.mod/pkg/github.com/foo/bar/b/b.cue">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" title="cue.mod/pkg/github.com/foo/bar/multi/hello.cue">}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" title="cue.mod/pkg/github.com/foo/bar/multi/world.cue">}}
 
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/module.html" >}}
+When we run this, we can see the output by combining the modules and pacakges
 
-`root.cue`
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/root.html" >}}
-
-`a/a.cue`
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/a/a.html" >}}
-
-`cue.mod/pkg/github.com/foo/bar/bar.cue`
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/bar.html" >}}
-
-`cue.mod/pkg/github.com/foo/bar/b/b.cue`
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/b/b.html" >}}
-
-`cue.mod/pkg/github.com/foo/bar/multi/hello.cue`
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" >}}
-
-`cue.mod/pkg/github.com/foo/bar/multi/world.cue`
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" >}}
-
-We can see this works by running
-
-```sh
-cue eval root.cue
-```
-
-{{< chromaHTML file="code/first-steps/modules-and-packages/eval.html" >}}
+{{< chromaHTML file="code/first-steps/modules-and-packages/eval.html" title="cue eval root.cue">}}
 
 
 <br>

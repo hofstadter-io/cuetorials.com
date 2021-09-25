@@ -1,0 +1,15 @@
+├── root.cue
+├── a
+│   └── a.cue
+└── cue.mod
+    ├── module.cue
+    └── pkg
+        └── github.com
+            └── foo
+                └── bar
+                    ├── bar.cue
+                    ├── b
+                    │   └── b.cue
+                    └── multi
+                        ├── hello.cue
+                        └── world.cue

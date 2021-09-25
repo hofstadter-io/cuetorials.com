@@ -4,8 +4,8 @@ import (
 	"tool/file"
 )
 
-command: "gen-todos": {
-	for i, R in gen.rendered {
+command: "gen": {
+	for i, R in rendered {
 		// make a unique name when comprehending
 		"write-\(i)": file.Create & {
 			filename: R.filename

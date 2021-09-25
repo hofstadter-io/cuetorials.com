@@ -13,13 +13,12 @@ How? By using `text/templates` to render any file we wish.
 
 ## Generating with Cue
 
-`first.cue`
+{{< chromaHTML file="code/first-steps/generate-all-the-things/first.html" title="first.cue">}}
 
-{{< chromaHTML file="code/first-steps/generate-all-the-things/first.html">}}
 
-`first_tool.cue`
-
-{{< chromaHTML file="code/first-steps/generate-all-the-things/first_tool.html">}}
+{{< chromaHTML file="code/first-steps/generate-all-the-things/first_tool.html" title="first_tool.cue">}}
+  
+{{< chromaHTML file="code/first-steps/generate-all-the-things/first_tool.txt" title="cue cmd gen *.cue">}}
 
 ```sh
 cue cmd -t "name=bob" gen-todos
@@ -51,9 +50,7 @@ The solution is actually pretty simple, keep a shadow copy of the generated code
 and use a 3-way diff to merge design updates and custom code.
 
 
-`hof.cue`
-
-{{< chromaHTML file="code/first-steps/generate-all-the-things/hof.html">}}
+{{< chromaHTML file="code/first-steps/generate-all-the-things/hof.html" title="hof.cue">}}
 
 You can learn more about `hof` from these links:
 

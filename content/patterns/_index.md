@@ -1,5 +1,5 @@
 ---
-title: "Patterns"
+title: "Useful Patterns"
 description: "Common Cue patterns"
 weight: 25
 ---
