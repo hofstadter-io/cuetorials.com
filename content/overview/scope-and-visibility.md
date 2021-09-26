@@ -13,7 +13,7 @@ Some quirks are:
 - fields with quotes require index notation
 - fields defined across scopes require sufficient paths to resolve
 
-{{< chromaHTML file="code/overview/scope-and-visibility/lookup.html" title="lookup.cue" >}}
+{{< codePane file="code/overview/scope-and-visibility/lookup.html" title="lookup.cue" play="true" >}}
 
 ### Aliases
 
@@ -22,13 +22,13 @@ They can be used for accessing shadowed fields,
 naming intermediate calculations or expressions,
 and more. They will not be output.
 
-{{< chromaHTML file="code/overview/scope-and-visibility/alias.html" title="alias.cue" >}}
+{{< codePane file="code/overview/scope-and-visibility/alias.html" title="alias.cue" play="true">}}
 
 ### Paths
 
 As we've seen, there are a few ways to access nested values.
 
-{{< chromaHTML file="code/overview/scope-and-visibility/paths.html" title="paths.cue" >}}
+{{< codePane file="code/overview/scope-and-visibility/paths.html" title="paths.cue" play="true">}}
 
 
 ### Hidden Fields and Values
@@ -39,10 +39,10 @@ show them when evaluating. Use quotes if you want a real label that begins with 
 
 _note, hidden output appears (no pun intended) to be broken in v0.3.0-alpha6_
 
-{{< chromaTriple
-  lhsPath="code/overview/scope-and-visibility/hidden.html" lhsTitle="hidden.cue"
-  midPath="code/overview/scope-and-visibility/hidden-out.html" midTitle="cue eval hidden.cue"
-  rhsPath="code/overview/scope-and-visibility/hidden-viz.html" rhsTitle="cue eval -H hidden.cue"
+{{< codePane3
+  file1="code/overview/scope-and-visibility/hidden.html"     title1="hidden.cue" play1="true"
+  file2="code/overview/scope-and-visibility/hidden-out.html" title2="cue eval hidden.cue"
+  file3="code/overview/scope-and-visibility/hidden-viz.html" title3="cue eval -H hidden.cue"
 >}}
 
 
@@ -51,7 +51,7 @@ _note, hidden output appears (no pun intended) to be broken in v0.3.0-alpha6_
 Cue can resolve many cycles, as long as they resolve to a final, concrete value.
 
 
-{{< chromaHTML file="code/overview/scope-and-visibility/ref-cycle.html" title="ref-cycle.cue" >}}
+{{< codePane file="code/overview/scope-and-visibility/ref-cycle.html" title="ref-cycle.cue" play="true">}}
 
 
 ### Structural Cycles
@@ -59,5 +59,5 @@ Cue can resolve many cycles, as long as they resolve to a final, concrete value.
 Structural cycles and recursion are not allowed in Cue.
 We can define infinite structures as long as the data is finite.
 
-{{< chromaHTML file="code/overview/scope-and-visibility/structural.html" title="structural.cue" >}}
+{{< codePane file="code/overview/scope-and-visibility/structural.html" title="structural.cue" play="true">}}
 

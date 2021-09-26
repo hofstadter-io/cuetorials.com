@@ -9,9 +9,9 @@ weight: 15
 Cue has the typical math operations for numbers.
 Multiplication also works for strings and lists.
 
-{{< chromaDouble
-  lhsPath="code/overview/expressions/math-ops.html" lhsTitle="math-ops.cue"
-  rhsPath="code/overview/expressions/math-ops-out.html" rhsTitle="cue eval math-ops.cue"
+{{< codePane2
+  file1="code/overview/expressions/math-ops.html" title1="math-ops.cue" play1="true"
+  file2="code/overview/expressions/math-ops-out.html" title2="cue eval math-ops.cue"
 >}}
 
 Additional math operations can be found in the Cue's
@@ -22,16 +22,16 @@ Additional math operations can be found in the Cue's
 Cue has the expected relative comparison operators and semantics.
 Equality checks are handled by value unification.
 
-{{< chromaDouble
-  lhsPath="code/overview/expressions/compare-ops.html" lhsTitle="compare-ops.cue"
-  rhsPath="code/overview/expressions/compare-ops-out.html" rhsTitle="cue eval compare-ops.cue"
+{{< codePane2
+  file1="code/overview/expressions/compare-ops.html" title1="compare-ops.cue" play1="true"
+  file2="code/overview/expressions/compare-ops-out.html" title2="cue eval compare-ops.cue"
 >}}
 
 ### Predefined Bounds
 
 Cue has the following predefined bounds for sized numbers
 
-```text
+{{<codeInner lang="text">}}
 int8      >=-128 & <=127
 int16     >=-32_768 & <=32_767
 int32     >=-2_147_483_648 & <=2_147_483_647
@@ -47,16 +47,18 @@ uint64    >=0 & <=18_446_744_073_709_551_615
 uint128   >=0 & <=340_282_366_920_938_463_463_374_607_431_768_211_455
 
 rune      >=0 & <=0x10FFFF
-```
+{{< /codeInner >}}
+
+
 
 ### Regular Expressions
 
 Cue supports regular expression constraints with the `=~` and `!~` operators.
 
 
-{{< chromaDouble
-  lhsPath="code/overview/expressions/regexp.html" lhsTitle="regexp.cue"
-  rhsPath="code/overview/expressions/regexp-out.html" rhsTitle="cue eval regexp.cue"
+{{< codePane2
+  file1="code/overview/expressions/regexp.html" title1="regexp.cue" play1="true"
+  file2="code/overview/expressions/regexp-out.html" title2="cue eval regexp.cue"
 >}}
 
 They are based on [Go's regular expressions](https://golang.org/pkg/regexp/).
@@ -68,9 +70,9 @@ Cue also has some additional {{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</c
 
 Cue supports interpolation in strings and bytes with `\(<expr>)`
 
-{{< chromaDouble
-  lhsPath="code/overview/expressions/interpolate.html" lhsTitle="interpolate.cue"
-  rhsPath="code/overview/expressions/interpolate-out.html" rhsTitle="cue eval interpolate.cue"
+{{< codePane2
+  file1="code/overview/expressions/interpolate.html" title1="interpolate.cue" play1="true"
+  file2="code/overview/expressions/interpolate-out.html" title2="cue eval interpolate.cue"
 >}}
 
 For more complicated scenarios, you can use the {{< cuedoc page="/pkg/text/template" >}}text/template{{</cuedoc>}} package.
@@ -87,9 +89,9 @@ The form is `[ for key, val in <iterable> [condition] { production } ]`
 
 \* key is the index for lists and the label for fields
 
-{{< chromaDouble
-  lhsPath="code/overview/expressions/list-comp.html" lhsTitle="list-comp.cue"
-  rhsPath="code/overview/expressions/list-comp-out.html" rhsTitle="cue eval list-comp.cue"
+{{< codePane2
+  file1="code/overview/expressions/list-comp.html" title1="list-comp.cue" play1="true"
+  file2="code/overview/expressions/list-comp-out.html" title2="cue eval list-comp.cue"
 >}}
 
 
@@ -97,9 +99,9 @@ The form is `[ for key, val in <iterable> [condition] { production } ]`
 
 Cue also has the ability to comprehend fields.
 
-{{< chromaDouble
-  lhsPath="code/overview/expressions/field-comp.html" lhsTitle="field-comp.cue"
-  rhsPath="code/overview/expressions/field-comp-out.html" rhsTitle="cue eval field-comp.cue"
+{{< codePane2
+  file1="code/overview/expressions/field-comp.html" title1="field-comp.cue" play1="true"
+  file2="code/overview/expressions/field-comp-out.html" title2="cue eval field-comp.cue"
 >}}
 
 ### Conditional Fields
@@ -111,4 +113,4 @@ Some important notes to make from the usual understanding of if's:
 - there is not an else statement, you have to have two with opposite conditions
 - there is no shortcircuiting of booleans, all conditions will be evaluated
 
-{{< chromaHTML file="code/overview/expressions/guards.html" title="guards.cue" >}}
+{{< codePane file="code/overview/expressions/guards.html" title="guards.cue" play="true">}}

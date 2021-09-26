@@ -20,5 +20,3 @@ app: {
 		footprint: "large"
 	}
 }
-
-

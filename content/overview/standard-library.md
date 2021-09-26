@@ -48,17 +48,17 @@ There are broadly two types of packages
 
 ##### Encoding
 
-{{< chromaHTML file="code/overview/standard-library/encoding.html" title="encoding.cue" >}}
+{{< codePane file="code/overview/standard-library/encoding.html" title="encoding.cue" play="true">}}
 
 ##### Strings
 
-{{< chromaHTML file="code/overview/standard-library/strings.html" title="strings.cue" >}}
+{{< codePane file="code/overview/standard-library/strings.html" title="strings.cue" play="true">}}
 
 ##### List
 
-{{< chromaHTML file="code/overview/standard-library/list.html" title="list.cue" >}}
+{{< codePane file="code/overview/standard-library/list.html" title="list.cue" play="true">}}
 
 #### Constrain
 
-{{< chromaHTML file="code/overview/standard-library/constrain.html" title="constrain.cue" >}}
+{{< codePane file="code/overview/standard-library/constrain.html" title="constrain.cue" play="true">}}
 

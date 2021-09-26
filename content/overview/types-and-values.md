@@ -15,14 +15,12 @@ Cue has the following built in types.
 They are meant to align with JSON types.
 
 ```text
-null  bool  string  bytes  number  struct  list
+null  bool  string  bytes  number  list  struct
                              |
                             int
 ```
 
-{{< chromaHTML
-  file="code/overview/types-and-values/builtins.html" title="builtins.cue"
->}}
+{{< codePane file="code/overview/types-and-values/builtins.html" title="builtins.cue" >}}
 
 
 
@@ -43,9 +41,7 @@ Errors result in __bottom__ with a message attached.
 You can get errors for incomplete types when exporting Cue to data
 or for conflicts and invalid semantics in your code.
 
-{{< chromaHTML
-  file="code/overview/types-and-values/errors.html" title="errors.cue"
->}}
+{{< codePane file="code/overview/types-and-values/errors.html" title="errors.cue" play="ture">}}
 
 
 ### Null Coalescing
@@ -54,9 +50,9 @@ Null coalescing allows us to provide fallback values when errors occur.
 This is technically error coalescing since `null` is a vaid value.
 This works by using disjunctions and defaults.
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/coalesce.html" lhsTitle="coalesce.cue"
-  rhsPath="code/overview/types-and-values/coalesce-out.html" rhsTitle="cue eval coalesce.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/coalesce.html" play1="true" title1="coalesce.cue"
+  file2="code/overview/types-and-values/coalesce-out.html" title2="cue eval coalesce.cue"
 >}}
 
 
@@ -67,9 +63,7 @@ Cue defines two number kinds:
 - `int` are whole numbers, implemented as BigInt to represent any value, and can be constrained for byte size (like int64)
 - `number` are decimals numbers, (also not bounded by byte size, also constrainable?), ints are also numbers
 
-{{< chromaHTML
-  file="code/overview/types-and-values/numbers.html" title="numbers.cue"
->}}
+{{< codePane file="code/overview/types-and-values/numbers.html" title="numbers.cue" play="true">}}
 
 Cue has syntactic sugar for writing numbers too:
 
@@ -78,9 +72,9 @@ Cue has syntactic sugar for writing numbers too:
 - `e/E` for decimal exponents
 - Underscores for visual readability for large numbers
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/number-sugar.html" lhsTitle="number-sugar.cue"
-  rhsPath="code/overview/types-and-values/number-sugar-out.html" rhsTitle="cue eval number-sugar.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/number-sugar.html" title1="number-sugar.cue" play1="true"
+  file2="code/overview/types-and-values/number-sugar-out.html" title2="cue eval number-sugar.cue"
 >}}
 
 
@@ -88,14 +82,14 @@ Cue has syntactic sugar for writing numbers too:
 
 Cue strings are valid UTF-8 sequences with some escaping options
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/strings.html" lhsTitle="strings.cue"
-  rhsPath="code/overview/types-and-values/strings-out.html" rhsTitle="cue eval strings.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/strings.html" title1="strings.cue" play1="true"
+  file2="code/overview/types-and-values/strings-out.html" title2="cue eval strings.cue"
 >}}
 
 The escape sequences are:
 
-```text
+{{<codeInner lang="text">}}
 \a   U+0007 alert or bell
 \b   U+0008 backspace
 \f   U+000C form feed
@@ -113,7 +107,7 @@ The escape sequences are:
 
 \uXXXX  for unicode
 \UXXXXXXXX for longer unicode
-```
+{{< /codeInner >}}
 
 https://cuelang.org/docs/references/spec/#string-and-byte-sequence-literals
 
@@ -125,9 +119,9 @@ There is one more escape for string interpolation which we will see in the next 
 Cue allows you to modify the string delimiters so you can avoid escaping.
 Use any number of `#` on both ends of normal strings
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/rawstrings.html" lhsTitle="rawstrings.cue"
-  rhsPath="code/overview/types-and-values/rawstrings-out.html" rhsTitle="cue eval rawstrings.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/rawstrings.html" title1="rawstrings.cue" play1="ture"
+  file2="code/overview/types-and-values/rawstrings-out.html" title2="cue eval rawstrings.cue"
 >}}
 
 
@@ -135,10 +129,10 @@ Use any number of `#` on both ends of normal strings
 
 Bytes are single quoted and base64 encoded when output:
 
-{{< chromaTriple
-  lhsPath="code/overview/types-and-values/bytes.html" lhsTitle="bytes.cue"
-  midPath="code/overview/types-and-values/bytes-eval.html" midTitle="cue eval bytes.cue"
-  rhsPath="code/overview/types-and-values/bytes-export.html" rhsTitle="cue export bytes.cue"
+{{< codePane3
+  file1="code/overview/types-and-values/bytes.html" title1="bytes.cue"
+  file2="code/overview/types-and-values/bytes-eval.html" title2="cue eval bytes.cue"
+  file3="code/overview/types-and-values/bytes-export.html" title3="cue export bytes.cue"
 >}}
 
 ### Lists
@@ -146,9 +140,9 @@ Bytes are single quoted and base64 encoded when output:
 Cue lists have arbitrary elements of mixed types. They can optionally be open and predefine some elements.
 Mismatched elements result in errors.
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/lists.html" lhsTitle="lists.cue"
-  rhsPath="code/overview/types-and-values/lists-out.html" rhsTitle="cue eval lists.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/lists.html" title1="lists.cue" play1="true"
+  file2="code/overview/types-and-values/lists-out.html" title2="cue eval lists.cue"
 >}}
 
 ### Structs
@@ -157,9 +151,7 @@ Structs are like JSON objects. They are the primary composite type in Cue.
 They have a set of fields (label: value).
 By default, they are open and you can add more fields.
 
-{{< chromaHTML
-  file="code/overview/types-and-values/structs.html" title="structs.cue"
->}}
+{{< codePane file="code/overview/types-and-values/structs.html" title="structs.cue" play="true" >}}
 
 
 ### Definitions
@@ -167,10 +159,10 @@ By default, they are open and you can add more fields.
 Definitions are very similar to structs and are primarily used for schemas.
 They are closed by default and are __not__ emitted by Cue when exporting.
 
-{{< chromaTriple
-  lhsPath="code/overview/types-and-values/defns.html" lhsTitle="defns.cue"
-  midPath="code/overview/types-and-values/defns-out.html" midTitle="cue eval defns.cue"
-  rhsPath="code/overview/types-and-values/defns-exp.html" rhsTitle="cue export defns.cue"
+{{< codePane3
+  file1="code/overview/types-and-values/defns.html"     title1="defns.cue" play1="true"
+  file2="code/overview/types-and-values/defns-out.html" title2="cue eval defns.cue"
+  file3="code/overview/types-and-values/defns-exp.html" title3="cue export defns.cue"
 >}}
 
 
@@ -180,9 +172,9 @@ You can embed structs and definitions within each other as a method to build up 
 You can achieve the same with opened structs / definitions and conjunctions, but often we cannot modify what we can embed.
 
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/embed.html" lhsTitle="embed.cue"
-  rhsPath="code/overview/types-and-values/embed-out.html" rhsTitle="cue export embed.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/embed.html"     title1="embed.cue" play1="true"
+  file2="code/overview/types-and-values/embed-out.html" title2="cue export embed.cue"
 >}}
 
 
@@ -194,8 +186,8 @@ While limited in matching today, they will be significantly more powerful once t
 For now, you can apply a constraint to string labels and use an identifier to set fields if you like.
 
 
-{{< chromaDouble
-  lhsPath="code/overview/types-and-values/patterns.html" lhsTitle="patterns.cue"
-  rhsPath="code/overview/types-and-values/patterns-out.html" rhsTitle="cue export patterns.cue"
+{{< codePane2
+  file1="code/overview/types-and-values/patterns.html"     title1="patterns.cue" play1="true"
+  file2="code/overview/types-and-values/patterns-out.html" title2="cue export patterns.cue"
 >}}
 

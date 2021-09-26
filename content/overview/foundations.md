@@ -21,9 +21,9 @@ When representing JSON in Cue, the differences are:
 - The outermost curly braces are optional
 
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/superset.html" lhsTitle="superset.cue"
-  rhsPath="code/overview/foundations/superset.json" rhsLang="json" rhsTitle="cue export superset.cue"
+{{< codePane2
+  file1="code/overview/foundations/superset.html" title1="superset.cue" play1="true"
+  file2="code/overview/foundations/superset.json" title2="cue export superset.cue" lang2="json"
 >}}
 
 
@@ -53,10 +53,10 @@ define schemas, refine with constraints, fill with data,
 and combine these ideas along a spectrum.
 It also means defining schemas is more natural with how we think about and write code as humans.
 
-{{< chromaTriple
-  lhsPath="code/overview/foundations/tav-schema.html" lhsTitle="Schema"
-  midPath="code/overview/foundations/tav-constrain.html" midTitle="Constraints"
-  rhsPath="code/overview/foundations/tav-data.html" rhsTitle="Data"
+{{< codePane3
+  file1="code/overview/foundations/tav-schema.html"    title1="Schema"
+  file2="code/overview/foundations/tav-constrain.html" title2="Constraints"
+  file3="code/overview/foundations/tav-data.html"      title3="Data"
 >}}
 
 While you're likely familiar with types and data,
@@ -92,9 +92,9 @@ as long as they are consistent with each other.
 - structs fields are merged, list elements must match exactly
 - the rules are applied recursively
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/fields.html" lhsTitle="fields.cue"
-  rhsPath="code/overview/foundations/fields-eval.html" rhsTitle="cue eval fields.cue"
+{{< codePane2
+  file1="code/overview/foundations/fields.html"      title1="fields.cue" play1="true"
+  file2="code/overview/foundations/fields-eval.html" title2="cue eval fields.cue"
 >}}
 
 Using these properties will be
@@ -113,9 +113,9 @@ They have slightly different rules from structs.
 
 You indicate a definitions with `#mydef:` and can leave it open with `...`
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/definition.html" lhsTitle="definition.cue"
-  rhsPath="code/overview/foundations/definition.json" rhsLang="json" rhsTitle="cue export definition.cue"
+{{< codePane2
+  file1="code/overview/foundations/definition.html" play1="true" title1="definition.cue"
+  file2="code/overview/foundations/definition.json" lang2="json" title2="cue export definition.cue"
 >}}
 
 
@@ -124,9 +124,9 @@ You indicate a definitions with `#mydef:` and can leave it open with `...`
 Conjunctions "meet" values together, combining their fields, rules, and data.
 They are like "and" and the `&` operator is used for them.
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/conjunction.html" lhsTitle="conjunction.cue"
-  rhsPath="code/overview/foundations/conjunction.json" rhsLang="json" rhsTitle="cue export conjunction.cue"
+{{< codePane2
+  file1="code/overview/foundations/conjunction.html" play1="true" title1="conjunction.cue"
+  file2="code/overview/foundations/conjunction.json" lang2="json" title2="cue export conjunction.cue"
 >}}
 
 
@@ -135,9 +135,9 @@ They are like "and" and the `&` operator is used for them.
 Disjunctions "join" values to create options or alternatives.
 They are like "or" and the `|` operator is used for them.
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/disjunction.html" lhsTitle="disjunction.cue"
-  rhsPath="code/overview/foundations/disjunction.json" rhsLang="json" rhsTitle="cue export disjunction.cue"
+{{< codePane2
+  file1="code/overview/foundations/disjunction.html" play1="true" title1="disjunction.cue"
+  file2="code/overview/foundations/disjunction.json" lang2="json" title2="cue export disjunction.cue"
 >}}
 
 Disjunctions have several uses:
@@ -151,9 +151,9 @@ Disjunctions have several uses:
 
 Cue supports setting defaults for values or marking a field optional.
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/default-optional.html" lhsTitle="default-optional.cue"
-  rhsPath="code/overview/foundations/default-optional.json" rhsLang="json" rhsTitle="cue export default-optional.cue"
+{{< codePane2
+  file1="code/overview/foundations/default-optional.html" play1="true" title1="default-optional.cue"
+  file2="code/overview/foundations/default-optional.json" lang2="json" title2="cue export default-optional.cue"
 >}}
 
 
@@ -169,7 +169,7 @@ Open means a struct can be extended, closed means they cannot.
 By default structs are open and definitions are closed.
 Cue also allows us to explicitly do the opposite.
 
-{{< chromaHTML
+{{< codePane
   file="code/overview/foundations/open-closed.html" title="open-closed.cue"
 >}}
 
@@ -179,9 +179,9 @@ Cue also allows us to explicitly do the opposite.
 In Cue, it is recommended to start small and build values up.
 This makes schemas reusable.
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/building-up.html" lhsTitle="building-up.cue"
-  rhsPath="code/overview/foundations/building-up.json" rhsLang="json" rhsTitle="cue export building-up.cue"
+{{< codePane2
+  file1="code/overview/foundations/building-up.html" play1="true" title1="building-up.cue"
+  file2="code/overview/foundations/building-up.json" lang2="json" title2="cue export building-up.cue"
 >}}
 
 ### Order is Irrelevant
@@ -189,10 +189,10 @@ This makes schemas reusable.
 Cue's unification system resolves values, schemas,  and correctness
 regardless of order and which files may contain them.
 
-{{< chromaDouble
-  lhsPath="code/overview/foundations/order.html" lhsTitle="order.cue"
-  midPath="code/overview/foundations/order-2.html" midTitle="crder-2.cue"
-  rhsPath="code/overview/foundations/order-out.html" rhsTitle="cue export order.cue order-2.cue"
+{{< codePane3
+  file1="code/overview/foundations/order.html"     title1="order.cue"
+  file2="code/overview/foundations/order-2.html"   title2="crder-2.cue"
+  file3="code/overview/foundations/order-out.html" title3="cue export order.cue order-2.cue"
 >}}
 
 
