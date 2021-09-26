@@ -9,7 +9,7 @@ weight: 15
 
 Cue can inject data from the command line into your configurations.
 
-{{< chromaHTML file="code/patterns/secrets/inject.html" title="inject.cue" >}}
+{{< codePane file="code/patterns/secrets/inject.html" title="inject.cue" >}}
 
 ```shell
 # -t key=value  -e to eval a specific value
@@ -23,13 +23,12 @@ You can combine multiple Cue files.
 Note how the secret values are structured the same
 and the secret file does not have a package name.
 
-{{< chromaDouble
-  lhsPath="code/patterns/secrets/app.html" lhsTitle="app.cue"
-  rhsPath="code/patterns/secrets/secret.html" rhsTitle="secret.cue"
+{{< codePane2
+  file1="code/patterns/secrets/app.html" title1="app.cue"
+  file2="code/patterns/secrets/secret.html" title2="secret.cue"
 >}}
 
-```shell
-$ cue eval app.cue secret.cue 
+{{<codeInner title="cue eval app.cue secret.cue" >}}
 secrets: {
     username: "prd-user"
     password: "prd-pass"
@@ -40,4 +39,4 @@ app: {
         pass: "prd-pass"
     }
 }
-```
+{{< /codeInner >}}

@@ -9,9 +9,9 @@ weight: 3
 
 Use disjunctions and an embedding when you want one or another field, but not both.
 
-{{< chromaDouble
-  lhsPath="code/patterns/fields/either-or.html" lhsTitle="either-or.cue"
-  rhsPath="code/patterns/fields/either-or-out.html" rhsTitle="cue eval either-or.cue"
+{{< codePane2
+  file1="code/patterns/fields/either-or.html"     title1="either-or.cue" play1="true"
+  file2="code/patterns/fields/either-or-out.html" title2="cue eval either-or.cue"
 >}}
 
 

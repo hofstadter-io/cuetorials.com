@@ -28,5 +28,4 @@ import "strings"
 }
 
 // Call transform
-loudly: #Transform & { in: { msg: "ra", count: 3 } }
-
+result: #Transform & { in: { msg: "ra", count: 3 } }

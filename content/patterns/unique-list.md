@@ -25,9 +25,9 @@ The way we do this is to turn the list
 into a "map" using struct comprehension
 and then convert it back to a list.
 
-{{< chromaDouble
-  lhsPath="code/tasks/unique-list-by-key.html" lhsTitle="unique-list-by-key.cue"
-  rhsPath="code/tasks/unique-list-by-key-out.html" rhsTitle="cue eval unique-list-by-key.cue"
+{{< codePane2
+  file1="code/tasks/unique-list-by-key.html"     title1="unique-list-by-key.cue" play1="true"
+  file2="code/tasks/unique-list-by-key-out.html" title2="cue eval unique-list-by-key.cue"
 >}}
 
 
@@ -37,8 +37,8 @@ The goal here is to detect and remove duplicates
 based on a the entire value.
 We use the list package and list comprehension.
 
-{{< chromaDouble
-  lhsPath="code/tasks/unique-list-by-val.html" lhsTitle="unique-list-by-val.cue"
-  rhsPath="code/tasks/unique-list-by-val-out.html" rhsTitle="cue eval unique-list-by-val.cue"
+{{< codePane2
+  file1="code/tasks/unique-list-by-val.html"      title1="unique-list-by-val.cue" play1="true"
+  file2="code/tasks/unique-list-by-val-out.html" title2="cue eval unique-list-by-val.cue"
 >}}
 
