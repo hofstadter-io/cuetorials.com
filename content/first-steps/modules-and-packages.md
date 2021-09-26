@@ -28,18 +28,18 @@ _While, Cue does not yet have a dependency management system, it will import and
 To define a module, we simply need to add a `cue.mod/module.cue` file.
 Before you do, you will _not_ be able to import files from other directories or modules.
 
-{{< chromaCode file="code/first-steps/modules-and-packages/listing.txt" title="file listing" lang="shell">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/module.html" title="cue.mod/module.cue">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/root.html" title="root.cue">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/a/a.html" title="a/a.cue">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/bar.html" title="cue.mod/pkg/github.com/foo/bar/bar.cue">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/b/b.html" title="cue.mod/pkg/github.com/foo/bar/b/b.cue">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" title="cue.mod/pkg/github.com/foo/bar/multi/hello.cue">}}
-{{< chromaHTML file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" title="cue.mod/pkg/github.com/foo/bar/multi/world.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/listing.txt" title="file listing" lang="shell">}}
+{{< codePane file="code/first-steps/modules-and-packages/cue.mod/module.html" title="cue.mod/module.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/root.html" title="root.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/a/a.html" title="a/a.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/bar.html" title="cue.mod/pkg/github.com/foo/bar/bar.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/b/b.html" title="cue.mod/pkg/github.com/foo/bar/b/b.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" title="cue.mod/pkg/github.com/foo/bar/multi/hello.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" title="cue.mod/pkg/github.com/foo/bar/multi/world.cue">}}
 
 When we run this, we can see the output by combining the modules and pacakges
 
-{{< chromaHTML file="code/first-steps/modules-and-packages/eval.html" title="cue eval root.cue">}}
+{{< codePane file="code/first-steps/modules-and-packages/eval.html" title="cue eval root.cue">}}
 
 
 <br>
@@ -75,7 +75,7 @@ First, you will need to initialize a module
 
 The format for `cue.mods` looks like Go's.
 
-```text
+{{<codeInner title="cue.mods">}}
 // this should match the cue.mod/modules.cue value
 module "github.com/hofstadter-io/cuetorials"
 
@@ -88,7 +88,7 @@ require (
 
 replace github.com/other/repo => github.com/myorg/repo  // replace with a different remote repository
 replace github.com/hof/studios => ../../studios         // local replace
-```
+{{< /codeInner >}}
 
 `hof` will not inspect your code to determine dependencies, thus you have to __always__ manually add them.
 

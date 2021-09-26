@@ -13,15 +13,12 @@ How? By using `text/templates` to render any file we wish.
 
 ## Generating with Cue
 
-{{< chromaHTML file="code/first-steps/generate-all-the-things/first.html" title="first.cue">}}
+{{< codePane file="code/first-steps/generate-all-the-things/first.html" title="first.cue" play="true">}}
 
-
-{{< chromaHTML file="code/first-steps/generate-all-the-things/first_tool.html" title="first_tool.cue">}}
-  
-{{< chromaHTML file="code/first-steps/generate-all-the-things/first_tool.txt" title="cue cmd gen *.cue">}}
+{{< codePane file="code/first-steps/generate-all-the-things/first_tool.html" title="first_tool.cue">}}
 
 ```sh
-cue cmd -t "name=bob" gen-todos
+cue cmd -t "name=bob" gen
 ```
 
 Cue's template system is Go's template system,
@@ -50,7 +47,7 @@ The solution is actually pretty simple, keep a shadow copy of the generated code
 and use a 3-way diff to merge design updates and custom code.
 
 
-{{< chromaHTML file="code/first-steps/generate-all-the-things/hof.html" title="hof.cue">}}
+{{< codePane file="code/first-steps/generate-all-the-things/hof.html" title="hof.cue">}}
 
 You can learn more about `hof` from these links:
 

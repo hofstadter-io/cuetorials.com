@@ -27,7 +27,7 @@ cue import -f -o cuetorials.cue -l 'strings.ToLower(kind)' -l 'metadata.name' -p
 - `-p` tells Cue to put the output in `package cuetorials`
 - the last argument is our file, but can also be a glob or directories (`./...`)
 
-{{< chromaHTML file="code/first-steps/import-configuration/cuetorials-import.html" >}}
+{{< codePane file="code/first-steps/import-configuration/cuetorials-import.html" title="cuetorials.cue">}}
 
 <br>
 
@@ -46,7 +46,7 @@ We'll talk about modules and packages in
 [an upcoming section](/first-steps/modules-and-packages),
 for now create the following file `cue.mod/module.cue`:
 
-{{< chromaHTML file="cue.mod/module.html" >}}
+{{< codePane file="cue.mod/module.html" >}}
 
 With that in place, what we are going to do is:
 
@@ -68,7 +68,7 @@ tree cue.mod/gen/
 
 Now add the following lines to your `cuetorials.cue` file:
 
-{{< chromaHTML file="code/first-steps/import-configuration/cuetorials-add.html" >}}
+{{< codePane file="code/first-steps/import-configuration/cuetorials-add.html" >}}
 
 Now try running `cue eval cuetorials.cue`. You are likely to see some errors.
 This is because Kubernetes accepts both strings and integers in several places.
@@ -84,7 +84,7 @@ you can run `cue trim` on the file to remove redundant code
 (based on minimization and defaults).
 Advanced trimming is on the roadmap for Cue via _anti-unification._
 
-{{< chromaHTML file="code/first-steps/import-configuration/cuetorials-trimmed.html" >}}
+{{< codePane file="code/first-steps/import-configuration/cuetorials-trimmed.html" >}}
 
 You may be saying, “this wackiness about int/str ports does not match my kubernetes files”
 and you are totally right. We’ll see later how to work with OpenAPI specs and more

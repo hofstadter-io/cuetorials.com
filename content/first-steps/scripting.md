@@ -39,6 +39,6 @@ Tool files have a common format:
 
 `ex_tool.cue` (run with `cue cmd prompter`)
 
-{{< chromaHTML file="code/first-steps/scripting/ex_tool.html" >}}
+{{< codePane file="code/first-steps/scripting/ex_tool.html" >}}
 
 

@@ -45,7 +45,10 @@ The saying is "Wrap code in data, not data in code."
 Cue is a superset of JSON. This means you can represent any JSON in Cue
 with a slightly different syntax and then some Cue super powers to boot!
 
-{{< chromaDouble lhsPath="code/introduction/json-superset/lhs.json" lhsLang="json" lhsTitle="music.json" rhsPath="code/introduction/json-superset/rhs.html" rhsTitle="music.cue" >}}
+{{< codePane2
+  file1="code/introduction/json-superset/lhs.json" lang1="json" title1="music.json"
+  file2="code/introduction/json-superset/rhs.html" title2="music.cue"
+>}}
 
 If you think about JSONSchema vs JSON, they are separate concepts.
 One defines a schema, the other is data. In Cue they are the same.
@@ -65,7 +68,7 @@ The entire lattice starts from a singular root (top, `_`, any),
 ends with a single leaf (bottom, `_|_`, void),
 and all other values are between these two, partially ordered.
 
-{{< chromaHTML file="code/introduction/hierarchy/code.html" >}}
+{{< codePane file="code/introduction/hierarchy/code.html" play="true">}}
 
 In the code above, we have a "type" `#Schema`, some constraints `#Constrained`, and a `Value`.
 `#Definitions:` had slightly different semantics and rules than `Values:` which we will expand on in the tutorial.
@@ -74,10 +77,6 @@ The `&` combines two or more Cue "values" (all three of {type, constraint, value
 and ensures that the result is valid and correct. There is also a disjunction ("or") operator `|`.
 In `#Constrained`, you can see a regexp and logical operators as well as a builtin from the standard library.
 We'll go into the in greater depth later.
-
-Here is a visual example of Cue's value lattice:
-
-[[ insert diagrams for simple examples here, both set theory and type > constraint > values ]]
 
 {{< panel title="CUE stands for Configure, Unify, Execute" style="primary" />}}
 
