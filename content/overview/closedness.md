@@ -39,15 +39,27 @@ These are not recursively applied, only changing the field they are used on.
 
 {{< codePane file="code/overview/closedness/open-n-close.html" title="open-n-close.cue" play="true">}}
 
-### Templates and closedness
+### Closedness with pattern constraints
 
-{{< codePane file="code/overview/closedness/template.html" title="template.cue" play="true">}}
+Pattern constraints define a set of fields. So while `d & #D` is closed,
+it can still have an infinite number of labels defined.
+
+{{< codePane file="code/overview/closedness/pattern-constraints.html" title="pattern-constraints.cue" play="true">}}
 
 ### Extending definitions by embedding
+
+Embedding allows the extension of a definition while still
+receiving updates when `#D` is changed.
 
 {{< codePane file="code/overview/closedness/embed.html" title="embed.cue" play="true">}}
 
 ### Hidden fields in definitions
+
+You can add as many hidden fields to a closed value.
+This is because the original definitions hidden fields
+are inaccessible and thus there cannot be a conflict.
+
+{{< codePane file="code/overview/closedness/hidden.html" title="hidden.cue" play="true">}}
 
 ### List closedness
 

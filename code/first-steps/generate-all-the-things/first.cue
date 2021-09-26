@@ -29,7 +29,7 @@ templates: [
 		{{ .msg }}
 
 		--- TODO ---
-		{{ range $T := .I -}}
+		{{ range $T := .incomplete -}}
 		{{ printf "%-4s%v" $T.name $T.effort }}
 		{{ end }}
 		"""
@@ -39,7 +39,7 @@ templates: [
 		Here's what you have finished \(data.name). Good job!
 
 		--- DONE ---
-		{{ range $T := .C -}}
+		{{ range $T := .complete -}}
 		{{ $T.name }}
 		{{ end }}
 		"""
