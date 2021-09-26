@@ -2,7 +2,7 @@
 	size: string
 	data: {
 		x: int
-		y: 
+		y: int
 	}
 }
 
