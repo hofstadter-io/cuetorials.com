@@ -5,12 +5,14 @@
 {{ $identifier := "" }}
 {{ $filepath := .Get "file"}}
 {{ $title := .Get "title"}}
+
 {{ if ($filepath) }}
   {{ .Scratch.Set "content" ($filepath | readFile) }}
   {{ .Scratch.Set "identifier" (first 10 (md5 (.Scratch.Get "content"))) }}
 {{ else }}
   "missing file input"
 {{ end}}
+
 {{ if (.Get "play") }}
   {{ $codepath := replace $filepath ".html" ".cue" }}
   {{ .Scratch.Set "code" ($codepath | readFile) }}

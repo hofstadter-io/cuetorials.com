@@ -18,7 +18,7 @@
   {{ .Scratch.Set "code" ($codepath | readFile) }}
 {{ end}}
 
-<div class="position-relative mb-3 overflow-auto">
+<div class="position-relative mb-3" style="overflow-x: auto; overflow-y: hidden">
     {{ if $title }}
     <p class="pl-2 py-1 m-0 border bg-light">{{ $title }}</p>
     {{ end }}
@@ -41,7 +41,7 @@
         </div>
       {{ end }}
 {{ if (.Get "play") }}
-<textarea class="invisible" style="height:0" id="{{printf "playground_%s" (.Scratch.Get "identifier") }}">
+<textarea class="invisible position-absolute" style="height:0" id="{{printf "playground_%s" (.Scratch.Get "identifier") }}">
 {{ .Scratch.Get "code" | htmlUnescape }}
 </textarea>
 {{ end}}
