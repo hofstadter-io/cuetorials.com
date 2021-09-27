@@ -74,7 +74,7 @@ Update: schema.#List & {
 		metadata: _Values.#metadata
 		spec: {
 			selector: _Values.#metadata.labels
-			type: "ClusterIP"
+			type: "NodePort"
 			ports: [{
 				port: _Values.port
 				targetPort: _Values.port
