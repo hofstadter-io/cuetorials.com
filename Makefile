@@ -37,7 +37,7 @@ docker: image push
 
 .PHONY: image
 image:
-	@docker build -f ci/Dockerfile -t us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG) .
+	@docker build --no-cache -f ci/Dockerfile -t us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG) .
 
 .PHONY: push
 push:
