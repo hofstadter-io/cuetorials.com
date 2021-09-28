@@ -1,15 +1,3 @@
-<!-- Load required Javascript -->
-<script src="/js/pv.js"></script> <!-- Other javascript -->
-<script src="/lib/jquery.min.js"></script> <!-- jQuery.js -->
-<script src="/lib/popper.min.js"></script> <!-- Popper.js - dependency of Bootstrap -->
-
-<script src="/js/bootstrap.min.js"></script> <!-- Other javascript -->
-<script src="/js/playground.js"></script> <!-- Other javascript -->
-
-<!-- Plugin: search -->
-<script type="text/javascript" src="{{"plugins/lunr.min.js" | relURL}}"></script>
-<script type="text/javascript" src="{{"plugins/auto-complete.js" | relURL}}"></script>
-<link href="{{"plugins/auto-complete.css" | relURL}}" rel="stylesheet">
 <script type="text/javascript">
   {{ if .Site.IsMultiLingual }}
       var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
@@ -17,10 +5,24 @@
       var baseurl = "{{.Site.BaseURL}}";
   {{ end }}
 </script>
-<script type="text/javascript" src="{{"plugins/search.js" | relURL}}"></script>
 
-<!-- Plugin: clipboard -->
-<script type="text/javascript" src="{{"plugins/clipboard.js" | relURL}}"></script>
+{{ $js1 := resources.Get "js/pv.js" | minify }}
+{{ $js2 := resources.Get "js/playground.js" | minify }}
+
+{{ $js3 := resources.Get "lib/jquery.min.js" }}
+{{ $js4 := resources.Get "lib/popper.min.js" }}
+{{ $js5 := resources.Get "js/bootstrap.min.js" }}
+
+{{ $js6 := resources.Get "plugins/lunr.min.js" }}
+{{ $js7 := resources.Get "plugins/auto-complete.js" | minify }}
+{{ $js8 := resources.Get "plugins/search.js" | minify }}
+{{ $js9 := resources.Get "plugins/clipboard.js" | minify }}
+
+{{ $js := slice $js1 $js2 $js3 $js4 $js5 $js6 $js7 $js8 $js9 | resources.Concat "js/bundle.js" }}
+{{ $JS := $js | resources.Fingerprint "sha512" }}
+
+<script type="text/javascript" src="{{ $JS.Permalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
+
 <script>
   new ClipboardJS('.btn');
 </script>

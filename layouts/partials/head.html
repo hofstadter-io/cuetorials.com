@@ -3,18 +3,20 @@
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
 
-    <title>
-        {{ block "title" . }}
-        {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
-        {{ end }}
-    </title>
+  <title>
+      {{ block "title" . }}
+      {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
+      {{ end }}
+  </title>
 
-    <!-- Load stylesheet -->
-    <link href="{{ .Site.BaseURL }}css/fontawesome.min.css" rel="stylesheet">
+  {{ $c1 := resources.Get "css/fontawesome.min.css" }}
+  {{ $c2 := resources.Get "plugins/auto-complete.css" | minify }}
+  {{ $c3 := resources.Get "css/ace.scss" | toCSS | minify }}
 
-    {{ $style := resources.Get "css/ace.scss" | toCSS | minify }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{ $css := slice $c1 $c2 $c3 | resources.Concat "css/bundle.css" }}
+  {{ $CSS := $css | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $CSS.Permalink }}" integrity="{{ $CSS.Data.Integrity }}">
 
 </head>
