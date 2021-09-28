@@ -8,6 +8,7 @@ function addHeaderLinks() {
       var a = document.createElement("a");
       a.className = "ml-2 fas fa-link fa-xs";
       a.href = window.location.pathname + "#" + h3.id
+      h3.className = "anchor"
       h3.appendChild(a);
     }
   })
