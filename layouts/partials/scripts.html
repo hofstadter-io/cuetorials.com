@@ -17,9 +17,10 @@
 {{ $js8 := resources.Get "plugins/search.js" | minify }}
 {{ $js9 := resources.Get "plugins/clipboard.js" | minify }}
 
+{{ $js11 := resources.Get "js/header-links.js" | minify }}
 {{ $js12 := resources.Get "js/playground.js" | minify }}
 
-{{ $js := slice $js1 $js3 $js4 $js5 $js6 $js7 $js8 $js9 $js12 | resources.Concat "js/bundle.js" }}
+{{ $js := slice $js1 $js3 $js4 $js5 $js6 $js7 $js8 $js9 $js11 $js12 | resources.Concat "js/bundle.js" }}
 {{ $JS := $js | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>

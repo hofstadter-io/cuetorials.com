@@ -16,9 +16,9 @@
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left">
                     {{- partial "tableofcontents.html" . -}}
                 </div>
-                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3" id="main-content">
                 {{else}}
-                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-10 py-3">
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-10 py-3" id="main-content">
                 {{end}}
 
                     {{- block "main" . }}{{- end }}
