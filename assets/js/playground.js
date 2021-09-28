@@ -16,3 +16,5 @@ function playground(id) {
     console.log("error:", error)
   })
 }
+
+new ClipboardJS('.btn');

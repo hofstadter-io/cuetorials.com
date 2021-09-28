@@ -17,6 +17,6 @@
 
   {{ $css := slice $c1 $c2 $c3 | resources.Concat "css/bundle.css" }}
   {{ $CSS := $css | resources.Fingerprint "sha512" }}
-  <link rel="stylesheet" href="{{ $CSS.Permalink }}" integrity="{{ $CSS.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" integrity="{{ $CSS.Data.Integrity }}">
 
 </head>

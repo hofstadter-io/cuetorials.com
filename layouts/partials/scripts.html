@@ -7,7 +7,6 @@
 </script>
 
 {{ $js1 := resources.Get "js/pv.js" | minify }}
-{{ $js2 := resources.Get "js/playground.js" | minify }}
 
 {{ $js3 := resources.Get "lib/jquery.min.js" }}
 {{ $js4 := resources.Get "lib/popper.min.js" }}
@@ -18,11 +17,9 @@
 {{ $js8 := resources.Get "plugins/search.js" | minify }}
 {{ $js9 := resources.Get "plugins/clipboard.js" | minify }}
 
-{{ $js := slice $js1 $js2 $js3 $js4 $js5 $js6 $js7 $js8 $js9 | resources.Concat "js/bundle.js" }}
+{{ $js12 := resources.Get "js/playground.js" | minify }}
+
+{{ $js := slice $js1 $js3 $js4 $js5 $js6 $js7 $js8 $js9 $js12 | resources.Concat "js/bundle.js" }}
 {{ $JS := $js | resources.Fingerprint "sha512" }}
 
-<script type="text/javascript" src="{{ $JS.Permalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
-
-<script>
-  new ClipboardJS('.btn');
-</script>
+<script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
