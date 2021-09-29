@@ -15,6 +15,6 @@ The proposal would eliminate this.
 The follow should result in an error.
 Note that `#bar` is both an `int` and a `string` in `foo`.
 
-{{< chromaHTML file="code/futurology/closedness/disallow-non-hidden.html">}}
+{{< codePane file="code/futurology/closedness/disallow-non-hidden.html">}}
 
 
