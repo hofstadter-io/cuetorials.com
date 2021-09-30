@@ -1,7 +1,7 @@
 ---
-title: "Field patterns"
+title: "Either Or"
 description: "Patterns around struct fields"
-weight: 3
+weight: 10
 ---
 
 

@@ -1,17 +1,17 @@
 ---
 title: "First Steps"
-description: "First steps with Cue"
+description: "First steps with CUE"
 weight: 10
 ---
 
 {{<lead>}}
-When you start out with Cue, the systax may feel overwhelming but the learning curve will pay itself back.
-First Steps will take you through some examples of how to get the most out of Cue without rewriting or breaking what you already have.
+When you start out with CUE, you can incorporate it without replacing existing code or processes.
+First Steps will take you through some examples of how to get the most out of CUE without rewriting or breaking what you already have.
 In fact, these will help you improve and verify your existing data, config, and processes.
 {{</lead>}}
 
 {{<quote author="Roger Peppe">}}
-Stealth Cue, not necessarily sneaky but you can start using Cue without changing existing code
+Stealth CUE, not necessarily sneaky but you can start using CUE without changing existing code
 {{</quote>}}
 
 <br>

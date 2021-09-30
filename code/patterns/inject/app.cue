@@ -1,13 +1,13 @@
 package app
 
-secrets: {
+_secrets: {
 	username: string
 	password: string
 }
 
 app: {
 	creds: {
-		user: secrets.username
-		pass: secrets.password
+		user: _secrets.username
+		pass: _secrets.password
 	}
 }

@@ -1,4 +1,4 @@
-secrets: {
+_secrets: {
 	username: "prd-user"
 	password: "prd-pass"
 }
