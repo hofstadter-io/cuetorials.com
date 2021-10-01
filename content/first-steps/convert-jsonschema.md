@@ -51,7 +51,9 @@ cue import -f -p compose -l '#ComposeSpec:' compose-spec.json
 - `-l` is the label to put the schema under
 - the last argument is the input schema
 
-We end up with about half as many lines. There are a lot of fields in a `docker-compose.yaml` file.
+While there are a lot of fields in a `docker-compose.yaml` file,
+and still 400+ lines,
+this CUE version is far easier to read and understand.
 
 <details>
   <summary class="h5">compose-spec.json (400+ lines)</summary>
@@ -79,34 +81,39 @@ cue vet -d '#ComposeSpec' docker-compose.yaml compose-spec.cue
 CUE's ability to import JSON Schema makes it easy to get started.
 However, the generated CUE doesn't always have the greatest ergonomics
 for building up and validating values. This is often because the
-source schema is underspecified or there are unusual types, like ports in Kubernetes.
+source schema is underspecified or there are unusual types.
+As such, you will likely find yourself building out and refining
+the imported schemas.
 
 The following are taken from the `docker-compose` output generated here.
 
 ##### Missing constraints
 
 Sometimes a schema does not add validation. We know there is a fixed
-format and valid versions for `docker-compose`
+format and valid versions for `docker-compose`, it's just not in this source.
 
 {{< codeInner >}}
 #version?: string
 {{< /codeInner >}}
 
-__Any fields__
+##### Any fields
 
 For more complex fields, we can end up with `_` (top)
 and have no validation for the field at all.
+You'll see this more often when importing Go
+that has types with custom marshal functions.
 
 {{< codeInner >}}
 #constraints: _
 {{< /codeInner >}}
 
-__Duplication__
+##### Duplication
 
 CUE cannot easily detect code duplication and shared structure
 if it is not already present in the source schema.
 The following show missed opportunity to have a more
 succinct schema with CUE.
+This also happens with the `regexp` for the fields near the top like services and volumes.
 
 
 {{< codePane3
@@ -115,4 +122,3 @@ succinct schema with CUE.
   file3="code/first-steps/convert-jsonschema/improved.html" title3="improved.cue"
 >}}
 
-This also happens with the `regexp` for the fields near the top like services and volumes.
