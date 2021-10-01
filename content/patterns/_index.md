@@ -1,7 +1,7 @@
 ---
 title: "Useful Patterns"
 description: "Common Cue patterns"
-weight: 25
+weight: 20
 ---
 
 {{<lead>}}

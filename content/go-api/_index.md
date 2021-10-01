@@ -1,7 +1,7 @@
 ---
-title: "Cue's API"
+title: "The Go API"
 description: "Using Cue's Go API"
-weight: 50
+weight: 40
 ---
 
 Cue has Go API so you can  work with Cue from Go programs.

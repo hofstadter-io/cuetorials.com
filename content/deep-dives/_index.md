@@ -1,11 +1,11 @@
 ---
-title: "Walkthroughs"
-description: "Step-by-step guides for CUE"
-weight: 60
+title: "Deep Dives"
+description: "In depth content on advanced Cuelang topics"
+weight: 30
 ---
 
 {{<lead>}}
-Step-by-step guides for CUE tasks and more.
+In depth content on advanced CUE topics.
 {{</lead>}}
 
 Coming soon, [open an issue](https://github.com/hofstadter-io/cuetorials.com/issues)

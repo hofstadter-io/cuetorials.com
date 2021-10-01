@@ -17,9 +17,11 @@ under [code](https://github.com/hofstadter-io/cuetorials/tree/main/code) and wil
 {{< childpages page="overview/" brief="of CUE's concepts and syntax" >}}
 {{< childpages page="first-steps/" brief="to adopting CUE" >}}
 {{< childpages page="patterns/" brief="and more complex CUE" >}}
+{{< childpages page="deep-dives/" brief="on topics in CUE" >}}
+{{< childpages page="go-api/" brief="for working with CUE from Go" >}}
 {{< childpages page="integrations/" brief="with other formats and standards" >}}
-{{< childpages page="api/" brief="for working with CUE from Go" >}}
-{{< childpages page="internals/" brief="of CUE's evaluator" >}}
-{{< childpages page="futurology/" brief="a look into what's coming" >}}
+{{< childpages page="walkthroughs/" brief="for tasks in CUE" >}}
+{{< childpages page="cueology/" brief="for aspiring Cueologists" >}}
+{{< childpages page="miscellaneous/" brief="and other uncategorized content" >}}
 {{< childpages page="getting-help/" >}}
 
