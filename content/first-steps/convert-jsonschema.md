@@ -23,9 +23,9 @@ or use any custom ones you have around.
 
 Download the `docker-compose` schema with this command:
 
-```sh
+{{< codeInner lang="sh" >}}
 wget https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
-```
+{{< /codeInner >}}
 
 
 <details>
@@ -42,9 +42,9 @@ wget https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/c
 
 Converting JSON Schema to CUE is a one liner and a no brainer.
 
-```sh
+{{< codeInner lang="sh" >}}
 cue import -f -p compose -l '#ComposeSpec:' compose-spec.json
-```
+{{< /codeInner >}}
 
 - `-f` forces overwriting the output file (compose-spec.cue)
 - `-p` sets the package name in the output
