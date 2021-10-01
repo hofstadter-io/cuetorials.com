@@ -61,7 +61,7 @@ that closely aligns with `go mod`.
 See 
 [first-steps/modules-and-packages](/first-steps/modules-and-packages/)
 and
-[futurology/dependency-management](/futurology/dependency-management)
+[cueology/futurology/dependency-management](/cueology/futurology/dependency-management)
 for more details.
 
 

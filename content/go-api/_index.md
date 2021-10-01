@@ -44,6 +44,11 @@ The examples in these sections can be found in `hofstadter-io/cutorials.com` rep
 under [code/api](https://github.com/hofstadter-io/cuetorials/tree/main/code/api)
 
 
+### Before you start
+
+CUE's evaluator is not yet safe for concurrency. See the
+[section in cueology/futurology/concurrency](/cueology/futurology/concurrency/)
+
 <br>
 
 ---

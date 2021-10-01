@@ -1,0 +1,9 @@
+kubernetes config / secrets
+- embedding
+- iterating
+- initContainer vs pre-export
+
+Something building up to Helm / c8s
+
+Building a task processor
+

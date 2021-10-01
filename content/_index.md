@@ -23,5 +23,5 @@ under [code](https://github.com/hofstadter-io/cuetorials/tree/main/code) and wil
 {{< childpages page="walkthroughs/" brief="for tasks in CUE" >}}
 {{< childpages page="cueology/" brief="for aspiring Cueologists" >}}
 {{< childpages page="miscellaneous/" brief="and other uncategorized content" >}}
-{{< childpages page="getting-help/" >}}
+{{< childpages page="getting-help/" brief="and support for CUE">}}
 
