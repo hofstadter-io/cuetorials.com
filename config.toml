@@ -23,6 +23,7 @@ github_project_repo = "https://github.com/hofstadter-io/cuetorials.com"
 github_repo = "https://github.com/hofstadter-io/cuetorials.com"
 time_format_default = "January 2, 2006"
 cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.0"
+ga = "UA-103579574-6"
 
 [markup]
   [markup.goldmark]

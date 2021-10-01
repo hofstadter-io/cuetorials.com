@@ -1,15 +1,14 @@
 <head>
 
   <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="robots" content="index, follow" />
 
   <link rel="canonical" href="{{ .Permalink }}">
 
-  <title>
-      {{ block "title" . }}
-      {{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
-      {{ end }}
-  </title>
+  <title>{{ .Title}}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
 
   {{ $c1 := resources.Get "css/fontawesome.min.css" }}
   {{ $c2 := resources.Get "plugins/auto-complete.css" | minify }}
@@ -18,5 +17,15 @@
   {{ $css := slice $c1 $c2 $c3 | resources.Concat "css/bundle.css" }}
   {{ $CSS := $css | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" integrity="{{ $CSS.Data.Integrity }}">
+
+  {{ if (and (not .Site.IsServer) .Site.Params.ga) }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.ga }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.Params.ga }}');
+  </script>
+  {{ end }}
 
 </head>
