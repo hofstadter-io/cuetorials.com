@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/c
 Converting JSON Schema to CUE is a one liner and a no brainer.
 
 ```sh
-cue import -f -p compose -l '#ComposeSchema:' compose-spec.json
+cue import -f -p compose -l '#ComposeSpec:' compose-spec.json
 ```
 
 - `-f` forces overwriting the output file (compose-spec.cue)
@@ -59,6 +59,18 @@ We end up with about half as many lines. There are a lot of fields in a `docker-
 {{< codePane file="code/first-steps/convert-jsonschema/compose-spec.html" title="compose-spec.cue" >}}
 
 </details>
+
+<br>
+
+### Validating with CUE
+
+You can now validate your `docker-compose.yaml` files like we did
+in the [Validate Configuration](/first-steps/validate-configuration).
+In this case, we will want to specify the schema with the `-d` flag.
+
+{{< codeInner lang="sh" >}}
+cue vet -d '#ComposeSpec' docker-compose.yaml compose-spec.cue
+{{< /codeInner >}}
 
 <br>
 
