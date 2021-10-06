@@ -26,4 +26,5 @@ configuration, schema, and languages.
 - mappings are non-trivial
 - meanings are not the same between them
 
-{{< childpages >}}
+{{< panel title="Links to content on each integration are coming soon!" style="warning" />}}
+

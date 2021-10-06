@@ -12,3 +12,5 @@ Projects and companies using CUE.
 [Open an issue](https://github.com/hofstadter-io/cuetorials.com/issues)
 to add your project or company.
 {{< /panel >}}
+
+{{< panel title="We're building the list and checking it twice!" style="warning" />}}

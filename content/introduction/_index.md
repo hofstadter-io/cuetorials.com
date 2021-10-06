@@ -7,8 +7,8 @@ weight: 1
 ### About this tutorial
 
 Welcome to __Cuetorials__ where you can
-_learn you some Cue for great good!_
-We hope this site will help you get started with Cue
+_learn you some CUE for great good!_
+We hope this site will help you get started with Cuelang (CUE)
 and that it becomes an invaluable resource as you become more versed.
 
 I am writing this to help you learn Cue while also learning more myself.
@@ -24,6 +24,11 @@ Marcel helped in making the configuration systems at Google.
 He says that they always chose the object-oriented approach
 and that the logical, non-programming Cue approach
 is the correct choice for configuration systems.
+
+
+{{<panel style="primary" title="When you see \"CUE\" or \"Cuelang\" we are referring to the language." />}}
+
+{{< panel style="primary" title="When you see \"cue\" we are referring the CLI reference implementation." />}}
 
 
 ### So what is Cue?
@@ -90,7 +95,7 @@ you can spread configuration across directories and packages,
 pulling common schema, constraint, logic, and values into
 reusable modules.
 
-#### _So what is Cue?_
+#### _What is CUE?_
 
 It's the new logical tool in your programming toolbox.
 Cue will help you manage configuration, validate data,

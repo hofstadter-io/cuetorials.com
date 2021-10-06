@@ -16,3 +16,9 @@ Background and theory for Cue:
 - [LKB](http://moin.delph-in.net/LkbInstallation)
 - http://courses.washington.edu/ling567/
 - [Quasi-Destructive Graph Unification](https://dl.acm.org/doi/pdf/10.3115/981344.981385)
+
+### Propegator Networks
+
+- https://github.com/cue-lang/cue/discussions/408 
+
+

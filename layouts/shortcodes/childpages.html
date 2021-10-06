@@ -1,16 +1,23 @@
 {{- $sortTerm :=  .Get "sort" | default "Weight" }}
 
 {{- .Scratch.Set "current" .Page }}
-
 {{- if (.Get "page")}}
 	{{- with .Site.GetPage "section" (.Get "page") }}
 		{{- $.Scratch.Set "current" . }}
 	{{- end }}
 {{- end }}
-
-{{- $brief := .Get "brief" -}}
-
 {{- $cpage := (.Scratch.Get "current") }}
+
+{{- $brief := "" }}
+{{- if $cpage.Params.brief}}
+{{- $.Scratch.Set "brief" $cpage.Params.brief }}
+{{- end }}
+{{- if (.Get "brief")}}
+{{- $.Scratch.Set "brief" (.Get "brief") }}
+{{- end }}
+{{- $brief := (.Scratch.Get "brief") }}
+
+
 
 <br>
 {{ if ne .Page.Title $cpage.Title }}
@@ -29,16 +36,17 @@
     {{- $pages := (.Scratch.Get "pages") }}
 
 	{{- if eq $sortTerm "Weight"}}
-		{{- template "childs" dict "menu" $pages.ByWeight "pages" .Site.Pages "sortTerm" $sortTerm}}
+		{{- template "childs" dict "menu" $pages.ByWeight "pages" .Site.Pages "sortTerm" $sortTerm "brief" (.Get "childBriefs")}}
 	{{end}}
 </ul>
 
 
 
 {{ define "childs" }}
-		{{- range .menu }}
-			<li class="h5 py-1">
-				<a href="{{.RelPermalink}}"> {{ .Title }} </a>
-			</li>
-		{{ end }}
+  {{ $cBrief := .brief }}
+  {{- range .menu }}
+    <li class="h5 py-1">
+      <a href="{{.RelPermalink}}"> {{ .Title }} </a>{{ if (and $cBrief .Params.brief) }} - {{ .Params.brief }}{{end}}
+    </li>
+  {{ end }}
 {{ end }}
