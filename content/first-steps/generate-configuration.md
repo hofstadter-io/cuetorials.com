@@ -1,6 +1,9 @@
 ---
 title: "Generate Configuration"
 description: "Generating configuration with Cue"
+keywords:
+- configuration
+- comprehension
 weight: 20
 ---
 

@@ -1,6 +1,10 @@
 ---
 title: "Walkthroughs"
 description: "Step-by-step guides for CUE"
+keywords:
+- walkthrough
+- kubernetes
+- scripting
 weight: 60
 ---
 

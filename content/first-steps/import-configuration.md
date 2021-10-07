@@ -1,6 +1,11 @@
 ---
 title: "Import Configuration"
 description: "Import existing configuration into Cue"
+keywords:
+- import
+- convert
+- go
+- golang
 weight: 10
 ---
 

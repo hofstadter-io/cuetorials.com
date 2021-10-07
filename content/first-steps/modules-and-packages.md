@@ -1,6 +1,14 @@
 ---
 title: "Modules and Packages"
 description: "Working with Cue modules and packages"
+keywords:
+- mod
+- module
+- package
+- dependency
+- management
+- hof
+- hofstadter
 weight: 50
 ---
 

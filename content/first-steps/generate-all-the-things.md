@@ -1,6 +1,11 @@
 ---
 title: "Generate All The Things"
 description: "Generating non-configuration with Cue"
+keywords:
+- code generation
+- template
+- hof
+- hofstadter
 weight: 90
 ---
 

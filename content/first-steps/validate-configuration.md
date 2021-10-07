@@ -1,6 +1,10 @@
 ---
 title: "Validate Configuration"
 description: "Validating existing configuration with Cue"
+keywords:
+- validate
+- configuration
+- kubernetes
 weight: 5
 ---
 

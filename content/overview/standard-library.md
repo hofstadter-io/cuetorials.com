@@ -1,6 +1,11 @@
 ---
 title: "Standard Library"
 description: "An overview of Cue's standard library"
+keywords:
+- stdlin
+- builtin
+- standard library
+- tool
 weight: 25
 ---
 

@@ -1,6 +1,13 @@
 ---
 title: "CUE's cli commands"
 description: "An overview of CUE's cli commands"
+keywords:
+- cli
+- commands
+- eval
+- def
+- export
+- vet
 weight: 23
 ---
 

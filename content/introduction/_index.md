@@ -1,6 +1,8 @@
 ---
 title: "Introduction"
 description: "Introduction to Cuelang"
+keywords:
+- introduction
 weight: 1
 ---
 

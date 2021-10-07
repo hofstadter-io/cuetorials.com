@@ -1,6 +1,8 @@
 ---
 title: "First Steps"
 description: "First steps with CUE"
+keywords:
+- getting started
 weight: 10
 ---
 

@@ -1,6 +1,11 @@
 ---
 title: "Scripting with Cue"
 description: "Scripting with Cue's tooling layer"
+keywords:
+- script
+- scripting
+- cue/tool
+- tooling layer
 weight: 60
 ---
 

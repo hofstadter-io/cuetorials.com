@@ -1,6 +1,10 @@
 ---
 title: "Convert JSON Schema"
 description: "This tutorial show how to convert JSON Schema to Cuelang."
+keywords:
+- jsonschema
+- convert
+- validate
 weight: 15
 ---
 

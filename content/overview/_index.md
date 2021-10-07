@@ -1,6 +1,10 @@
 ---
 title: "Overview"
-description: "A oerview of Cue syntax and capabilities"
+description: "An overiew of Cue syntax and capabilities"
+keywords:
+- overview
+- getting started
+- examples
 weight: 5
 ---
 

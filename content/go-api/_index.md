@@ -1,22 +1,26 @@
 ---
 title: "The Go API"
-description: "Using Cue's Go API"
+description: "Using Cuelang's Go API"
+keywords:
+- go
+- golang
+- api
 weight: 40
 ---
 
-Cue has Go API so you can  work with Cue from Go programs.
+CUE has Go API so you can  work with Cuelang from Go programs.
 It offers more granularity and sophistication than the cli.
-There are also capabilities only accessible from Cue's Go API.
+There are also capabilities only accessible from CUE's Go API.
 This section will take you on a tour through
-Cue's Go API, showing you how to do Cue things in Go.
+CUE's Go API, showing you how to do Cuelang things in Go.
 You will learn how to:
 
-- Load Cue code into Cue values
-- Print Cue values with various options
-- Extract Cue values, loop over fields and lists
-- Extract and work with Cue attributes
-- Unify and validate Cue and Go values
-- Decode to, and encode from, Cue and Go values
+- Load CUE code into CUE values
+- Print CUE values with various options
+- Extract CUE values, loop over fields and lists
+- Extract and work with CUE attributes
+- Unify and validate CUE and Go values
+- Decode to, and encode from, CUE and Go values
 - Validate, constrain, and complete Go values
 
 Working with the encodings is in the [integrations section](/integrations).
@@ -46,7 +50,7 @@ under [code/api](https://github.com/hofstadter-io/cuetorials/tree/main/code/api)
 
 ### Before you start
 
-CUE's evaluator is not yet safe for concurrency. See the
+`cue`'s evaluator is not yet safe for concurrency. See the
 [section in cueology/futurology/concurrency](/cueology/futurology/concurrency/)
 
 <br>
