@@ -15,7 +15,7 @@ they will all become invaluable assets to your Cue toolbox.
 
 You can find more examples in the [patterns section](/patterns/).
 
-## List and Field Comprehension
+### List and Field Comprehension
 
 List and field comprehensions allow us to iterate over an _iterable_
 and generate new lists or fields. An iterable is an existing list or the fields of a struct.
@@ -34,7 +34,7 @@ We've introduced a few things in this file:
 
 <br>
 
-## Conjunctions and Defaults
+### Conjunctions and Defaults
 
 We've already seen conjunctions being used for validation.
 You can also use them to build up Cue values and your configuration.
@@ -43,7 +43,7 @@ You can also use them to build up Cue values and your configuration.
 
 <br>
 
-## Guards of Conditionality
+### Guards of Conditionality
 
 Cue has an `if` statement called a __guard__ which protects an area of code.
 This is not a conditional branch as much as a way to conditionally include or extend some Cue code.

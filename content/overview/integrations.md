@@ -28,3 +28,16 @@ configuration, schema, and languages.
 
 {{< panel title="Links to content on each integration are coming soon!" style="warning" />}}
 
+### Yaml
+
+### JSON
+
+### JSON Schema
+
+- [Converting to CUE](/first-steps/convert-jsonschema/)
+
+### OpenAPI
+
+### Protobuf
+
+### Golang

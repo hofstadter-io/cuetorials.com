@@ -5,7 +5,7 @@ weight: 50
 ---
 
 
-## Notes on learning how Cue works internally
+### Notes on learning how Cue works internally
 
 The main logical piece is the evaluator.
 This is..

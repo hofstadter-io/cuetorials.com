@@ -16,7 +16,7 @@ you can actually generate pretty much anything.
 
 How? By using `text/templates` to render any file we wish.
 
-## Generating with Cue
+### Generating with Cue
 
 {{< codePane file="code/first-steps/generate-all-the-things/first.html" title="first.cue" play="true">}}
 
@@ -34,7 +34,7 @@ With sophisticated Cue definitions, values, and templates
 you can generate any output that Cue does not map onto natively.
 
 
-## Generating with Hof
+### Generating with Hof
 
 At Hofstadter, we built `hof` as a custom tool for sophisticated code generation.
 We wanted a single source of truth for our models which we could turn into

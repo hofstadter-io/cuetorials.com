@@ -31,7 +31,7 @@ Cue's module system is very similar to Go's, but has it's differences.
 
 _While, Cue does not yet have a dependency management system, it will import and process them. See below for details._
 
-## Defining a module
+### Defining a module
 
 To define a module, we simply need to add a `cue.mod/module.cue` file.
 Before you do, you will _not_ be able to import files from other directories or modules.
@@ -52,7 +52,7 @@ When we run this, we can see the output by combining the modules and pacakges
 
 <br>
 
-## Dependency management
+### Dependency management
 
 Cue dependencies are located in the `cue.mod/pkg/...` directory.
 From here, dependent modules are nested under directories mirroring their import path.

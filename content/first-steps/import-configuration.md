@@ -13,7 +13,7 @@ To save you time, effort, and mistakes,
 Cue has some commands to import and minimize
 your existing configurations into Cue.
 
-## Importing configuration
+### Importing configuration
 
 `cue import` will process files and directories of Yaml and JSON
 into Cue values. There are many flags for controlling how this happens
@@ -36,7 +36,7 @@ cue import -f -o cuetorials.cue -l 'strings.ToLower(kind)' -l 'metadata.name' -p
 
 <br>
 
-## Importing Go to Cue
+### Importing Go to Cue
 
 Cue can turn Go types into Cue definitions.
 This is helpful when you have existing code

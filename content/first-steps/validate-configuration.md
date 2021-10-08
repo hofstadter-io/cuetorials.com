@@ -12,7 +12,7 @@ Validating existing configuration is one of the easiest ways to get started with
 It is low impact and low risk as you are not changing anything you use today.
 When we validate existing configuration, we are designing a schema and using Cue to test against it.
 
-## A Simple Example
+### A Simple Example
 
 Let's start out with a simple example for an `album` object. Here we see the JSON and Cue representation for an album.
 
@@ -62,7 +62,7 @@ error in call to time.Format: invalid time "97-11-11"
 
 <br>
 
-## A Kubernetes Example
+### A Kubernetes Example
 
 Let's validate the Kubernetes manifests for this website.
 Below is the Yaml as a single file,

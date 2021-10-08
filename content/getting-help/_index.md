@@ -31,6 +31,6 @@ Hofstadter offers services for:
 
 To learn more:
 
-### [Contact Hofstadter](mailto:cue@hofstadter.io)
+#### [Contact Hofstadter](mailto:cue@hofstadter.io)
 
 <br />
