@@ -1,0 +1,8 @@
+#Xcheck: field not allowed: "3":
+    ./check-basic.cue:3:5
+    ./check-basic.cue:4:2
+    ./check-basic.cue:4:13
+    ./check-basic.cue:11:10
+    ./check-basic.cue:11:15
+    ./check-basic.cue:11:17
+    ./check-basic.cue:11:38
