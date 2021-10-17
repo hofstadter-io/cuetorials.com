@@ -9,9 +9,9 @@ weight: 5
 
 This first example shows how to load, build, and validate Cue.
 
-{{< chromaCode lang="go" title="code/api/loading.go" file="code/api/loading.go" >}}
+{{< chromaCode lang="go" title="code/go-api/loading.go" file="code/go-api/loading.go" >}}
 
-{{< chromaHTML title="code/api/hello.cue" file="code/api/hello.html" >}}
+{{< chromaHTML title="code/go-api/hello.cue" file="code/go-api/hello.html" >}}
 
 <br>
 

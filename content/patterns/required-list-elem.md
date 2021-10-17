@@ -27,5 +27,6 @@ Even better would be to apply the definition to the original list.
 Some considerations:
 
 - You will need the elements to have a unique key.
-	You could use `true` or `_` if you don't care about duplicate keys with different values.
+	You could use `true` or any (`_`) as the value if you don't care about duplicate keys with different values.
 - This pattern will change once [Associative Lists](/cueology/futurology/associative-lists/) are implemented.
+

@@ -8,11 +8,11 @@
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index,follow" />
 
-  <title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
-  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
-  <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
-  <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
-  <meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+  <title itemprop="name">{{ partial "titlecrumbs.html" . }}</title>
+  <meta property="og:title" content="{{ partial "titlecrumbs.html" . }}" />
+  <meta name="twitter:title" content="{{ partial "titlecrumbs.html" . }}" />
+  <meta itemprop="name" content="{{ partial "titlecrumbs.html" . }}" />
+  <meta name="application-name" content="{{ partial "titlecrumbs.html" . }}" />
   <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
 
   <meta name="description" content="{{ .Params.description }}" />

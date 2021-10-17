@@ -25,9 +25,11 @@ pretty print a Cue AST.
 
 This first example shows how to load, build, and validate Cue.
 
-{{< chromaCode lang="go" title="code/api/format.go" file="code/api/format.go" >}}
+{{< codePane2 
+	file1="code/go-api/format.go" title1="code/go-api/format.go" lang1="go"
+	file2="code/go-api/format.html"  title2="code/go-api/format.cue"
+>}}
 
-{{< chromaHTML title="code/api/format.cue" file="code/api/format.html" >}}
 
 
 

@@ -18,8 +18,8 @@ You will need to implement
 
 You can find the {{<cuedoc page="/tool/flow">}}workflow godocs here{{</cuedoc>}}.
 
-{{< chromaCode file="code/api/flow/custom.go" lang="go" title="custom.go" >}}
+{{< chromaCode file="code/go-api/flow/custom.go" lang="go" title="custom.go" >}}
 
 #### `go run custom.go`
 
-{{< chromaCode file="code/api/flow/custom.out" lang="shell" title="output" >}}
+{{< chromaCode file="code/go-api/flow/custom.out" lang="shell" title="output" >}}

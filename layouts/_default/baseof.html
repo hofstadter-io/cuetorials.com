@@ -21,6 +21,7 @@
           <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-10 py-3" id="main-content">
           {{end}}
 
+              {{ partial "breadcrumbs.html" . }}
               {{- block "main" . }}{{- end }}
 
               <div class="row">
