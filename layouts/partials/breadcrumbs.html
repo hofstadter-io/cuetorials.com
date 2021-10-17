@@ -9,6 +9,6 @@
 {{- template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  -}}
 {{- end -}}
 {{- if not .p1.IsHome -}}
-/ <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+<b class="p-1"> / </b><a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
 {{- end -}}
 {{- end -}}
