@@ -41,7 +41,6 @@ Update: schema.#List & {
 	}
 
 	Ingress: schema.#Ingress & {
-		apiVersion: "extensions/v1beta1"
 		metadata: _Values.#metadata & {
 			annotations: {
 				"kubernetes.io/tls-acme": "true"
@@ -61,8 +60,10 @@ Update: schema.#List & {
 				host: _Values.domain
 				http: paths: [{
 					backend: {
-						serviceName: Service.metadata.name
-						servicePort: Service.spec.ports[0].port
+						service: {
+							name: Service.metadata.name
+							port: "number": Service.spec.ports[0].port
+						}
 					}
 				}]
 			}]
