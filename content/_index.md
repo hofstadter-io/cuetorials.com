@@ -26,5 +26,7 @@ We're here to make the content that helps you learn Cuelang for a great good!
 {{< childpages page="walkthroughs/" brief="for tasks in CUE" >}}
 {{< childpages page="cueology/" brief="for aspiring Cueologists" >}}
 {{< childpages page="miscellaneous/" brief="and other uncategorized content" >}}
+{{< childpages page="videos/" brief="about CUE">}}
+{{< childpages page="jobs/" brief="involving CUE">}}
 {{< childpages page="getting-help/" brief="and support for CUE">}}
 

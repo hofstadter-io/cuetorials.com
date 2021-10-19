@@ -39,6 +39,10 @@ docker: image push
 image:
 	@docker build --no-cache -f ci/Dockerfile -t us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG) .
 
+.PHONY: nginx
+nginx:
+	@docker run --rm -it -p 8080:80 --name cuetorials us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG)
+
 .PHONY: push
 push:
 	@docker push us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG)
