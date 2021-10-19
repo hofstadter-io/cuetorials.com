@@ -23,7 +23,11 @@ $dark:          #343a40;
     margin-bottom: 1rem;
 }
 
-.main > h2, .main > h3, .main > h4, .main > h5, .main > h6{
+.main > h2, .main > h3 {
+	margin-top: 3rem;
+}
+
+.main > h4, .main > h5, .main > h6{
     margin-top: 1rem;
 }
 
@@ -137,6 +141,6 @@ table > thead {
 }
 
 h3.anchor {
-  padding-top: 100px;
-  margin-top: -100px;
+  padding-top: 8rem;
+  margin-top: -6rem;
 }
