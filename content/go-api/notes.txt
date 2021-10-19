@@ -3,3 +3,4 @@
 - Working with CUE Values
 - Unification in Go
 - Processing Attributes
+- walking values

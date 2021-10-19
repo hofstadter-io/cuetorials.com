@@ -1,6 +1,6 @@
 ---
-title: "Formatting Cue"
-description: "Printing Cue with formatting"
+title: "Printing Cue"
+description: "How to print Cuelang values with fmt and Cue's builtin formatting."
 weight: 10
 ---
 

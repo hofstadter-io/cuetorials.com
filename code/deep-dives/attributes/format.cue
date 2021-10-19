@@ -4,6 +4,7 @@ foo: "bar" @attr()
 // declaration attribute
 foo: {
 	@attr()
+	bar: string
 }
 
 // they can have keys
