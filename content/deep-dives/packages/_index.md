@@ -1,6 +1,6 @@
 ---
-title: "Modules"
-desciption: "Mode complex examples of modules and packages in Cueland"
+title: "Packages"
+description: "More complex examples of packages in Cuelang"
 ---
 
 - Answer questions in discussion 1282.

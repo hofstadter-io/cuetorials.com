@@ -34,7 +34,7 @@
           </button>
       </div>
       {{ if $lang }}
-        {{ (print "```" $lang "\n" (.Scratch.Get "content") "\n```") | markdownify }}
+        {{ (print "```" $lang "\n" (.Scratch.Get "content") "```") | markdownify }}
       {{ else }}
         <div class="highlight">
           {{ .Scratch.Get "content" | safeHTML }}
