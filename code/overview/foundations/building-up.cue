@@ -1,8 +1,8 @@
 #Base: {
 	name: string
 	kind: string
-	... // so it can be extended
 }
+
 #Meta: {
 	// string and a semver regex
 	version: string & =~"^v[0-9]+\\.[0-9]+\\.[0-9]+$"
@@ -15,9 +15,10 @@
 	public: bool | *false
 }
 
-// Building up a schema using a conjunction and embedding
-#Schema: #Base & {
-	// "embed" meta and permissions
+// Building up a schema using embeddings
+#Schema: {
+	// embed other schemas
+	#Base
 	#Meta
 	#Permissions
 	// with no '...' this is final

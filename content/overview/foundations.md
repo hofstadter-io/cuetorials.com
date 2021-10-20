@@ -177,7 +177,7 @@ Cue also allows us to explicitly do the opposite.
 ### Building Up Values
 
 In Cue, it is recommended to start small and build values up.
-This makes schemas reusable.
+This makes schemas reusable. You can do this by embedding values.
 
 {{< codePane2
   file1="code/overview/foundations/building-up.html" play1="true" title1="building-up.cue"
@@ -186,7 +186,7 @@ This makes schemas reusable.
 
 ### Order is Irrelevant
 
-Cue's unification system resolves values, schemas,  and correctness
+Cue's unification system resolves values, schemas, and constraints
 regardless of order and which files may contain them.
 
 {{< codePane3
@@ -194,6 +194,8 @@ regardless of order and which files may contain them.
   file2="code/overview/foundations/order-2.html"   title2="crder-2.cue"
   file3="code/overview/foundations/order-out.html" title3="cue export order.cue order-2.cue"
 >}}
+
+More generally, unification is associative, commutative and idempotent.
 
 
 ### Turing-Incomplete
@@ -212,7 +214,7 @@ The main ideas are:
 
 The main inspirations for these restrictions are:
 
-- Difficulties with Borgcfg and GCL as complexity grew (i.e. object orientedness)
+- Difficulties with Borgcfg and GCL as complexity grew (i.e. object oriented and lambdas)
 - Lingo and Typed Feature Structure Grammars (managing massive configurations)
 - Logical and functional languages (various pieces like comprehensions in immutability)
 
