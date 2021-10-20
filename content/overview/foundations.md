@@ -173,6 +173,8 @@ Cue also allows us to explicitly do the opposite.
   file="code/overview/foundations/open-closed.html" title="open-closed.cue"
 >}}
 
+For a more in-depth discussion, see [deep-dives/closedness](/deep-dives/closedness/).
+
 
 ### Building Up Values
 
@@ -191,7 +193,7 @@ regardless of order and which files may contain them.
 
 {{< codePane3
   file1="code/overview/foundations/order.html"     title1="order.cue"
-  file2="code/overview/foundations/order-2.html"   title2="crder-2.cue"
+  file2="code/overview/foundations/order-2.html"   title2="order-2.cue"
   file3="code/overview/foundations/order-out.html" title3="cue export order.cue order-2.cue"
 >}}
 
@@ -222,7 +224,7 @@ The main inspirations for these restrictions are:
 ### Foundations in Golang
 
 Cue started as a fork of Go mainly to simplify the bootstrapping of a new language.
-Marcel is also a member of the Go team at Google and many philosophies carry over:
+Marcel was also a member of the Go team at Google and many philosophies carry over:
 
 - Cue is implemented in Go
 - Rich tooling in an awesome CLI

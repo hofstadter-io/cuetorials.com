@@ -53,11 +53,10 @@ receiving updates when `#D` is changed.
 
 {{< codePane file="code/overview/closedness/embed.html" title="embed.cue" play="true">}}
 
-### Hidden fields in definitions
+### Hidden fields
 
-You can add as many hidden fields to a closed value.
-This is because the original definitions hidden fields
-are inaccessible and thus there cannot be a conflict.
+You can add hidden fields to a closed value. This works for both definitions
+and structs which have been `close()`'d.
 
 {{< codePane file="code/overview/closedness/hidden.html" title="hidden.cue" play="true">}}
 
