@@ -9,7 +9,7 @@ import (
 
 const val = `
 i: int
-foo: "bar"
+s: "hello"
 `
 
 func main() {

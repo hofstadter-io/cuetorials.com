@@ -13,8 +13,8 @@ fine grained controls.
 ### Printing with go/fmt
 
 {{< codePane2 
-	file1="code/go-api/basics/print.go" title1="print.go" lang1="go"
-	file2="code/go-api/basics/print.html"  title2="go run print.go"
+	file1="code/go-api/basics/printing/print.go" title1="print.go" lang1="go"
+	file2="code/go-api/basics/printing/print.html"  title2="go run print.go"
 >}}
 
 ### Printing with cue/format
@@ -27,8 +27,8 @@ Abstract Syntax Tree (AST) for the value.
 We then use Cue's `format.Node` to pretty print a Cue AST.
 
 {{< codePane2 
-	file1="code/go-api/basics/format.go" title1="format.go" lang1="go"
-	file2="code/go-api/basics/format.html"  title2="go run format.go"
+	file1="code/go-api/basics/printing/format.go" title1="format.go" lang1="go"
+	file2="code/go-api/basics/printing/format.html"  title2="go run format.go"
 >}}
 
 ##### Links:
