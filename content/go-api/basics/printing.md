@@ -4,11 +4,12 @@ description: "How to print Cuelang values with fmt and Cue's builtin formatting.
 weight: 10
 ---
 
-In the last section, you may have noticed
-we printed a Value with `fmt.Println`.
-CUE Values support the `fmt.Printf` modifiers
-and there is a builtin formatter for
-fine grained controls.
+{{<lead>}}
+CUE supports the `fmt.Printf` modifiers
+for when you want to quickly print values.
+For fine grained control when printing,
+you can use the `cue/format` package.
+{{</lead>}}
 
 ### Printing with go/fmt
 

@@ -3,6 +3,10 @@ title: "Jobs"
 weight: 999
 ---
 
-Interested in listing a job related to CUE?
+{{<panel title="Interested in listing a job related to CUE?" style="secondary">}}
+Reach out using the support button at the bottom.
+{{</panel>}}
 
-Contact us using the support button at the bottom.
+<br/>
+
+{{<jobs>}}

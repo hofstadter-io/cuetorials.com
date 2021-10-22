@@ -1,0 +1,22 @@
+{{ define "card" }}
+<div class="card my-3">
+  <div class="card-body">
+    <h3 class="card-title"><a href="{{.homepage}}" target="_blank">{{.company}}</a></h3>
+    <p class="card-text">{{.about}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    {{ range .jobs }}
+    <li class="list-group-item">
+      <a href="{{.link}}" target="_blank" style="display: inline-block; width:33%;">{{.name}}</a>
+      <span> {{.short}} </span>
+    </li>
+
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{ range $.Site.Data.jobs }}
+  {{ template "card" . }}
+{{ end }}
+

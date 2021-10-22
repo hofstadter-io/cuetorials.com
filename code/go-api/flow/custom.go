@@ -36,7 +36,7 @@ func main() {
 	ctx := cuecontext.New()
 
 	// Setup the flow Config
-	cfg := &flow.Config{ Root: cue.ParsePath("tasks") }
+	cfg := &flow.Config{Root: cue.ParsePath("tasks")}
 
 	// compile our input
 	value := ctx.CompileString(input, cue.Filename("input.cue"))

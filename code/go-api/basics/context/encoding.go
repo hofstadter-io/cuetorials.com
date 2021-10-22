@@ -19,7 +19,7 @@ func main() {
 		v cue.Value
 	)
 
-	val := Val {
+	val := Val{
 		I: 1,
 		S: "hello",
 		b: true,

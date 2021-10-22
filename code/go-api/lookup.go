@@ -38,8 +38,8 @@ func main() {
 
 		// Validate the value
 		err := value.Validate(
-			cue.Final(), // close structs and lists
-			cue.Concrete(false),   // allow incomplete values
+			cue.Final(),         // close structs and lists
+			cue.Concrete(false), // allow incomplete values
 		)
 		if err != nil {
 			fmt.Println("Error during validate:", err)
@@ -58,8 +58,8 @@ func main() {
 
 func printVal(val cue.Value) {
 	syn := val.Syntax(
-		cue.Final(), // close structs and lists
-		cue.Concrete(false),   // allow incomplete values
+		cue.Final(),         // close structs and lists
+		cue.Concrete(false), // allow incomplete values
 		cue.Definitions(false),
 		cue.Hidden(true),
 		cue.Optional(true),

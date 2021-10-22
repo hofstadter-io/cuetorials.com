@@ -1,0 +1,11 @@
+---
+- company: Dagger
+  homepage: https://dagger.io
+  about: A new kind of CICD framework built entirely on CUE, by the creators of Docker.
+  jobs:
+    - name: Senior Software Engineer
+      short: Fulltime - Remote - Backend - 6+ years
+      link: https://www.workatastartup.com/jobs/47026
+    - name: Senior Product Manager
+      short: Fulltime - Remote - 6+ years
+      link: https://www.workatastartup.com/jobs/47026

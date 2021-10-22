@@ -49,7 +49,7 @@ func main() {
 		//   try out different options
 		syn := value.Syntax(
 			cue.Final(),
-			cue.Concrete(false),   // allow incomplete values
+			cue.Concrete(false), // allow incomplete values
 			cue.Definitions(false),
 			cue.Hidden(true),
 			cue.Optional(true),
@@ -73,4 +73,3 @@ func main() {
 	}
 
 }
-

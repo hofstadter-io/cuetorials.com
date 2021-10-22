@@ -65,7 +65,7 @@
         </button>
       </div>
       {{ if $lang1 }}
-        {{ (print "```" $lang1 "\n" (.Scratch.Get "content1") "\n```") | markdownify }}
+        {{ (print "```" $lang1 "\n" (.Scratch.Get "content1") "```") | markdownify }}
       {{ else }}
         <div class="highlight">
           {{ .Scratch.Get "content1" | safeHTML }}
@@ -95,7 +95,7 @@
           </button>
       </div>
       {{ if $lang2 }}
-        {{ (print "```" $lang2 "\n" (.Scratch.Get "content2") "\n```") | markdownify }}
+        {{ (print "```" $lang2 "\n" (.Scratch.Get "content2") "```") | markdownify }}
       {{ else }}
         <div class="highlight">
           {{ .Scratch.Get "content2" | safeHTML }}
@@ -125,7 +125,7 @@
           </button>
       </div>
       {{ if $lang3 }}
-        {{ (print "```" $lang3 "\n" (.Scratch.Get "content3") "\n```") | markdownify }}
+        {{ (print "```" $lang3 "\n" (.Scratch.Get "content3") "```") | markdownify }}
       {{ else }}
         <div class="highlight">
           {{ .Scratch.Get "content3" | safeHTML }}

@@ -1,0 +1,18 @@
+talks:
+- title: GopherCon Russia (2019)
+  brief: This video has some outdated syntax but the concepts are good. Shows how
+    to convert Kubernetes config to CUE.
+  ytid: b3fhA12KS48
+- title: GopherCon Europe (2020)
+  ytid: IRNluM2B4p8
+- title: Hands on with CUE (2021)
+  ytid: fR_yApIf6jU
+- title: Conflang Workshop (2021)
+  brief: High-level introduction to CUE and the problems solved. Provides a historical
+    context and the influences on CUE.
+  ytid: jSRXobu1jHk
+
+halls:
+- title: "#1 (2021-10-21)"
+  brief: The very first CUE Town Hall. Project update, roadmap, and a high-level conversation on what's to come.
+  ytid: GMTQcm3AwOU

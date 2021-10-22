@@ -31,8 +31,8 @@ func main() {
 	// Generate an AST
 	//   try out different options
 	syn := v.Syntax(
-		cue.Final(), // close structs and lists
-		cue.Concrete(false),   // allow incomplete values
+		cue.Final(),         // close structs and lists
+		cue.Concrete(false), // allow incomplete values
 		cue.Definitions(false),
 		cue.Hidden(true),
 		cue.Optional(true),
