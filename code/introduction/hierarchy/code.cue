@@ -1,4 +1,4 @@
-package heirarchy
+package hierarchy
 
 import "list"
 
