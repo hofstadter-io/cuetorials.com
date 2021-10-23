@@ -10,3 +10,4 @@ v.i: conflicting values int and "hello" (mismatched types int and string):
 v.s: conflicting values string and 1 (mismatched types string and int):
     schema.cue:4:5
     val.cue:4:5
+

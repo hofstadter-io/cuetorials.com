@@ -50,3 +50,14 @@ push:
 .PHONY: deploy
 deploy:
 	@cue export ci/cuelm.cue -t version=$(TAG) -e Install | kubectl apply -f -
+
+
+.PHONY: verify_code verify_code verify_diff
+verify: verify_code highlight verify_diff
+
+verify_diff:
+	@git diff --exit-code code/
+
+verify_code:
+	make -C code all
+
