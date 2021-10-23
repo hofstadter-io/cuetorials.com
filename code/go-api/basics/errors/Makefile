@@ -6,6 +6,6 @@ tests = errors
 all: $(tests)
 
 errors: errors.go
-	@go run errors.go > errors.txt
+	go run errors.go > errors.txt
 	$(DIFF_CMD) errors.txt
 

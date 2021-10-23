@@ -23,7 +23,7 @@ When representing JSON in Cue, the differences are:
 
 {{< codePane2
   file1="code/overview/foundations/superset.html" title1="superset.cue" play1="true"
-  file2="code/overview/foundations/superset.json" title2="cue export superset.cue" lang2="json"
+  file2="code/overview/foundations/superset.json" title2="cue export superset.cue --out json" lang2="json"
 >}}
 
 
@@ -115,7 +115,7 @@ You indicate a definitions with `#mydef:` and can leave it open with `...`
 
 {{< codePane2
   file1="code/overview/foundations/definition.html" play1="true" title1="definition.cue"
-  file2="code/overview/foundations/definition.json" lang2="json" title2="cue export definition.cue"
+  file2="code/overview/foundations/definition.json" lang2="json" title2="cue export definition.cue --out json"
 >}}
 
 
@@ -126,7 +126,7 @@ They are like "and" and the `&` operator is used for them.
 
 {{< codePane2
   file1="code/overview/foundations/conjunction.html" play1="true" title1="conjunction.cue"
-  file2="code/overview/foundations/conjunction.json" lang2="json" title2="cue export conjunction.cue"
+  file2="code/overview/foundations/conjunction.json" lang2="json" title2="cue export conjunction.cue --out json"
 >}}
 
 
@@ -137,7 +137,7 @@ They are like "or" and the `|` operator is used for them.
 
 {{< codePane2
   file1="code/overview/foundations/disjunction.html" play1="true" title1="disjunction.cue"
-  file2="code/overview/foundations/disjunction.json" lang2="json" title2="cue export disjunction.cue"
+  file2="code/overview/foundations/disjunction.json" lang2="json" title2="cue export disjunction.cue --out json"
 >}}
 
 Disjunctions have several uses:
@@ -153,7 +153,7 @@ Cue supports setting defaults for values or marking a field optional.
 
 {{< codePane2
   file1="code/overview/foundations/default-optional.html" play1="true" title1="default-optional.cue"
-  file2="code/overview/foundations/default-optional.json" lang2="json" title2="cue export default-optional.cue"
+  file2="code/overview/foundations/default-optional.json" lang2="json" title2="cue export default-optional.cue --out json"
 >}}
 
 
@@ -183,7 +183,7 @@ This makes schemas reusable. You can do this by embedding values.
 
 {{< codePane2
   file1="code/overview/foundations/building-up.html" play1="true" title1="building-up.cue"
-  file2="code/overview/foundations/building-up.json" lang2="json" title2="cue export building-up.cue"
+  file2="code/overview/foundations/building-up.json" lang2="json" title2="cue export building-up.cue --out json"
 >}}
 
 ### Order is Irrelevant
@@ -194,7 +194,7 @@ regardless of order and which files may contain them.
 {{< codePane3
   file1="code/overview/foundations/order.html"     title1="order.cue"
   file2="code/overview/foundations/order-2.html"   title2="order-2.cue"
-  file3="code/overview/foundations/order-out.html" title3="cue export order.cue order-2.cue"
+  file3="code/overview/foundations/order-out.json" title3="cue export order.cue order-2.cue --out json" lang3="json"
 >}}
 
 More generally, unification is associative, commutative and idempotent.

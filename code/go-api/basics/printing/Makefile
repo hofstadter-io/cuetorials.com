@@ -6,11 +6,11 @@ tests = print format
 all: $(tests)
 
 print: print.go
-	@go run print.go > print.cue
+	go run print.go > print.cue
 	$(DIFF_CMD) print.cue
 
 format: format.go
-	@go run format.go > format.cue
+	go run format.go > format.cue
 	$(DIFF_CMD) format.cue
 
 
