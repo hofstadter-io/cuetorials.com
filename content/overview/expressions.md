@@ -94,6 +94,11 @@ The form is `[ for key, val in <iterable> [condition] { production } ]`
   file2="code/overview/expressions/list-comp-out.html" title2="cue eval list-comp.cue"
 >}}
 
+_you cannot have more than list element introduced by a conditional_
+(https://github.com/cue-lang/cue/discussions/713)
+
+You can work around this with `list.FlattenN`
+
 
 ### Field Comprehensions
 

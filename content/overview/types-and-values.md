@@ -29,9 +29,9 @@ null  bool  string  bytes  number  list  struct
 Top and Bottom are special values in Cue.
 They form the opposite ends of the value lattice.
 
-"`_`" is top and matches all values
+"`_`" is top and matches all value. It is also called the "any" value.
 
-"`_|_`" is bottom and represents an error
+"`_|_`" is bottom and represents an error. (_this symbol is likely to be replaced with a word in a future version_)
 
 
 
@@ -41,7 +41,13 @@ Errors result in __bottom__ with a message attached.
 You can get errors for incomplete types when exporting Cue to data
 or for conflicts and invalid semantics in your code.
 
-{{< codePane file="code/overview/types-and-values/errors.html" title="errors.cue" play="ture">}}
+{{< codePane2
+	file1="code/overview/types-and-values/errors.html" title1="errors.cue" play1="true"
+	file2="code/overview/types-and-values/errors.txt" title2="cue eval -c errors.cue" lang2="text"
+>}}
+
+__note, not all errors are shown [due to an issue](https://github.com/cue-lang/cue/issues/1319)__
+
 
 
 ### Null Coalescing
@@ -54,6 +60,7 @@ This works by using disjunctions and defaults.
   file1="code/overview/types-and-values/coalesce.html" play1="true" title1="coalesce.cue"
   file2="code/overview/types-and-values/coalesce-out.html" title2="cue eval coalesce.cue"
 >}}
+
 
 
 ### Numbers
@@ -76,6 +83,7 @@ Cue has syntactic sugar for writing numbers too:
   file1="code/overview/types-and-values/number-sugar.html" title1="number-sugar.cue" play1="true"
   file2="code/overview/types-and-values/number-sugar-out.html" title2="cue eval number-sugar.cue"
 >}}
+
 
 
 ### Strings
@@ -114,6 +122,7 @@ https://cuelang.org/docs/references/spec/#string-and-byte-sequence-literals
 There is one more escape for string interpolation which we will see in the next section.
 
 
+
 ### "Raw" Strings
 
 Cue allows you to modify the string delimiters so you can avoid escaping.
@@ -121,8 +130,9 @@ Use any number of `#` on both ends of normal strings
 
 {{< codePane2
   file1="code/overview/types-and-values/rawstrings.html" title1="rawstrings.cue" play1="ture"
-  file2="code/overview/types-and-values/rawstrings-out.html" title2="cue eval rawstrings.cue"
+  file2="code/overview/types-and-values/rawstrings.json" title2="cue eval rawstrings.cue --out json" lang2="json"
 >}}
+
 
 
 ### Bytes
@@ -132,8 +142,10 @@ Bytes are single quoted and base64 encoded when output:
 {{< codePane3
   file1="code/overview/types-and-values/bytes.html" title1="bytes.cue"
   file2="code/overview/types-and-values/bytes-eval.html" title2="cue eval bytes.cue"
-  file3="code/overview/types-and-values/bytes-export.html" title3="cue export bytes.cue"
+  file3="code/overview/types-and-values/bytes-export.json" title3="cue export bytes.cue --out json" lang3="json"
 >}}
+
+
 
 ### Lists
 
@@ -145,6 +157,8 @@ Mismatched elements result in errors.
   file2="code/overview/types-and-values/lists-out.html" title2="cue eval lists.cue"
 >}}
 
+
+
 ### Structs
 
 Structs are like JSON objects. They are the primary composite type in Cue.
@@ -152,6 +166,7 @@ They have a set of fields (label: value).
 By default, they are open and you can add more fields.
 
 {{< codePane file="code/overview/types-and-values/structs.html" title="structs.cue" play="true" >}}
+
 
 
 ### Definitions
@@ -166,16 +181,17 @@ They are closed by default and are __not__ emitted by Cue when exporting.
 >}}
 
 
+
 ### Embeddings
 
 You can embed structs and definitions within each other as a method to build up values.
 You can achieve the same with opened structs / definitions and conjunctions, but often we cannot modify what we can embed.
 
-
 {{< codePane2
   file1="code/overview/types-and-values/embed.html"     title1="embed.cue" play1="true"
   file2="code/overview/types-and-values/embed-out.html" title2="cue export embed.cue"
 >}}
+
 
 
 ### Pattern Matching Constraints
@@ -184,7 +200,6 @@ Pattern matching allows you to specify constraints for labels which match a patt
 While limited in matching today, they will be significantly more powerful once the
 [query proposal](https://github.com/cuelang/cue/issues/165) is accepted and implemented.
 For now, you can apply a constraint to string labels and use an identifier to set fields if you like.
-
 
 {{< codePane2
   file1="code/overview/types-and-values/patterns.html"     title1="patterns.cue" play1="true"
