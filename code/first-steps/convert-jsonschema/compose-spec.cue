@@ -131,7 +131,7 @@ import "list"
 		network_mode?:    string
 		networks?:        #list_of_strings | {
 			{[=~"^[a-zA-Z0-9._-]+$" & !~"^()$"]: {
-								aliases?: #list_of_strings, ipv4_address?: string, ipv6_address?: string, link_local_ips?: #list_of_strings, priority?: number
+				aliases?: #list_of_strings, ipv4_address?: string, ipv6_address?: string, link_local_ips?: #list_of_strings, priority?: number
 
 				{[=~"^x-" & !~"^(aliases|ipv4_address|ipv6_address|link_local_ips|priority)$"]: _}
 			} | null
@@ -180,7 +180,7 @@ import "list"
 		tty?:   bool
 		ulimits?: {
 			{[=~"^[a-z]+$" & !~"^()$"]: int | {
-							hard: int, soft: int
+				hard: int, soft: int
 
 				{[=~"^x-" & !~"^(hard|soft)$"]: _}
 			}}

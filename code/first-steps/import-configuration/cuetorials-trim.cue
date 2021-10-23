@@ -7,8 +7,8 @@ import (
 )
 
 deployment: [string]: apps.#Deployment
-service: [string]: core.#Service
-ingress: [string]: extn.#Ingress
+service: [string]:    core.#Service
+ingress: [string]:    extn.#Ingress
 
 deployment: cuetorials: {
 	apiVersion: "apps/v1"
@@ -24,7 +24,7 @@ deployment: cuetorials: {
 		strategy: {
 			type: "RollingUpdate"
 			rollingUpdate: {
-				maxSurge:       IntVal: 1
+				maxSurge: IntVal:       1
 				maxUnavailable: IntVal: 0
 			}
 		}
@@ -69,7 +69,7 @@ service: cuetorials: {
 		selector: app: "cuetorials"
 		type: "ClusterIP"
 		ports: [{
-			port:       80
+			port: 80
 			targetPort: IntVal: 80
 		}]
 	}

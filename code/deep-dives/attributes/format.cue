@@ -1,4 +1,4 @@
-// field attribute
+	// field attribute
 foo: "bar" @attr()
 
 // declaration attribute

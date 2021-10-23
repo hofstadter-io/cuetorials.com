@@ -5,7 +5,7 @@ import "strings"
 // An input schema
 #Input: {
 	count: int
-	msg: string
+	msg:   string
 }
 
 // An output schema
@@ -15,17 +15,17 @@ import "strings"
 
 #Transform: {
 	// Input for the caller
-	in: #Input
+	X1="in": #Input
 	// output for the caller
 	out: #Output
 
 	// intermediate fields
-	_upper: strings.ToUpper(in.msg)
-	_msg: strings.Join([_upper] * in.count, " ")
+	_upper: strings.ToUpper(X1.msg)
+	_msg:   strings.Join([_upper]*X1.count, " ")
 
 	// set output
 	out: val: _msg
 }
 
 // Call transform
-result: #Transform & { in: { msg: "ra", count: 3 } }
+result: #Transform & {in: {msg: "ra", count: 3}}

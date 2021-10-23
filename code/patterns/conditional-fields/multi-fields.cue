@@ -108,4 +108,3 @@ withdefaultselector: #Service & {
 ///  spec: selector: {x: "y"}
 ///  spec: type: "ExternalName"
 /// }
-

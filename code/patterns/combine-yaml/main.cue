@@ -1,12 +1,12 @@
 #User: {
-	name: string
-	site: string
+	name:    string
+	site:    string
 	website: #Website & websites["\(site)"]
 }
 
 #Website: {
 	name: string
-	url: string
+	url:  string
 }
 
 users: [string]: #User

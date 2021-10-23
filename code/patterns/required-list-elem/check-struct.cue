@@ -1,12 +1,12 @@
 X: [{
 	name: "a"
-	val: 1
-},{
+	val:  1
+}, {
 	name: "b"
-	val: 2
-},{
+	val:  2
+}, {
 	name: "c"
-	val: 3
+	val:  3
 }]
 
 #X: {
@@ -17,4 +17,4 @@ X: [{
 
 #MustHave: ["b"]
 
-#Xcheck: #X & { for x in #MustHave { "\(b)": _ } }
+#Xcheck: #X & {for x in #MustHave {"\(b)": _}}

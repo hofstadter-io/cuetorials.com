@@ -19,31 +19,31 @@ _lines: strings.Split(_input, "\n")
 // R -> 1
 
 #parse: {
-	in: string
+	X1="in": string
 
 	// get row string, sub 0/1, parse binary int
-	rowS: strings.TrimRight(in, "LR")
+	rowS: strings.TrimRight(X1, "LR")
 	rowB: strings.Replace(strings.Replace(rowS, "B", "1", -1), "F", "0", -1)
 	rowI: strconv.ParseInt(rowB, 2, 64)
 
 	// get col string, sub 0/1, parse binary int
-	colS: strings.TrimLeft(in, "FB")
+	colS: strings.TrimLeft(X1, "FB")
 	colB: strings.Replace(strings.Replace(colS, "R", "1", -1), "L", "0", -1)
 	colI: strconv.ParseInt(colB, 2, 64)
 
 	// calculate ID
-	ID: rowI * 8 + colI
+	ID: rowI*8 + colI
 }
 
 // parse lines to structs
-_p1a: [ for i, I in _lines { #parse & { in: I } }]
+_p1a: [ for i, I in _lines {#parse & {in: I}}]
 // extract IDs
-_ids: [ for i, I in _p1a { I.ID } ]
+_ids: [ for i, I in _p1a {I.ID}]
 // sort IDs for part2
 _sorted: list.Sort(_ids, list.Ascending)
 // first and last numbers for part2
 _first: _sorted[0]
-_last: _sorted[len(_sorted)-1]
+_last:  _sorted[len(_sorted)-1]
 
 // part1 answer is max of all ids
 ans1: list.Max(_ids)

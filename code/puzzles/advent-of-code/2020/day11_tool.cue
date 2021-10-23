@@ -22,14 +22,14 @@ command: sol: {
 		contents: string
 	}
 	//regurg: cli.Print & {
-		//text: "---\n" + read.contents + "---\n\n"
+	//text: "---\n" + read.contents + "---\n\n"
 	//}
 	progress: cli.Print & {
-		
+
 		text: "   same: \(#calc.next.same)  seats: \(#calc.next.seats)"
 	}
 	//result: cli.Print & {
-		//text: "---\n" + #calc.next.pretty + "---\n\n"
+	//text: "---\n" + #calc.next.pretty + "---\n\n"
 	//}
 	write: file.Create & {
 		filename: currFN
@@ -39,47 +39,49 @@ command: sol: {
 
 _input: command.sol.read.contents
 _lines: strings.Split(_input, "\n")
-_runes: [for _, L in _lines {
+_runes: [ for _, L in _lines {
 	strings.Runes(L)
 }]
 
-_nums: [for _, L in _runes if len(L) > 0 {
-	[for _, R in L {
-	({
-		if R != 35 { val: 0 }
-		if R == 35 { val: 1 }
-	}).val
+_nums: [ for _, L in _runes if len(L) > 0 {
+	[ for _, R in L {
+		({
+			if R != 35 {val: 0}
+			if R == 35 {val: 1}
+		}).val
 	}]
 }]
 // _nums: #nums
 
-Y: len(_lines)-1
-_YR: list.Range(0,Y,1)
-X: len(_lines[0])-1
-_XR: list.Range(0,X+1,1)
+Y:   len(_lines) - 1
+_YR: list.Range(0, Y, 1)
+X:   len(_lines[0]) - 1
+_XR: list.Range(0, X+1, 1)
 
 #calc: {
 	last: _nums
 	next: {
 		let Grid = [ for y, _ in _YR {
-			[for x, _ in _XR {
+			[ for x, _ in _XR {
 				let R = _runes[y][x]
+
 				// floor, always 0
 				if R == 46 {
-					val: 0
+					val:  0
 					rune: "."
 				}
+
 				// not floor, calculate
 				if R != 46 {
 
 					// default calculations for neighbors
-					_n: 0 | *last[y-1][x]
+					_n:  0 | *last[y-1][x]
 					_ne: 0 | *last[y-1][x+1]
-					_e: 0 | *last[y][x+1]
+					_e:  0 | *last[y][x+1]
 					_se: 0 | *last[y+1][x+1]
-					_s: 0 | *last[y+1][x]
+					_s:  0 | *last[y+1][x]
 					_sw: 0 | *last[y+1][x-1]
-					_w: 0 | *last[y][x-1]
+					_w:  0 | *last[y][x-1]
 					_nw: 0 | *last[y-1][x-1]
 
 					// sum of neighbors
@@ -94,6 +96,7 @@ _XR: list.Range(0,X+1,1)
 					if c == 0 && C == 0 {
 						val: 1
 					}
+
 					// occupied becomes empty
 					if c == 1 && C >= 4 {
 						val: 0
@@ -105,13 +108,13 @@ _XR: list.Range(0,X+1,1)
 					if val == 1 {
 						rune: "#"
 					}
-					
+
 				}
 			}]
 		}]
-		_grid: [ for y, _ in _YR { [for x, _ in _XR { Grid[y][x].val }] } ]
-		same: _grid == last
-		pretty: strings.Join([ for y, _ in _YR { strings.Join([for x, _ in _XR { Grid[y][x].rune }], "") } ], "\n") + "\n"
-		seats: strings.Count(pretty, "#")
+		_grid: [ for y, _ in _YR {[ for x, _ in _XR {Grid[y][x].val}]}]
+		same:   _grid == last
+		pretty: strings.Join([ for y, _ in _YR {strings.Join([ for x, _ in _XR {Grid[y][x].rune}], "")}], "\n") + "\n"
+		seats:  strings.Count(pretty, "#")
 	}
 }

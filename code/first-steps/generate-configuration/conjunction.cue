@@ -10,8 +10,8 @@
 
 // require the following keys for labels
 #requiredLabels: #labels & {
-	app: string
-	env: string
+	app:  string
+	env:  string
 	team: string
 }
 
@@ -22,7 +22,7 @@
 
 // set concrete values to be reused
 #myLabels: #defaultLabels & {
-	app: "cuetorials"
+	app:  "cuetorials"
 	team: "hofstadter"
 }
 
@@ -38,18 +38,18 @@
 
 #Deployment: {
 	apiVersion: "apps/v1"
-	kind: "Deployment"
+	kind:       "Deployment"
 	...
 }
 
 #Service: {
 	apiVersion: "v1"
-	kind: "Service"
+	kind:       "Service"
 	...
 }
 
 #Ingress: {
 	apiVersion: "extensions/v1beta1"
-	kind: "Ingress"
+	kind:       "Ingress"
 	...
 }

@@ -9,11 +9,12 @@ import (
 #Input: {
 	name: string
 	todos: [...{
-		name: string
-		effort: int
+		name:     string
+		effort:   int
 		complete: bool
 	}]
 }
+
 // create a generator
 #Gen: schema.#HofGenerator & {
 	// We often have some input values for the user to provide.
@@ -33,45 +34,45 @@ import (
 	// In is supplied as the root data object to every template
 	// pass user inputs to the tempaltes here, possibly modified, enhanced, or transformed
 	In: {
-		INPUT: Input
-		Completed: _C
+		INPUT:      Input
+		Completed:  _C
 		Incomplete: _I
 	}
 
 	// calculate some internal data from the input
-	_C: [ for t in Input.todos if t.complete == true { t } ]
-	_I: [ for t in Input.todos if t.complete == false { t } ]
+	_C: [ for t in Input.todos if t.complete == true {t}]
+	_I: [ for t in Input.todos if t.complete == false {t}]
 
 	// the template files
 	todo: {
 		Template: """
-		Hello {{ .INPUT.name }}.
-		
-		The items still on your todo list:
+			Hello {{ .INPUT.name }}.
+			
+			The items still on your todo list:
 
-		{{ range $T := .Incomplete -}}
-		{{ printf "%-4s%v" $T.name $T.effort }}
-		{{ end }}
-		"""
+			{{ range $T := .Incomplete -}}
+			{{ printf "%-4s%v" $T.name $T.effort }}
+			{{ end }}
+			"""
 		// The output filename, using string interpolation
 		Filepath: "\(Input.name)-todo.txt"
 	}
 	done: {
 		Template: """
-		Here's what you have finished {{ .INPUT.name }}. Good job!
+			Here's what you have finished {{ .INPUT.name }}. Good job!
 
-		{{ range $T := .Completed -}}
-		{{ $T.name }}
-		{{ end }}
-		"""
+			{{ range $T := .Completed -}}
+			{{ $T.name }}
+			{{ end }}
+			"""
 		Filepath: "\(Input.name)-done.txt"
 	}
 
 	// useful helper
 	debug: {
 		Template: """
-		{{ yaml . }}
-		"""
+			{{ yaml . }}
+			"""
 		Filepath: "debug.yaml"
 	}
 }
@@ -82,7 +83,7 @@ Gen: _ @gen(todos)
 Gen: #Gen & {
 	Input: {
 		// from first.cue
-		name: gen.data.name
+		name:  gen.data.name
 		todos: gen.data.tasks
 	}
 }

@@ -1,15 +1,15 @@
 // Given the original definition
 #D: {
-    a: int
+	a: int
 }
 
 // And a downstream usage
 foo: #D & {
-    #bar: int
+	#bar: int
 }
 
 // The original could be chagned to
 #D: {
-    a: int
-   #bar: string
+	a:    int
+	#bar: string
 }

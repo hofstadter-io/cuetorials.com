@@ -17,6 +17,6 @@ b: {
 }
 
 B: {
-	foo: "bar"
+	foo:   "bar"
 	hello: "world"
 }

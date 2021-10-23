@@ -1,6 +1,6 @@
 app: {
-    creds: {
-        user: "prd-user"
-        pass: "prd-pass"
-    }
+	creds: {
+		user: "prd-user"
+		pass: "prd-pass"
+	}
 }

@@ -1,4 +1,4 @@
-X: [1,2,4]
+X: [1, 2, 4]
 
 #X: {
 	for x in X {
@@ -8,4 +8,4 @@ X: [1,2,4]
 
 #MustHave: [3]
 
-#Xcheck: #X & { for x in #MustHave { "\(x)": x } }
+#Xcheck: #X & {for x in #MustHave {"\(x)": x}}

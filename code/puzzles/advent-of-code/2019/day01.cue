@@ -6,30 +6,30 @@ import (
 )
 
 MAX: 11
-RR: list.Range(1,MAX,1)
+RR:  list.Range(1, MAX, 1)
 
 #calc: {
 	mass: int
-	d: mass / 3
-	r: math.Floor(d)
-	f: r - 2
+	d:    mass / 3
+	r:    math.Floor(d)
+	f:    r - 2
 }
 
 #calc2: {
-	s0: int
-	s1: (#calc & { mass: s0 }).f
-	s2: (#calc & { mass: s1 }).f
-	s3: (#calc & { mass: s2 }).f
-	s4: (#calc & { mass: s3 }).f
-	s5: (#calc & { mass: s4 }).f
-	s6: (#calc & { mass: s5 }).f
-	s7: (#calc & { mass: s6 }).f
-	s8: (#calc & { mass: s7 }).f
-	s9: (#calc & { mass: s8 }).f
-	s10: (#calc & { mass: s9 }).f
+	s0:  int
+	s1:  (#calc & {mass: s0}).f
+	s2:  (#calc & {mass: s1}).f
+	s3:  (#calc & {mass: s2}).f
+	s4:  (#calc & {mass: s3}).f
+	s5:  (#calc & {mass: s4}).f
+	s6:  (#calc & {mass: s5}).f
+	s7:  (#calc & {mass: s6}).f
+	s8:  (#calc & {mass: s7}).f
+	s9:  (#calc & {mass: s8}).f
+	s10: (#calc & {mass: s9}).f
 
 	ss: [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10]
-	sp: [ for i, s in ss if s > 0 { s }]
+	sp: [ for i, s in ss if s > 0 {s}]
 	f: list.Sum(sp)
 }
 
@@ -39,23 +39,23 @@ RR: list.Range(1,MAX,1)
 	ss: {
 		"0": mass
 		for i, I in RR {
-			"\(I)": (#calc & { "mass": ss["\(I-1)"] }).f
+			"\(I)": (#calc & {"mass": ss["\(I-1)"]}).f
 		}
 	}
 
-	sp: [ for i, s in ss if s > 0 { s }]
+	sp: [ for i, s in ss if s > 0 {s}]
 	f: list.Sum(sp) - mass
 }
 
 _inputs: _real
-max: list.Max(_inputs)
-ans1: [ for i, I in _inputs { (#calc & { mass: I }).f } ]
+max:     list.Max(_inputs)
+ans1: [ for i, I in _inputs {(#calc & {mass: I}).f}]
 Ans1: list.Sum(ans1)
 
-ans2: [ for i, I in _inputs { (#calc2 & { s0: I }).f } ]
+ans2: [ for i, I in _inputs {(#calc2 & {s0: I}).f}]
 Ans2: list.Sum(ans2)
 
-ans3: [ for i, I in _inputs { (#calc3 & { mass: I }).f } ]
+ans3: [ for i, I in _inputs {(#calc3 & {mass: I}).f}]
 Ans3: list.Sum(ans3)
 
 _example: [12, 14, 1969, 100756]

@@ -1,17 +1,16 @@
 // Should be oneOf?
 
-
 #A: {
 	spec: {
-	    type:  *"ClusterIP" | "NodePort"
-	    ...
+		type: *"ClusterIP" | "NodePort"
+		...
 	}
 	labels: [string]: string
-	labels: app: "APP"
-    if (labels."dns-resolver") != _|_ {
-        spec: selector: close({})
-    }
-    ...
+	labels: app:      "APP"
+	if (labels."dns-resolver") != _|_ {
+		spec: selector: close({})
+	}
+	...
 }
 
 // this one has a label dns-resolver and no selector: Good

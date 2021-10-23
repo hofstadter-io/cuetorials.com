@@ -14,11 +14,11 @@ _input: _real
 _inputs: strings.Split(_input, "\n\n")
 
 #calcYes: {
-	in: string
+	X1="in": string
 	// count num lines for part2
-	numL: strings.Count(in, "\n")+1
+	numL: strings.Count(X1, "\n") + 1
 	// convert input into single string
-	cl: strings.Replace(in, "\n", "", -1)
+	cl: strings.Replace(X1, "\n", "", -1)
 	// convert to runes for looping
 	rs: strings.Runes(cl)
 	ls: {
@@ -32,12 +32,12 @@ _inputs: strings.Split(_input, "\n\n")
 	// count num fields for part1
 	cnt1: len(ls)
 	// count num true for part2
-	cnt2: len([ for i, l in ls if l { l } ])
+	cnt2: len([ for i, l in ls if l {l}])
 }
 
 // run inputs through calc
-_calced: [ for i, G in _inputs { (#calcYes & { in: G }) } ]
+_calced: [ for i, G in _inputs {(#calcYes & {in: G})}]
 
 // sum counts to get answers
-ans1: list.Sum([ for i, G in _calced { G.cnt1 } ])
-ans2: list.Sum([ for i, G in _calced { G.cnt2 } ])
+ans1: list.Sum([ for i, G in _calced {G.cnt1}])
+ans2: list.Sum([ for i, G in _calced {G.cnt2}])

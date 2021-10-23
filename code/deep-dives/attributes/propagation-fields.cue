@@ -1,4 +1,4 @@
-// Attributes are collected
+	// Attributes are collected
 x: _ @foo(bar) @cow(moo)
 x: _ @foo(baz)
 

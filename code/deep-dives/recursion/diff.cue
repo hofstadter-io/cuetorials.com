@@ -7,14 +7,14 @@ package r
 		#Y: _
 		diff: {
 			{
-				for i,x in #X {
+				for i, x in #X {
 					let y = #Y[i]
 					if y == _|_ {
-						"-": "\(i)": x			
+						"-": "\(i)": x
 					}
 					if y != _|_ {
 						if (x & {...}) != _|_ {
-							"\(i)": (#next & { #X: x, #Y: y }).diff
+							"\(i)": (#next & {#X: x, #Y: y}).diff
 						}
 						if (x & {...}) == _|_ {
 							if (x & y) == _|_ {
@@ -24,9 +24,9 @@ package r
 						}
 					}
 				}
-			} 
+			}
 			"+": {
-				for i,y in #Y {
+				for i, y in #Y {
 					if #X[i] == _|_ {
 						"\(i)": y
 					}
@@ -36,7 +36,7 @@ package r
 	}
 }
 
-#diff: #RecurseN & { #funcFactory: #DiffF }
+#diff: #RecurseN & {#funcFactory: #DiffF}
 
 ex: {
 	x: {
@@ -53,12 +53,11 @@ ex: {
 		b: "b"
 		c: "c"
 		d: "D"
-		e:  {
+		e: {
 			b: "b"
 			c: "c"
 			d: 1
 		}
 	}
-	diff: (#diff & { #X: x, #Y: y }).diff
+	diff: (#diff & {#X: x, #Y: y}).diff
 }
-

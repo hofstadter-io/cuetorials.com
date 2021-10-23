@@ -2,18 +2,18 @@
 
 #Deployment: {
 	apiVersion: "apps/v1"
-	kind: "Deployment"
+	kind:       "Deployment"
 	...
 }
 
 #Service: {
 	apiVersion: "v1"
-	kind: "Service"
+	kind:       "Service"
 	...
 }
 
 #Ingress: {
 	apiVersion: "extensions/v1beta1"
-	kind: "Ingress"
+	kind:       "Ingress"
 	...
 }

@@ -7,7 +7,7 @@ import (
 )
 
 deployment: [string]: apps.#Deployment
-service: [string]: core.#Service
-ingress: [string]: extn.#Ingress
+service: [string]:    core.#Service
+ingress: [string]:    extn.#Ingress
 
 // ...

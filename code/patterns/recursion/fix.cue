@@ -2,7 +2,7 @@ package fix
 
 // Phil's code
 #Fix: {
-	F: _
+	F:   _
 	Out: *null | F & {Self: Out, ...}
 }
 
@@ -11,26 +11,24 @@ package fix
 	#I: _
 	#O: *null | (#fix & {
 		"#F": #F
-		"#I": (#F & { in: #I }).out
+		"#I": (#F & {in: #I}).out
 	}).out
 }
 
 #f: {
-	in: int
-	out: in - 1
+	X1="in": int
+	out:     X1 - 1
 }
 
-f: #f & { in: 4 }
+f: #f & {in: 4}
 
-F: #fix & { #F: #f, #I: 4 }
+F: #fix & {#F: #f, #I: 4}
 
 // f: #fix & { F: #f, I: 4 }
 
-
-
 //list: {
-	//val: _
-	//next: *null | list
+//val: _
+//next: *null | list
 //}
 
 //ll1: list & { val: "a", next: list & { val: 1 } }

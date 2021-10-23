@@ -1,26 +1,26 @@
 #First: {
-    foo: string
+	foo: string
 }
 #Other: {
-    msg: string
+	msg: string
 }
 #Either: {
-    foo: string
+	foo: string
 } | {
-    msg: string
+	msg: string
 }
 #Thing: {
-    name: string
-    foo:  string
+	name: string
+	foo:  string
 } | {
-    name: string
-    msg:  string
+	name: string
+	msg:  string
 }
 thing1: {
-    name: "thing1"
-    foo:  "bar"
+	name: "thing1"
+	foo:  "bar"
 }
 thing2: {
-    name: "thing2"
-    msg:  "hello"
+	name: "thing2"
+	msg:  "hello"
 }

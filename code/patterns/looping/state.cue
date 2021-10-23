@@ -12,7 +12,7 @@ calc: {
 		}
 	}
 
-	for i, I in list.Range(1,10,1) {
+	for i, I in list.Range(1, 10, 1) {
 		let last = state["\(i)"]
 		state: {
 			"\(i+1)": {

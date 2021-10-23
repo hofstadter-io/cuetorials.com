@@ -1,13 +1,13 @@
 // use if guard to get even numbers in a list comprehension
-nums: [1,2,3,4,5,6,7,8]
-sqrs: [ for n in nums if mod(n,2) == 0 { n*n } ]
+nums: [1, 2, 3, 4, 5, 6, 7, 8]
+sqrs: [ for n in nums if mod(n, 2) == 0 {n * n}]
 
 // use if guard to conditionally add fields
 elems: [
-	{ name: "a", public: true },
-	{ name: "b", public: true },
-	{ name: "c", public: false },
-	{ name: "d" },
+	{name: "a", public: true},
+	{name: "b", public: true},
+	{name: "c", public: false},
+	{name: "d"},
 ]
 
 Elems: {
@@ -27,11 +27,12 @@ Elems: {
 
 				// test conjunctions not equal to bottom for "truthiness"
 				if (val.public & true) != _|_ {
-					"\(key)": val & { PUB: "true" }
+					"\(key)": val & {PUB: "true"}
 				}
+
 				// note, there is no "else" clause
 				if (val.public & false) != _|_ {
-					"\(key)": val & { PUB: "false" }
+					"\(key)": val & {PUB: "false"}
 				}
 			}
 		}

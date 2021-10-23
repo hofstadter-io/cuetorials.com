@@ -5,7 +5,6 @@
 		name?: string
 		...
 	}
-	labels?: #list_or_dict
+	labels?:          #list_or_dict
 	template_driver?: string
 }
-

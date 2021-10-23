@@ -5,20 +5,20 @@ import "text/template"
 data: {
 	// meta info
 	name: *"tasks" | string @tag(name)
-	msg: "Hello \(name), welcome to Cuetorials"
+	msg:  "Hello \(name), welcome to Cuetorials"
 
 	// task list
 	tasks: [
-		{ name: "t1", effort: 1, complete: true },
-		{ name: "t2", effort: 4,  complete: true },
-		{ name: "t3", effort: 3,  complete: false },
-		{ name: "t4", effort: 2,  complete: true },
-		{ name: "t5", effort: 3,  complete: false },
+		{name: "t1", effort: 1, complete: true},
+		{name: "t2", effort: 4, complete: true},
+		{name: "t3", effort: 3, complete: false},
+		{name: "t4", effort: 2, complete: true},
+		{name: "t5", effort: 3, complete: false},
 	]
 
 	// grouped tasks
-	complete: [ for t in tasks if t.complete == true { t } ]
-	incomplete: [ for t in tasks if t.complete == false { t } ]
+	complete: [ for t in tasks if t.complete == true {t}]
+	incomplete: [ for t in tasks if t.complete == false {t}]
 }
 
 // Templates which use Go's template engine
@@ -26,14 +26,14 @@ templates: [
 	{
 		filename: "\(data.name)-todo.txt"
 		contents: """
-		{{ .msg }}
+			{{ .msg }}
 
-		--- TODO ---
-		{{ range $T := .incomplete -}}
-		{{ printf "%-4s%v" $T.name $T.effort }}
-		{{ end }}
-		"""
-	},{
+			--- TODO ---
+			{{ range $T := .incomplete -}}
+			{{ printf "%-4s%v" $T.name $T.effort }}
+			{{ end }}
+			"""
+	}, {
 		filename: "\(data.name)-done.txt"
 		contents: """
 		Here's what you have finished \(data.name). Good job!
@@ -43,7 +43,7 @@ templates: [
 		{{ $T.name }}
 		{{ end }}
 		"""
-	}
+	},
 ]
 
 // The rendered output from data+templates

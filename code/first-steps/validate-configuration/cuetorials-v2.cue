@@ -2,11 +2,11 @@
 
 #Deployment: {
 	apiVersion: "apps/v1"
-	kind: "Deployment"
+	kind:       "Deployment"
 	metadata: {
-		name: string
+		name:       string
 		namespace?: string
-		labels: [string]: string
+		labels: [string]:       string
 		annotations?: [string]: string
 	}
 	spec: {
@@ -22,11 +22,11 @@
 
 #Service: {
 	apiVersion: "v1"
-	kind: "Service"
+	kind:       "Service"
 	metadata: {
-		name: string
+		name:       string
 		namespace?: string
-		labels: [string]: string
+		labels: [string]:       string
 		annotations?: [string]: string
 	}
 	spec: {
@@ -39,11 +39,11 @@
 
 #Ingress: {
 	apiVersion: "extensions/v1beta1"
-	kind: "Ingress"
+	kind:       "Ingress"
 	metadata: {
-		name: string
+		name:       string
 		namespace?: string
-		labels: [string]: string
+		labels: [string]:       string
 		annotations?: [string]: string
 	}
 	spec: {...}

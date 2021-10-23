@@ -27,24 +27,24 @@ objs: {
 	}
 }
 
-ordered: (#toposort & { _In: objs }).out
+ordered: (#toposort & {_In: objs}).out
 
 _#obj: {
 	name: string
-	val: _
+	val:  _
 	deps: [...string]
-	edges: [N=string]: { name: N }
+	edges: [N=string]: {name: N}
 }
 
 _#revd: {
-	In: [string]: _#obj
+	In: [string]:  _#obj
 	Out: [string]: _#obj
 	Out: {
 		for o, O in In {
 			"\(o)": {
-					name: O.name
-					val: O.val
-					deps: O.deps
+				name: O.name
+				val:  O.val
+				deps: O.deps
 			}
 			for e, E in O.deps {
 				"\(E)": {
@@ -56,18 +56,18 @@ _#revd: {
 }
 
 #toposort: {
-	_In: [Name=string]: _#obj & { name: Name }
-	_in: (_#revd & { In: _In }).Out
-	_range: list.Range(0,len(_in),1)
+	_In: [Name=string]: _#obj & {name: Name}
+	_in:    (_#revd & {In: _In}).Out
+	_range: list.Range(0, len(_in), 1)
 
 	revd: _in
 
 	#calc: {
 		// initial state
 		"0": {
-			stack: [for _, O in _in if len(O.edges) == 0 { O }]
-			degrees: { 
-				for _, O in _in { 
+			stack: [ for _, O in _in if len(O.edges) == 0 {O}]
+			degrees: {
+				for _, O in _in {
 					let L = len(O.edges)
 					if L != 0 {
 						"\(O.name)": L
@@ -80,7 +80,7 @@ _#revd: {
 			order: []
 		}
 		for i, _ in _range {
-			let I = i+1
+			let I = i + 1
 			let last = #calc["\(i)"]
 
 			let vert = last.stack[0]
@@ -93,7 +93,7 @@ _#revd: {
 							"\(d)": -1
 						}
 						if d != vert.name {
-							let found = list.Contains(vert.deps,d)
+							let found = list.Contains(vert.deps, d)
 							if found {
 
 								"\(d)": D - 1
@@ -104,7 +104,7 @@ _#revd: {
 						}
 					}
 				}
-				stack: list.Drop(last.stack, 1) + [for dep, deg in _degrees if deg == 0 { _in[dep] }]
+				stack: list.Drop(last.stack, 1) + [ for dep, deg in _degrees if deg == 0 {_in[dep]}]
 				degrees: {
 					for dep, deg in _degrees {
 						if deg == 0 {

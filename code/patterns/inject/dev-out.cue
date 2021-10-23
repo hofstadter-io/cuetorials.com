@@ -1,6 +1,6 @@
 app: {
-    creds: {
-        user: "dev-user"
-        pass: "dev-pass"
-    }
+	creds: {
+		user: "dev-user"
+		pass: "dev-pass"
+	}
 }

@@ -1,19 +1,19 @@
 #Schema: #Deployment | #Service | #Ingress
 
 #labels: [string]: string
-#labels: app: string
+#labels: app:      string
 
 #metadata: {
-	name: string
+	name:       string
 	namespace?: string
-	labels: #labels
+	labels:     #labels
 	annotations?: [string]: string
 }
 
 #Deployment: {
 	apiVersion: "apps/v1"
-	kind: "Deployment"
-	metadata: #metadata
+	kind:       "Deployment"
+	metadata:   #metadata
 	spec: {
 		selector: {
 			matchLabels: metadata.labels
@@ -27,11 +27,11 @@
 
 #Service: {
 	apiVersion: "v1"
-	kind: "Service"
-	metadata: #metadata
+	kind:       "Service"
+	metadata:   #metadata
 	spec: {
 		selector: metadata.labels
-		type: string
+		type:     string
 		ports: [...{...}]
 	}
 	...
@@ -39,8 +39,8 @@
 
 #Ingress: {
 	apiVersion: "extensions/v1beta1"
-	kind: "Ingress"
-	metadata: #metadata
+	kind:       "Ingress"
+	metadata:   #metadata
 	spec: {...}
 	...
 }
