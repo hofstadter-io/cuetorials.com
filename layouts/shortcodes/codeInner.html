@@ -7,7 +7,7 @@
 
 <div class="position-relative mb-3" style="overflow-x: auto; overflow-y: hidden">
     {{ if $title }}
-    <p class="pl-2 py-1 m-0 border bg-light">{{ $title }}</p>
+    <p class="pl-2 py-1 m-0 border bg-light code-title">{{ $title }}</p>
     {{ end }}
     <div class="border" id="{{printf "clipboard_%s" (.Scratch.Get "identifier") }}">
       <div class="position-absolute pt-1 pr-1" style="right:0;">
