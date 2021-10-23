@@ -1,0 +1,8 @@
+l.1: conflicting values 3 and 2:
+    ./errors.cue:9:7
+    ./errors.cue:10:7
+s: conflicting values "world" and "hello":
+    ./errors.cue:1:4
+    ./errors.cue:2:4
+v: index out of range [2] with length 2:
+    ./errors.cue:13:6

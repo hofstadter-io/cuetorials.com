@@ -5,20 +5,20 @@ import (
 )
 
 data: """
-{
-	"hello": "world",
-	"list": [ 1, 2 ],
-	"nested": {
-		"foo": "bar"
+	{
+		"hello": "world",
+		"list": [ 1, 2 ],
+		"nested": {
+			"foo": "bar"
+		}
 	}
-}
-"""
+	"""
 
 jval: json.Unmarshal(data)
 
 val: {
 	hello: "world"
-	list: [1,2]
+	list: [1, 2]
 	nested: foo: "bar"
 }
 

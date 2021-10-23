@@ -14,7 +14,7 @@ d: #D & {
 	}
 
 	_calc: data.x * data.y
-	size: string | *"med"
+	size:  string | *"med"
 	if _calc < 10 {
 		size: "small"
 	}
@@ -22,4 +22,3 @@ d: #D & {
 		size: "large"
 	}
 }
-

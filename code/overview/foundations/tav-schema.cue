@@ -1,5 +1,5 @@
 album: {
 	title: string
-	year: int
-	live: bool
+	year:  int
+	live:  bool
 }

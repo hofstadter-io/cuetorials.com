@@ -1,5 +1,5 @@
 album: {
 	title: "Houses of the Holy"
-	year: 1973
-	live: false
+	year:  1973
+	live:  false
 }

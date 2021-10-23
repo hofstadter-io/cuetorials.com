@@ -5,10 +5,11 @@ A: {
 
 	// irregular names need to be quoted and require indexing to access
 	"user-id": "abc"
-	UserID: A["user-id"]
+	UserID:    A["user-id"]
 }
 A: {
-	b: val // 42, matches top-level
+	b: val   // 42, matches top-level
 	c: A.num // 23, reference A.num
+
 	// num itself is not in scope even though it is part of A
 }

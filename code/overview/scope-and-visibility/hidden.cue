@@ -6,7 +6,7 @@ A: {
 
 _#NoshowDefn: {
 	hello: string
-	num: int | *42
+	num:   int | *42
 }
 
-B: _#NoshowDefn & { hello: "world" }
+B: _#NoshowDefn & {hello: "world"}

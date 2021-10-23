@@ -7,7 +7,7 @@ S: {
 }
 
 // we can extend the fields
-s: S & { 
+s: S & {
 	data: bytes
 	point: z: int
 }

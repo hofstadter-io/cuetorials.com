@@ -1,7 +1,7 @@
 app: {
 	name: string
 	tech: string
-	mem: int
+	mem:  int
 
 	if tech == "react" {
 		tier: "frontend"
@@ -16,7 +16,7 @@ app: {
 	if mem >= 1Gi && mem < 4Gi {
 		footprint: "medium"
 	}
-	if mem  >= 4Gi {
+	if mem >= 4Gi {
 		footprint: "large"
 	}
 }

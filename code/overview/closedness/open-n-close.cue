@@ -6,7 +6,7 @@ S: close({
 	}
 })
 
-s: S & { 
+s: S & {
 	// this is no longer allowed
 	data: bytes
 	// this is still allowed
@@ -24,7 +24,7 @@ s: S & {
 
 // this is now allowed
 d: #D & {
-	meta: string	
+	meta: string
 	data: {
 		val: string
 	}

@@ -8,6 +8,6 @@ S: {
 	// intermediate value
 	let lower = strings.ToLower(name)
 	version: "13"
-	label: L
-	image: "docker.io/\(lower):\(version)"
+	label:   L
+	image:   "docker.io/\(lower):\(version)"
 }

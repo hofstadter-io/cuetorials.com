@@ -1,8 +1,8 @@
 #schema: {
-    word: string
-    num:  42
+	word: string
+	num:  42
 }
 value: {
-    word: "what's the good?"
-    num:  42
+	word: "what's the good?"
+	num:  42
 }

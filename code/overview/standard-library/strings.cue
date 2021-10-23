@@ -7,7 +7,7 @@ s: "HelloWorld"
 u: strings.ToUpper(s)
 l: strings.ToLower(s)
 
-line: "Cue stands for configure, unify, execute"
+line:  "Cue stands for configure, unify, execute"
 words: strings.Split(line, " ")
 lined: strings.Join(words, " ")
 

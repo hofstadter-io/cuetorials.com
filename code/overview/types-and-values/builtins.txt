@@ -1,0 +1,8 @@
+N:   null
+B:   bool
+S:   string
+By:  bytes
+Num: number
+Int: int
+List: []
+Struct: {}

@@ -61,3 +61,6 @@ verify_diff:
 verify_code:
 	make -C code all
 
+format_code:
+	cue fmt code/..
+	gofmt -w code/..

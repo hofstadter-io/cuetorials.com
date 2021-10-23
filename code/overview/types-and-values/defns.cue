@@ -1,6 +1,6 @@
 #schema: {
-	word: string
-	num: int | *42
+	word:      string
+	num:       int | *42
 	optional?: string
 }
 

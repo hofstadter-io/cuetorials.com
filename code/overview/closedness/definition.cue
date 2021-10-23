@@ -10,7 +10,7 @@
 
 // after conjuncting, extension is not allowed
 d: #D & {
-	meta: string	
+	meta: string
 	data: {
 		val: string
 	}

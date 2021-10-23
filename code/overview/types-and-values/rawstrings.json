@@ -1,0 +1,4 @@
+{
+    "str1": "avoid using \\ to \"escape\"",
+    "str2": "#\"\"\"\na nested multiline\nstring goes here\n\"\"\"#"
+}

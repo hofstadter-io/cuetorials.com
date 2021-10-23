@@ -8,13 +8,13 @@
 
 // this won't work
 #bad: #A & #B
-bad: #bad & {
+bad:  #bad & {
 	num: 42
 	ans: "life"
 }
 
 // but this will
-#val: { #A, #B }
+#val: {#A, #B}
 val: #val & {
 	num: 42
 	ans: "life"

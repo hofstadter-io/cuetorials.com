@@ -1,12 +1,12 @@
 #schema: {
 	name: string
-	ans: string
-	num: int | *42
+	ans:  string
+	num:  int | *42
 }
 
 // match elem fields and alias labels to Name,
 // unify with schema, set name to Name by label
-elems: [Name=_]: #schema & { name: Name }
+elems: [Name=_]: #schema & {name: Name}
 
 elems: {
 	one: {
@@ -18,4 +18,4 @@ elems: {
 	}
 }
 
-elems: other: { ans: "id", num: 23 }
+elems: other: {ans: "id", num: 23}

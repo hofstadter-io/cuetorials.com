@@ -1,8 +1,8 @@
 A: {
-    isshown: "I can be seen"
-    hidrefd: "a hidden field sort of?"
+	isshown: "I can be seen"
+	hidrefd: "a hidden field sort of?"
 }
 B: {
-    hello: "world"
-    num:   42
+	hello: "world"
+	num:   42
 }

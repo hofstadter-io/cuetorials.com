@@ -3,9 +3,9 @@ apps: ["nginx", "express", "postgres"]
 stack: {
 	for i, app in apps {
 		"\(app)": {
-			name: app
+			name:   app
 			labels: #labels & {
-				app: "foo"
+				app:  "foo"
 				tier: "\(i)"
 			}
 		}

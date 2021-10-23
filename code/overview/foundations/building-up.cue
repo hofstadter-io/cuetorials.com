@@ -11,7 +11,7 @@
 }
 
 #Permissions: {
-	role: string
+	role:   string
 	public: bool | *false
 }
 
@@ -20,13 +20,14 @@
 	// embed other schemas
 	#Base
 	#Meta
+
 	#Permissions
 	// with no '...' this is final
 }
 
 value: #Schema & {
-	name: "app"
-	kind: "deploy"
+	name:    "app"
+	kind:    "deploy"
 	version: "v1.0.42"
 	labels: ["server", "prod"]
 	role: "backend"

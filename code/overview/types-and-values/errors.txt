@@ -1,0 +1,6 @@
+l.1: conflicting values 3 and 2:
+    ./errors.cue:7:7
+    ./errors.cue:8:7
+s: conflicting values "world" and "hello":
+    ./errors.cue:1:4
+    ./errors.cue:2:4
