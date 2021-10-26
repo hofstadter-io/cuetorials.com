@@ -1,0 +1,33 @@
+loose error:
+#d: conflicting values int and "bar" (mismatched types int and string):
+    7:5
+    8:5
+_h: conflicting values int and "hidden" (mismatched types int and string):
+    5:5
+    6:5
+
+every error:
+#d: conflicting values int and "bar" (mismatched types int and string):
+    7:5
+    8:5
+_h: conflicting values int and "hidden" (mismatched types int and string):
+    5:5
+    6:5
+
+strict error:
+#d: conflicting values int and "bar" (mismatched types int and string):
+    7:5
+    8:5
+_h: conflicting values int and "hidden" (mismatched types int and string):
+    5:5
+    6:5
+
+
+value:
+i: int
+s: string
+t: {
+	[string]: string
+}
+_h: _|_ // conflicting values int and "hidden" (mismatched types int and string)
+#d: _|_ // conflicting values int and "bar" (mismatched types int and string)

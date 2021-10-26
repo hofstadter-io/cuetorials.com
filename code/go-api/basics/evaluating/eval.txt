@@ -1,0 +1,13 @@
+v: {
+	i:  int
+	s:  "hello"
+	#d: "defn"
+	_h: "hidden"
+	o?: string
+}
+v: {
+	i:  int
+	s:  "hello"
+	#d: "defn"
+	o?: string
+}

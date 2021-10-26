@@ -41,7 +41,12 @@ func main() {
 	)
 
 	// Pretty print the AST, returns ([]byte, error)
-	bs, _ := format.Node(syn)
+	bs, _ := format.Node(
+		syn,
+		// format.TabIndent(false),
+		// format.UseSpaces(2),
+	)
 
+	// print to stdout
 	fmt.Println(string(bs))
 }

@@ -1,0 +1,17 @@
+Unify Error:
+v.i: conflicting values int and "hello" (mismatched types int and string):
+    schema.cue:3:5
+    val.cue:3:5
+
+Validate Error:
+v.i: conflicting values int and "hello" (mismatched types int and string):
+    schema.cue:3:5
+    val.cue:3:5
+v.s: conflicting values string and 1 (mismatched types string and int):
+    schema.cue:4:5
+    val.cue:4:5
+
+v: {
+	i: _|_ // conflicting values int and "hello" (mismatched types int and string)
+	s: _|_ // conflicting values string and 1 (mismatched types string and int)
+}

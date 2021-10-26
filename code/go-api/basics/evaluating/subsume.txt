@@ -1,0 +1,15 @@
+s > r:
+field i not present in {i:>10,s:=~"^foo"}:
+    constrain.cue:2:1
+missing field "i"
+
+r > s:
+field i not present in {i:int,s:string}:
+    schema.cue:2:1
+missing field "i"
+
+v > s:
+field i not present in {i:int,s:string}:
+    schema.cue:2:1
+missing field "i"
+
