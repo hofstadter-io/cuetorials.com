@@ -10,7 +10,7 @@ Saw before...
 
 Here...
 
-- Path
+- LookupPath
 - Exists
 - IsConcrete
 - IncompleteKind

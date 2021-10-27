@@ -1,7 +1,7 @@
 ---
 title: "Theory"
 description: "Cue Theory"
-weight: 125
+weight: 30
 ---
 
 Background and theory for Cue:

@@ -1,7 +1,7 @@
 ---
 title: "Futurology"
 description: "Upcoming features and capabilities"
-weight: 110
+weight: 10
 ---
 
 {{<lead>}}

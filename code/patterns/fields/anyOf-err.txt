@@ -1,0 +1,3 @@
+val.#AnyOfABC: conflicting values false and true:
+    ./anyOf.cue:7:13
+    ./anyOf.cue:7:20

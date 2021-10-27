@@ -1,7 +1,7 @@
 ---
 title: "Internals"
 description: "How Cue works internally"
-weight: 100
+weight: 40
 ---
 
 {{<lead>}}
