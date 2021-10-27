@@ -26,12 +26,12 @@ if you want to allow none of them to be valid as well.
   file="code/patterns/fields/oneOfMaybe.html" title="oneOfMaybe.cue" play="true"
 >}}
 
-_Note, that you cannot have options which are subsets of another option.
-The following will error when only `a` is provided:_
+However, you cannot have options which are subsets of another option.
+The following will error when only `a` is provided:
 
-```
-#OneOf: { a: _ } | { a: _, b:_ }
-```
+{{< codePane
+  file="code/patterns/fields/subsetFail.html" title="subsetFail.cue" play="true"
+>}}
 
 CUE cannot distinguish between the choices.
 
