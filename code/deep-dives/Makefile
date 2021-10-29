@@ -1,7 +1,4 @@
-tests = go-api \
-				introduction \
-				overview \
-				patterns
+tests = foundations
 
 verifies = $(addprefix verify_, $(tests))
 
@@ -10,3 +7,5 @@ all: $(verifies)
 
 $(verifies): verify_%:
 	@make -C $(subst verify_,,$@)
+
+

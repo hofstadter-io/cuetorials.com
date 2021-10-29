@@ -1,0 +1,11 @@
+====  a  ====
+"a" true true
+b: "b"
+c: "c"
+e: int
+====  d.g  ====
+"d.g" true false
+_
+====  x.y  ====
+"" false true
+_|_ // field "x" not found

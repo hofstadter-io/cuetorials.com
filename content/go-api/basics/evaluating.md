@@ -1,5 +1,14 @@
 ---
 title: "Evaluating Values"
+keywords:
+- go
+- golang
+- api
+- validate
+- unify
+- subsume
+- eval
+- options
 weight: 50
 ---
 

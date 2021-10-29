@@ -1,0 +1,14 @@
+====  a  ====
+"a" struct _|_ // len not supported for type struct
+b: "b"
+c: "c"
+e: int
+====  d.g  ====
+"d.g" _ _|_ // len not supported for type _|_
+_
+====  l  ====
+"l" list 4
+[1, 2, "y", "z"]
+====  b  ====
+"b" bytes 6
+'abc123'

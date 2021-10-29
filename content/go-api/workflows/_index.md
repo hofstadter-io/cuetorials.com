@@ -1,5 +1,5 @@
 ---
-title: "tool/flow"
+title: "The Flow Engine"
 description: "Learn how to Cuelang's tool/flow for DAG prociessing using the Go API"
 keywords:
 - go

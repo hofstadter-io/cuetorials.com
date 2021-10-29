@@ -10,7 +10,7 @@ import (
 
 const schema = `
 {
-	i: int
+	i: number
 	s: string
 }
 `

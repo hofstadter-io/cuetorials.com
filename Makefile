@@ -30,6 +30,7 @@ code/%.html: code/%.cue
 
 .PHONY: hugo
 hugo:
+	@rm -rf dist
 	@hugo --baseURL https://cuetorials.com/ -d dist
 
 .PHONY: docker

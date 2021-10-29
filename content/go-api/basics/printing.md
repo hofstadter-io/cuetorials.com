@@ -1,6 +1,13 @@
 ---
 title: "Printing Cue"
 description: "How to print Cuelang values with fmt and Cue's builtin formatting."
+keywords:
+- go
+- golang
+- api
+- print
+- format
+- syntax
 weight: 10
 ---
 
