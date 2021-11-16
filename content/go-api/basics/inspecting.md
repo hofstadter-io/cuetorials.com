@@ -23,9 +23,9 @@ for the examples in this section.
 	file="code/go-api/basics/inspecting/value.html" title="value.cue"
 >}}
 
-### Path, ReferencePath, LookupPath
+### LookupPath, Path
 
-`Path` and `ReferencePath` return paths to the value
+`Path` return paths to the value
 which can be used with `LookupPath` to get the value.
 They can be considered inverse functions of each other.
 
@@ -35,9 +35,22 @@ They can be considered inverse functions of each other.
 >}}
 
 Docs:
-[Path](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Path),
+[LookupPath](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.LookupPath),
+[Path](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Path)
+
+
+### ReferencePath and Dereference
+
+`ReferencePath` 
+
+{{< codePane2
+	file1="code/go-api/basics/inspecting/reference.go"  lang1="go"  title1="reference.go"
+	file2="code/go-api/basics/inspecting/reference.txt" lang2="txt" title2="go run reference.go"
+>}}
+
+Docs:
 [ReferencePath](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.ReferencePath),
-[LookupPath](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.LookupPath)
+[Dereference](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Dereference)
 
 ### Exists and IsConcrete
 
@@ -91,8 +104,7 @@ You will first want to know what type of value you are dealing with before tryin
 
 ### Len
 
-`Len` will tell you the length of a list, the number of fields in a struct,
-or how many bytes are in a bytes.
+`Len` will tell you the length of a list or how many bytes are in a bytes.
 
 {{< codePane2
 	file1="code/go-api/basics/inspecting/length.go"  lang1="go"  title1="length.go"
@@ -102,4 +114,3 @@ or how many bytes are in a bytes.
 Docs:
 [Len](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Len)
 
-__There appears to be an issue with Len() for structs, see [issue 1346](https://github.com/cue-lang/cue/issues/1346).__

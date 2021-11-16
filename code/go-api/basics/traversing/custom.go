@@ -1,8 +1,50 @@
-package structural
+package main
 
 import (
+	"fmt"
+
 	"cuelang.org/go/cue"
+	"cuelang.org/go/cue/ast"
+	"cuelang.org/go/cue/cuecontext"
 )
+
+const input = `
+a: {
+	i: int
+	j: int | *i
+}
+`
+
+func main() {
+	c := cuecontext.New()
+	val := c.CompileString(input)
+
+	fmt.Println("\noriginal\n===============")
+	val.Walk(func(v cue.Value) bool {
+		fmt.Printf("\n%# v\n", v)
+		return true
+	}, nil)
+
+	val = val.FillPath(cue.ParsePath("a.i"), 42)
+
+	fmt.Println("\nfilled\n===============")
+	val.Walk(func(v cue.Value) bool {
+		fmt.Printf("\n%# v\n", v)
+		return true
+	}, nil)
+
+	// val.Evaluate(cue.Final())
+
+	a := val.Syntax(cue.Final(), cue.Concrete(true))
+	val = c.BuildExpr(a.(ast.Expr))
+
+	fmt.Println("\nfinal (hypothetical)\n===============")
+	val.Walk(func(v cue.Value) bool {
+		fmt.Printf("\n%# v\n", v)
+		return true
+	}, nil)
+
+}
 
 var defaultWalkOptions = []cue.Option{
 	cue.Attributes(true),

@@ -2,7 +2,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
   <meta name="robots" content="index, follow" />
@@ -33,14 +33,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
 
-  <meta name="keywords" content="{{.Site.Params.keywords}}{{ range .Params.keywords }} {{ . }}{{ end }}" />
+  {{ $keywords := union .Site.Params.keywords .Params.keywords -}}
+  <meta name="keywords" content="{{ delimit $keywords ", " }}" />
 
-  {{ $c1 := resources.Get "css/fontawesome.min.css" }}
-  {{ $c2 := resources.Get "plugins/auto-complete.css" | minify }}
-  {{ $c3 := resources.Get "css/ace.scss" | toCSS | minify }}
+  {{- $c1 := resources.Get "css/fontawesome.min.css" }}
+  {{- $c2 := resources.Get "plugins/auto-complete.css" | minify }}
+  {{- $c3 := resources.Get "css/ace.scss" | toCSS | minify }}
 
-  {{ $css := slice $c1 $c2 $c3 | resources.Concat "css/bundle.css" }}
-  {{ $CSS := $css | resources.Fingerprint "sha512" }}
+  {{- $css := slice $c1 $c2 $c3 | resources.Concat "css/bundle.css" }}
+  {{- $CSS := $css | resources.Fingerprint "sha512" }}
+
   <link rel="stylesheet" href="{{ $CSS.RelPermalink }}" integrity="{{ $CSS.Data.Integrity }}">
 
   {{ if (and (not .Site.IsServer) .Site.Params.ga) }}
@@ -51,6 +53,6 @@
     gtag('js', new Date());
     gtag('config', '{{ .Site.Params.ga }}');
   </script>
-  {{ end }}
+  {{ end -}}
 
 </head>

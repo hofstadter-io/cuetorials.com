@@ -6,4 +6,4 @@ weight: 100
 
 Conway's Game of Life in Cue
 
-{{< chromaHTML file="code/puzzles/gol.html">}}
+{{< codePane file="code/puzzles/gol.html" title="game-of-life.cue">}}

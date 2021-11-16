@@ -15,3 +15,5 @@ The setup requires cloning the following PR until it is merged.
 You can use a symlink to place it in the global node modules location for your system.
 
 [SEO tags in hugo](https://www.skcript.com/svr/perfect-seo-meta-tags-with-hugo/)
+
+[HTML Metatags](https://gist.github.com/whitingx/3840905)

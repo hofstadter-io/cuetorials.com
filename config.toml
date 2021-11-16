@@ -25,7 +25,7 @@ github_repo = "https://github.com/hofstadter-io/cuetorials.com"
 time_format_default = "January 2, 2006"
 cuedocBase = "https://pkg.go.dev/cuelang.org/go@v0.4.0"
 ga = "UA-103579574-6"
-keywords="cue cuelang tutorial example"
+keywords= ["cue","cuelang","tutorial","example"]
 
 [markup]
   [markup.goldmark]
