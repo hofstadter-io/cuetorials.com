@@ -1,6 +1,6 @@
 ---
 title: "Inspecting Values"
-description: ""
+description: "Inspect CUE values from Go"
 keywords:
 - go
 - golang

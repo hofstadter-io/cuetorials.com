@@ -36,6 +36,22 @@
   {{ $keywords := union .Site.Params.keywords .Params.keywords -}}
   <meta name="keywords" content="{{ delimit $keywords ", " }}" />
 
+  <script defer type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "CreativeWork",
+      "url": {{ .Permalink }},
+      "headline": "{{ partial "titlecrumbs.html" . }}",
+      "datePublished": "{{ now.Format "2006-01-02" }}",
+      "description": "{{ .Params.Description }}",
+      "mainEntityOfPage": "True",
+      "image": {
+        "@type": "imageObject",
+        "url": {{ printf "%s%s" .Site.BaseURL "android-chrome-192x192.png"}}
+      }
+    }
+  </script>
+
   {{- $c1 := resources.Get "css/fontawesome.min.css" }}
   {{- $c2 := resources.Get "plugins/auto-complete.css" | minify }}
   {{- $c3 := resources.Get "css/ace.scss" | toCSS | minify }}

@@ -7,6 +7,7 @@
 
 {{ if $gh_repo }}
 <div class="d-flex flex-column td-page-meta ml-2 pb-1 pt-2 mb-0">
+<p>Published {{ now.Format "2006-01-02" }}</p>
 {{ $editURL := printf "%s/edit/%s/content/%s" $gh_repo $gh_branch $pathFormatted }}
 {{ if and ($gh_subdir) (.Site.Language.Lang) }}
 {{ $editURL = printf "%s/edit/%s/%s/content/%s" $gh_repo $gh_branch $gh_subdir $pathFormatted }}
