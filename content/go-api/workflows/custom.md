@@ -16,7 +16,7 @@ You will need to implement
 - the `TaskFunc` interface which turns values into `flow.Runner`
 - the `RunnerFunc` is the interface for custom tasks
 
-You can find the {{<cuedoc page="/tool/flow">}}workflow godocs here{{</cuedoc>}}.
+You can find the {{<cuedoc page="/tools/flow">}}workflow godocs here{{</cuedoc>}}.
 
 {{< codePane file="code/go-api/flow/custom.go" lang="go" title="custom.go" >}}
 
