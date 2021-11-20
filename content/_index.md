@@ -1,6 +1,6 @@
 ---
 title: Learn you some CUE for a great good!
-description: "Cue Tutorials to learn Cuelang for a great good. Table of contents and links to the website."
+description: "Tutorials for Cuelang. Learn you some CUE for a great good!"
 ---
 
 {{<lead>}}
