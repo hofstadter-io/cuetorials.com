@@ -39,7 +39,7 @@ _ins: {for i, l in _lines {"\(i)": (#parseLine & {in: l}).ins, ...}}
 		}
 
 		for i, I in list.Range(1, limit, 1) {
-			// iteration object start, we use i+1 becuase it's 1 less than I and aligns correctly
+			// iteration object start, we use i+1 because it's 1 less than I and aligns correctly
 			"\(i+1)": {
 				// the last iteration state
 				let l = iter["\(i)"]
