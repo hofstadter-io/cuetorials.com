@@ -12,20 +12,19 @@ func main() {
 	c := cuecontext.New()
 
 	// read and compile value
-	d,_ := os.ReadFile("value.cue")
+	d, _ := os.ReadFile("value.cue")
 	val := c.CompileBytes(d)
 
 	paths := []string{
 		"a",
 		"d.f",
-		"r.s",
+		"l",
 	}
 
 	for _, path := range paths {
 		fmt.Printf("====  %s  ====\n", path)
 		v := val.LookupPath(cue.ParsePath(path))
 		p := v.Path()
-		_, r := v.ReferencePath()
-		fmt.Printf("%q %q\n%# v\n", p, r, v)
+		fmt.Printf("%q\n%# v\n", p, v)
 	}
 }

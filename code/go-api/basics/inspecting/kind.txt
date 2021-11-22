@@ -3,6 +3,7 @@
 	c: "c"
 	e: int
 }
+"a.e" _|_ int int
 "d.g" _|_ _ _
 "l" list list [1, 2, "y", "z"]
 "b" bytes bytes 'abc123'

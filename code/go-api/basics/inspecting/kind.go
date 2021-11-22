@@ -12,11 +12,12 @@ func main() {
 	c := cuecontext.New()
 
 	// read and compile value
-	d,_ := os.ReadFile("value.cue")
+	d, _ := os.ReadFile("value.cue")
 	val := c.CompileBytes(d)
 
 	paths := []string{
 		"a",
+		"a.e",
 		"d.g",
 		"l",
 		"b",
@@ -30,4 +31,3 @@ func main() {
 		fmt.Printf("%q %v %v %v\n", path, k, i, v)
 	}
 }
-
