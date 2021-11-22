@@ -33,7 +33,7 @@ command: prompter: {
 	// append to a file, starts after echo
 	append: file.Append & {
 		filename: var.file
-		contents: echo.stdout // becuase we reference the echo task
+		contents: echo.stdout // because we reference the echo task
 	}
 
 	// also starts after echo, and concurrently with append
