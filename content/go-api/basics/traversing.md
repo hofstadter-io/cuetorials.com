@@ -20,6 +20,10 @@ like regular, hidden, optional, and definitions.
 {{</lead>}}
 
 
+We will use the following Value for the examples in this section.
+
+{{< codePane file="code/go-api/basics/traversing/value.html" title="value.cue" >}}
+
 ### Selectors and MakePath
 
 We saw how to use `LookupPath` with `ParsePath` in a previous section.
