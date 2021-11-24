@@ -19,19 +19,20 @@ Some of these are configurable, which is tied to the different labels
 like regular, hidden, optional, and definitions.
 {{</lead>}}
 
-### LookupPath
 
-We've briefly seen `LookupPath` in previous sections.
-Here we will see more examples and ways we can build
-path values programatically.
+### Selectors and MakePath
+
+We saw how to use `LookupPath` with `ParsePath` in a previous section.
+We can programmatically construct paths with `Selectors` and `MakePath`.
+We'll also use this to reconstruct the label for the current value.
 
 {{< codePane2
-	file1="code/go-api/basics/traversing/lookup.go"  lang1="go"  title1="lookup.go"
-	file2="code/go-api/basics/traversing/lookup.txt" lang2="txt" title2="go run lookup.go"
+	file1="code/go-api/basics/traversing/selectors.go"  lang1="go"  title1="selectors.go"
+	file2="code/go-api/basics/traversing/selectors.txt" lang2="txt" title2="go run selectors.go"
 >}}
 
 Docs:
-[LookupPath](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.LookupPath),
+[MakePath](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#MakePath),
 [Selectors](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Selector)
 
 ### List Iteration
@@ -52,7 +53,18 @@ Docs:
 >}}
 
 Docs:
-[Fields](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Fields)
+[Fields](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Fields),
+[Options](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Option)
+
+### Type Switching
+
+You will likely want to make choices based on the type of a value.
+Use a switch statement on `val.IncompleteKind()`.
+
+{{< codePane2
+	file1="code/go-api/basics/traversing/switch.go"  lang1="go"  title1="switch.go"
+	file2="code/go-api/basics/traversing/switch.txt" lang2="txt" title2="go run switch.go"
+>}}
 
 ### Walking a Value
 
@@ -65,6 +77,11 @@ Docs:
 [Walk](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Walk)
 
 ### Custom Walk
+
+In the previous example for default walk, some of the fields were not traversed.
+This is because CUE's default `Walk()` uses the same default `Field()` options on a value.
+In order to walk all fields, we need to write a custom walk function
+where we can pass in the options for `Field()`.
 
 {{< codePane2
 	file1="code/go-api/basics/traversing/custom.go"  lang1="go"  title1="custom.go"

@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"cuelang.org/go/cue"
-	"cuelang.org/go/cue/ast"
 	"cuelang.org/go/cue/cuecontext"
 )
 
@@ -17,41 +17,23 @@ a: {
 
 func main() {
 	c := cuecontext.New()
-	val := c.CompileString(input)
+	d, _ := os.ReadFile("value.cue")
+	val := c.CompileBytes(d)
 
-	fmt.Println("\noriginal\n===============")
-	val.Walk(func(v cue.Value) bool {
-		fmt.Printf("\n%# v\n", v)
+	// before (pre-order) traversal
+	preprinter := func(v cue.Value) bool {
+		fmt.Printf("%v\n", v)
 		return true
-	}, nil)
+	}
 
-	val = val.FillPath(cue.ParsePath("a.i"), 42)
+	// after (post-order) traversal
+	cnt := 0
+	postcounter := func(v cue.Value) {
+		cnt++
+	}
 
-	fmt.Println("\nfilled\n===============")
-	val.Walk(func(v cue.Value) bool {
-		fmt.Printf("\n%# v\n", v)
-		return true
-	}, nil)
+	Walk(val, preprinter, postcounter, customOptions...)
 
-	// val.Evaluate(cue.Final())
-
-	a := val.Syntax(cue.Final(), cue.Concrete(true))
-	val = c.BuildExpr(a.(ast.Expr))
-
-	fmt.Println("\nfinal (hypothetical)\n===============")
-	val.Walk(func(v cue.Value) bool {
-		fmt.Printf("\n%# v\n", v)
-		return true
-	}, nil)
-
-}
-
-var defaultWalkOptions = []cue.Option{
-	cue.Attributes(true),
-	cue.Concrete(false),
-	cue.Definitions(true),
-	cue.Hidden(true),
-	cue.Optional(true),
 }
 
 // Walk is an alternative to cue.Value.Walk which handles more field types
@@ -67,9 +49,9 @@ func Walk(v cue.Value, before func(cue.Value) bool, after func(cue.Value), optio
 	switch v.IncompleteKind() {
 	case cue.StructKind:
 		if options == nil {
-			options = defaultWalkOptions
+			options = defaultOptions
 		}
-		s, _ := v.Fields( options...)
+		s, _ := v.Fields(options...)
 
 		for s.Next() {
 			Walk(s.Value(), before, after, options...)
@@ -81,7 +63,7 @@ func Walk(v cue.Value, before func(cue.Value) bool, after func(cue.Value), optio
 			Walk(l.Value(), before, after, options...)
 		}
 
-	// no default (basic lit types)
+		// no default (basic lit types)
 
 	}
 
@@ -91,3 +73,26 @@ func Walk(v cue.Value, before func(cue.Value) bool, after func(cue.Value), optio
 
 }
 
+// Cue's default
+var defaultOptions = []cue.Option{
+	cue.Attributes(true),
+	cue.Concrete(false),
+	cue.Definitions(false),
+	cue.DisallowCycles(false),
+	cue.Docs(false),
+	cue.Hidden(false),
+	cue.Optional(false),
+	cue.ResolveReferences(false),
+	// The following are not set
+	// nor do they have a bool arg
+	// cue.Final(),
+	// cue.Raw(),
+	// cue.Schema(),
+}
+
+// Our custom options
+var customOptions = []cue.Option{
+	cue.Definitions(true),
+	cue.Hidden(true),
+	cue.Optional(true),
+}

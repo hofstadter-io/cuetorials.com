@@ -1,0 +1,47 @@
+{
+	obj: {
+		sub: {
+			foo: "bar"
+			n:   int
+		}
+		list: [1, 2, {
+			a: 3
+		}]
+		any: _
+		labels: {}
+	}
+}
+{
+	sub: {
+		foo: "bar"
+		n:   int
+	}
+	list: [1, 2, {
+		a: 3
+	}]
+	any: _
+	labels: {}
+}
+{
+	foo: "bar"
+	n:   int
+}
+"bar"
+int
+[1, 2, {
+	a: 3
+}]
+1
+2
+{
+	a: 3
+}
+3
+_
+{
+	val: string
+}
+string
+42
+bool
+{}
