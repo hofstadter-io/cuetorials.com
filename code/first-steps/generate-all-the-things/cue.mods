@@ -1,0 +1,7 @@
+module cuetorials.com/gen-with-hof
+
+cue 0.4.0
+
+require (
+	github.com/hofstadter-io/hof v0.5.17
+)

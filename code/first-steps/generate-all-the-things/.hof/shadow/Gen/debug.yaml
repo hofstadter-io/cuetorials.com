@@ -9,7 +9,7 @@ Completed:
   effort: 2
   name: t4
 INPUT:
-  name: Tony
+  name: tasks
   todos:
   - complete: true
     effort: 1

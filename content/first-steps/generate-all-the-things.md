@@ -51,6 +51,9 @@ The two problem with previous systems are:
 The solution is actually pretty simple, keep a shadow copy of the generated code
 and use a 3-way diff to merge design updates and custom code.
 
+##### With the following two files in a directory, run `hof mod vendor cue` and `hof gen`
+
+{{< codePane file="code/first-steps/generate-all-the-things/cue.mods" title="cue.mods" lang="text">}}
 
 {{< codePane file="code/first-steps/generate-all-the-things/hof.html" title="hof.cue">}}
 

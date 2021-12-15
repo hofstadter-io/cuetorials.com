@@ -1,8 +1,8 @@
 package gen
 
 import (
-	// import hof's schemas for our generator
-	"github.com/hofstadter-io/hof/schema"
+	// import hof's generator schema
+	"github.com/hofstadter-io/hof/schema/gen"
 )
 
 // A schema for our generator's input
@@ -16,7 +16,7 @@ import (
 }
 
 // create a generator
-#Gen: schema.#HofGenerator & {
+#Gen: gen.#HofGenerator & {
 	// We often have some input values for the user to provide.
 	// Use a Cue definition to enforce a schema
 	Input: #Input
@@ -25,7 +25,7 @@ import (
 	PackageName: "dummy"
 
 	// Required field for a generator to work, the list of files to generate
-	Out: [...schema.#HofGeneratorFile] & [
+	Out: [...gen.#HofGeneratorFile] & [
 		todo,
 		done,
 		debug,
@@ -82,8 +82,13 @@ Gen: _ @gen(todos)
 // Construct the generator
 Gen: #Gen & {
 	Input: {
-		// from first.cue
-		name:  gen.data.name
-		todos: gen.data.tasks
+		name:  "tasks"
+		todos: [
+			{name: "t1", effort: 1, complete: true},
+			{name: "t2", effort: 4, complete: true},
+			{name: "t3", effort: 3, complete: false},
+			{name: "t4", effort: 2, complete: true},
+			{name: "t5", effort: 3, complete: false},
+		]
 	}
 }
