@@ -8,9 +8,13 @@ import "list"
 		#in:    _
 		#basic: int | number | string | bytes | null
 		out: {
+			// if we have a basic type, we are at a leaf, depth is 1
 			if (#in & #basic) != _|_ {1}
+			// if we are not a basic type, then we are 1 + the max of children
 			if (#in & #basic) == _|_ {
-				list.Max([ for k, v in #in {(#next & {#in: v}).out}]) + 1
+				// this is our "recursion" for each child
+				let depths = [ for k, v in #in {(#next & {#in: v}).out}]
+				list.Max(depths) + 1
 			}
 		}
 	}
