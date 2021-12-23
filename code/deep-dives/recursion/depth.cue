@@ -20,7 +20,7 @@ import "list"
 	}
 }
 
-#depth: (#RecurseN & {#depth: 11, #funcFactory: #DepthF}).Func
+#Depth: #RecurseN & {#maxiter: 11, #funcFactory: #DepthF}
 
 tree: {
 	a: {
@@ -30,4 +30,4 @@ tree: {
 	cow: "moo"
 }
 
-d: #depth & {#in: tree}
+d: #Depth & {#in: tree}
