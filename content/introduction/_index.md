@@ -6,34 +6,9 @@ keywords:
 weight: 1
 ---
 
-### About this tutorial
-
-Welcome to __Cuetorials__ where you can
-_learn you some CUE for great good!_
-We hope this site will help you get started with Cuelang (CUE)
-and that it becomes an invaluable resource as you become more versed.
-
-I am writing this to help you learn Cue while also learning more myself.
-Cue fascinated me the first time I saw it. __#Futurology!__
-Cue's logical foundation took me back to Prolog
-and its application to managing configuration was timely.
-I had just hacked imports into yaml, sat back and said "this is a bad idea..."
-Cue stuck out from the alternatives for its philosophy and heritage. 
-Cue has now become the central UX to the [hof tool](https://github.com/hofstadter-io/hof).
-
-Much credit must be given to Marcel van Lohuizen, the creator of Cue.
-Marcel helped in making the configuration systems at Google.
-He says that they always chose the object-oriented approach
-and that the logical, non-programming Cue approach
-is the correct choice for configuration systems.
 
 
-{{<panel style="primary" title="When you see \"CUE\" or \"Cuelang\" we are referring to the language." />}}
-
-{{< panel style="primary" title="When you see \"cue\" we are referring the CLI reference implementation." />}}
-
-
-### So what is Cue?
+### What is Cue?
 
 Cue is a purpose built logical language for working with config, schemas, data, and executing on these things.
 Most people start with Cue by validating and generating configuration.
@@ -121,7 +96,7 @@ the instructions for it will be found there.
 
 ### Where to get help?
 
-I'm glad you asked!
+Several options are available
 
 1. `cue help`, the builtin help command
 2. [GitHub Discussions](https://github.com/cuelang/cue/discussions) (trying to move here for longevity)

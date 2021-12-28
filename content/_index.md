@@ -12,10 +12,27 @@ configuration, APIs, database schemas, code, … you name it.
 
 <br>
 
-{{< panel title="We're creating lots of content..." style="secondary">}}
-between now and the end of the year. If there is anything you'd like to see that is missing, reach out on Slack or GitHub.
-We're here to make the content that helps you learn Cuelang for a great good!
-{{< /panel >}}
+### About this tutorial
+
+Welcome to __Cuetorials__ where you can
+_learn you some CUE for great good!_
+We hope this site will help you get started with Cuelang (CUE)
+and that it becomes an invaluable resource as you 
+
+Much credit must be given to Marcel van Lohuizen, the creator of Cue.
+Marcel helped in making the configuration systems at Google.
+He says that they always chose the object-oriented approach
+and that the logical, non-programming Cue approach
+is the correct choice for configuration systems.
+
+
+<br>
+
+{{<panel style="info" title="When you see \"CUE\" or \"Cuelang\" we are referring to the language." />}}
+
+{{< panel style="info" title="When you see \"cue\" we are referring the CLI implementation in Go." />}}
+
+<br>
 
 {{< childpages page="introduction/" brief="a one pager about CUE" >}}
 {{< childpages page="overview/" brief="of CUE's concepts and syntax" >}}
