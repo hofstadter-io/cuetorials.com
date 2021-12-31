@@ -1,10 +1,10 @@
 r > s:
-field i not present in {i:int,s:string}:
+field i not present in {i:number,s:string}:
     schema.cue:2:1
 missing field "i"
 
 v > s:
-field i not present in {i:int,s:string}:
+field i not present in {i:number,s:string}:
     schema.cue:2:1
 missing field "i"
 
