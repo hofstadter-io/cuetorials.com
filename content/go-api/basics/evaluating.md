@@ -58,6 +58,9 @@ Subsumption is a powerful technique which compares the relation of two values wi
 `Subsume` will tell you if one value is an instance of another,
 or to say it another way, if one value is backwards compatible with another.
 
+In the following example, we check subsume in both directions. 
+For each pair, we expect one to pass and one to fail.
+
 {{< codePane2
 	file1="code/go-api/basics/evaluating/subsume.go"  lang1="go"  title1="subsume.go"
 	file2="code/go-api/basics/evaluating/subsume.txt" lang2="txt" title2="go run subsume.go"
@@ -65,7 +68,8 @@ or to say it another way, if one value is backwards compatible with another.
 
 [Subsume Docs](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Subsume)
 
-__see [issue 1330](https://github.com/cue-lang/cue/discussions/1330) for a discussion on the output which seems to have inconsistencies__
+__Why `>10` won't be subsumed by `int`? See [issue 1330](https://github.com/cue-lang/cue/discussions/1330) for a discussion on the output which seems to have inconsistencies__
+
 
 ### Value.Eval()
 
