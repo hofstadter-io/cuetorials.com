@@ -1,6 +1,7 @@
 tests = context \
 				errors \
-				printing
+				printing \
+				evaluating
 
 verifies = $(addprefix verify_, $(tests))
 
