@@ -12,6 +12,7 @@ Background and theory for Cue:
 
 ### Links & references
 
+- https://github.com/cue-lang/cue/blob/master/doc/ref/impl.md
 - [LinGo](https://www-csli.stanford.edu/groups/lingo-project)
 - [LKB](http://moin.delph-in.net/LkbInstallation)
 - http://courses.washington.edu/ling567/

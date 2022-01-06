@@ -4,6 +4,16 @@ description: "Cue's scope and visibility rules"
 weight: 20
 ---
 
+### Lexical Scoping
+
+CUE uses [lexical scoping, not dynamic](https://en.wikipedia.org/wiki/Scope_(computer_science))
+
+Evaluation (or resolution) of references is lazy, consider
+
+https://cuelang.org/play/?id=5AmcbLo3DPC#cue@export@cue
+
+That the “example” field unifies the #example definition and a struct does not place the definition’s fields in the scope of the struct.
+
 ### Reference Lookup
 
 Cue will reference a value from the nearest enclosing scope.
@@ -18,7 +28,7 @@ Some quirks are:
 ### Aliases
 
 An alias defines a local value which is not part of the struct.
-They can be used for accessing shadowed fields, 
+They can be used for accessing shadowed fields,
 naming intermediate calculations or expressions,
 and more. They will not be output.
 
@@ -37,13 +47,14 @@ Hidden fields and values are prefixed with underscores.
 You can reference them in the current package and optionally
 show them when evaluating. Use quotes if you want a real label that begins with an underscore.
 
-_note, hidden output appears (no pun intended) to be broken in v0.3.0-alpha6_
-
 {{< codePane3
   file1="code/overview/scope-and-visibility/hidden.html"     title1="hidden.cue" play1="true"
   file2="code/overview/scope-and-visibility/hidden-out.html" title2="cue eval hidden.cue"
   file3="code/overview/scope-and-visibility/hidden-viz.html" title3="cue eval -H hidden.cue"
 >}}
+
+Note, hidden fields are not visible across package boundaries.
+So you cannot refer to hidden fields in imported packages.
 
 
 ### Reference Cycles

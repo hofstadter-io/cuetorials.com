@@ -17,6 +17,10 @@ $dark:          #343a40;
 
 @import "bootstrap/bootstrap";
 
+body, .main {
+	font-family: Roboto !important;
+}
+
 /* Typography styling */
 .main > h1{
     padding-top: 2rem;
@@ -29,6 +33,22 @@ $dark:          #343a40;
 
 .main > h4, .main > h5, .main > h6{
     margin-top: 1rem;
+}
+
+#main-content {
+	p, ul, ol, summary {
+		font-size: 1.25rem;
+	}
+	.code-title {
+		font-size: 1rem;
+	}
+	.fas {
+		font-weight: 900;
+	}
+}
+
+#main-content > .lead {
+	font-size: 1.5rem;
 }
 
 .nav-link {
