@@ -68,7 +68,15 @@ For each pair, we expect one to pass and one to fail.
 
 [Subsume Docs](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Value.Subsume)
 
-__Why `>10` won't be subsumed by `int`? See [issue 1330](https://github.com/cue-lang/cue/discussions/1330) for a discussion on the output which seems to have inconsistencies__
+__Why `>10` won't be subsumed by `int`?__
+
+The reason is that `>10` is a constraint on numbers, just like `int`.
+Recall `number` is both decimal and integers.
+This means both of our constraints are peers in the lattice.
+We could have set `i: int & >10` and this would be subsumed by `int`.
+
+_also note, that if the values were all in the same file,
+the unification would have been implied._
 
 
 ### Value.Eval()
