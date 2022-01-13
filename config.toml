@@ -18,7 +18,7 @@ enableGitInfo = true
     weight = 1
     languageName = 'English'
   [languages.zh]
-    title = 'CUE 学习指南'
+    title = 'Cuetorials'
     weight = 2
     languageName = '简体中文'
 

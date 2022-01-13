@@ -1,5 +1,5 @@
 ---
-title: 开始学 CUE 吧!
+title: 开始学习 CUE 吧!
 description: "Cuelang 学习指南，开始学 CUE 吧!"
 ---
 
@@ -25,7 +25,7 @@ description: "Cuelang 学习指南，开始学 CUE 吧!"
 
 <br>
 
-{{< childpages page="introduction/" brief="a one pager about CUE" >}}
+{{< childpages page="introduction/" brief="CUE 的简单介绍" >}}
 {{< childpages page="overview/" brief="of CUE's concepts and syntax" >}}
 {{< childpages page="first-steps/" brief="to adopting CUE" >}}
 {{< childpages page="patterns/" brief="and more complex CUE" >}}
