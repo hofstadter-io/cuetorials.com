@@ -10,7 +10,7 @@ description: "Cuelang 学习指南，开始学 CUE 吧!"
 
 <br>
 
-### 关于本指南
+### 关于本教程
 
 欢迎来到 __Cuetorials__，我们希望这个网站能帮助你快速上手 Cuelang（CUE），也希望它能成为你宝贵的学习资源。
 
@@ -26,15 +26,15 @@ description: "Cuelang 学习指南，开始学 CUE 吧!"
 <br>
 
 {{< childpages page="introduction/" brief="CUE 的简单介绍" >}}
-{{< childpages page="overview/" brief="of CUE's concepts and syntax" >}}
-{{< childpages page="first-steps/" brief="to adopting CUE" >}}
-{{< childpages page="patterns/" brief="and more complex CUE" >}}
-{{< childpages page="deep-dives/">}}
-{{< childpages page="go-api/" brief="for working with CUE from Go" >}}
-{{< childpages page="walkthroughs/" brief="for tasks in CUE" >}}
-{{< childpages page="cueology/" brief="for aspiring Cueologists" >}}
-{{< childpages page="miscellaneous/" brief="and other uncategorized content" >}}
-{{< childpages page="videos/" brief="about CUE">}}
-{{< childpages page="jobs/" brief="involving CUE">}}
-{{< childpages page="getting-help/" brief="and support for CUE">}}
+{{< childpages page="overview/" brief="CUE 的概念和语法" >}}
+{{< childpages page="first-steps/" brief="CUE 的基本应用" >}}
+{{< childpages page="patterns/" brief="CUE 的高级使用" >}}
+{{< childpages page="deep-dives/" >}}
+{{< childpages page="go-api/" brief="如何在 Go 中使用 CUE" >}}
+{{< childpages page="walkthroughs/" brief="CUE 任务的最佳实践" >}}
+{{< childpages page="cueology/" brief="Cue 的愿景" >}}
+{{< childpages page="miscellaneous/" brief="其他未分类的内容" >}}
+{{< childpages page="videos/" brief="CUE 相关的视频">}}
+{{< childpages page="jobs/" brief="CUE 相关的工作">}}
+{{< childpages page="getting-help/">}}
 
