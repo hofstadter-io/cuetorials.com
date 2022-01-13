@@ -12,6 +12,15 @@ defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
 enableGitInfo = true
+[languages]
+  [languages.en]
+    title = 'Cuetorials'
+    weight = 1
+    languageName = 'English'
+  [languages.zh]
+    title = 'CUE 学习指南'
+    weight = 2
+    languageName = '简体中文'
 
 [params]
 sitename="Cuetorials"
