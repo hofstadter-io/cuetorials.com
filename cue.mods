@@ -1,5 +1,5 @@
 module github.com/hofstadter-io/cuetorials.com
 
-cue v0.3.0
+cue v0.4.1
 
 replace github.com/hofstadter-io/cuelm => ../../hof/cuelm
