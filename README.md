@@ -5,15 +5,19 @@ Hugo static website.
 - https://cuetorials.com
 - https://gohugo.io
 
-You can run this locally using the normal hugo commands.
+### Setup and running
 
-There is also a Makefile. `make dev` and `make highlight` are the primary commands.
+1. Clone this repo
+2. `npm install` to add js deps
+3. `make highlight` to generate CUE file highlighting
+4. `make dev` to run hugo
 
-CUE code highlighting is done with `shiki`.
-The setup requires cloning the following PR until it is merged.
-(https://github.com/shikijs/shiki/pull/236).
-You can use a symlink to place it in the global node modules location for your system.
+### Adding translations
 
-[SEO tags in hugo](https://www.skcript.com/svr/perfect-seo-meta-tags-with-hugo/)
+You should be able to create files next to the existing content.
 
-[HTML Metatags](https://gist.github.com/whitingx/3840905)
+`content/path/to/file.<lang>.md`
+
+See: https://gohugo.io/content-management/multilingual/#translation-by-filename
+
+If this is a new language, you will need to add it to the config.toml.

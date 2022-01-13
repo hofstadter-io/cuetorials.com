@@ -11,6 +11,12 @@ talks:
   brief: High-level introduction to CUE and the problems solved. Provides a historical
     context and the influences on CUE.
   ytid: jSRXobu1jHk
+- title: Using CUE with GitHug Actions (2021)
+  brief: Paul Jolly (https://twitter.com/_myitcv) welcomes guest Michael Gasch (https://twitter.com/embano1) to demonstrate how to use CUE with GitHub Actions.
+  ytid: Ey3ca0K2h2U
+- title: Contributing to CUE (2021)
+  breif: Paul Jolly (https://twitter.com/_myitcv) welcomes guest Daniel Martí (https://twitter.com/mvdan_) to explain how to contribute to the CUE (https://cuelang.org/) project.
+  ytid: _vxoYVYbwf8
 
 halls:
 - title: "#1 (2021-10-21)"

@@ -1,0 +1,27 @@
+{
+  "name": "cuetorials.com",
+  "version": "1.0.0",
+  "description": "documentation for the CUE language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hofstadter-io/cuetorials.com.git"
+  },
+  "keywords": [
+    "CUE",
+    "learning",
+    "documentation"
+  ],
+  "author": "Hofstadter, Inc",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/hofstadter-io/cuetorials.com/issues"
+  },
+  "homepage": "https://github.com/hofstadter-io/cuetorials.com#readme",
+  "dependencies": {
+    "shiki": "^0.10.0"
+  }
+}

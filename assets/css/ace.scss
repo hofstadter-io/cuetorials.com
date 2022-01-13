@@ -51,6 +51,12 @@ body, .main {
 	font-size: 1.5rem;
 }
 
+#TableOfContents {
+	a {
+		display: inline
+	}
+}
+
 .nav-link {
   &.parent {
     color: #0058aa !important;

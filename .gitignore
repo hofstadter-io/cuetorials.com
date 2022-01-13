@@ -10,3 +10,4 @@
 
 vendor/
 /pv/
+node_modules/
