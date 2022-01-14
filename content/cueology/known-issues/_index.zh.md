@@ -1,6 +1,6 @@
 ---
-title: "Known Issues"
-description: "Known issues in CUE and Cuelang with links to GitHub for tracking"
+title: "已知问题"
+description: "CUE 的已知问题以及追踪链接"
 weight: 20
 ---
 
@@ -13,25 +13,18 @@ weight: 20
 
 ### Root Value
 
-Generally the root value is not accessible.
+通常 root 不能被访问，
+这个错误会影响 `-e` 标志和使用引号引用的标识符，例如 `"dashed-id": 42`。
+这些不能在命令行引用，它会更改 CLI 以特殊方式允许访问 root 范围，然后就能访问到这些值。
 
-This plays into the `-e` flag and quoted identifiers like `"dashed-id": 42`.
-These cannot be referenced from the command line.
-The CLI may be changed to allow a special way to access the root scope
-so that these values can be accessed.
-
-[See issue #358](https://github.com/cue-lang/cue/issues/358)
-
+[请移步 issue #358](https://github.com/cue-lang/cue/issues/358)
 
 ### Encoders
 
-There are a number of issues with encoders,
-largely around inconsistent behavior.
-
+有很多关于 encoder 的问题，大多数都是不一致的问题。
 
 ### Playground
 
-The playground does not have exact parity with the CLI.
-If you have an issue there, you should confirm it also
-exists with the `cue` CLI.
+playground 和 CLI 不是完全一致的，
+如果你在 playground 遇到了问题，需要确认它在 `cue` 命令行中也有。
 
