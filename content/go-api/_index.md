@@ -23,9 +23,6 @@ You will learn how to:
 - Decode to, and encode from, CUE and Go values
 - Validate, constrain, and complete Go values
 
-Working with the encodings is in the [integrations section](/integrations).
-
-
 ### Links for Cue's Go docs
 
 These links will be handy as you learn and work with Cue's Go API.
@@ -45,7 +42,7 @@ _\* operations depend on the codec, some only work one direction_
 <br>
 
 The examples in these sections can be found in `hofstadter-io/cutorials.com` repository
-under [code/api](https://github.com/hofstadter-io/cuetorials/tree/main/code/api)
+under [code/api](https://github.com/hofstadter-io/cuetorials.com/tree/main/code/go-api)
 
 
 ### Before you start

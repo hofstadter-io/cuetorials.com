@@ -7,7 +7,7 @@
 
 {{ if $gh_repo }}
 <div class="d-flex flex-column td-page-meta ml-2 pb-1 pt-2 mb-0">
-<p>Published {{ now.Format "2006-01-02" }}</p>
+<p>{{ i18n "Published" }} {{ now.Format "2006-01-02" }}</p>
 {{ $editURL := printf "%s/edit/%s/content/%s" $gh_repo $gh_branch $pathFormatted }}
 {{ if and ($gh_subdir) (.Site.Language.Lang) }}
 {{ $editURL = printf "%s/edit/%s/%s/content/%s" $gh_repo $gh_branch $gh_subdir $pathFormatted }}
@@ -15,11 +15,11 @@
 {{ $editURL = printf "%s/edit/%s/%s/content/%s" $gh_repo $gh_branch $gh_subdir $pathFormatted }}
 {{ end }}
 {{ $issuesURL := printf "%s/issues/new?title=%s" $gh_repo (htmlEscape $.Title )}}
-<a id="page-meta-link-edit-page" href="{{ $editURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a id="page-meta-link-docs-issue" href="{{ $issuesURL }}" target="_blank"><i class="fab fa-github fa-fw"></i> Create page issue</a>
+<a id="page-meta-link-edit-page" href="{{ $editURL }}" target="_blank"><i class="fa fa-edit fa-fw"></i>{{i18n "Edit this page"}}</a>
+<a id="page-meta-link-docs-issue" href="{{ $issuesURL }}" target="_blank"><i class="fab fa-github fa-fw"></i>{{i18n "Create page issue"}} </a>
 {{ if $gh_project_repo }}
 {{ $project_issueURL := printf "%s/issues/new" $gh_project_repo }}
-<a id="page-meta-link-proj-issue" href="{{ $project_issueURL }}" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+<a id="page-meta-link-proj-issue" href="{{ $project_issueURL }}" target="_blank"><i class="fas fa-tasks fa-fw"></i>{{i18n "Create project issue"}} </a>
 {{ end }}
 </div>
 {{ end }}
