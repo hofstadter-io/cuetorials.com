@@ -1,4 +1,4 @@
-	// Closed struct
+// Closed struct
 s: close({
 	foo: "bar"
 })
