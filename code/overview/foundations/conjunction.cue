@@ -1,4 +1,4 @@
-	// conjunctions on a field
+// conjunctions on a field
 n: int & >0 & <100
 n: 23
 

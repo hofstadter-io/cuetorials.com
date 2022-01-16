@@ -29,7 +29,7 @@ When representing JSON in Cue, the differences are:
 
 ### The Lattice
 
-Every instance lives somewhere in Cue's __Value Lattice__.
+Every instance lives somewhere in Cue's __Value Lattice__ ([wikipedia](https://en.wikipedia.org/wiki/Lattice_%28order%29)).
 The most open value is "top" or `_` which matches any instance.
 The most restricted value is "bottom" or `_|_` and represents
 invalid instances, conflicts, and errors.
@@ -166,7 +166,7 @@ By contrast, concrete is a fully specified value.
 ### Open and Closed
 
 Open means a struct can be extended, closed means they cannot.
-By default structs are open and definitions are closed.
+By default, structs are open and definitions are closed.
 Cue also allows us to explicitly do the opposite.
 
 {{< codePane

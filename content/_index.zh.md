@@ -32,7 +32,7 @@ description: "Cuelang 学习指南，开始学 CUE 吧!"
 {{< childpages page="deep-dives/" >}}
 {{< childpages page="go-api/" brief="如何在 Go 中使用 CUE" >}}
 {{< childpages page="walkthroughs/" brief="CUE 任务的最佳实践" >}}
-{{< childpages page="cueology/" brief="Cue 的愿景" >}}
+{{< childpages page="cueology/" brief="成为 CUE 高手" >}}
 {{< childpages page="miscellaneous/" brief="其他未分类的内容" >}}
 {{< childpages page="videos/" brief="CUE 相关的视频">}}
 {{< childpages page="jobs/" brief="CUE 相关的工作">}}

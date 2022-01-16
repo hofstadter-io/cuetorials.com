@@ -1,6 +1,6 @@
 ---
 title: "模版"
-description: "通用的 CUE 模式"
+description: "通用的 CUE 模板"
 weight: 20
 ---
 
