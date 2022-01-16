@@ -1,5 +1,12 @@
-{{ if .Path }}
-{{ $pathFormatted := replace .Path "\\" "/" }}
+{{ $path := "" }}
+{{ with .File }}
+      {{ $path = .Path }}
+{{ else }}
+      {{ $path = .Path }}
+{{ end }}
+
+{{ if $path }}
+{{ $pathFormatted := replace $path "\\" "/" }}
 {{ $gh_repo := ($.Param "github_repo") }}
 {{ $gh_subdir := ($.Param "github_subdir") }}
 {{ $gh_project_repo := ($.Param "github_project_repo") }}
