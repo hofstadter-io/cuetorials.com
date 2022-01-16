@@ -53,7 +53,7 @@ __note, not all errors are shown [due to an issue](https://github.com/cue-lang/c
 ### Null Coalescing
 
 Null coalescing allows us to provide fallback values when errors occur.
-This is technically error coalescing since `null` is a vaid value.
+This is technically error coalescing since `null` is a valid value.
 This works by using disjunctions and defaults.
 
 {{< codePane2
