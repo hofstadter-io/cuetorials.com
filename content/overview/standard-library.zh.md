@@ -1,6 +1,6 @@
 ---
-title: "Standard Library"
-description: "An overview of Cue's standard library"
+title: "标准库"
+description: "CUE 标准库概览"
 keywords:
 - stdlin
 - builtin
@@ -10,18 +10,21 @@ weight: 25
 ---
 
 {{<lead>}}
-Cue has a standard library with numerous helper packages.
+CUE 有包含许多辅助 package 的标准库。
 {{</lead>}}
 
 
-### Overview
+### 概览
 
-{{< cuedoc page="/pkg" >}}Root of the Go docs{{</cuedoc>}}
 
-There are broadly two types of packages
+{{< cuedoc page="/pkg" >}}CUE 文档首页{{</cuedoc>}}
 
-1. Hermetic functions which you can use from `pure.cue` files.
-2. Non-hermetic functions which interact with the outside world. These are for the scripting layer in `_tool.cue` files.
+
+
+大体分为两种类型：
+
+1. 一些只能在 `pure.cue` 中使用的封闭函数
+2. 一些与外界交互的非封闭函数，它们为 `_tool.cue` 文件的脚本层提供一些函数
 
 ##### Pure Packages
 
@@ -49,7 +52,7 @@ There are broadly two types of packages
 - `tool/os`: work with environment vars
 
 
-### Examples
+### 示例
 
 ##### Encoding
 
