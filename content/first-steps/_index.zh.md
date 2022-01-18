@@ -1,6 +1,6 @@
 ---
-title: "快速开始"
-description: "学习 CUE 的第一步"
+title: "入门"
+description: "学习 CUE 的入门"
 keywords:
 - getting started
 weight: 10

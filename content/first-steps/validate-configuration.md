@@ -66,7 +66,7 @@ error in call to time.Format: invalid time "97-11-11"
 
 Let's validate the Kubernetes manifests for this website.
 Below is the Yaml as a single file,
-[you can find the originals in the repo](https://github.com/hofstadter-io/cuetorials.com/tree/main/ci/k8s).
+[you can find the originals in the repo](https://github.com/hofstadter-io/cuetorials.com/blob/main/code/first-steps/validate-configuration/cuetorials.yaml).
 
 {{< codePane lang="yaml" file="code/first-steps/validate-configuration/cuetorials.yaml" >}}
 
