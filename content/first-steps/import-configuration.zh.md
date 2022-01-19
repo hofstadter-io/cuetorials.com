@@ -45,7 +45,13 @@ CUE 可以将 Go 的类型转换为 CUE 的定义，当你写好了代码并想�
 
 {{< codePane file="cue.mod/module.html" >}} 
 
-有了这个之后, 接下来我们要做:
+然后用下面的命令初始化 `go.mod` 文件
+
+```sh
+go mod init  "github.com/hofstadter-io/cuetorials.com" 
+```
+
+有了这些之后, 接下来我们要做:
 
 1. 把 Kubernetes API 包的代码下载下来（需要在本地）
 2. 从 Go 导入生成 CUE 定义
