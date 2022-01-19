@@ -1,5 +1,5 @@
 ---
-title: "都有谁在用 CUE"
+title: "谁在用 CUE"
 description: "使用 CUE 的项目和公司"
 weight: 100
 ---
