@@ -93,7 +93,7 @@ for more details.
 
 ### Help
 
-While there is of course `cue help` for all of the commands,
+While there is of course `cue help` for all the commands,
 you can find additional information with the `help topics`
 which span the cli.
 
