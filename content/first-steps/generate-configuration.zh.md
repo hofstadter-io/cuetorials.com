@@ -54,11 +54,5 @@ CUE 有个 `if` 声明，被称为 __守卫__ ，用于保护某个代码区块�
   file2="code/first-steps/generate-configuration/guards-evald.html" title2="cue eval guards.cue"
 >}}
 
-// TODO:
-
-```sh
-
-```
-
 如何获取到所有 `elems` 中 _不_ 包含 `public` 字段的元素？
 

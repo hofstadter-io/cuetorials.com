@@ -54,11 +54,4 @@ Recall that Cue is *__turing incomplete__* and thus doesn't have concepts of loo
   file2="code/first-steps/generate-configuration/guards-evald.html" title2="cue eval guards.cue"
 >}}
 
-// TODO:
-
-```sh
-
-```
-
-
 How would you get all the `elems` which do _not_ have a `public` field defined?
