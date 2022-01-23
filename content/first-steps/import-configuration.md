@@ -53,6 +53,12 @@ for now create the following file `cue.mod/module.cue`:
 
 {{< codePane file="cue.mod/module.html" >}}
 
+Then use the following command to init `go.mod` file,
+
+```sh
+go mod init  "github.com/hofstadter-io/cuetorials.com" 
+```
+
 With that in place, what we are going to do is:
 
 1. Download the Kubernetes API code (you need a local copy)
@@ -62,10 +68,10 @@ With that in place, what we are going to do is:
 
 ```sh
 # "go get" the Kubernetes code
-go get k8s.io/api/... k8s.io/apimachinery/...
+go get k8s.io/api/...
 
 # "cue go get" to import into Cue defs
-cue get go k8s.io/api/... k8s.io/apimachinery/...
+cue get go k8s.io/api/...
 
 # inspect what "cue get go" into the cue.mod/gen directory
 tree cue.mod/gen/

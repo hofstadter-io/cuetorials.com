@@ -1,6 +1,6 @@
 ---
-title: "Modules and Packages"
-description: "Working with Cue modules and packages"
+title: "模块和包"
+description: "Cue 模块和包的使用"
 keywords:
 - mod
 - module
@@ -12,29 +12,32 @@ keywords:
 weight: 50
 ---
 
-Cue has a module and package system like any proper language.
-With modules and packages, you also have imports.
-This is one of its most significant advantages over current configuration
-languages like Yaml and JSON.
-Cue's module system is very similar to Go's, but has it's differences.
+CUE 像其他语言一样，也有模块（module）和包（package）系统。
 
-- A module name has a particular format
-    - `domain.com/name` is the minimal
-    - `github.com/owner/repo` is common
-    - imports without a domain are assumed to be builtins from the standard library
-    - You don't actually need a domain or repository, it's just a path naming requirement
-- You must create a file (`cue.mod/module.cue`) to signify a module
-- Modules are comprised of packages, Cue supports multiple packages in a directory
-- Only absolute imports are allowed, no relative imports (for security reasons)
-- You can rename imported packages at the time of import (like the k8s.io imports previously seen)
-- Definitions and Values in the same package can be accessed across files without imports
+因为有 module 和 package，所以也有 import。
 
-_While, Cue does not yet have a dependency management system, it will import and process them. See below for details._
+对于像 Yaml 和 JSON 的配置语言来说，这是最重要的优点之一。
 
-### Defining a module
+CUE 的模块系统和 Go 的非常相似，但是也有不同点。
 
-To define a module, we simply need to add a `cue.mod/module.cue` file.
-Before you do, you will _not_ be able to import files from other directories or modules.
+- 一个模块名有特定的格式
+  - `domain.com/name` 是最小的模块
+  - `github.com/owner/repo` 是通用模块
+  - import 时不加 domain，表明引入内置的标准包
+  - 不是需要一个真正的 domain 或 repository，只是定义需要的路径
+- 必须创建一个文件（`cue.mod/module.cue`）来声明模块
+- 模块由很多包组成，CUE 支持在一个目录中包含多个 package
+- 只允许绝对路径的引用，不允许相对路径的引用（出于安全考虑）
+- 可以在引用时修改包的名字（就像之前看到的 k8s.io 的引用）
+- 同一个包下的`定义`和`值`可以直接访问而不需要引用
+
+_但是，CUE 还没有依赖管理系统，它将引用和处理他们。详情参考下文_
+
+### 定义模块
+
+为了定义模块，只需要简单的添加一个 `cue.mod/module.cue` 文件。
+
+在创建之前，你将 _不_ 能引用其他目录或模块的文件。
 
 {{< codePane file="code/first-steps/modules-and-packages/listing.txt" title="file listing" lang="shell">}}
 {{< codePane file="code/first-steps/modules-and-packages/cue.mod/module.html" title="cue.mod/module.cue">}}
@@ -45,17 +48,16 @@ Before you do, you will _not_ be able to import files from other directories or 
 {{< codePane file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/hello.html" title="cue.mod/pkg/github.com/foo/bar/multi/hello.cue">}}
 {{< codePane file="code/first-steps/modules-and-packages/cue.mod/pkg/github.com/foo/bar/multi/world.html" title="cue.mod/pkg/github.com/foo/bar/multi/world.cue">}}
 
-When we run this, we can see the output by combining the modules and packages
+当运行下面的命令，将看到输出合并了 module 和 package
 
 {{< codePane file="code/first-steps/modules-and-packages/eval.html" title="cue eval root.cue">}}
 
 
 <br>
 
-### Dependency management
+### 依赖管理
 
-Cue dependencies are located in the `cue.mod/pkg/...` directory.
-From here, dependent modules are nested under directories mirroring their import path.
+CUE 的依赖都在 `cue.mod/pkg/...` 文件下，依赖的模块的文件路径和引用它们的路径一样。
 
 ```text
 cue.mod
@@ -70,8 +72,7 @@ cue.mod
             └── hofmod-server
 ```
 
-Cue does not yet have a dependency management system. You have to get them in place another way.
-([Open issue](https://github.com/cuelang/cue/issues/409))
+CUE 目前还没有依赖管理系统，你必须通过其他方式获取它们。（[Open issue](https://github.com/cuelang/cue/issues/409）)
 
 Fortunately, Hofstadter has built a generalized dependency management system as part of our `hof` tool,
 based on `go mod` and Minimum Version Selection (MVS).
@@ -90,8 +91,8 @@ module "github.com/hofstadter-io/cuetorials"
 cue = master // or another version, not really used but a required field
 
 require (
-  domain.com/owner/repo v0.1.2    // select a version
-  domain.com/other/repo v0.0.0    // latest version
+domain.com/owner/repo v0.1.2    // select a version
+domain.com/other/repo v0.0.0    // latest version
 )
 
 replace github.com/other/repo => github.com/myorg/repo  // replace with a different remote repository
