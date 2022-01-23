@@ -29,35 +29,33 @@ CUE 的模板系统使用的 Go 的模板系统，所以所有的兼容性和规
 
 我们使用了 list 和 field 推导分别渲染和写入我们的模板，使用复杂的 CUE 定义、值以及模板你可以生成任何输出。
 
-### Generating with Hof
+### 使用 Hof 生成
 
-At Hofstadter, we built `hof` as a custom tool for sophisticated code generation.
-We wanted a single source of truth for our models which we could turn into
-the source code for databases, servers, and frontend which implement a full stack app.
-We think of it as a "high code" (~~low code~~) solution for developers.
-Cue was chosen as the UX/DX for writing the input (designs)
-and the generators which `hof` processes.
+在 Hofstadter，我们使用 `hof` 用于复杂的代码生成，
+我们希望可以通过唯一的来源来生成数据库、后端以及前端的代码。
 
-The two problem with previous systems are:
+我们认为对于开发这来说是，这是 `high code` （~~low code~~）的解决方案，CUE 被选为 UX/DX 来写输入（设计）和生成器。
 
-1. You always end up writing custom code in the generated output
-2. Your designs evolve but you've already generated the boilerplate
+之前系统的两个问题是：
 
-The solution is actually pretty simple, keep a shadow copy of the generated code
-and use a 3-way diff to merge design updates and custom code.
+1. 你总会在生成的代码中编写自定义的代码
+2. 设计发展了，但是你已经生成了样板代码
 
-##### With the following two files in a directory, run `hof mod vendor cue` and `hof gen`
+解决方案实际上非常简单，保留最初生成代码代码的副本，然后使用 3-way diff 工具来合并设计更新和自定义的代码。
+
+##### 将下面两个文件放到同一个文件夹，然后运行 `hof mod vendor cue` 和 `hof gen`
 
 {{< codePane file="code/first-steps/generate-all-the-things/cue.mods" title="cue.mods" lang="text">}}
 
 {{< codePane file="code/first-steps/generate-all-the-things/hof.html" title="hof.cue">}}
 
-You can learn more about `hof` from these links:
+你可以通过下面的链接了解更多 `hof` 相关的内容：
 
 - https://github.com/hofstadter-io/hof
 - https://docs.hofstadter.io
 
-There are also a number of "hofmod" repos for generating CLIs, APIs, and more.
-The separation of `hofmod`'s from the `hof` tool means that you can create your own without needing to change our code.
-Because they are also Cue modules, you have all the power of Cue and
-can import them for reusing or extending your own generators and projects.
+也有许多 `hofmod` 的仓库用于生成 CLI、API 以及更多其他内容，
+
+`hofmod` 和 `hof` 工具的分离意味着你可以创建你自己的而不需要修改我们的代码。
+因为它们也是 CUE 的模块，所以你可以使用 CUE 的所有功能，也可以引用它们来重用并扩展你自己的生成器和项目。
+
