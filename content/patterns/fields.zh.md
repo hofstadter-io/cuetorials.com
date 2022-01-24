@@ -1,6 +1,6 @@
 ---
-title: "结构体字段模板"
-description: "结构体字段相关的模板"
+title: "字段模板"
+description: "字段相关的模板"
 weight: 3
 ---
 
