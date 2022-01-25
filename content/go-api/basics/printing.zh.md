@@ -26,7 +26,7 @@ CUE 支持 `fmt.Printf` 修饰符，你可以快速打印 CUE 的值。
 
 ### 使用 cue/format 打印
 
-当运行 `cue eval` 和 `cue def`的时候 我们可以通过 flag 来控制打印格式选项。
+当运行 `cue eval` 和 `cue def` 的时候 我们可以通过 flag 来控制打印格式选项。
 这些 flag 可以映射到 `cue.Option` 类型。这种类型的用法常是传入 `cue.Value.Syntax` 函数，
 这个函数可以返回 CUE 值的抽象语法树（Abstract Syntax Tree, AST）。
 然后我们可以使用 `format.Node` 来格式化打印一个 CUE 的抽象语法树。

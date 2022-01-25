@@ -49,7 +49,7 @@ _当操作多个 value 的时候，他们应当来自同一个运行时。这个
 你可以把你的 Go 类型和值转为 CUE value。
 可以通过结构体标签（tag）来控制输出。注意
 
-- 只有导出的字段可以被cue编码
+- 只有导出的字段可以被CUE编码
 - 可以使用 `omitempty` 阻止输出该字段，但是这样也会影响这个类型的其他编码。
 - 数字类型有一些怪异之处，我们稍后再谈。CUE 通常使用 `math/big` 类型。
 - 你可以在这里查看细节 [pkg.go.dev cue.Context.Encode docs](https://pkg.go.dev/cuelang.org/go@v0.4.0/cue#Context.Encode).

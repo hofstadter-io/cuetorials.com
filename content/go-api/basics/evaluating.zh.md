@@ -1,5 +1,5 @@
 ---
-title: "评估 Value"
+title: "对 Value 求值"
 keywords:
 - go
 - golang
@@ -13,15 +13,15 @@ weight: 50
 ---
 
 {{<lead>}}
-评估是 CUE 的核心能力，并且是其他一切功能（如统一和验证）的底层能力。
-本节将展示如何在 Go 中进行评估，而且可以用选项控制其行为。
+求值是 CUE 的核心能力，并且是其他一切功能（如统一和验证）的底层能力。
+本节将展示如何在 Go 中进行求值，而且可以用选项控制其行为。
 {{</lead>}}
 
 
 
 ### Value.Validate()
 
-验证（Validate）函数会在一个 Value 上运行评估过程，返回一个 error 类型。
+Validate 函数会在一个 Value 上运行求值过程，返回一个 error 类型。
 前面已经演示过如何不带参数地使用该函数了。
 Validate 也可以接受传入 `cue.Option` 类型的参数来控制过程。
 没错，就是我们之前传给 `Value.Syntax(...Option)` 的那些参数。
@@ -41,7 +41,7 @@ __因为不是每一个 Option 在这里都可以使用，
 
 ### Value.Unify()
 
-统一（或者称为聚合，Unify）函数其实就是 CUE 中的 `&` 操作符。用同样的方式可以把两个值结合起来。
+Unify 函数其实就是 CUE 中的 `&` 操作符。用同样的方式可以把两个值结合起来。
 函数返回的是聚合的结果。
 
 {{< codePane2
@@ -54,7 +54,7 @@ __因为不是每一个 Option 在这里都可以使用，
 
 ### Value.Subsume()
 
-容纳（Subsume）是一种在`格`的概念下比较两个 Value 的关系的强力工具。
+Subsume 是一种在`格`的概念下比较两个 Value 的关系的强力工具。
 `Subsume` 会告诉你一个 Value 是不是另一个的实例。换句话说，他检查一个 Value 是否完全向后兼容另一个。
 
 下面的例子里，我们对每一对 Value 检查两个方向的容纳情况。
@@ -79,8 +79,8 @@ _另外请注意，如果所有 Value 都在同一个文件里，意味着已经
 
 ### Value.Eval()
 
-评估（Eval）函数会解析所有引用，保证具体性，发现所有错误，并最终产生一个新的值。
-评估结果包含在返回的新值中。
+Eval 函数会解析所有引用，保证具体性，发现所有错误，并最终产生一个新的值。
+求值结果包含在返回的新值中。
 
 {{< codePane2
 	file1="code/go-api/basics/evaluating/eval.go"  lang1="go"  title1="eval.go"
@@ -96,7 +96,7 @@ __这个函数可能有一个Bug，具体请查看 [issue 1326](https://github.c
 ### Value.Evaluate()
 
 这个函数的提案已经提出了，但还没有实现。
-他可以像 Validate 和 Syntax 接受 `...Option` 参数，处理后返回一个新的 Value。
+它可以像 Validate 和 Syntax 接受 `...Option` 参数，处理后返回一个新的 Value。
 
 `func (v Value) Evaluate(opts ...Option) Value {...}`
 

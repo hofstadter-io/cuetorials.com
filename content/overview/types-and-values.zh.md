@@ -46,7 +46,7 @@ __注意，因为这个 [issue](https://github.com/cue-lang/cue/issues/1319) 并
 
 空值结合运算在发生错误时提供备选，这是个技术方面的错误合并，因为 `null` 是个有效值。
 
-使用分离符和默认值可以设置。
+使用析取符和默认值可以设置。
 
 {{< codePane2
   file1="code/overview/types-and-values/coalesce.html" play1="true" title1="coalesce.cue"
