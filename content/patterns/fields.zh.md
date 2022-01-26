@@ -11,7 +11,7 @@ weight: 3
 
 ### OneOf
 
-OneOf 模板用于强制一组字段中的一个且只有一个，我们使用分隔符和嵌入来创建。
+OneOf 模板用于强制一组字段中的一个且只有一个，我们使用析取符和嵌入来创建。
 
 {{< codePane
   file="code/patterns/fields/oneOf.html" title="oneOf.cue" play="true"
@@ -23,7 +23,7 @@ OneOf 模板用于强制一组字段中的一个且只有一个，我们使用�
   file="code/patterns/fields/oneOfMaybe.html" title="oneOfMaybe.cue" play="true"
 >}}
 
-然而，你不能使用其他选项的集合，如果只设置 `a` 下面的例子将会报错：
+然而，一个选项不能是其他选项的子集，如果只设置 `a` 下面的例子将会报错：
 
 {{< codePane
   file="code/patterns/fields/subsetFail.html" title="subsetFail.cue" play="true"

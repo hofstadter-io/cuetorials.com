@@ -1,6 +1,6 @@
 ---
-title: "唯一 List"
-description: "Lists 和 唯一性"
+title: "List 去重"
+description: "Lists 去重"
 weight: 5
 ----
 
