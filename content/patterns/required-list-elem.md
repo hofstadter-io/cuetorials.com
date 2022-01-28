@@ -10,7 +10,7 @@ us to verify elements without knowing their position.
 This example works for basic types like ints and strings.
 
 {{< codePane2
-  file1="code/patterns/required-list-elem/check-basic.html" title1="check-base.cue" play1="true"
+  file1="code/patterns/required-list-elem/check-basic.html" title1="check-basic.cue" play1="true"
   file2="code/patterns/required-list-elem/check-basic-out.txt" title2="cue eval check-basic.cue" lang2="text"
 >}}
 

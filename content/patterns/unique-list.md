@@ -11,7 +11,7 @@ There are two versions and accompanying methods.
 1. Unique elements by key
 2. Unique elements by value
 
-The choice depends on the presense of a "unique key."
+The choice depends on the presence of a "unique key."
 That is, if you can construct a unique key from a set of fields,
 then use option 1, else you will need to use option 2.
 Prefer option 1 as option 2 will have much worse runtimes
@@ -34,7 +34,7 @@ and then convert it back to a list.
 ### Unique Elements by Value
 
 The goal here is to detect and remove duplicates
-based on a the entire value.
+based on the entire value.
 We use the list package and list comprehension.
 
 {{< codePane2

@@ -2,28 +2,24 @@
 title: "List 去重"
 description: "Lists 去重"
 weight: 5
-----
+---
 
-Finding the unique elements of a list is a common task,
-often tied to detecting or removing duplicate values.
-There are two versions and accompanying methods.
+List 去重是很常见，通常用于检测和移除重复数据，去重可以分为两种，同时也都有对应的方法。
 
-1. Unique elements by key
-2. Unique elements by value
+1. 根据 key 去重
+2. 根据 value 去重
 
-The choice depends on the presense of a "unique key."
-That is, if you can construct a unique key from a set of fields,
-then use option 1, else you will need to use option 2.
-Prefer option 1 as option 2 will have much worse runtimes
-as the input grows.
+选择哪种去重方式，取决于是否存在 "唯一键"。
 
-### Unique Elements by Key
+也就是说，如果你能根据一组字段构造唯一键，那就可以用方法 1，否则需要用方法 2。
 
-The goal here is to detect and remove duplicates
-based on a key or set of fields.
-The way we do this is to turn the list
-into a "map" using struct comprehension
-and then convert it back to a list.
+最好选择方法 1，因为随着数据增多，方法 2 可能会导致更多的 runtime。
+
+### 根据 Key 去重
+
+要实现的是基于 key 或一组字段检测然后移除重复的数据。
+
+我们实现的方式是根据 struct 推导将 list 转换为 "map"，然后再将其转回 list。
 
 {{< codePane2
   file1="code/tasks/unique-list-by-key.html"     title1="unique-list-by-key.cue" play1="true"
@@ -31,11 +27,11 @@ and then convert it back to a list.
 >}}
 
 
-### Unique Elements by Value
+### 根据 Value 去重
 
-The goal here is to detect and remove duplicates
-based on a the entire value.
-We use the list package and list comprehension.
+这里要实现的是基于所有的 Value 检测并移除重复数据。
+
+我们使用了 list 包还有 list 推导。
 
 {{< codePane2
   file1="code/tasks/unique-list-by-val.html"      title1="unique-list-by-val.cue" play1="true"
