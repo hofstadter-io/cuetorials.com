@@ -11,15 +11,15 @@ We can use list comprehensions to simulate a switch statement.
 
 {{< codePane file="code/patterns/switch/pattern.html">}}
 
-This pattern has an number of `if` conditions or guards in a list
+This pattern has a number of `if` conditions or guards in a list
 and then selects the `[0]` element.
 By doing so, we emulate a switch statement from other languages.
-Be advised that all conditional statements will be evaulated.
+Be advised that all conditional statements will be evaluated.
 
 
 ### A basic example
 
-This example demonstrates turning a integer into a string describing
+This example demonstrates turning an integer into a string describing
 its numerical classification.
 
 {{< codePane2
@@ -52,8 +52,8 @@ when you forget the default, or otherwise fail to cover all conditions.
 ### All conditions are evaluated
 
 You might expect the following to work rather than error.
-This is the result of all conditions being evaulated.
-That is, there is not short-circuit to the evaluation.
+This is the result of all conditions being evaluated.
+That is, there is no short-circuit to the evaluation.
 
 {{< codePane2
   file1="code/patterns/switch/conditions.html" title1="conditions.cue" play1="true"
