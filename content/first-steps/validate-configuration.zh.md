@@ -68,7 +68,7 @@ error in call to time.Format: invalid time "97-11-11"
 ### Schema v1
 
 第一步，要给我们的 Kubernetes 资源定义一些顶级的 __定义（Definition）__，
-对每种资源类型都有定义，然后 `#Schema` 将使用分隔符（`|`）来表明必须通过其中一个实体来进行联合，就像 "or" 的作用一样。
+对每种资源类型都有定义，然后 `#Schema` 将使用析取符（`|`）来表明必须通过其中一个实体来进行联合，就像 "or" 的作用一样。
 
 {{< codePane file="code/first-steps/validate-configuration/cuetorials-v1.html" >}}
 

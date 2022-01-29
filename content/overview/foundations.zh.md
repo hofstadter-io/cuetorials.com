@@ -116,16 +116,16 @@ CUE 允许字段被定义多次，只要保持一致的就没问题。
 >}}
 
 
-### 分离符
+### 析取
 
-分离符用于"加入"（"join"）可选项或备选方案，就像 `or` 的功能，用 `|` 表示。
+析取符用于"合并"（"join"）可选项或备选方案，就像 `or` 的功能，用 `|` 表示。
 
 {{< codePane2
   file1="code/overview/foundations/disjunction.html" play1="true" title1="disjunction.cue"
   file2="code/overview/foundations/disjunction.json" lang2="json" title2="cue export disjunction.cue --out json"
 >}}
 
-分离符可以用于:
+析取符可以用于:
 
 - 枚举值
 - 多个类型（这些类型中任意一个）
