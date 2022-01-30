@@ -13,5 +13,5 @@ planned work on the roadmap, like structural sharing.
 
 See the following GitHub links for more details:
 
-- [readmap/performance labels](https://github.com/cue-lang/cue/labels/roadmap%2Fperformance)
+- [roadmap/performance labels](https://github.com/cue-lang/cue/labels/roadmap%2Fperformance)
 - [Discussions about performance](https://github.com/cue-lang/cue/search?q=performance&type=discussions)

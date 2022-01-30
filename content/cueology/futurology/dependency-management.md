@@ -11,7 +11,7 @@ mirrors Go's system.
 You can read more in the
 [package management proposal](https://github.com/cue-lang/cue/issues/851).
 
-In the mean time, there are two methods
+In the meantime, there are two methods
 for managing dependencies
 
 1. Using scripts to fetch them into the `cue.mod/pkg` folder

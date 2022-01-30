@@ -1,6 +1,6 @@
 ---
 title: "General processes"
-description: "OVerview to the vairous processes in Cue"
+description: "Overview to the various processes in Cue"
 weight: 10
 ---
 
