@@ -61,7 +61,7 @@ CUE 支持正则表达式，通过 `=~` 和 `!~` 进行限制。
 它们基于 [Go 的正则表达式](https://golang.org/pkg/regexp/) ， CUE 也有一些额外的{{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</cuedoc>}}
 
 
-### Interpolation
+### 嵌入
 
 CUE 使用 `\(<expr>)` 就可以 string 或 byte 中插入值。
 

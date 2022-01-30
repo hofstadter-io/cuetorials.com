@@ -17,4 +17,4 @@ X: [{
 
 #MustHave: ["b"]
 
-#Xcheck: #X & {for x in #MustHave {"\(b)": _}}
+#Xcheck: #X & {for x in #MustHave {"\(x)": _}}
