@@ -165,7 +165,7 @@ struct 包含一组字段 (label: value)。
 
 `Definition` 很像 struct，主要用于定义结构。
 
-它们默认情况下是关闭（Close）的，而且 CUE 导出时 __不会__ 被输出。
+它们默认情况下是封闭（Close）的，而且 CUE 导出时 __不会__ 被输出。
 
 {{< codePane3
   file1="code/overview/types-and-values/defns.html"     title1="defns.cue" play1="true"

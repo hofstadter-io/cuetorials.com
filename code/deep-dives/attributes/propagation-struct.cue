@@ -1,6 +1,6 @@
 #X: {
 	@model(db)
-		uuid: string @key(primary)
+	uuid: string @key(primary)
 } @app(backend) // does not propagate
 
 x: #X & {

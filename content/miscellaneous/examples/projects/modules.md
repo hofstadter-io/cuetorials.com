@@ -5,7 +5,7 @@ weight: 20
 ---
 
 {{<lead>}}
-Projects using Cue from Go.
+Cue modules you can use in your project
 {{</lead>}}
 
 

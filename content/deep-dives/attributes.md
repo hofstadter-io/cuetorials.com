@@ -22,7 +22,7 @@ Despite being simple markup, attributes offer
 significant flexibility and configurability
 for custom Go tools.
 They were originally added to help map between different
-representations like Go and Protobug.
+representations like Go and Protobuf.
 However, you can assign any meaning or behavior to them
 as they are only interpretable by your applications.
 In that sense they are a lot like Go struct tags, for the familiar.
@@ -108,7 +108,7 @@ You can also add to the attributes.
 >}}
 
 
-Field attributes do not propegate due to the following issue:
+Field attributes do not propagate due to the following issue:
 
 {{< codePane2
 	file1="code/deep-dives/attributes/field-prop-issue.html" title1="field-propagation-issue.cue"
