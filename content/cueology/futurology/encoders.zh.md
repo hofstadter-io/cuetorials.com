@@ -1,12 +1,10 @@
 ---
-title: "Encoders"
+title: "编码器"
 ---
 
-While not currently in a proposal,
-it is expected that there will be
-an effort to make the implementations more consistent.
+虽然还没有被提出，但是会努力让其变得一致。
 
-There are a number of known issues and feature requests:
+有很多已知的问题和功能需求：
 
 - [GitHub Issues Search](https://github.com/cue-lang/cue/search?q=encoder&type=issues)
 - [Inconsistent Base64](https://github.com/cue-lang/cue/issues/1253)
