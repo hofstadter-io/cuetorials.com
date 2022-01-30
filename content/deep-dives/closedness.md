@@ -1,6 +1,6 @@
 ---
 title: "Open and Closedness"
-description: "CUE's conepts of open and closed values"
+description: "CUE's concepts of open and closed values"
 weight: 22
 ---
 
@@ -41,7 +41,7 @@ These are not recursively applied, only changing the field they are used on.
 
 ### Closedness with pattern constraints
 
-Pattern constraints define a set of fields. So while `d & #D` is closed,
+Pattern constraints define a set of values. So while `d & #D` is closed,
 it can still have an infinite number of labels defined.
 
 {{< codePane file="code/overview/closedness/pattern-constraints.html" title="pattern-constraints.cue" play="true">}}
@@ -62,7 +62,7 @@ and structs which have been `close()`'d.
 
 ### List closedness
 
-List open and closedness is much simpler than stucts and definitions.
+List open and closedness is much simpler than structs and definitions.
 When you use ellipses, the list is open.
 Any fixed elements are required in the exact position.
 

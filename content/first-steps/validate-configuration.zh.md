@@ -73,7 +73,7 @@ error in call to time.Format: invalid time "97-11-11"
 {{< codePane file="code/first-steps/validate-configuration/cuetorials-v1.html" >}}
 
 每种类型都定义为 `struct`（`{}`），并添加字段 `apiVersions` 和 `kind`，然后通过结构体最后添加 `...` 表明可以添加更多字段。
-默认情况下, definition 是关闭的，任何未定义的字段将会导致错误。
+默认情况下, definition 是封闭的，任何未定义的字段将会导致错误。
 
 `apiVersion` 和 `kind` 都是具体的数值，表明我们要验证的配置必须完全匹配。
 
