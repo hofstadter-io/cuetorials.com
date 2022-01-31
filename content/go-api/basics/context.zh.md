@@ -43,7 +43,6 @@ _当操作多个 value 的时候，他们应当来自同一个运行时。这个
 	file2="code/go-api/basics/context/scope.html"  title2="go run scope.go"
 >}}
 
-### Encoding Values from Go
 ### 从 Go 类型编码为 Value
 
 你可以把你的 Go 类型和值转为 CUE value。
