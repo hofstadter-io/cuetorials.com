@@ -1,0 +1,43 @@
+contributors:
+  - display_name: "Tony Worm"
+    avatar: "https://avatars.githubusercontent.com/u/1390600"
+    profile: "https://github.com/verdverm"
+    urls:
+      - icon: "fab fa-github"
+        url: "https://github.com/verdverm"
+      - icon: "fab fa-twitter"
+        url: "https://twitter.com/verdverm"
+
+  - display_name: "Zhaoyang"
+    avatar: "https://avatars.githubusercontent.com/u/12080364"
+    profile: "https://h1z3y3.me"
+    urls:
+      - icon: "fab fa-github"
+        url: "https://github.com/h1z3y3"
+      - icon: "fab fa-twitter"
+        url: "https://twitter.com/Mr_hezhaoyang"
+      - icon: "fa fa-envelope"
+        url: "mailto: gmzhaoyang@gmail.com"
+      - icon: "fas fa-blog"
+        url: "https://www.h1z3y3.me"
+        
+  - display_name: "qiaozp"
+    avatar: "https://avatars.githubusercontent.com/u/47812250?v=4"
+    profile: "https://github.com/chivalryq"
+    urls:
+      - icon: "fab fa-github"
+        url: "https://github.com/chivalryq"
+
+  - display_name: "Nick Reilingh"
+    avatar: "https://avatars.githubusercontent.com/u/2458645?v=4"
+    profile: "https://github.com/NReilingh"
+    urls:
+      - icon: "fab fa-github"
+        url: "https://github.com/NReilingh"
+
+  - display_name: "Benjamin Kane"
+    avatar: "https://avatars.githubusercontent.com/u/6081085?v=4"
+    profile: "https://github.com/bbkane"
+    urls:
+      - icon: "fab fa-github"
+        url: "https://github.com/bbkane"

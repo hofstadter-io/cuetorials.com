@@ -1,0 +1,35 @@
+{{ define "contributor-card" }}
+
+<div class="card-group row">
+    {{ range .contributors }}
+    <div class="col-sm-4 col-md-3 col-lg-2">
+        <div class="card">
+            <div class="card-header" style="padding: 10px;">
+                {{ if .profile }}
+                <a href="{{.profile}}" target="_blank">
+                    {{ end }}
+                    <img src="{{.avatar}}" class="card-img-top">
+                    {{ if .profile }}
+                </a>
+                {{ end }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ .display_name }}
+                </h5>
+
+                <p>
+                    {{ range .urls }}
+                    <a href="{{.url}}" target="_blank"><i class="{{ .icon }}"></i></a>
+                    {{ end }}
+                </p>
+            </div>
+        </div>
+        <br>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+
+{{ template "contributor-card" $.Site.Data.contributors }}
+

@@ -2,14 +2,13 @@
 title: "获得帮助"
 description: "获取 Cuelang 的帮助"
 keywords:
-
 - help
 - support
 - training
 - tutoring
 - consulting
-- workshop weight: 1000
-
+- workshop 
+weight: 1000
 ---
 
 ## 社区帮助
