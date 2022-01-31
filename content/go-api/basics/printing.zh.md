@@ -1,6 +1,5 @@
 ---
 title: "打印 Cue"
-description: "How to print Cuelang values with fmt and Cue's builtin formatting."
 description: "如何使用 fmt 包格式化打印 Cuelang 的值，以及 Cue 的内置格式"
 keywords:
 - go

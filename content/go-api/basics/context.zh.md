@@ -1,6 +1,5 @@
 ---
 title: "CUE 上下文（Context）"
-description: "Overview for to use the Cuelang Context to compile CUE using the Go API"
 description: "概览：使用 Go API 中的 Cuelang 上下文（Context）编译 CUE"
 weight: 5
 keywords:
