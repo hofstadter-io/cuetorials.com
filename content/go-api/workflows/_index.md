@@ -1,6 +1,6 @@
 ---
 title: "The Flow Engine"
-description: "Learn how to Cuelang's tool/flow for DAG prociessing using the Go API"
+description: "Learn how to Cuelang's tool/flow for DAG processing using the Go API"
 keywords:
 - go
 - golang
