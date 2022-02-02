@@ -9,11 +9,10 @@ weight: 60
 ---
 
 {{<lead>}}
-CUE 任务最佳实践的逐步指南。
+CUE 任务的逐步指南。
 {{</lead>}}
 
-Coming soon, [open an issue](https://github.com/hofstadter-io/cuetorials.com/issues)
-to request or contribute a walkthrough.
+马上推出，在 [issue list](https://github.com/hofstadter-io/cuetorials.com/issues) 来请求或贡献。
 
 {{< childpages >}}
 
