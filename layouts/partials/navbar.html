@@ -31,9 +31,10 @@
                           {{ .Site.Language.LanguageName }}
                       </a>
                       <ul class="dropdown-menu dropdown-menu-right" role="menu" style="min-width:100px" >
+                          {{ $link := .RelPermalink }}
                           {{ range $.Site.Home.AllTranslations }}
                             <li class="text-center">
-                                <a href="{{ .Permalink }}">
+                                <a href="{{ .Permalink }}{{ $link }}">
                                     {{ .Language.LanguageName }}
                                 </a>
                             </li>
