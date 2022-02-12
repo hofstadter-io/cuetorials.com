@@ -1,3 +1,6 @@
+{{ $slang := .Site.Language.Lang }}
+{{ $rlink := .RelPermalink }}
+{{ $link := strings.TrimPrefix $slang (strings.TrimPrefix "/" $rlink) }}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
     <div class="container-fluid">
         <div>
@@ -26,16 +29,27 @@
                         {{- end}}
                   {{- end}}
                   <li class="nav-item dropdown">
-                      <a class="nav-link" href="#" data-toggle="dropdown">
+                      <a class="nav-link" href="{{ .RelPermalink }}" data-toggle="dropdown">
                           <i class='fa fa-globe-europe'></i>
-                          {{ .Site.Language.LanguageName }}
+                           {{ .Site.Language.LanguageName }}
                       </a>
                       <ul class="dropdown-menu dropdown-menu-right" role="menu" style="min-width:100px" >
-                          {{ $link := .RelPermalink }}
+
                           {{ range $.Site.Home.AllTranslations }}
+                            {{ $lang := .Language.Lang }}
                             <li class="text-center">
-                                <a href="{{ .Permalink }}{{ $link }}">
-                                    {{ .Language.LanguageName }}
+                              <a href="
+                                {{- if eq $lang $slang -}}
+                                  {{ $rlink }}
+                                {{- else -}}
+                                  {{ if eq $lang "en" }}
+                                    {{ $link }}
+                                  {{- else -}}
+                                    /{{ $lang }}/{{ $link }}
+                                  {{- end -}}
+                                {{- end -}}
+                              ">
+                                {{ .Language.LanguageName }}
                                 </a>
                             </li>
                           {{ end }}
