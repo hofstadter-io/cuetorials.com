@@ -6,13 +6,17 @@
 *   @license https://github.com/vantagedesign/ace-documentation/blob/master/LICENSE
 * ------------------------------------------------------------------------ */
 
-$primary:       #007bff;
+$hof-blue:  #02344d;
+$hof-gold:  #CBA44F;
+$hof-white: #f5f7fd;
+
+$primary:       #02344d;
 $secondary:     #6610f2;
 $success:       #28a745;
 $info:          #17a2b8;
 $warning:       #ffc107;
 $danger:        #dc3545;
-$light:         #f8f9fa;
+$light:         #f5f7fd;
 $dark:          #343a40;
 
 @import "bootstrap/bootstrap";
@@ -25,14 +29,17 @@ body, .main {
 .main > h1{
     padding-top: 2rem;
     margin-bottom: 1rem;
+    color: $primary;
 }
 
 .main > h2, .main > h3 {
 	margin-top: 3rem;
+	color: $primary;
 }
 
 .main > h4, .main > h5, .main > h6{
     margin-top: 1rem;
+    color: $primary;
 }
 
 #main-content {
@@ -42,8 +49,19 @@ body, .main {
 	.code-title {
 		font-size: 1rem;
 	}
+	.bottom-nav, .btn {
+		text-decoration: none !important;
+	}
 	.fas {
 		font-weight: 900;
+	}
+	a {
+		text-decoration: underline;
+		text-decoration-color: $hof-gold;
+		&:not(.btn):hover {
+      color: $hof-gold;
+			text-decoration-color: $hof-blue;
+		}
 	}
 }
 
@@ -59,15 +77,16 @@ body, .main {
 
 .nav-link {
   &.parent {
-    color: #0058aa !important;
+    color: $primary !important;
   }
   &.current {
-    color: #007bff !important;
+    color: $primary !important;
+    font-weight: bold;
   }
 }
 
 .nav-item.current {
-  color: #007bff !important;
+  color: $primary !important;
 }
 
 .haschildren ul{
@@ -82,10 +101,22 @@ body, .main {
     padding:15px;
 }
 
+#navbarMain .navbar-nav {
+  li > a:not(.lang-link) {
+    color: $hof-white !important;
+  }
+  li > a:hover {
+      color: $hof-gold !important;
+  }
+}
+
 .navbar-brand {
-  font-size: 2rem;
   img {
-      height: 3rem;
+    height: 1.67rem;
+    padding-bottom: 3px;
+  }
+  span {
+    color: $hof-gold;
   }
 }
 
@@ -96,7 +127,7 @@ body, .main {
 
 @media (min-width: 768px) {
     .docs-sidenav, .docs-toc{
-        min-height: calc(100vh - 8rem);
+        min-height: calc(100vh - 7rem);
         top:4rem;
         position: sticky;
     }
@@ -178,4 +209,10 @@ h3.anchor {
 pre.shiki {
   // -moz-tab-size:2;-o-tab-size:2;tab-size:2;
   -moz-tab-size:4;-o-tab-size:4;tab-size:4;
+}
+
+#np-btn, #pp-btn {
+  &:hover {
+    background-color: $hof-gold !important;
+  }
 }

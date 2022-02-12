@@ -8,7 +8,7 @@
                 {{ with .Site.Params.site_logo }}
                     <img src="{{ . }}" />
                 {{ end }}
-                {{ .Site.Title }}
+        <span class="underscore">_</span>{{ .Site.Title }}
             </a>
         </div>
         <!-- only add the navbar toggle button if there are elements within the toggle -->
@@ -38,7 +38,7 @@
                           {{ range $.Site.Home.AllTranslations }}
                             {{ $lang := .Language.Lang }}
                             <li class="text-center">
-                              <a href="
+                              <a class="lang-link" href="
                                 {{- if eq $lang $slang -}}
                                   {{ $rlink }}
                                 {{- else -}}

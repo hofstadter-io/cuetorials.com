@@ -34,14 +34,14 @@
 <div class="d-flex justify-content-around">
 
   {{- with ($.Scratch.Get "prevPage") -}}
-  <a class="bg-primary overflow-hidden p-3 mt-5 text-white shadow d-flex flex-row" style="width: 40%" href="{{.RelPermalink}}" title="{{.Title}}">
+  <a id="pp-btn" class="np-button bottom-nav bg-primary overflow-hidden p-3 mt-5 text-white shadow d-flex flex-row" style="width: 40%" href="{{.RelPermalink}}" title="{{.Title}}">
     <i class="fas fa-chevron-left align-self-center"></i>
     <p class="flex-fill align-self-center my-0 text-center">{{.Title}}</p>
   </a>
   {{ end -}}
 
   {{- with ($.Scratch.Get "nextPage") -}}
-  <a class="bg-primary overflow-hidden p-3 mt-5 text-white shadow d-flex flex-row" style="width: 40%" href="{{.RelPermalink}}" title="{{.Title}}">
+  <a id="np-btn" class="bottom-nav bg-primary overflow-hidden p-3 mt-5 text-white shadow d-flex flex-row" style="width: 40%" href="{{.RelPermalink}}" title="{{.Title}}">
     <p class="flex-fill align-self-center my-0 text-center">{{.Title}}</p>
     <i class="fas fa-chevron-right align-self-center"></i>
   </a>
