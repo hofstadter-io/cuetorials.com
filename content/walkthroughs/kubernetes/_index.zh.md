@@ -2,6 +2,6 @@
 title: "Kubernetes"
 ---
 
-Walkthroughs for using CUE and Kubernetes together.
+如何使用 CUE 和 Kubernetes 的最佳实践。
 
 {{< childpages >}}
