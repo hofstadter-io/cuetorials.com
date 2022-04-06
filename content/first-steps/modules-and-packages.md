@@ -71,7 +71,7 @@ cue.mod
 ```
 
 Cue does not yet have a dependency management system. You have to get them in place another way.
-([Open issue](https://github.com/cuelang/cue/issues/409))
+([Open issue](https://github.com/cue-lang/cue/issues/851))
 
 Fortunately, Hofstadter has built a generalized dependency management system as part of our `hof` tool,
 based on `go mod` and Minimum Version Selection (MVS).
