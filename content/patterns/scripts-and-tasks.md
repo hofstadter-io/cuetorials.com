@@ -57,6 +57,17 @@ for both of these, even together.
 {{< codePane file="code/patterns/scripts-and-tasks/comprehend_tool.html" title="comprehend_tool.cue" >}}
 
 
+### Sequential Comprehended Tasks
+
+What if we combine the last two examples?
+
+- The comprehended tasks would run in parallel
+- We actually want them to run sequentially
+
+We can conditionally refer to the previous task 
+as follows:
+
+{{< codePane file="code/patterns/scripts-and-tasks/sequential_tool.html" title="sequential_tool.cue" >}}
 
 
 ### Reusable Scripts and Tasks
