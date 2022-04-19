@@ -70,6 +70,19 @@ as follows:
 {{< codePane file="code/patterns/scripts-and-tasks/sequential_tool.html" title="sequential_tool.cue" >}}
 
 
+### Scripts with args
+
+We can use the `@tag()` attribute
+as a way to inject values or args
+when running a script.
+
+`cue cmd -t msg=foobar print args_tool.cue`
+
+{{< codePane file="code/patterns/scripts-and-tasks/args_tool.html" title="args_tool.cue" >}}
+
+
+
+
 ### Reusable Scripts and Tasks
 
 We can define reusable tasks,
