@@ -1,6 +1,6 @@
 ---
 title: "Attributes"
-description: "Cuelang Attributes are markup used by CUE and tools written in Go."
+description: "Attributes are CUE markup used by tools written in Go."
 brief: "CUE markup for use by tools"
 weight: 10
 ---
