@@ -13,32 +13,32 @@ foo: {
 #prep: {
 	In: {...}
 	Out: {
-		for l,v in In {
+		for l, v in In {
 			"\(l)": [
-				if (v & "") != _|_ { "string" }
-				if (v & 1.0) != _|_ { "float64" }
-				if (v & 1) != _|_ { "int" }
-				if (v & true) != _|_ { "bool" }
-				"unknown type"
+				if (v & "") != _|_ {"string"},
+				if (v & 1.0) != _|_ {"float64"},
+				if (v & 1) != _|_ {"int"},
+				if (v & true) != _|_ {"bool"},
+				"unknown type",
 			][0]
 		}
 	}
 }
 
 val: {
-	Foo: (#prep & { In: foo }).Out
+	Foo: (#prep & {In: foo}).Out
 }
 
 data: yaml.Marshal(val)
 
 tmpl: #"""
-{{ range $Type, $Fields := . }}
-type {{ $Type }} struct {
-	{{ range $k, $v := $Fields }}
-	{{ $k }} {{ $v }} `json:"{{$k}}"`
+	{{ range $Type, $Fields := . }}
+	type {{ $Type }} struct {
+		{{ range $k, $v := $Fields }}
+		{{ $k }} {{ $v }} `json:"{{$k}}"`
+		{{ end }}
+	}
 	{{ end }}
-}
-{{ end }}
-"""#
+	"""#
 
 go: template.Execute(tmpl, val)

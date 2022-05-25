@@ -8,7 +8,7 @@ import (
 	"cuelang.org/go/cue/errors"
 )
 
-const schemaWithNumber =`
+const schemaWithNumber = `
 {
 	i: number
 	s: string
@@ -64,7 +64,6 @@ func main() {
 
 	printErr("si > v", si.Subsume(v))
 	printErr("v > si", v.Subsume(si))
-
 
 	printErr("s > b", si.Subsume(b))
 	printErr("b > v", b.Subsume(v))

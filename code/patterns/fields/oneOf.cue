@@ -1,4 +1,4 @@
-#OneOf: { a: string } | { b: string }
+#OneOf: {a: string} | {b: string}
 
 #E: {
 	name: string
@@ -7,12 +7,12 @@
 
 ex1: #E & {
 	name: "a choice"
-	a:  "bar"
+	a:    "bar"
 }
 
 ex2: #E & {
 	name: "b choice"
-	b:  "hello"
+	b:    "hello"
 }
 
 ex3: #E & {
@@ -21,6 +21,6 @@ ex3: #E & {
 
 ex4: #E & {
 	name: "error both chosen"
-	a: "a"
-	b: "b"
+	a:    "a"
+	b:    "b"
 }

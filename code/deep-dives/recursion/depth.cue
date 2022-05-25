@@ -10,6 +10,7 @@ import "list"
 		out: {
 			// if we have a basic type, we are at a leaf, depth is 1
 			if (#in & #basic) != _|_ {1}
+
 			// if we are not a basic type, then we are 1 + the max of children
 			if (#in & #basic) == _|_ {
 				// this is our "recursion" for each child

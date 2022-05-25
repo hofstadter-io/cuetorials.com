@@ -82,7 +82,7 @@ Gen: _ @gen(todos)
 // Construct the generator
 Gen: #Gen & {
 	Input: {
-		name:  "tasks"
+		name: "tasks"
 		todos: [
 			{name: "t1", effort: 1, complete: true},
 			{name: "t2", effort: 4, complete: true},

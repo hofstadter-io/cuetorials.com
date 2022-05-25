@@ -18,6 +18,7 @@ import "list"
 		// this is where we build up our indexed functions and the references between them
 		#funcs: "\(k)": (#funcFactory & {#next: #funcs["\(k+1)"]}).#func
 	}
+
 	// our final value needs to be null
 	#funcs: "\(#maxiter)": null
 

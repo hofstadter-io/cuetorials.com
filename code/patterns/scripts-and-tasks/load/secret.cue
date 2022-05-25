@@ -2,34 +2,34 @@
 package load
 
 import (
-  "encoding/json"
+	"encoding/json"
 
-  "hof.io/example/utils"
+	"hof.io/example/utils"
 )
 
 meta: {
-  vars: {
-    // import a reusable task
-    RR: utils.RepoRoot  // localized dependency
-    root: RR.Out        // inferred dependency
-    fn: "\(root)/code/patterns/scripts-and-tasks/data.json"
-  }
+	vars: {
+		// import a reusable task
+		RR:   utils.RepoRoot // localized dependency
+		root: RR.Out         // inferred dependency
+		fn:   "\(root)/code/patterns/scripts-and-tasks/data.json"
+	}
 }
 
 load: {
-  cfg: meta  // localized dependency
+	cfg: meta // localized dependency
 
-  read: {
-    $id: "tool/file.Read"
-    filename: cfg.vars.fn  // inferred dependency
-    contents: string
-  }
+	read: {
+		$id:      "tool/file.Read"
+		filename: cfg.vars.fn // inferred dependency
+		contents: string
+	}
 
-  data: json.Unmarshal(read.contents)
-  say: data.cow
+	data: json.Unmarshal(read.contents)
+	say:  data.cow
 
-  print: {
-    $id: "tool/cli.Print"
-    text: read.contents    // inferred dependency
-  }
+	print: {
+		$id:  "tool/cli.Print"
+		text: read.contents // inferred dependency
+	}
 }

@@ -5,9 +5,9 @@
 
 _IDExamples: [...#ID]
 _IDExamples: [
-  "xyz",
-  "ab",
-  "aB",
+	"xyz",
+	"ab",
+	"aB",
 ]
 
 // https://cuelang.org/docs/references/spec/#disjunction

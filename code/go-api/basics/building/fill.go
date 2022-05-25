@@ -45,7 +45,6 @@ func main() {
 	k = v.LookupPath(cue.ParsePath("v.#k"))
 	fmt.Printf("%#v\n", k)
 
-
 	v = v.FillPath(cue.ParsePath("v.j"), 3)
 
 	k = v.LookupPath(cue.ParsePath("v.#k"))
@@ -62,10 +61,9 @@ func main() {
 	fmt.Printf("%#v\n", k)
 
 	fmt.Println("----------")
-	v.Validate(cue.Final(),cue.Concrete(true),cue.Definitions(true))
+	v.Validate(cue.Final(), cue.Concrete(true), cue.Definitions(true))
 	fmt.Printf("%#v\n", e)
 	k = v.LookupPath(cue.ParsePath("v.#k"))
 	ik, _ := k.Int64()
 	fmt.Printf("%#v == %v\n", k, ik)
 }
-

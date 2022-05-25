@@ -1,7 +1,7 @@
 obj: {
 	sub: {
 		foo: "bar"
-		n: int
+		n:   int
 	}
 	list: [1, 2, {a: 3}]
 	any: _

@@ -12,7 +12,7 @@ func main() {
 	c := cuecontext.New()
 
 	// read and compile value
-	d,_ := os.ReadFile("value.cue")
+	d, _ := os.ReadFile("value.cue")
 	val := c.CompileBytes(d)
 
 	paths := []string{
