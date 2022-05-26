@@ -37,7 +37,7 @@ Every other instance is in between, and partially ordered
 when compared to other instances.
 This may sound confusing right now, but will become clearer
 as you learn and use Cue more.
-It's based on some mathematical concepts you can learn more about in the [theory section](/theory/).
+It's based on some mathematical concepts you can learn more about in the [theory section](/cueology/theory/).
 For now, consider `top -> schema -> constraint -> data -> bottom`
 as a rough guide with instances becoming more concrete until there is an error.
 
