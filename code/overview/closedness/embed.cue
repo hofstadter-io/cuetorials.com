@@ -5,7 +5,7 @@
 	}
 }
 
-// embed D into a new defintion
+// embed D into a new definition
 #L: {
 	#D
 	tags: [...string]
