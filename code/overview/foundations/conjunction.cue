@@ -1,8 +1,8 @@
-	// conjunctions on a field
+// conjunctions on a field
 n: int & >0 & <100
 n: 23
 
-// conjuction of schemas
+// conjunction of schemas
 val: #Def1 & #Def2
 val: {foo: "bar", ans: 42}
 
