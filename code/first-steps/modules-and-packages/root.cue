@@ -3,7 +3,7 @@ package root
 import (
 	// imports from a dependency
 	"github.com/foo/bar"
-	// import from a dependency subdir, rerwite name
+	// import from a dependency subdir, rewrite name
 	B "github.com/foo/bar/b"
 	// import from a nested dir with package name
 	"github.com/foo/bar/multi:hello"
