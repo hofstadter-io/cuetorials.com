@@ -7,6 +7,6 @@
 {{- template "menu-curr" (dict "p1" .p1.Site.Home "p2" .p2 )  -}}
 {{- end -}}
 {{- if not .p1.IsHome -}}
-{{ .p1.Title }}|{{- /* */ -}}
+{{ .p1.Title | safeHTML }}|{{- /* */ -}}
 {{- end -}}
 {{- end -}}

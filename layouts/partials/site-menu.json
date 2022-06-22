@@ -1,5 +1,5 @@
 {{- $currentNode := . -}}
-let toc = [{
+[{
 {{- $len := len .Site.Home.Sections.ByWeight -}}
 {{- range $index, $section := .Site.Home.Sections.ByWeight -}}
 {{ template "section-tree-json" dict "section" $section "currentnode" $currentNode }}

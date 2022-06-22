@@ -1,8 +1,10 @@
 <script type="text/javascript">
   {{ if .Site.IsMultiLingual }}
-      var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+  var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+  var lang = "{{.Site.Language.Lang}}";
   {{ else }}
-      var baseurl = "{{.Site.BaseURL}}";
+  var baseurl = "{{.Site.BaseURL}}";
+  var lang = "en";
   {{ end }}
   let menuCurr = "{{ partial "menu-curr.html" . }}"
   let currItems = menuCurr.split('|').map(element => element.trim()).filter(e =>  e);;
@@ -19,7 +21,6 @@
   ( resources.Get "plugins/clipboard.js" | minify )
   ( resources.Get "js/playground.js" | minify )
   ( resources.Get "js/header-links.js" | minify )
-  ( resources.Get "js/menu.js" | minify )
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>

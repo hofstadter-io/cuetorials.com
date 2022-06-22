@@ -53,14 +53,15 @@ const MenuItem = {
     toggleChildren() {
       this.showChildren = !this.showChildren;
     }
-  }
+  },
+
 }
 
 const MenuComponent = {
   template: `
     <ul class="navbar-nav flex-column pt-3">
       <menu-item
-        v-for="(item, index) in toc"
+        v-for="(item, index) in items"
         :item="item"
         :key="item.RelPermalink"
         :curr="currItems"
@@ -70,12 +71,31 @@ const MenuComponent = {
   `,
   data() {
     return {
-      "toc": toc,
+      "items": null,
       "currItems": currItems
     }
   },
   components : {
     'menu-item': MenuItem
+  },
+  mounted() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      let url = "/menu.json";
+      if (lang != "en") {
+        url = "/" + lang + url;
+      }
+      const req = new Request(url)
+
+      fetch(req)
+        .then((response) => { return response.json() })
+        .then((data) => {
+          this.items = data
+          // console.log(self.items)
+        }).catch( error => { console.log(error); });
+    }
   }
 }
 
