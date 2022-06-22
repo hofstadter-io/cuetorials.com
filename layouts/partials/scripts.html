@@ -27,7 +27,11 @@
 <script type="importmap">
   {
     "imports": {
+      {{ if (not .Site.IsServer) }}
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
+      {{ else }}
       "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      {{ end }}
     }
   }
 </script>
