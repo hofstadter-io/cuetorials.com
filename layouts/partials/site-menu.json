@@ -1,0 +1,51 @@
+{{- $currentNode := . -}}
+let toc = [{
+{{- $len := len .Site.Home.Sections.ByWeight -}}
+{{- range $index, $section := .Site.Home.Sections.ByWeight -}}
+{{ template "section-tree-json" dict "section" $section "currentnode" $currentNode }}
+{{ if ne $index (sub $len 1) }}
+},{
+{{- end}}
+{{- end}}
+}]
+
+{{- define "section-tree-json" }}
+{{- $currentNode := .currentnode }}
+{{- with .section}}
+{{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+    {{if eq .RelPermalink $currentNode.RelPermalink}}"current": true,{{end }}
+    {{- if .Params.alwaysopen}}"alwaysopen": true,{{end -}}
+    "RelPermalink": "{{.RelPermalink}}",
+    "Title": "{{.Title}}",
+    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    {{- if ne $numberOfPages 0 }}
+      {{- .Scratch.Set "pages" .Pages }}
+      {{- if .Sections}}
+      {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+      {{- end}}
+      {{- $pages := (.Scratch.Get "pages") }}
+
+      "children": [{
+        {{- $len := len $pages.ByWeight -}}
+        {{- range $index, $section := $pages.ByWeight }}
+          {{- if and .Params.hidden (not $.showhidden) }}
+          {{- else}}
+          {{- template "section-tree-json" dict "section" $section "currentnode" $currentNode }}
+          {{- end}}
+          {{ if ne $index (sub $len 1) }}
+          },{
+          {{- end}}
+        {{- end}}
+      }],
+    {{- end}}
+    "section": true
+{{- else}}
+    {{- if not .Params.Hidden }}
+    {{if eq .RelPermalink $currentNode.RelPermalink}}"current": true,{{end }}
+    "RelPermalink": "{{.RelPermalink}}",
+    "Title": "{{.Title}}",
+    "section": false
+    {{- end}}
+{{- end}}
+{{- end}}
+{{- end}}

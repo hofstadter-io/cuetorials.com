@@ -4,11 +4,19 @@ TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
 
 .PHONY: dev
-dev:
+dev: config.yaml
 	@hugo serve --bind 0.0.0.0 --buildDrafts --buildFuture --disableFastRender
 
+# run locally in prd mode
+.PHONY: prd
+prd: config.yaml
+	@hugo serve --bind 0.0.0.0
+
 .PHONY: all
-all: highlight hugo docker deploy
+all: config.yaml highlight hugo docker deploy
+
+config.yaml: config.cue
+	cue export config.cue --out yaml --outfile config.yaml --force
 
 .PHONY: highlight code
 highlight: $(HTML_FILES)
@@ -29,15 +37,17 @@ code/%.html: code/%.cue
 	@node ci/highlight.js < "$<" > "$@"
 
 .PHONY: hugo
-hugo:
+hugo: config.yaml
 	@rm -rf dist
+	@hugo --baseURL https://cuetorials.com/ -d dist
+	@cp dist/menu.json assets/js/menu.js
 	@hugo --baseURL https://cuetorials.com/ -d dist
 
 .PHONY: docker
 docker: image push
 
 .PHONY: image
-image:
+image: hugo
 	@docker build --no-cache -f ci/Dockerfile -t us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG) .
 
 .PHONY: nginx
@@ -52,6 +62,9 @@ push:
 deploy:
 	@cue export ci/cuelm.cue -t version=$(TAG) -e Install | kubectl apply -f -
 
+.PHONY: deploy-view
+deploy-view:
+	@cue export ci/cuelm.cue -t version=$(TAG) -e Install
 
 .PHONY: verify_code verify_code verify_diff
 verify: verify_code highlight verify_diff

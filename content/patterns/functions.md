@@ -1,5 +1,5 @@
 ---
-title: "The \"Function\" Pattern"
+title: "The Function Pattern"
 description: "Reusable transformations in CUE"
 weight: 5
 ---

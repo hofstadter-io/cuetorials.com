@@ -4,23 +4,33 @@
   {{ else }}
       var baseurl = "{{.Site.BaseURL}}";
   {{ end }}
+  let menuCurr = "{{ partial "menu-curr.html" . }}"
+  let currItems = menuCurr.split('|').map(element => element.trim()).filter(e =>  e);;
 </script>
 
-{{ $js1 := resources.Get "js/pv.js" | minify }}
-
-{{ $js3 := resources.Get "lib/jquery.min.js" }}
-{{ $js4 := resources.Get "lib/popper.min.js" }}
-{{ $js5 := resources.Get "js/bootstrap.min.js" }}
-
-{{ $js6 := resources.Get "plugins/lunr.min.js" }}
-{{ $js7 := resources.Get "plugins/auto-complete.js" | minify }}
-{{ $js8 := resources.Get "plugins/search.js" | minify }}
-{{ $js9 := resources.Get "plugins/clipboard.js" | minify }}
-
-{{ $js11 := resources.Get "js/header-links.js" | minify }}
-{{ $js12 := resources.Get "js/playground.js" | minify }}
-
-{{ $js := slice $js1 $js3 $js4 $js5 $js6 $js7 $js8 $js9 $js11 $js12 | resources.Concat "js/bundle.js" }}
-{{ $JS := $js | resources.Fingerprint "sha512" }}
+{{ $JS := slice
+  ( resources.Get "js/pv.js" | minify )
+  ( resources.Get "lib/jquery.min.js" )
+  ( resources.Get "lib/popper.min.js" )
+  ( resources.Get "lib/bootstrap.min.js" )
+  ( resources.Get "plugins/lunr.min.js" )
+  ( resources.Get "plugins/auto-complete.js" | minify )
+  ( resources.Get "plugins/search.js" | minify )
+  ( resources.Get "plugins/clipboard.js" | minify )
+  ( resources.Get "js/playground.js" | minify )
+  ( resources.Get "js/header-links.js" | minify )
+  ( resources.Get "js/menu.js" | minify )
+  | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+{{ $VUE := slice
+  ( resources.Get "js/menuComponent.js" )
+  | resources.Concat "js/components.js" | resources.Fingerprint "sha512" }}
+<script type="module" src="{{ $VUE.RelPermalink }}" integrity="{{ $VUE.Data.Integrity }}"></script>

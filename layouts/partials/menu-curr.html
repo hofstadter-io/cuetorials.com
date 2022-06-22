@@ -1,0 +1,12 @@
+{{ template "menu-curr" (dict "p1" . "p2" .) }}
+
+{{- define "menu-curr" -}}
+{{- if .p1.Parent -}}
+{{- template "menu-curr" (dict "p1" .p1.Parent "p2" .p2 )  -}}
+{{- else if not .p1.IsHome -}}
+{{- template "menu-curr" (dict "p1" .p1.Site.Home "p2" .p2 )  -}}
+{{- end -}}
+{{- if not .p1.IsHome -}}
+{{ .p1.Title }}|{{- /* */ -}}
+{{- end -}}
+{{- end -}}

@@ -20,6 +20,7 @@ $light:         #f5f7fd;
 $dark:          #343a40;
 
 @import "bootstrap/bootstrap";
+@import "funcs";
 
 body, .main {
 	font-family: Roboto, sans-serif !important;
@@ -89,12 +90,11 @@ body, .main {
   color: $primary !important;
 }
 
-.haschildren ul{
-    display:none;
+.fa-caret-right {
+  color: $hof-gold !important;
 }
-
-.haschildren.current ul, .haschildren.parent ul{
-    display:block;
+.fa-caret-down {
+  color: $hof-blue !important;
 }
 
 .highlight > pre {
