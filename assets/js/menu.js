@@ -1,4 +1,4 @@
-let toc = [{
+[{
     "RelPermalink": "/introduction/",
     "Title": "Introduction",
     "section": true
