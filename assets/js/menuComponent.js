@@ -7,7 +7,7 @@ const MenuItem = {
       class="nav-item my-1"
       :data-nav-id="item.RelPermalink"
     >
-      <span class="d-flex justify-content-between">
+      <span class="d-flex justify-content-start">
       <i 
         @click="toggleChildren"
         class="fas fa-lg"
