@@ -8,6 +8,10 @@ const MenuItem = {
       :data-nav-id="item.RelPermalink"
     >
       <span class="d-flex justify-content-between">
+      <i 
+        @click="toggleChildren"
+        class="fas fa-lg"
+        :class="{ 'fa-caret-down': hasChildren && showChildren, 'fa-caret-right': hasChildren && !showChildren, 'ml-2': !hasChildren }"></i>
       <a
         :href="item.RelPermalink"
         class="nav-link py-0 px-2"
@@ -16,10 +20,6 @@ const MenuItem = {
         <h6 v-if="item.section || hasChildren">{{ item.Title }}</h6>
         <span v-else>{{ item.Title }}</span> 
       </a>
-      <i 
-        @click="toggleChildren"
-        class="float-right fas fa-lg"
-        :class="{ 'fa-caret-down': hasChildren && showChildren, 'fa-caret-right': hasChildren && !showChildren }"></i>
       </span>
       <ul v-if="showChildren" class="list-unstyled ml-2 mb-0">
         <menu-item
