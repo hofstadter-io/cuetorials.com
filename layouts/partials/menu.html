@@ -9,54 +9,7 @@
                 <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder='{{ i18n "Search" }}'>
             </form>
         {{- end}}
-        {{ partial "vue-menu.html" . }}
+        {{ partial "menu-hugo.html" . }}
     </div>
 </nav>
 
-<!-- Template -->
-{{- define "section-tree-nav" }}
-{{- $currentNode := .currentnode }}
-{{- with .sect}}
-{{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
-    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
-    {{- safeHTML .Params.head}}
-    <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1
-        {{- if .InSection $currentNode}} insection{{ else }} notinsection{{end}}
-        {{- if .IsAncestor $currentNode}} parent{{end}}
-        {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{ end }}
-        {{- if .Params.alwaysopen}} alwaysopen{{end -}}
-        {{- if ne $numberOfPages 0 }} haschildren{{end -}}
-        ">
-        <!-- I'm the params head -->
-        <a class="nav-link p-0 foo
-          {{- if eq .RelPermalink $currentNode.RelPermalink}} current
-          {{- else if .IsAncestor $currentNode}} parent{{end}}" href="{{.RelPermalink}}"><h6>{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</h6></a>
-        {{- if ne $numberOfPages 0 }}
-        <ul class="list-unstyled ml-2 mb-2">
-          {{- .Scratch.Set "pages" .Pages }}
-          {{- if .Sections}}
-          {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
-          {{- end}}
-          {{- $pages := (.Scratch.Get "pages") }}
-
-          {{- range $pages.ByWeight }}
-            {{- if and .Params.hidden (not $.showhidden) }}
-            {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
-            {{- end}}
-          {{- end}}
-        </ul>
-        {{- end}}
-    </li>
-{{- else}}
-    {{- if not .Params.Hidden }}
-        <li data-nav-id="{{.RelPermalink}}" class="nav-item my-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
-                <!-- I'm the params hidden -->
-                 <a href="{{.RelPermalink}}" class="nav-link py-0 px-1 {{- if eq .RelPermalink $currentNode.RelPermalink}} current{{end -}}">
-                    {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
-                </a>
-        </li>
-    {{- end}}
-{{- end}}
-{{- end}}
-{{- end}}

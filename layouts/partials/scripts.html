@@ -1,17 +1,14 @@
 <script type="text/javascript">
   {{ if .Site.IsMultiLingual }}
   var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
-  var lang = "{{.Site.Language.Lang}}";
   {{ else }}
   var baseurl = "{{.Site.BaseURL}}";
-  var lang = "en";
   {{ end }}
-  let menuCurr = "{{ partial "menu-curr.html" . }}"
-  let currItems = menuCurr.split('|').map(element => element.trim()).filter(e =>  e);;
 </script>
 
 {{ $JS := slice
   ( resources.Get "js/pv.js" | minify )
+  ( resources.Get "js/menu.js" | minify )
   ( resources.Get "lib/jquery.min.js" )
   ( resources.Get "lib/popper.min.js" )
   ( resources.Get "lib/bootstrap.min.js" )
@@ -24,18 +21,3 @@
   | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 
 <script type="text/javascript" src="{{ $JS.RelPermalink }}" integrity="{{ $JS.Data.Integrity }}"></script>
-<script type="importmap">
-  {
-    "imports": {
-      {{ if (not .Site.IsServer) }}
-      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js"
-      {{ else }}
-      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-      {{ end }}
-    }
-  }
-</script>
-{{ $VUE := slice
-  ( resources.Get "js/menuComponent.js" )
-  | resources.Concat "js/components.js" | resources.Fingerprint "sha512" }}
-<script type="module" src="{{ $VUE.RelPermalink }}" integrity="{{ $VUE.Data.Integrity }}"></script>

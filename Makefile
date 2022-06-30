@@ -40,8 +40,6 @@ code/%.html: code/%.cue
 hugo: config.yaml
 	@rm -rf dist
 	@hugo --baseURL https://cuetorials.com/ -d dist
-	@cp dist/menu.json assets/js/menu.js
-	@hugo --baseURL https://cuetorials.com/ -d dist
 
 .PHONY: docker
 docker: image push
