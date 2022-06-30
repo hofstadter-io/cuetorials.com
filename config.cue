@@ -51,14 +51,7 @@ markup: tableOfContents: {
 	endLevel:   3
 }
 
-outputs: home: ["HTML", "RSS", "JSON", "MENU"]
-
-outputFormats: MENU: {
-  baseName: "menu"
-  mediaType: "application/json"
-  isPlainText: true
-  notAlternative: true
-}
+outputs: home: ["HTML", "RSS", "JSON"]
 
 menu: shortcuts: [{
   name: "v0.4.3 <i class='fas fa-copyright pl-2'></i> Cuelang.org"
