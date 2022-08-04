@@ -1,1 +1,42 @@
 ---
+
+- name: dagger
+  org:  Dagger
+  home:  https://dagger.io
+  docs:  https://docs.dagger.io
+  github:  https://github.com/dagger/dagger
+  logo: /images/dagger.svg
+  blurb: |
+    is using CUE and BuildKit to reimagine the
+    CI/CD experience from commit to proudction
+
+- name: hof
+  org:  Hofstadter
+  home:  https://hofstadter.io
+  docs:  https://docs.hofstadter.io
+  github:  https://github.com/hofstadter-io/hof
+  logo:  /images/hof.svg
+  blurb: |
+    uses CUE to power a data modeling & code generation,
+    the High Code™ platform (low-code for developers).
+
+- name: thema
+  org:  Grafana
+  home:  https://github.com/grafana/thema
+  docs:  https://github.com/grafana/thema
+  github:  https://github.com/grafana/thema
+  logo: /images/grafana.svg
+  blurb: |
+    is A CUE-based framework for writing portable, evolvable schema
+    and trying to solve the version coordination problem.
+
+- name: kubevela
+  org: KubeVela
+  home: https://kubevela.io/
+  docs: https://kubevela.io/docs/
+  github: https://github.com/kubevela/kubevela
+  logo: /images/kubevela.svg
+  blurb: |
+    puts CUE at the forefront of an application centric,
+    multi/hybrid cloud, software delivery platform.
+

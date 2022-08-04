@@ -3,6 +3,9 @@ HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
 
+help:
+	@cat Makefile
+
 .PHONY: dev
 dev: config.yaml
 	@hugo serve --bind 0.0.0.0 --buildDrafts --buildFuture --disableFastRender
@@ -12,7 +15,16 @@ dev: config.yaml
 prd: config.yaml
 	@hugo serve --bind 0.0.0.0
 
+# https://github.com/stevenvachon/broken-link-checker
+BLC_EXCLUDES=--exclude 'https://github.com/hofstadter-io/cuetorials.com/issues/new' \
+	--exclude 'https://github.com/hofstadter-io/cuetorials.com/edit'
+blc: blc.dev
+blc.dev:
+	blc -ro http://localhost:1313 ${BLC_EXCLUDES}
+blc.prd:
+	blc -ro https://docs.hofstadter.io ${BLC_EXCLUDEDS}
 .PHONY: all
+
 all: config.yaml highlight hugo docker deploy
 
 config.yaml: config.cue

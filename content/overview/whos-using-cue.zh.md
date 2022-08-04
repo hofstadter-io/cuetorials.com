@@ -12,4 +12,4 @@ weight: 100
 请在添加 [Issue](https://github.com/hofstadter-io/cuetorials.com/issues) 添加你的项目或公司
 {{< /panel >}}
 
-{{< panel title="我们正在检查和创建列表" style="warning" />}}
+{{< using-cue-list >}}

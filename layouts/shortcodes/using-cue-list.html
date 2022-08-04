@@ -1,0 +1,20 @@
+{{ $theList := $.Site.Data.projects }}
+
+<div class="using-list container mt-5">
+{{ range $theList }}
+{{ template "using-card" . }}
+{{ end }}
+</div>
+
+{{ define "using-card" }}
+<div class="using-list-card d-flex m-3">
+	<img src="{{ .logo }}" height=100></img>
+	<div class="d-flex flex-column ml-5">
+		<div class="d-flex align-items-end">
+			<h1>{{ .name }}</h1>
+			by <h3>{{ .org  }}
+		</div>
+		<p style="max-width: 70vw">{{ .blurb }}</p>
+	</div>
+</div>
+{{ end }}
