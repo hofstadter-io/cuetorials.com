@@ -2,7 +2,7 @@ package inject
 
 // @tag() is how we inject data
 env:      *"dev" | string @tag(env)      // env has a default
-database: string          @tag(database) // databse is "required"
+database: string          @tag(database) // database is "required"
 
 // A schema for DBs with some defaults
 #DB: {
