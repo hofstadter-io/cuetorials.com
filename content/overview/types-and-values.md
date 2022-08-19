@@ -198,7 +198,7 @@ You can achieve the same with opened structs / definitions and conjunctions, but
 
 Pattern matching allows you to specify constraints for labels which match a pattern.
 While limited in matching today, they will be significantly more powerful once the
-[query proposal](https://github.com/cuelang/cue/issues/165) is accepted and implemented.
+[query proposal](https://github.com/cue-lang/cue/issues/165) is accepted and implemented.
 For now, you can apply a constraint to string labels and use an identifier to set fields if you like.
 
 {{< codePane2

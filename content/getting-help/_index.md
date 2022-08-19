@@ -14,7 +14,7 @@ weight: 1000
 ## Community based help
 
 1. `cue help`, the builtin help command
-2. [GitHub Discussions](https://github.com/cuelang/cue/discussions)
+2. [GitHub Discussions](https://github.com/cue-lang/cue/discussions)
 3. [Cuelang Slack](./https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C) (and the [invite if needed](https://join.slack.com/t/cuelang/shared_invite/enQtNzQwODc3NzYzNTA0LTAxNWQwZGU2YWFiOWFiOWQ4MjVjNGQ2ZTNlMmIxODc4MDVjMDg5YmIyOTMyMjQ2MTkzMTU5ZjA1OGE0OGE1NmE))
 4. [Stack Overflow](https://stackoverflow.com/questions/tagged/cue)
 

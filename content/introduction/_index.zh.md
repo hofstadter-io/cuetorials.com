@@ -75,7 +75,7 @@ CUE 非常年轻，它有光明的未来，我个人是在 devops 中首次接�
 ### 如何学习 CUE
 
 需要一个文本编辑器并安装命令 `cue`，如果你还没有安装，请从 
-[GitHub releases](https://github.com/cuelang/cue/releases) 
+[GitHub releases](https://github.com/cue-lang/cue/releases) 
 下载最新版本的命令行工具。
 
 除此之外，大部分例子都会用到命令行，所以需要一个特定命令行终端工具，当然如果用 VS Code 也可以。
@@ -87,7 +87,7 @@ CUE 非常年轻，它有光明的未来，我个人是在 devops 中首次接�
 有几个选择：
 
 1. `cue help`, 命令行内置的帮助
-2. [GitHub Discussions](https://github.com/cuelang/cue/discussions) (为了持续跟进，请到这里讨论提问)
+2. [GitHub Discussions](https://github.com/cue-lang/cue/discussions) (为了持续跟进，请到这里讨论提问)
 3. [Cuelang Slack](https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C) (还有 [invite if needed](https://join.slack.com/t/cuelang/shared_invite/enQtNzQwODc3NzYzNTA0LTAxNWQwZGU2YWFiOWFiOWQ4MjVjNGQ2ZTNlMmIxODc4MDVjMDg5YmIyOTMyMjQ2MTkzMTU5ZjA1OGE0OGE1NmE))
 4. [Hofstadter](/getting-help/#hofstadter-commercial-support-for-cue) 提供关于 CUE 的商业支持和服务
 

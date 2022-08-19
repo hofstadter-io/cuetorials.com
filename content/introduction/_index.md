@@ -87,7 +87,7 @@ to the community.
 
 You'll need a text editor and the `cue` cli.
 If you haven't already, go ahead and download the
-latest version from the [GitHub releases](https://github.com/cuelang/cue/releases).
+latest version from the [GitHub releases](https://github.com/cue-lang/cue/releases).
 Beyond that, most examples will be run from the command line,
 so a dedicated terminal is often helpful, but VS Code is just fine too.
 If anything extra is needed for a particular section,
@@ -99,7 +99,7 @@ the instructions for it will be found there.
 Several options are available
 
 1. `cue help`, the builtin help command
-2. [GitHub Discussions](https://github.com/cuelang/cue/discussions) (trying to move here for longevity)
+2. [GitHub Discussions](https://github.com/cue-lang/cue/discussions) (trying to move here for longevity)
 3. [Cuelang Slack](./https://app.slack.com/client/TLUV4Q1ST/CLT3ULF6C) (and the [invite if needed](https://join.slack.com/t/cuelang/shared_invite/enQtNzQwODc3NzYzNTA0LTAxNWQwZGU2YWFiOWFiOWQ4MjVjNGQ2ZTNlMmIxODc4MDVjMDg5YmIyOTMyMjQ2MTkzMTU5ZjA1OGE0OGE1NmE))
 4. [Hofstadter](/getting-help/#hofstadter-commercial-support-for-cue) offers commercial support and services for Cue
 
