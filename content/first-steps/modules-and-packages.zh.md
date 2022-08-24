@@ -72,7 +72,7 @@ cue.mod
             └── hofmod-server
 ```
 
-CUE 目前还没有依赖管理系统，你必须通过其他方式获取它们。（[Open issue](https://github.com/cuelang/cue/issues/409）)
+CUE 目前还没有依赖管理系统，你必须通过其他方式获取它们。（[Open issue](https://github.com/cue-lang/cue/issues/851))
 
 Fortunately, Hofstadter has built a generalized dependency management system as part of our `hof` tool,
 based on `go mod` and Minimum Version Selection (MVS).

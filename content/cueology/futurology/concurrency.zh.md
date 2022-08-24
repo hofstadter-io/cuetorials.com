@@ -10,7 +10,7 @@ CUE 的求值器是非并发安全的。
 
 并发或并行调用最终将会支持，你可以在下面的链接中查看更多信息。
 
-- [让 CUE 并发安全](https://github.com/cuelang/cue/discussions/613)
+- [让 CUE 并发安全](https://github.com/cue-lang/cue/discussions/613)
 - [我如何并发地使用 CUE](https://github.com/cue-lang/cue/discussions/1205)
 - [GitHub Issues](https://github.com/cue-lang/cue/labels/concurrency)
 

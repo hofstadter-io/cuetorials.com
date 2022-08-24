@@ -192,7 +192,7 @@ struct 包含一组字段 (label: value)。
 
 模式匹配现在允许对通过匹配的标签进行特定的约束。
 
-目前来说还不成熟，但是当 [query 提案](https://github.com/cuelang/cue/issues/165) 接受并实现之后，会变得更强大。
+目前来说还不成熟，但是当 [query 提案](https://github.com/cue-lang/cue/issues/165) 接受并实现之后，会变得更强大。
 
 目前，你可以对字符串类型的标签约束，然后将其设为你想要设置的字段的值。
 
