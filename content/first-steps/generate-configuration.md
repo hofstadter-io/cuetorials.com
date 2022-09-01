@@ -26,7 +26,7 @@ We've introduced a few things in this file:
 
 - list comprehension: `[ for key, val in iterable { ... } ]`. Notice you can leave the key off, and you just get the value.
 - field comprehension: `[ for key, val in iterable { ... } ]`. We've interpolated a field name by calling a builtin, notice the surrounding quotes.
-- string interpolation: `"\(<a cue expression)"`. These are based on Swift's string interpolation, and it's the only valid mechanism when you want to be JSON compatible.
+- string interpolation: `"\(<a cue expression>)"`. These are based on Swift's string interpolation, and it's the only valid mechanism when you want to be JSON compatible.
 - hidden fields: `_hidden: "I'm hidden"` which begin with an underscore. There are also hidden definitions (`_#`)
 
 {{< codePane lang="yaml" file="code/first-steps/generate-configuration/comprehension.yaml" >}}
