@@ -1,4 +1,4 @@
-	// disjunction of values (like an enum)
+// disjunction of values (like an enum)
 hello: "world" | "bob" | "mary"
 hello: "world"
 

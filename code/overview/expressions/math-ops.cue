@@ -1,4 +1,4 @@
-	// mathematical!
+// mathematical!
 n1: 3 + 2
 n2: 3 - 2
 n3: 3 * 2
