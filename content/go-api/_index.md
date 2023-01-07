@@ -8,6 +8,10 @@ keywords:
 weight: 40
 ---
 
+{{<lead>}}
+Go + CUE, it's over 9000!
+{{</lead>}}
+
 CUE has Go API so you can  work with Cuelang from Go programs.
 It offers more granularity and sophistication than the cli.
 There are also capabilities only accessible from CUE's Go API.

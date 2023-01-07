@@ -47,6 +47,8 @@ Update: schema.#List & {
 				"kubernetes.io/ingress.class": "nginx"
 				"nginx.ingress.kubernetes.io/force-ssl-redirect": "true"
 				"cert-manager.io/cluster-issuer": "letsencrypt-prod"
+				"cert-manager.io/issue-temporary-certificate": "true"
+				"acme.cert-manager.io/http01-edit-in-place": "true"
 			}
 		} // END Ingress.metadata
 

@@ -6,6 +6,9 @@ PROJECT    = "hof-io--develop"
 help:
 	@cat Makefile
 
+.PHONY: all
+all: config.yaml highlight hugo docker deploy
+
 .PHONY: dev
 dev: config.yaml
 	@hugo serve --bind 0.0.0.0 --buildDrafts --buildFuture --disableFastRender
@@ -23,9 +26,6 @@ blc.dev:
 	blc -ro http://localhost:1313 ${BLC_EXCLUDES}
 blc.prd:
 	blc -ro https://docs.hofstadter.io ${BLC_EXCLUDEDS}
-.PHONY: all
-
-all: config.yaml highlight hugo docker deploy
 
 config.yaml: config.cue
 	cue export config.cue --out yaml --outfile config.yaml --force
