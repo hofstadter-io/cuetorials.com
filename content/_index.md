@@ -17,13 +17,19 @@ configuration, APIs, database schemas, code, … you name it.
 Welcome to __Cuetorials__ where you can
 _learn you some CUE for great good!_
 We hope this site will help you get started with Cuelang (CUE)
-and that it becomes an invaluable resource as you 
+and become an invaluable resource as you
+continue to learn and grow your CUE usage.
+Cuetorials was created to deepen our own understanding
+and to share the learnings with everyone else.
 
 Much credit must be given to Marcel van Lohuizen, the creator of Cue.
-Marcel helped in making the configuration systems at Google.
-He says that they always chose the object-oriented approach
-and that the logical, non-programming Cue approach
-is the correct choice for configuration systems.
+Marcel helped create the major configuration systems at Google.
+He said they always chose the object-oriented approach
+while the logical, non-programming CUE approach
+is the correct choice for these systems.
+His unique experiences give him the perspective
+to create an effective and efficient language for
+configuration, data, schemas, transformations, and much more.
 
 
 <br>
