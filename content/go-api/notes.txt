@@ -4,3 +4,5 @@
 - Unification in Go
 - Processing Attributes
 - walking values
+
+- concurrency limitations, locks, and examples

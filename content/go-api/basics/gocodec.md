@@ -9,7 +9,9 @@ keywords:
 weight: 100
 ---
 
-https://pkg.go.dev/cuelang.org/go@v0.4.0/encoding/gocode/gocodec
+{{<cuedoc page="encoding/gocode/gocodec">}}encoding/gocode/gocodec{{</cuedoc>}} package documentation
+
+This page has been put onhold until the package is updated to use `cue.Context` from the deprecated `cue.Runtime`.
 
 [Issue to track Runtime -> Context for gocodec](https://github.com/cue-lang/cue/issues/1318)
 
