@@ -11,8 +11,8 @@ When we load with Go, we can setup this `Config` object to modify the behavior.
 
 {{< cuedoc page="/cue/load#Config" >}}load.Config{{</cuedoc>}} documentation
 
-The comments there explain how to use the various options.
-Most are for advanced use cases and will make more sense
-once you have seen more of Cue.
-Others you have seen as flags to the CLI.
+### 
 
+### CLI Flags in the Configuration
+
+flags -> config fields

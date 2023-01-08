@@ -8,7 +8,8 @@ weight: 20
 Loading CUE aims to mimic the process the CLI
 uses to construct a value from entrypoints or arguments.
 This section and subsections go over the loading process and configuration.
-The next section deals with managing the the gaps and differences.
+The next section deals with managing the the gaps and differences
+to fully replicate the CLI behavior.
 {{</lead>}}
 
 
@@ -25,6 +26,18 @@ The process consists of:
 4. turning or building the Instances into a CUE Value
 
 We will first walk through a basic example of this process
-and then look at the details and advanced usage.
+then look at details and advanced usage.
 
 {{<childpages>}}
+
+### Loading and Printing CUE Code
+
+This first example shows how to load and build CUE from entrypoints like the `cue` CLI commands.
+
+{{< codePane3
+	file1="code/go-api/loading/simple.go"  title1="simple.go" lang1="go" 
+	file2="code/go-api/loading/hello.html" title2="hello.cue"
+	file3="code/go-api/loading/simple.txt" title3="go run simple.go" lang3="txt" 
+>}}
+
+

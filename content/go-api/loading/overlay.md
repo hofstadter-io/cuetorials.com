@@ -7,4 +7,4 @@ Overlay field
 
 Creating Sources
 
-put embedded cue.mod in advanced
+embedding files & cue.mod (deps)

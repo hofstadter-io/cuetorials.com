@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	// We need a cue.Context, the New'd return is ready to use
+	// We need a cue.Context for building after loading
 	ctx := cuecontext.New()
 
 	// The entrypoints are the same as the files you'd specify at the command line
@@ -18,7 +18,7 @@ func main() {
 	// the second arg is a configuration object, we'll see this later
 	bis := load.Instances(entrypoints, nil)
 
-	// Loop over the instances, checking for errors and printing
+	// Loop over the instances, typically there is only one
 	for _, bi := range bis {
 		// check for errors on the instance
 		// these are typically parsing errors
@@ -27,22 +27,22 @@ func main() {
 			continue
 		}
 
-		// Use cue.Context to turn build.Instance to cue.Instance
+		// Use cue.Context.BuildInstance to turn
+		// a build.Instance into a cue.Value
 		value := ctx.BuildInstance(bi)
 		if value.Err() != nil {
 			fmt.Println("Error during build:", value.Err())
 			continue
 		}
 
-		// print the value
-		fmt.Println("value:", value)
-
 		// Validate the value
 		err := value.Validate()
 		if err != nil {
-			fmt.Println("Error during validate:", err)
+			fmt.Println("Error during validation:", err)
 			continue
 		}
-	}
 
+		// Print the value
+		fmt.Println("value:", value)
+	}
 }
