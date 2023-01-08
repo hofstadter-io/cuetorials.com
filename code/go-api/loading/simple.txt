@@ -1,0 +1,6 @@
+value: {
+	hello: "world"
+	a: {
+		foo: "bar"
+	}
+}

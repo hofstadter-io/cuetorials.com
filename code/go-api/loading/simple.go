@@ -34,8 +34,8 @@ func main() {
 			continue
 		}
 
-		// print the error
-		fmt.Println("root value:", value)
+		// print the value
+		fmt.Println("value:", value)
 
 		// Validate the value
 		err := value.Validate()

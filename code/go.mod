@@ -2,7 +2,7 @@ module hof.io/cuetorials
 
 go 1.17
 
-require cuelang.org/go v0.4.0
+require cuelang.org/go v0.4.3
 
 require (
 	github.com/cockroachdb/apd/v2 v2.0.1 // indirect
@@ -13,7 +13,6 @@ require (
 	github.com/pkg/errors v0.8.1 // indirect
 	github.com/protocolbuffers/txtpbfmt v0.0.0-20201118171849-f6a6b3f636fc // indirect
 	golang.org/x/net v0.0.0-20200226121028-0de0cce0169b // indirect
-	golang.org/x/text v0.3.2 // indirect
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200121175148-a6ecf24a6d71 // indirect
+	golang.org/x/text v0.3.7 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )

@@ -1,18 +1,13 @@
 DIFF_CMD   = @git diff --exit-code
 
-tests = print format
+tests = simple
 
 .PHONY: all
 all: $(tests)
 
-print: print.go
-	go run print.go > print.cue
-	$(DIFF_CMD) print.cue
-
-format: format.go
-	go run format.go > format.cue
-	$(DIFF_CMD) format.cue
-
+simple: simple.go
+	go run simple.go > simple.txt
+	$(DIFF_CMD) simple.txt
 
 
 
