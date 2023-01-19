@@ -16,7 +16,7 @@ to fully replicate the CLI behavior.
 ### The Loading Process
 
 The CUE loader or
-{{<cuedoc page="cue/load">}}cue/load{{</cuedoc>}} package
+{{<cuedoc page="/cue/load">}}cue/load{{</cuedoc>}} package
 can be used to load CUE much like the CLI.
 The process consists of:
 

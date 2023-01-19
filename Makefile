@@ -1,4 +1,4 @@
-CUE_FILES  = $(shell find code/ -type f -name '*.cue' ! -path './code/vendor/*' ! -path '*/cue.mod/*')
+CUE_FILES  = $(shell find code/ -type f -name '*.cue' ! -path './code/vendor/*' )
 HTML_FILES = $(patsubst code/%.cue, code/%.html, $(CUE_FILES))
 TAG        = $(shell git rev-parse --short HEAD | tr -d "\n")
 PROJECT    = "hof-io--develop"
@@ -88,6 +88,8 @@ verify_code:
 fmt: cuefmt gofmt
 
 .PHONY: cuefmt cuefiles
+cuefiles_mega:
+	find code/ -type f -name '*.cue' '!' -path '*/cue.mod/*' -print
 cuefiles_all:
 	find code/ -type f -name '*.cue' '!' -path '*/cue.mod/*' -print
 cuefiles:
