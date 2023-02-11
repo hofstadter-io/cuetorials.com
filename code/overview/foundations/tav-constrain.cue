@@ -1,5 +1,7 @@
+import "strings"
+
 album: {
-	title: string
+	title: strings.MinRunes(5)
 	year:  >1950
 	live:  false
 }

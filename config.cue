@@ -52,6 +52,8 @@ markup: tableOfContents: {
 }
 
 outputs: home: ["HTML", "RSS", "JSON"]
+outputs: page: ["HTML", "JSON"]
+outputs: section: ["HTML", "JSON"]
 
 menu: shortcuts: [{
   name: "v0.4.3 <i class='fas fa-copyright pl-2'></i> Cuelang.org"

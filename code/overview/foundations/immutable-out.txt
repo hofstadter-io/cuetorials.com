@@ -1,0 +1,6 @@
+a: conflicting values "b" and "a":
+    ./immutable.cue:2:4
+    ./immutable.cue:3:4
+n: conflicting values int and string (mismatched types int and string):
+    ./immutable.cue:6:4
+    ./immutable.cue:7:4

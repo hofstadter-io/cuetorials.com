@@ -4,6 +4,12 @@ description: "Expressions in Cue"
 weight: 15
 ---
 
+{{<lead>}}
+CUE has a variety of expressions for working with values.
+{{</lead>}}
+
+## Numerical Expressions
+
 ### Mathematical Operations
 
 Cue has the typical math operations for numbers.
@@ -49,6 +55,18 @@ uint128   >=0 & <=340_282_366_920_938_463_463_374_607_431_768_211_455
 rune      >=0 & <=0x10FFFF
 {{< /codeInner >}}
 
+## Non-numerical, Math Operators
+
+Some mathematical looking operators
+have secondary uses.
+
+{{< codePane2
+  file1="code/overview/expressions/math-ops.html" title1="math-ops.cue" play1="true"
+  file2="code/overview/expressions/math-ops-out.html" title2="cue eval math-ops.cue"
+>}}
+
+
+## String Expressions
 
 
 ### Regular Expressions
@@ -64,6 +82,7 @@ Cue supports regular expression constraints with the `=~` and `!~` operators.
 They are based on [Go's regular expressions](https://golang.org/pkg/regexp/).
 Cue also has some additional {{<cuedoc page="/pkg/regexp" >}}regexp helpers{{</cuedoc>}}.
 
+<!--- regular string vs raw string-->
 
 
 ### Interpolation
@@ -75,10 +94,16 @@ Cue supports interpolation in strings and bytes with `\(<expr>)`
   file2="code/overview/expressions/interpolate-out.html" title2="cue eval interpolate.cue"
 >}}
 
-For more complicated scenarios, you can use the {{< cuedoc page="/pkg/text/template" >}}text/template{{</cuedoc>}} package.
+For more complicated scenarios, use
+[text/template base generation](/first-steps/generate-all-the-things/)
 
 You can also interpolate field names. (as we will see shortly)
 
+## Comprehensions
+
+CUE has several forms of comprehension to add or extend values.
+More details and advanced cases can be found in
+[deep-dives/comprehension](/deep-dives/comprehension/).
 
 ### List Comprehensions
 
@@ -111,11 +136,17 @@ Cue also has the ability to comprehend fields.
 
 ### Conditional Fields
 
-Conditional fields, or guarded fields (if technically means guard), are another form of field comprehension.
+CUE's `if` is different from other languages.
+It is a comprehension rather than a branching mechanism.
+That is why we refer to it as
+conditional fields, guarded fields, or another form of field comprehension.
 
-Some important notes to make from the usual understanding of if's:
+Some important differences:
 
-- there is not an else statement, you have to have two with opposite conditions
-- there is no shortcircuiting of booleans, all conditions will be evaluated
+- there is no else statement, you only include config when statements are true
+- there is no short-circuiting for multiple checks, all conditions will be evaluated
 
 {{< codePane file="code/overview/expressions/guards.html" title="guards.cue" play="true">}}
+
+\* Short-circuiting is likely to be added at some point, see https://github.com/cue-lang/cue/issues/2232
+

@@ -6,10 +6,6 @@ q:  -2
 r:  -1
 d:  -3
 m:  1
-s: """
-	for he's a jolly good fellow
-	for he's a jolly good fellow
-	for he's a jolly good fellow
-	which nobody can deny
-	"""
-l: ["eye", "eye", "eye", "eye", "eye"]
+f:  3
+l:  4.60716818865076442405424
+t:  1.557407724654902

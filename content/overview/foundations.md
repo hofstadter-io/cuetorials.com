@@ -53,10 +53,12 @@ define schemas, refine with constraints, fill with data,
 and combine these ideas along a spectrum.
 It also means defining schemas is more natural with how we think about and write code as humans.
 
+`$ cue eval schema.cue constraints.cue data.cue`
+
 {{< codePane3
-  file1="code/overview/foundations/tav-schema.html"    title1="Schema"
-  file2="code/overview/foundations/tav-constrain.html" title2="Constraints"
-  file3="code/overview/foundations/tav-data.html"      title3="Data"
+  file1="code/overview/foundations/tav-schema.html"    title1="schema.cue"
+  file2="code/overview/foundations/tav-constrain.html" title2="constraints.cue"
+  file3="code/overview/foundations/tav-data.html"      title3="data.cue"
 >}}
 
 While you're likely familiar with types and data,
@@ -71,6 +73,16 @@ and eventually arrive at a concrete instances.
 You'll also want to start with small schemas and build them up into more complex instances.
 
 
+### Order is Irrelevant
+
+Cue's unification system resolves values, schemas, and constraints
+regardless of order and which files may contain them.
+
+{{< codePane file="code/overview/foundations/order.html" title="order.cue" >}}
+
+More generally, unification is associative, commutative and idempotent.
+
+
 ### Values Cannot Be Changed
 
 One of the most important aspects of Cue to understand is that __values cannot be changed__.
@@ -81,6 +93,10 @@ You will find this useful if you've ever wondered where else some value in your
 configuration was set from. Cue will not only guarantee that it is the value you set it to,
 it will also tell you where it was set and other locations if there is a conflict.
 
+{{< codePane2
+  file1="code/overview/foundations/immutable.html" title1="immutable.cue" play1="true"
+  file2="code/overview/foundations/immutable-out.txt" title2="cue eval immutable.cue" lang2="txt"
+>}}
 
 ### Defining Fields
 
@@ -185,20 +201,6 @@ This makes schemas reusable. You can do this by embedding values.
   file1="code/overview/foundations/building-up.html" play1="true" title1="building-up.cue"
   file2="code/overview/foundations/building-up.json" lang2="json" title2="cue export building-up.cue --out json"
 >}}
-
-### Order is Irrelevant
-
-Cue's unification system resolves values, schemas, and constraints
-regardless of order and which files may contain them.
-
-{{< codePane3
-  file1="code/overview/foundations/order.html"     title1="order.cue"
-  file2="code/overview/foundations/order-2.html"   title2="order-2.cue"
-  file3="code/overview/foundations/order-out.json" title3="cue export order.cue order-2.cue --out json" lang3="json"
->}}
-
-More generally, unification is associative, commutative and idempotent.
-
 
 ### Turing-Incomplete
 
