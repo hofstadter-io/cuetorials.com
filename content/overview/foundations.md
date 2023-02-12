@@ -179,6 +179,8 @@ An incomplete value is one which does not have all fields filled with data.
 Cue will not export incomplete values and instead return an error.
 By contrast, concrete is a fully specified value.
 
+{{< codePane file="code/overview/foundations/incomplete.html" title="incomplete.cue" >}}
+
 ### Open and Closed
 
 Open means a struct can be extended, closed means they cannot.
