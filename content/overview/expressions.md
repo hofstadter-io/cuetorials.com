@@ -61,8 +61,8 @@ Some mathematical looking operators
 have secondary uses.
 
 {{< codePane2
-  file1="code/overview/expressions/math-ops.html" title1="math-ops.cue" play1="true"
-  file2="code/overview/expressions/math-ops-out.html" title2="cue eval math-ops.cue"
+  file1="code/overview/expressions/nonnum-ops.html" title1="nonnum-ops.cue" play1="true"
+  file2="code/overview/expressions/nonnum-ops-out.html" title2="cue eval nonnum-ops.cue"
 >}}
 
 
