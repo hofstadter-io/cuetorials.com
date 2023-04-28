@@ -70,7 +70,7 @@ With that in place, what we are going to do is:
 # "go get" the Kubernetes code
 go get k8s.io/api/...
 
-# "cue go get" to import into Cue defs
+# "cue get go" to import into Cue defs
 cue get go k8s.io/api/...
 
 # inspect what "cue get go" into the cue.mod/gen directory
