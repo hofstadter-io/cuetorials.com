@@ -1,0 +1,571 @@
+# album
+exec cue eval album.cue album.json
+-- Makefile --
+-- album.cue --
+import "time"
+
+#Album: {
+	artist: string
+	title:  string
+	date:   string
+	date:   time.Format("2006-01-02")
+}
+
+album: #Album
+-- album.html --
+<pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #CF222E">import</span><span style="color: #24292F"> </span><span style="color: #0A3069">&quot;time&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Album: {</span></span>
+<span class="line"><span style="color: #24292F">	artist: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	title:  </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	date:   </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	date:   </span><span style="color: #0550AE">time</span><span style="color: #24292F">.</span><span style="color: #0550AE">Format</span><span style="color: #24292F">(</span><span style="color: #0A3069">&quot;2006-01-02&quot;</span><span style="color: #24292F">)</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">album: #Album</span></span>
+<span class="line"></span></code></pre>
+-- album.json --
+{
+  "album": {
+    "artist": "Led Zeppelin",
+    "title": "BBC Sessions",
+    "date": "1997-11-11"
+  }
+}
+-- cuetorials-final.cue --
+#Schema: #Deployment | #Service | #Ingress
+
+#Deployment: {
+	apiVersion: "apps/v1"
+	kind:       "Deployment"
+	metadata:   #metadata
+	spec: {
+		selector: {...}
+		strategy: {...}
+		minReadySeconds: uint
+		template: {
+			metadata: {
+				labels: #labels
+			}
+			spec: {...}
+		}
+	}
+	...
+}
+
+#Service: {
+	apiVersion: "v1"
+	kind:       "Service"
+	metadata:   #metadata
+	spec: {
+		selector: #labels
+		type:     string
+		ports: [...{...}]
+	}
+	...
+}
+
+#Ingress: {
+	apiVersion: "extensions/v1beta1"
+	kind:       "Ingress"
+	metadata:   #metadata
+	spec: {...}
+	...
+}
+
+#metadata: {
+	name:       string
+	namespace?: string
+	labels:     #labels
+	annotations?: [string]: string
+}
+
+#labels: [string]: string
+-- cuetorials-final.html --
+<pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">#Schema: #Deployment </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Service </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Ingress</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Deployment: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;apps/v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Deployment&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: {...}</span></span>
+<span class="line"><span style="color: #24292F">		strategy: {...}</span></span>
+<span class="line"><span style="color: #24292F">		minReadySeconds: </span><span style="color: #0550AE">uint</span></span>
+<span class="line"><span style="color: #24292F">		template: {</span></span>
+<span class="line"><span style="color: #24292F">			metadata: {</span></span>
+<span class="line"><span style="color: #24292F">				labels: #labels</span></span>
+<span class="line"><span style="color: #24292F">			}</span></span>
+<span class="line"><span style="color: #24292F">			spec: {...}</span></span>
+<span class="line"><span style="color: #24292F">		}</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Service: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Service&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: #labels</span></span>
+<span class="line"><span style="color: #24292F">		type:     </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		ports: [...{...}]</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Ingress: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;extensions/v1beta1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Ingress&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {...}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#metadata: {</span></span>
+<span class="line"><span style="color: #24292F">	name:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	namespace?: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	labels:     #labels</span></span>
+<span class="line"><span style="color: #24292F">	annotations?: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#labels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"></span></code></pre>
+-- cuetorials-v1.cue --
+#Schema: #Deployment | #Service | #Ingress
+
+#Deployment: {
+	apiVersion: "apps/v1"
+	kind:       "Deployment"
+	...
+}
+
+#Service: {
+	apiVersion: "v1"
+	kind:       "Service"
+	...
+}
+
+#Ingress: {
+	apiVersion: "extensions/v1beta1"
+	kind:       "Ingress"
+	...
+}
+-- cuetorials-v1.html --
+<pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">#Schema: #Deployment </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Service </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Ingress</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Deployment: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;apps/v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Deployment&quot;</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Service: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Service&quot;</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Ingress: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;extensions/v1beta1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Ingress&quot;</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span></code></pre>
+-- cuetorials-v2.cue --
+#Schema: #Deployment | #Service | #Ingress
+
+#Deployment: {
+	apiVersion: "apps/v1"
+	kind:       "Deployment"
+	metadata: {
+		name:       string
+		namespace?: string
+		labels: [string]:       string
+		annotations?: [string]: string
+	}
+	spec: {
+		selector: {
+			matchLabels: [string]: string
+		}
+		strategy: {...}
+		minReadySeconds: uint
+		template: {...}
+	}
+	...
+}
+
+#Service: {
+	apiVersion: "v1"
+	kind:       "Service"
+	metadata: {
+		name:       string
+		namespace?: string
+		labels: [string]:       string
+		annotations?: [string]: string
+	}
+	spec: {
+		selector: [string]: string
+		type: string
+		ports: [...{...}]
+	}
+	...
+}
+
+#Ingress: {
+	apiVersion: "extensions/v1beta1"
+	kind:       "Ingress"
+	metadata: {
+		name:       string
+		namespace?: string
+		labels: [string]:       string
+		annotations?: [string]: string
+	}
+	spec: {...}
+	...
+}
+-- cuetorials-v2.html --
+<pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">#Schema: #Deployment </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Service </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Ingress</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Deployment: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;apps/v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Deployment&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata: {</span></span>
+<span class="line"><span style="color: #24292F">		name:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		namespace?: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		labels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		annotations?: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: {</span></span>
+<span class="line"><span style="color: #24292F">			matchLabels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		}</span></span>
+<span class="line"><span style="color: #24292F">		strategy: {...}</span></span>
+<span class="line"><span style="color: #24292F">		minReadySeconds: </span><span style="color: #0550AE">uint</span></span>
+<span class="line"><span style="color: #24292F">		template: {...}</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Service: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Service&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata: {</span></span>
+<span class="line"><span style="color: #24292F">		name:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		namespace?: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		labels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		annotations?: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		type: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		ports: [...{...}]</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Ingress: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;extensions/v1beta1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Ingress&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata: {</span></span>
+<span class="line"><span style="color: #24292F">		name:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		namespace?: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		labels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		annotations?: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	spec: {...}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span></code></pre>
+-- cuetorials-v3.cue --
+#Schema: #Deployment | #Service | #Ingress
+
+#labels: [string]: string
+
+#metadata: {
+	name:       string
+	namespace?: string
+	labels:     #labels
+	annotations?: [string]: string
+}
+
+#Deployment: {
+	apiVersion: "apps/v1"
+	kind:       "Deployment"
+	metadata:   #metadata
+	spec: {
+		selector: {
+			matchLabels: #labels
+		}
+		strategy: {...}
+		minReadySeconds: uint
+		template: {...}
+	}
+	...
+}
+
+#Service: {
+	apiVersion: "v1"
+	kind:       "Service"
+	metadata:   #metadata
+	spec: {
+		selector: #labels
+		type:     string
+		ports: [...{...}]
+	}
+	...
+}
+
+#Ingress: {
+	apiVersion: "extensions/v1beta1"
+	kind:       "Ingress"
+	metadata:   #metadata
+	spec: {...}
+	...
+}
+-- cuetorials-v3.html --
+<pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">#Schema: #Deployment </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Service </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Ingress</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#labels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#metadata: {</span></span>
+<span class="line"><span style="color: #24292F">	name:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	namespace?: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	labels:     #labels</span></span>
+<span class="line"><span style="color: #24292F">	annotations?: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Deployment: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;apps/v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Deployment&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: {</span></span>
+<span class="line"><span style="color: #24292F">			matchLabels: #labels</span></span>
+<span class="line"><span style="color: #24292F">		}</span></span>
+<span class="line"><span style="color: #24292F">		strategy: {...}</span></span>
+<span class="line"><span style="color: #24292F">		minReadySeconds: </span><span style="color: #0550AE">uint</span></span>
+<span class="line"><span style="color: #24292F">		template: {...}</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Service: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Service&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: #labels</span></span>
+<span class="line"><span style="color: #24292F">		type:     </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		ports: [...{...}]</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Ingress: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;extensions/v1beta1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Ingress&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {...}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span></code></pre>
+-- cuetorials-v4.cue --
+#Schema: #Deployment | #Service | #Ingress
+
+#labels: [string]: string
+#labels: app:      string
+
+#metadata: {
+	name:       string
+	namespace?: string
+	labels:     #labels
+	annotations?: [string]: string
+}
+
+#Deployment: {
+	apiVersion: "apps/v1"
+	kind:       "Deployment"
+	metadata:   #metadata
+	spec: {
+		selector: {
+			matchLabels: metadata.labels
+		}
+		strategy: {...}
+		minReadySeconds: uint
+		template: {...}
+	}
+	...
+}
+
+#Service: {
+	apiVersion: "v1"
+	kind:       "Service"
+	metadata:   #metadata
+	spec: {
+		selector: metadata.labels
+		type:     string
+		ports: [...{...}]
+	}
+	...
+}
+
+#Ingress: {
+	apiVersion: "extensions/v1beta1"
+	kind:       "Ingress"
+	metadata:   #metadata
+	spec: {...}
+	...
+}
+-- cuetorials-v4.html --
+<pre class="shiki" style="background-color: #ffffff"><code><span class="line"><span style="color: #24292F">#Schema: #Deployment </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Service </span><span style="color: #CF222E">|</span><span style="color: #24292F"> #Ingress</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#labels: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">#labels: app:      </span><span style="color: #0550AE">string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#metadata: {</span></span>
+<span class="line"><span style="color: #24292F">	name:       </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	namespace?: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">	labels:     #labels</span></span>
+<span class="line"><span style="color: #24292F">	annotations?: [</span><span style="color: #0550AE">string</span><span style="color: #24292F">]: </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Deployment: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;apps/v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Deployment&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: {</span></span>
+<span class="line"><span style="color: #24292F">			matchLabels: metadata.labels</span></span>
+<span class="line"><span style="color: #24292F">		}</span></span>
+<span class="line"><span style="color: #24292F">		strategy: {...}</span></span>
+<span class="line"><span style="color: #24292F">		minReadySeconds: </span><span style="color: #0550AE">uint</span></span>
+<span class="line"><span style="color: #24292F">		template: {...}</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Service: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;v1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Service&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {</span></span>
+<span class="line"><span style="color: #24292F">		selector: metadata.labels</span></span>
+<span class="line"><span style="color: #24292F">		type:     </span><span style="color: #0550AE">string</span></span>
+<span class="line"><span style="color: #24292F">		ports: [...{...}]</span></span>
+<span class="line"><span style="color: #24292F">	}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292F">#Ingress: {</span></span>
+<span class="line"><span style="color: #24292F">	apiVersion: </span><span style="color: #0A3069">&quot;extensions/v1beta1&quot;</span></span>
+<span class="line"><span style="color: #24292F">	kind:       </span><span style="color: #0A3069">&quot;Ingress&quot;</span></span>
+<span class="line"><span style="color: #24292F">	metadata:   #metadata</span></span>
+<span class="line"><span style="color: #24292F">	spec: {...}</span></span>
+<span class="line"><span style="color: #24292F">	...</span></span>
+<span class="line"><span style="color: #24292F">}</span></span>
+<span class="line"></span></code></pre>
+-- cuetorials.yaml --
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cuetorials
+  namespace: websites
+  labels:
+    app: cuetorials
+spec:
+  selector:
+    matchLabels:
+      app: cuetorials
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  minReadySeconds: 5
+
+  template:
+    metadata:
+      labels:
+        app: cuetorials
+    spec:
+      containers:
+      - name: website
+        image: us.gcr.io/hof-io--develop/cuetorials.com:manual
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: "TCP"
+
+        readinessProbe:
+          httpGet:
+            port: 80
+          initialDelaySeconds: 6
+          failureThreshold: 3
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            port: 80
+          initialDelaySeconds: 6
+          failureThreshold: 3
+          periodSeconds: 10
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cuetorials
+  namespace: websites
+  labels:
+    app: cuetorials
+spec:
+  selector:
+    app: cuetorials
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cuetorials
+  namespace: websites
+  labels:
+    app: cuetorials
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+
+    kubernetes.io/configuration-snippet: |
+      location ~* \.(?:css|js|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
+        expires 1h;
+        access_log off;
+        add_header Cache-Control "public";
+      }
+      location / {
+        expires -1;
+      }
+
+spec:
+  tls:
+  - hosts:
+    - cuetorials.com
+    secretName: cuetorials-tls
+
+  rules:
+  - host: cuetorials.com
+    http:
+      paths:
+        - backend:
+            serviceName: cuetorials
+            servicePort: 80
+
+-- txtar-exec.001 --
+# album
+exec cue eval album.cue album.json

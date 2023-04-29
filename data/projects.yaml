@@ -1,15 +1,5 @@
 ---
 
-- name: dagger
-  org:  Dagger
-  home:  https://dagger.io
-  docs:  https://docs.dagger.io
-  github:  https://github.com/dagger/dagger
-  logo: /images/dagger.svg
-  blurb: |
-    is using CUE and BuildKit to reimagine the
-    CI/CD experience from commit to proudction
-
 - name: hof
   org:  Hofstadter
   home:  https://hofstadter.io
@@ -19,6 +9,16 @@
   blurb: |
     uses CUE to power a data modeling & code generation,
     the High Code™ company (low-code for developers).
+
+- name: timoni
+  org:  Timoni
+  home:  https://timoni.sh
+  docs:  https://timoni.sh
+  github:  https://github.com/stefanprodan/timoni
+  logo: ""
+  blurb: |
+    Timoni is a package manager for Kubernetes,
+    powered by CUE and inspired by Helm.
 
 - name: thema
   org:  Grafana
