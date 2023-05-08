@@ -21,7 +21,7 @@ params: {
 	disableReadmoreNav:  false // set true to hide prev/next navigation, default is false
 	highlightClientSide: false // set true to use highlight.pack.js instead of the default hugo chroma highlighter
 	menushortcutsnewtab: true  // set true to open shortcuts links to a new tab/window
-	ga:                  "UA-103579574-6"
+	ga:                  "G-LXK0DFYZX4"
 	github_project_repo: "https://github.com/hofstadter-io/cuetorials.com"
 	github_repo:         "https://github.com/hofstadter-io/cuetorials.com"
 	time_format_default: "January 2, 2006"
