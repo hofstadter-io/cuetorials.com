@@ -163,14 +163,19 @@ Disjunctions have several uses:
 - null-coalescing (use this computation, or default to some value)
 
 
-### Defaults and Optionals
+### Required, Optionals, and Defaults
 
-Cue supports setting defaults for values or marking a field optional.
+Cue supports marking a field as optional, required, or providing a default.
 
 {{< codePane2
   file1="code/overview/foundations/default-optional.html" play1="true" title1="default-optional.cue"
   file2="code/overview/foundations/default-optional.json" lang2="json" title2="cue export default-optional.cue --out json"
 >}}
+
+We are currently in a transition from optional to required markers.
+
+- before, optional had to be marked, required was the default
+- future, required will be maredk and optional will be the default
 
 
 ### Incomplete and Concrete

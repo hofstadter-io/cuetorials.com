@@ -23,9 +23,9 @@ params:
     - cuelang
     - tutorial
     - example
-  hofver: v0.6.8-beta.13
-  cuever: v0.5.0
-  cuedocBase: https://pkg.go.dev/cuelang.org/go@v0.5.0
+  hofver: v0.6.9-alpha.3
+  cuever: v0.6.0
+  cuedocBase: https://pkg.go.dev/cuelang.org/go@v0.6.0
 languages:
   en:
     title: !!binary Q3VldG9yaWFscw==
@@ -55,7 +55,7 @@ outputs:
     - JSON
 menu:
   shortcuts:
-    - name: v0.5.0 <i class='fas fa-copyright pl-2'></i> Cuelang.org
+    - name: v0.6.0 <i class='fas fa-copyright pl-2'></i> Cuelang.org
       url: https://cuelang.org
       weight: 0
     - name: <i class='fab fa-github'></i> GitHub

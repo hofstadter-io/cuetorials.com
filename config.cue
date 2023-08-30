@@ -26,8 +26,8 @@ params: {
 	github_repo:         "https://github.com/hofstadter-io/cuetorials.com"
 	time_format_default: "January 2, 2006"
 	keywords: ["cue", "cuelang", "tutorial", "example"]
-	hofver:     "v0.6.8-beta.13"
-	cuever:     "v0.5.0"
+	hofver:     "v0.6.9-alpha.3"
+	cuever:     "v0.6.0"
 	cuedocBase: "https://pkg.go.dev/cuelang.org/go@\(cuever)"
 }
 
