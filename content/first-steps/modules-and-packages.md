@@ -16,7 +16,7 @@ Cue has a module and package system like any proper language.
 With modules and packages, you also have imports.
 This is one of its most significant advantages over current configuration
 languages like Yaml and JSON.
-Cue's module system is very similar to Go's, but has it's differences.
+Cue's module system is very similar to Go's, but has its differences.
 
 - A module name has a particular format
     - `domain.com/name` is the minimal
