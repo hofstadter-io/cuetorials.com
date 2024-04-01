@@ -58,7 +58,7 @@ docker: image push
 
 .PHONY: image
 image: hugo
-	@docker build --no-cache -f ci/Dockerfile -t us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG) .
+	@docker build --platform linux/amd64 --no-cache -f ci/Dockerfile -t us.gcr.io/$(PROJECT)/cuetorials.com:$(TAG) .
 
 .PHONY: nginx
 nginx:
