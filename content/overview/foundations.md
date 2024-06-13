@@ -175,7 +175,7 @@ Cue supports marking a field as optional, required, or providing a default.
 We are currently in a transition from optional to required markers.
 
 - before, optional had to be marked, required was the default
-- future, required will be maredk and optional will be the default
+- future, required will be marked and optional will be the default
 
 
 ### Incomplete and Concrete
