@@ -13,7 +13,7 @@ CUE has a variety of expressions for working with values.
 ### Mathematical Operations
 
 Cue has the typical math operations for numbers.
-Multiplication also works for strings and lists.
+Multiplication also works for strings.
 
 {{< codePane2
   file1="code/overview/expressions/math-ops.html" title1="math-ops.cue" play1="true"
