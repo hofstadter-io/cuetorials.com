@@ -1,6 +1,9 @@
 package function
 
-import "strings"
+import (
+	"list"
+	"strings"
+)
 
 // An input schema
 #Input: {
@@ -21,7 +24,7 @@ import "strings"
 
 	// intermediate fields
 	_upper: strings.ToUpper(X1.msg)
-	_msg:   strings.Join([_upper]*X1.count, " ")
+	_msg: strings.Join(list.Repeat([_upper], X1.count), " ")
 
 	// set output
 	out: val: _msg
