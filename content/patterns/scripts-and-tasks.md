@@ -14,8 +14,8 @@ where non-hermetic operations are allowed.
 
 `cue/flow` can automatically infer task dependencies
 based on references between their values.
-Tasks, where all tasks it dependens have on have completed,
-are available to run.
+Each task is available to run when all tasks it depends
+on have completed.
 
 {{< codePane file="code/patterns/scripts-and-tasks/autodep_tool.html" title="autodep_tool.cue" >}}
 
