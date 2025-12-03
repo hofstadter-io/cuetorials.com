@@ -18,13 +18,13 @@ import (
 
 #Transform: {
 	// Input for the caller
-	X1="in": #Input
+	in: #Input
 	// output for the caller
 	out: #Output
 
 	// intermediate fields
-	_upper: strings.ToUpper(X1.msg)
-	_msg: strings.Join(list.Repeat([_upper], X1.count), " ")
+	_upper: strings.ToUpper(in.msg)
+	_msg: strings.Join(list.Repeat([_upper], in.count), " ")
 
 	// set output
 	out: val: _msg
